@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nbgrader basics &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="JupyterHub for instructors" href="index.html"/>
+        <link rel="next" title="nbgrader hints" href="nbgrader-hints.html"/>
+        <link rel="prev" title="Course data" href="course-data.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../jupyterhub.html">JupyterHub</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#basic-usage">Basic usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#terms-of-use">Terms of use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#courses-and-assignments">Courses and assignments</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jupyterhub.html#instructors">Instructors</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">JupyterHub for instructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#privacy-policy">Privacy policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#faq-and-bugs">FAQ and bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#more-info">More info</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">The Aalto environment</a> &raquo;</li>
+      
+          <li><a href="../jupyterhub.html">JupyterHub</a> &raquo;</li>
+      
+          <li><a href="index.html">JupyterHub for instructors</a> &raquo;</li>
+      
+    <li>Nbgrader basics</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/jupyterhub-instructors/nbgrader.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nbgrader-basics">
+<h1>Nbgrader basics<a class="headerlink" href="#nbgrader-basics" title="Permalink to this headline">¶</a></h1>
+<p>&#8220;nbgrader is a tool that facilitates creating and grading assignments
+in the Jupyter notebook. It allows instructors to easily create
+notebook-based assignments that include both coding exercises and
+written free-responses. nbgrader then also provides a streamlined
+interface for quickly grading completed assignments.&#8221;  <em>- nbgrader
+upstream documentation</em></p>
+<p>Currently you should read the upstream <a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/">nbgrader documentation</a>, which we don&#8217;t
+repeat.  We have some custom Aalto modifications (also submitted
+upstream) which are:</p>
+<div class="section" id="how-to-use-nbgrader">
+<h2>How to use nbgrader<a class="headerlink" href="#how-to-use-nbgrader" title="Permalink to this headline">¶</a></h2>
+<p>Read the nbgrader docs!  We can&#8217;t explain everything again here.</p>
+<p>The course directory is <code class="docutils literal"><span class="pre">/course/</span></code>.  Within this are <code class="docutils literal"><span class="pre">source/</span></code>,
+<code class="docutils literal"><span class="pre">release/</span></code>, <code class="docutils literal"><span class="pre">submitted/</span></code>, <code class="docutils literal"><span class="pre">autograded/</span></code>, and <code class="docutils literal"><span class="pre">feedback/</span></code>.</p>
+</div>
+<div class="section" id="things-which-don-t-necessarily-work-in-nbgrader">
+<h2>Things which don&#8217;t (necessarily) work in nbgrader<a class="headerlink" href="#things-which-don-t-necessarily-work-in-nbgrader" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Autograde</strong>: if you click the thing, it will work, but is the same
+as running all your students code <em>on your own computer</em> with no
+security whatsoever.  A slightly clever student is able to see other
+students work (a privacy breach), alter their grades.</li>
+<li><strong>Feedback</strong>: While it appears to work, it is designed to operate by
+hashing the contents of the notebook.  Thus, if you have to edit the
+notebook to make it execute, the hash will be different and the
+built-in feedback distribution will not work.</li>
+<li>Furthermore, don&#8217;t expect hidden tests to stay hidden, grading to
+happen actually automatically, things to be fully automatic, and so
+on.  Do expect a computing environment optimized for learning.</li>
+</ul>
+<p>These are just intrinsic to how nbgrader works.  We&#8217;d hope to fix
+these sometime, but it will require a more coordinated development
+effort.</p>
+</div>
+<div class="section" id="aalto-specifics">
+<h2>Aalto specifics<a class="headerlink" href="#aalto-specifics" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Instructors can share responsibilities, multiple instructors can use
+the exchange to release/collect files, autograde, etc.  Note that
+with this power comes responsibility - try hard to keep things
+organized.</li>
+<li>We can have the assignments in <code class="docutils literal"><span class="pre">/notebooks</span></code> while providing
+whole-filesystem access (so that students can also access
+<code class="docutils literal"><span class="pre">/coursedata</span></code>).</li>
+<li>We&#8217;ve added some extra security and sharing measures (most of these
+are contributed straight to nbgrader).</li>
+</ul>
+<p>To use nbgrader:</p>
+<ul class="simple">
+<li>Request a course as above.</li>
+<li>Read the <a class="reference external" href="https://nbgrader.readthedocs.io/">nbgrader user instructions</a>.</li>
+<li>You can use the <code class="docutils literal"><span class="pre">Formgrader</span></code> tab at the top to manage the whole
+nbgrader process (this automatically appears for instructors).  This
+is the easiest way, because it will automatically set up the course
+directory, create assignment directories, etc.  But, you can use the
+<code class="docutils literal"><span class="pre">nbgrader</span></code> command line, too.  It is especially useful for
+autograding.</li>
+<li>It&#8217;s good to know how we arrange the course directory anyway,
+especially if you want to manage things yourself without Formgrader.
+The &#8220;course directory&#8221; (nbgrader term) is <code class="docutils literal"><span class="pre">/course</span></code>.  The original
+assignments go in <code class="docutils literal"><span class="pre">/course/source</span></code>.  The other directories are
+<code class="docutils literal"><span class="pre">/course/{nbgrader_step}</span></code> and, for the most part, are
+automatically managed.</li>
+<li>New assignments should be in <code class="docutils literal"><span class="pre">/course/source</span></code>.  Also don&#8217;t use
+<code class="docutils literal"><span class="pre">+</span></code> in the assignment filename (nbgrader #928).</li>
+<li>Manage your assignments with <code class="docutils literal"><span class="pre">git</span></code>.  See below for some hints
+about how to do this.</li>
+<li>If you ever get permission denied errors, let us know.  nbgrader
+does not support multiple instructors editing the same files that
+well, but we have tried to patch it in order to do this.  We may
+still have missed some things here.</li>
+</ul>
+</div>
+<div class="section" id="version-control-of-course-assignments">
+<h2>Version control of course assignments<a class="headerlink" href="#version-control-of-course-assignments" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://git-scm.com/">git</a> is a version control system which lets
+you track file versions, examine history, and share.  We assume you
+have basic knowledge of git, and here we will give practical tips to
+use git to manage a course&#8217;s files.  Our vision is that you should use
+nbgrader to manage the normal course files, not the students
+submissions.  Thus, to set up the next year&#8217;s course, you just clone
+the existing git repository to the new <code class="docutils literal"><span class="pre">/course</span></code> directory.  You
+backup the entire old course directory to maintain the old students
+work.  Of course, there are other options, too.</p>
+<p>Create a new git repository in your <code class="docutils literal"><span class="pre">/course/</span></code> directory and do some
+basic setup:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd /course/
+git init
+git config core.sharedRepository group
+</pre></div>
+</div>
+<p>You should make a <code class="docutils literal"><span class="pre">.gitignore</span></code> file excluding some common things
+(TODO: maybe more is needed):</p>
+<div class="highlight-python"><div class="highlight"><pre>gradebook.db
+release/
+submitted/
+autograded/
+feedback/
+.nbgrader.log
+.ipynb-checkpoints
+</pre></div>
+</div>
+<p>The git repository is in <code class="docutils literal"><span class="pre">/course</span></code>, but the main subdirectory of
+interest is the <code class="docutils literal"><span class="pre">source/</span></code> directory, which has the original files,
+along with whatever other course notes/management files you may have
+which are under <code class="docutils literal"><span class="pre">/course</span></code>.  Everything else is auto-generated.</p>
+</div>
+<div class="section" id="autograding">
+<h2>Autograding<a class="headerlink" href="#autograding" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><code class="docutils literal"><span class="pre">nbgrader</span> <span class="pre">autograde</span></code> is not secure, because arbitrary student
+code is run with instructor permissions.  Read more from the
+instructor page.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nbgrader-hints.html" class="btn btn-neutral float-right" title="nbgrader hints" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="course-data.html" class="btn btn-neutral" title="Course data" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

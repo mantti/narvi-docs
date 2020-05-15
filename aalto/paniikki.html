@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Paniikki: Computer Lab For Students &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="HTCondor" href="htcondor.html"/>
+        <link rel="prev" title="Remote Jupyter Notebook on shell servers" href="remotejupyter.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterhub.html">JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Paniikki: Computer Lab For Students</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-name">The name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hardware">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#software">Software</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#questions">Questions?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>Paniikki: Computer Lab For Students</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/paniikki.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="paniikki-computer-lab-for-students">
+<h1>Paniikki: Computer Lab For Students<a class="headerlink" href="#paniikki-computer-lab-for-students" title="Permalink to this headline">¶</a></h1>
+<p>Paniikki is a cutting edge computer lab in the computer science
+department. It is located in <a class="reference external" href="https://usefulaaltomap.fi/#!/select/paniikki">T-building C106</a> (right under lecture
+hall T1). This documentation is a Paniikki cheatsheet.</p>
+<div class="align-center figure" id="id1">
+<img alt="alternate text" src="../_images/paniikki_map.png" />
+<p class="caption"><span class="caption-text">&lt; The blue box at the entrance is Paniikki &gt;</span></p>
+</div>
+<p>For more services directed at students, see <a class="reference internal" href="welcomestudents.html"><em>Welcome, students!</em></a>.</p>
+<div class="section" id="the-name">
+<h2>The name<a class="headerlink" href="#the-name" title="Permalink to this headline">¶</a></h2>
+<p>Paniikki means &#8220;panic&#8221; in English which is a fascinating name as people in panic are in panic. I don&#8217;t know which comes first, the space or the emotion. Anyway, people experience the both simultaneously.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">CPU properties</th>
+<th class="head">Spec</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Model</td>
+<td>Intel(R) Xeon(R) CPU E5-1650 v4 &#64; 3.60GHz</td>
+</tr>
+<tr class="row-odd"><td>Architecture</td>
+<td>x86_64</td>
+</tr>
+<tr class="row-even"><td>CPU(s)</td>
+<td>12</td>
+</tr>
+<tr class="row-odd"><td>Thread(s) per core</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>max MHz</td>
+<td>4000.0000</td>
+</tr>
+<tr class="row-odd"><td>Virtualization</td>
+<td>VT-x</td>
+</tr>
+<tr class="row-even"><td>L1d cache</td>
+<td>32K</td>
+</tr>
+<tr class="row-odd"><td>L1i cache</td>
+<td>32K</td>
+</tr>
+<tr class="row-even"><td>L2 cache</td>
+<td>256K</td>
+</tr>
+<tr class="row-odd"><td>L3 cache</td>
+<td>15360K</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Model</th>
+<th class="head">NVIDIA Quadro P5000</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>GPU properties</td>
+<td>Spec</td>
+</tr>
+<tr class="row-odd"><td>Core</td>
+<td>GP104GL (Pascal-based)</td>
+</tr>
+<tr class="row-even"><td>Core clock</td>
+<td>1607 MHz</td>
+</tr>
+<tr class="row-odd"><td>Memory clock</td>
+<td>1251 MHz</td>
+</tr>
+<tr class="row-even"><td>Memory size</td>
+<td>16384 MiB</td>
+</tr>
+<tr class="row-odd"><td>Memory type</td>
+<td>256-bit GDDR5X</td>
+</tr>
+<tr class="row-even"><td>Memory bandwidth</td>
+<td>320</td>
+</tr>
+<tr class="row-odd"><td>CUDA cores</td>
+<td>2560</td>
+</tr>
+<tr class="row-even"><td>CUDA compute capability</td>
+<td>6.1</td>
+</tr>
+<tr class="row-odd"><td>OpenGL</td>
+<td>4.5</td>
+</tr>
+<tr class="row-even"><td>OpenCL</td>
+<td>1.2</td>
+</tr>
+<tr class="row-odd"><td>Near GeForce Model</td>
+<td>GeForce GTX 1080</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Memory properties</th>
+<th class="head">Spec</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>RAM</td>
+<td>32GiB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="software">
+<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<p>First thing first, you DO NOT have a sudo right in Aalto classroom
+machines and you never will. We provide the most used SW and if you need
+more you could inquire via <a class="reference external" href="mailto:servicedesk&#37;&#52;&#48;aalto&#46;fi">servicedesk<span>&#64;</span>aalto<span>&#46;</span>fi</a>.  We try to have a good
+base software that covers most people&#8217;s needs.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">What?</th>
+<th class="head">How?</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Python via Anaconda</td>
+<td><code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda</span></code></td>
+</tr>
+<tr class="row-even"><td>Python (system)</td>
+<td>Default available</td>
+</tr>
+<tr class="row-odd"><td>Tensorflow</td>
+<td>in the Python environments, e.g. anaconda above</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="modules">
+<h3>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
+<p>In short, <code class="docutils literal"><span class="pre">module</span></code> is a software environment management tool. With
+<code class="docutils literal"><span class="pre">module</span></code> you can manage multiple versions of software easily. Here
+are some sample commands:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span></code> <em>NAME</em></td>
+<td>load module</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">avail</span></code></td>
+<td>list all modules</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">spider</span></code> <em>NAME</em></td>
+<td>search modules</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">list</span></code></td>
+<td>list currently loaded modules</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">show</span></code> <em>NAME</em></td>
+<td>details on a module</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">help</span></code> <em>NAME</em></td>
+<td>details on a module</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">unload</span></code> <em>NAME</em></td>
+<td>unload a module</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">save</span></code> <em>ALIAS</em></td>
+<td>save module to this alias (saved in ~/.lmod.d/)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">restore</span></code> <em>ALIAS</em></td>
+<td>load saved module set (faster than loading individually)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">purge</span></code></td>
+<td>unload all loaded modules (faster than unloading individually)</td>
+</tr>
+</tbody>
+</table>
+<p>There are some modules set up specifically for different courses: if
+you just load the environment with &#8220;module load&#8221;, you will have everything you need.</p>
+<p>Read the details in <a class="reference internal" href="../triton/tut/modules.html"><em>Module environment page</em></a>.</p>
+<div class="section" id="example-1">
+<h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h4>
+<p>Assume we are in Paniikki and wants to do our homework for CS-E4820 Machine Learning: Advanced probabilistic methods. In the course students use Tensorflow and Edward.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c1"># Check available modules</span>
+$ module load courses/    <span class="c1"># Tab to auto-complete</span>
+
+<span class="c1"># Finally you will complete this</span>
+$ module load courses/CS-E4820-advanced-probabilistic-methods.lua
+
+<span class="c1"># Check the module you loaded</span>
+$ module list
+
+Currently Loaded Modules:
+        1<span class="o">)</span> courses/CS-E4820-advanced-probabilistic-methods
+
+<span class="c1"># Check the packages</span>
+$ conda list    <span class="c1"># You will see Tensorflow and etc.</span>
+
+<span class="c1"># Launch Jupyter</span>
+$ jupyter notebook
+
+<span class="c1"># Do your homework</span>
+
+<span class="c1"># You are done and want to un-load all the modules?</span>
+$ module purge
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-2-general-python-software">
+<h4>Example 2: General Python software<a class="headerlink" href="#example-2-general-python-software" title="Permalink to this headline">¶</a></h4>
+<p>Need Python and general software?  The anaconda modules have Python, a
+bunch of useful scientific and data packages, and machine learning
+libraries.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c1"># Latest Python 3</span>
+$ module load anaconda
+
+<span class="c1"># Old Python 2</span>
+$ module load anaconda2
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-3-list-all-software">
+<h4>Example 3: List all software<a class="headerlink" href="#example-3-list-all-software" title="Permalink to this headline">¶</a></h4>
+<p>You can check all other modules as well</p>
+<div class="highlight-bash"><div class="highlight"><pre>$ module avail
+</pre></div>
+</div>
+<div class="align-center figure" id="id2">
+<img alt="alternate text" src="../_images/module_avail.png" />
+<p class="caption"><span class="caption-text">&lt; Available modules in Paniikki as of 2018 March 8th &gt;</span></p>
+</div>
+<p>You want to use Matlab?</p>
+<div class="highlight-bash"><div class="highlight"><pre>$ module load matlab/2017b
+$ matlab
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+<p>If you have any question please contact <a class="reference external" href="mailto:seyoung&#46;park&#37;&#52;&#48;aalto&#46;fi">seyoung<span>&#46;</span>park<span>&#64;</span>aalto<span>&#46;</span>fi</a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="htcondor.html" class="btn btn-neutral float-right" title="HTCondor" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="remotejupyter.html" class="btn btn-neutral" title="Remote Jupyter Notebook on shell servers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

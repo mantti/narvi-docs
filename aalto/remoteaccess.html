@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Remote Access &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="JupyterHub" href="jupyterhub.html"/>
+        <link rel="prev" title="Science-IT data policy" href="datapolicy.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Remote Access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#linux-shell-servers">Linux shell servers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vpn-web-proxy">VPN / web proxy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-mounting-of-network-filesystems">Remote mounting of network filesystems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-you-linux-workstation-triton-remotely">Accessing you Linux workstation / Triton remotely</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-desktop">Remote desktop</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterhub.html">JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>Remote Access</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/remoteaccess.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="remote-access">
+<h1>Remote Access<a class="headerlink" href="#remote-access" title="Permalink to this headline">¶</a></h1>
+<p>This page describes remote access solutions. Most of them are provided
+by Aalto, but there are also instruction for accessing your workstations
+here. See Aalto Inside for more details.</p>
+<div class="section" id="linux-shell-servers">
+<h2>Linux shell servers<a class="headerlink" href="#linux-shell-servers" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Department servers have <strong>project</strong>, <strong>archive</strong>, <strong>scratch</strong>, etc
+mounted, so are good to use for research purposes.<ul>
+<li>CS: <code class="docutils literal"><span class="pre">magi.cs.aalto.fi</span></code>: Department staff server (no heavy computing,
+access to workstations and has file systems mounted, use the <code class="docutils literal"><span class="pre">kinit</span></code>
+command first if project directories are not accessible)</li>
+<li>NBE: <code class="docutils literal"><span class="pre">amor.nbe.aalto.fi</span></code>, same as above.</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://www.aalto.fi/en/services/linux-shell-servers-at-aalto">Aalto servers</a><ul>
+<li><code class="docutils literal"><span class="pre">kosh.aalto.fi</span></code>, <code class="docutils literal"><span class="pre">lyta.aalto.fi</span></code>: Aalto, for general login use
+(no heavy compting)</li>
+<li><code class="docutils literal"><span class="pre">brute.aalto.fi</span></code>, <code class="docutils literal"><span class="pre">force.aalto.fi</span></code>: Aalto, for &#8220;light computing&#8221;
+(expect them to be overloaded and not that useful). If you are
+trying to use these for research, you really want to be using
+Triton instead.</li>
+<li><code class="docutils literal"><span class="pre">taltta.aalto.fi</span></code>: Staff server (access to workstations and has
+filesystems mounted, but you need to kinit to access them.) that
+is kind of outdated and different.</li>
+</ul>
+</li>
+<li>Your <strong>home</strong> directory is shared on all Aalto shell servers, and
+that means <code class="docutils literal"><span class="pre">.ssh/authorized_keys</span></code> as well.</li>
+<li>You can use any of these to mount things remotely via sshfs. This is
+easy on Linux, harder but possible on other OSs. You are on your own
+here.  You still need <code class="docutils literal"><span class="pre">kinit</span></code> at the same time.<ul>
+<li>The CS filesystems <strong>project</strong> and <strong>archive</strong> and Triton
+filesystems <strong>scratch</strong> and <strong>work</strong> are mounted on
+<code class="docutils literal"><span class="pre">magi</span></code> (and <code class="docutils literal"><span class="pre">taltta.aalto.fi</span></code>) (see
+<a class="reference internal" href="aaltostorage.html"><em>storage</em></a>).</li>
+</ul>
+</li>
+</ul>
+<p>For any of these, if you can&#8217;t access something, run <code class="docutils literal"><span class="pre">kinit</span></code>!</p>
+</div>
+<div class="section" id="vpn-web-proxy">
+<span id="aalto-vpn"></span><h2>VPN / web proxy<a class="headerlink" href="#vpn-web-proxy" title="Permalink to this headline">¶</a></h2>
+<p>To access certain things, you need to be able to connect to the Aalto
+networks via VPN. This is easy and automatically set up on Aalto
+computers.</p>
+<p><a class="reference external" href="https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network">Main Aalto instructions</a>.
+This section has some quick reference info.</p>
+<ul class="simple">
+<li>Generic: OpenConnect/Cisco AnyConnect protocols. <code class="docutils literal"><span class="pre">vpn.aalto.fi</span></code></li>
+<li>Aalto Linux: Status bar → Network → VPN Connections → Aalto TLS
+VPN.</li>
+<li>Aalto mac: Dock → Launchpad → Cisco AnyConnect Secure Mobility
+Client</li>
+<li>Aalto windows: Start → Search → AnyConnect</li>
+<li>Personal Linux laptops: Use OpenConnect. Configuration on Ubuntu:
+Networks → Add Connection → Cisco AnyConnect compatible VPN. →
+<code class="docutils literal"><span class="pre">vpn.aalto.fi</span></code>. Then connect and use Aalto username/password. Or from
+command line: <code class="docutils literal"><span class="pre">openconnect</span> <span class="pre">https://vpn.aalto.fi</span></code></li>
+<li>Personal mac: <a class="reference external" href="https://download.aalto.fi/staff/">use Cisco AnyConnect VPN
+Client</a></li>
+<li>personal windows: <a class="reference external" href="https://download.aalto.fi/staff/">use Cisco AnyConnect VPN
+Client</a></li>
+</ul>
+<p>For more lightweight things (though not actually easier!), you can use
+ssh proxy. You are on your own
+here. <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">-D</span> <span class="pre">8080</span> <span class="pre">$username&#64;kosh.aalto.fi</span></code>. Configure your web
+browser or other applications to use a SOCKS5 proxy on <code class="docutils literal"><span class="pre">localhost:8080</span></code>
+for connections. Remember to revert when done or else you can&#8217;t connect
+to anything (&#8220;proxy refusing connections&#8221;). The extension FoxyProxy
+Standard may be useful here, because you can direct <em>only the domains
+you want through the proxy</em>.</p>
+</div>
+<div class="section" id="remote-mounting-of-network-filesystems">
+<h2>Remote mounting of network filesystems<a class="headerlink" href="#remote-mounting-of-network-filesystems" title="Permalink to this headline">¶</a></h2>
+<p>From Aalto networks (or VPN), you can mount many of the filesystems via
+SMB. To use this well, you want to get the VPN set up first like
+mentioned above. (You can also access these filesystems via ssh through
+the shell servers):</p>
+<ul class="simple">
+<li>In all cases, username=aalto username, domain=AALTO,
+password=Aalto password.</li>
+<li>For NBE/PHYS, replace <code class="docutils literal"><span class="pre">tw-cs</span></code> with <code class="docutils literal"><span class="pre">tw-nbe</span></code> or <code class="docutils literal"><span class="pre">tw-phys</span></code>.</li>
+<li><strong>Home</strong> directories: <code class="docutils literal"><span class="pre">smb://home.org.aalto.fi/</span></code></li>
+<li><strong>Project</strong> directories: <code class="docutils literal"><span class="pre">smb://tw-cs.org.aalto.fi/project/$name/</span></code>
+(<code class="docutils literal"><span class="pre">$name</span></code>=project name)</li>
+<li><strong>Archive</strong> directories: <code class="docutils literal"><span class="pre">smb://tw-cs.org.aalto.fi/archive/$name/</span></code>
+(<code class="docutils literal"><span class="pre">$name</span></code>=project name)</li>
+<li><strong>Scratch directories</strong>, see <a class="reference internal" href="../triton/tut/storage.html"><em>Triton storage</em></a>.</li>
+<li><code class="docutils literal"><span class="pre">smb://work.org.aalto.fi</span></code> for <strong>Aalto work</strong> directories (different
+than Triton <code class="docutils literal"><span class="pre">work</span></code>).</li>
+</ul>
+<p>Depending on your OS, you may need to use either your username
+directly or <code class="docutils literal"><span class="pre">AALTO\username</span></code></p>
+<p>On <strong>Ubuntu</strong>: Files → Left sidebar → Connect to server → use the URLs above.
+For other Linuxes, you can probably figure it out.  (It varies
+depending on operating system, look around in the finder)</p>
+<p>On <strong>Mac</strong> laptops: Finder → Go menu item → Connect to server → use the URLs
+above.</p>
+<p>On <strong>Windows</strong> laptops:  To do the mounting, Windows Explorer → Computer → Map network drive →
+select a free letter.  <code class="docutils literal"><span class="pre">smb://</span></code> becomes <code class="docutils literal"><span class="pre">\\</span></code> (without the <code class="docutils literal"><span class="pre">smb:</span></code>), and <code class="docutils literal"><span class="pre">/</span></code> becomes
+<code class="docutils literal"><span class="pre">\</span></code>.  For example, a full URL could be
+<code class="docutils literal"><span class="pre">\\tw-cs.org.aalto.fi\project\mygroup</span></code>.  You can also just enter
+it into the file manager bar.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Must use VPN or Aalto network.</p>
+<p class="last">Remember that you must connect to the Aalto VPN first, unless you are
+on an <em>Aalto laptop</em> on the <code class="docutils literal"><span class="pre">aalto</span></code> network.</p>
+</div>
+</div>
+<div class="section" id="accessing-you-linux-workstation-triton-remotely">
+<h2>Accessing you Linux workstation / Triton remotely<a class="headerlink" href="#accessing-you-linux-workstation-triton-remotely" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Remote access to desktop workstations is available via the university
+staff shell servers <code class="docutils literal"><span class="pre">taltta.aalto.fi</span></code> or department-specific
+servers <code class="docutils literal"><span class="pre">magi.cs.aalto.fi</span></code> (CS), <code class="docutils literal"><span class="pre">amor.org.aalto.fi</span></code> (NBE).</li>
+<li>You need to be the <strong>PrimaryUser</strong> of the desktop in order to ssh to
+it.</li>
+<li>Remote access to Triton is available from any Aalto shell server:
+<code class="docutils literal"><span class="pre">taltta</span></code>, <code class="docutils literal"><span class="pre">kosh.aalto.fi</span></code>, etc.</li>
+<li>SSHing directly to computers using openssh ProxyCommand:<ul>
+<li>Put this in your .ssh/config file under the proper Host line:
+<code class="docutils literal"><span class="pre">ProxyCommand</span> <span class="pre">ssh</span> <span class="pre">taltta.aalto.fi</span> <span class="pre">-W</span> <span class="pre">%h:%p</span></code></li>
+<li>For this to be most useful, you probably want to set up ssh keys,
+otherwise you will have to enter your password twice.</li>
+<li>This starts getting beyond the basic level of ssh use, so you may
+want to read up on ssh keys, ProxyCommand, ControlMaster. It can
+make your experience much better.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="remote-desktop">
+<h2>Remote desktop<a class="headerlink" href="#remote-desktop" title="Permalink to this headline">¶</a></h2>
+<p>Aalto has remote desktops available at <a class="reference external" href="https://vdi.aalto.fi">https://vdi.aalto.fi</a>.  This
+works from any network.</p>
+<p>There are both Windows and Linux desktops available.  They are
+arranged as virtual machines with the normal desktop installations, so
+have access to all the important filesystems and all <code class="docutils literal"><span class="pre">/m/{dept}/...</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jupyterhub.html" class="btn btn-neutral float-right" title="JupyterHub" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="datapolicy.html" class="btn btn-neutral" title="Science-IT data policy" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

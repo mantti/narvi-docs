@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Linux shell crash course &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="Scientific computing" href="index.html"/>
+        <link rel="next" title="SSH" href="ssh.html"/>
+        <link rel="prev" title="Python" href="python.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scientific computing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="encryption.html">Encryption for researchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter-pitfalls.html">Pitfalls of Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Linux shell crash course</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-s-a-shell">What&#8217;s a shell?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-and-viewing-files">Editing and viewing files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#listing-and-moving-files">Listing and moving files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#current-directory">Current directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#online-manuals-for-any-command">Online manuals for any command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#history-and-tab-completion">History and tab completion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zen-of-scicomp.html">The Zen of Scientific computing</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Scientific computing</a> &raquo;</li>
+      
+    <li>Linux shell crash course</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/scicomp/shell.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="linux-shell-crash-course">
+<h1>Linux shell crash course<a class="headerlink" href="#linux-shell-crash-course" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This is a kickstart for the Linux shell, to teach the minimum amount
+needed for any scientific computing course.  For more, see the
+<a class="reference internal" href="../training/linux-shell-tutorial.html"><em>linux shell course</em></a> or the
+references below.</p>
+<p class="last">This is <a class="reference internal" href="../training/index.html"><em>basic B-level</em></a>: no prerequisites.</p>
+</div>
+<p>If you are reading this case, you probably need to do some sort of
+scientific computing involving the <strong>Linux shell</strong>, or command line
+interface.  You may wonder why we are still using a command line
+today, but the answer is somewhat simple: once you are doing
+<em>scientific computing</em>, you eventually need to script and automate
+something.  The shell is the <em>only</em> method that gives you the power to
+do <em>anything you may want</em>.</p>
+<p>These days, you don&#8217;t need to know as much about the shell as you used
+to, but you <em>do</em> need to know a few important commands because the
+command line works when nothing else does - and you can&#8217;t do scripting
+without it.</p>
+<div class="section" id="what-s-a-shell">
+<h2>What&#8217;s a shell?<a class="headerlink" href="#what-s-a-shell" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s the old-fashioned looking thing where you type commands with a
+keyboard and get output to the screen.  It seems boring, but the real
+power is that you can <strong>script</strong> (program) commands to run
+automatically - which is the point of scientific computing.</p>
+<p>You type a <strong>command</strong>, which may include <strong>arguments</strong>.  Output gets
+shown to the screen.  Spaces separate commands and arguments.
+Example: <code class="docutils literal"><span class="pre">cp</span> <span class="pre">-i</span> <span class="pre">file1.txt</span> <span class="pre">file2.txt</span></code>.  <em>cp</em> is the command, <em>-i</em> is
+an option, <em>file1.txt</em> and <em>file2.txt</em> are arguments.</p>
+<p>Files are represented by <strong>filenames</strong>, like <code class="docutils literal"><span class="pre">file.txt</span></code>.
+<strong>Directories</strong> are separated by <code class="docutils literal"><span class="pre">/</span></code>, for example <code class="docutils literal"><span class="pre">mydir/file.txt</span></code>
+is <strong>file.txt</strong> inside of <strong>mydir</strong>.</p>
+<p><strong>Exercise:</strong> Start a shell.  On Linux or Mac, the &#8220;terminal&#8221;
+application does this.</p>
+</div>
+<div class="section" id="editing-and-viewing-files">
+<h2>Editing and viewing files<a class="headerlink" href="#editing-and-viewing-files" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">nano</span></code> is an <strong>editor</strong> which allows you to <strong>edit files</strong> directly
+from the shell.  This is a simple console editor which always gets the
+job done.  Use <em>Control-x</em> (control and x at the same time), then
+<code class="docutils literal"><span class="pre">y</span></code> when requested and <em>enter</em>, to save and exit.</p>
+<p><code class="docutils literal"><span class="pre">less</span></code> is a <strong>pager</strong> (file viewer) which lets you <strong>view files</strong>
+without editing them.  (<code class="docutils literal"><span class="pre">q</span></code> to quit, <code class="docutils literal"><span class="pre">/</span></code> to search, <code class="docutils literal"><span class="pre">n</span></code> / <code class="docutils literal"><span class="pre">N</span></code>
+to research forward and backwards, <code class="docutils literal"><span class="pre">&lt;</span></code> for beginning of file, <code class="docutils literal"><span class="pre">&gt;</span></code>
+for end of file)</p>
+</div>
+<div class="section" id="listing-and-moving-files">
+<h2>Listing and moving files<a class="headerlink" href="#listing-and-moving-files" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">ls</span></code> <strong>lists the current directory</strong>.  <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span></code> shows more
+information, and <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></code> shows hidden files.  The options can be
+combined, <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-la</span></code> or <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span> <span class="pre">-a</span></code>.  This pattern of options is
+standard for most commands.</p>
+<p><code class="docutils literal"><span class="pre">mv</span></code> will <strong>move or rename files</strong>.  For example, <code class="docutils literal"><span class="pre">mv</span> <span class="pre">file.old</span>
+<span class="pre">file.new</span></code>.</p>
+<p><code class="docutils literal"><span class="pre">cp</span></code> will <strong>make a copy of a file</strong>, with the exact same syntax as
+<code class="docutils literal"><span class="pre">mv</span></code>: <code class="docutils literal"><span class="pre">cp</span> <span class="pre">file.old</span> <span class="pre">file.copy</span></code>.</p>
+<p><code class="docutils literal"><span class="pre">rm</span></code> will <strong>remove a file</strong>: <code class="docutils literal"><span class="pre">rm</span> <span class="pre">file.txt</span></code>.  To remove a directory,
+use <code class="docutils literal"><span class="pre">rm</span> <span class="pre">-r</span></code>.  Note that <code class="docutils literal"><span class="pre">rm</span></code> does not have backups and does not
+ask for confirmation!</p>
+<p><code class="docutils literal"><span class="pre">mkdir</span></code> <strong>makes a directory</strong>: <code class="docutils literal"><span class="pre">mkdir</span> <span class="pre">dirname</span></code>.</p>
+</div>
+<div class="section" id="current-directory">
+<h2>Current directory<a class="headerlink" href="#current-directory" title="Permalink to this headline">¶</a></h2>
+<p>Unlike with a graphical file browser, there is a concept of <strong>current
+working directory</strong>: each shell is in a current directory.  If you
+<code class="docutils literal"><span class="pre">ls</span></code>, it lists files in your current directory.  If a program tries
+to open a file, it opens it <em>relative to that directory</em>.</p>
+<p><code class="docutils literal"><span class="pre">cd</span> <span class="pre">dirname</span></code> will <strong>change working directories</strong> for your current
+shell.  Normally, you will <code class="docutils literal"><span class="pre">cd</span></code> to a working directory, and use
+relative paths from there. <code class="docutils literal"><span class="pre">/</span></code> alone refers to the <strong>root
+directory</strong>, the parent of all files and directories.</p>
+<p><code class="docutils literal"><span class="pre">cd</span> <span class="pre">..</span></code> will change to the <strong>parent directory</strong> (dir containing this
+dir).  By the same token, <code class="docutils literal"><span class="pre">../..</span></code> the parent of the parent, and so
+on.</p>
+<p><strong>Exercise:</strong> Change to some directory and then another.  What do
+(<code class="docutils literal"><span class="pre">cd</span> <span class="pre">-</span></code>) and (<code class="docutils literal"><span class="pre">cd</span></code> with no arguments) do?  Try each a few times in
+a row.</p>
+</div>
+<div class="section" id="online-manuals-for-any-command">
+<h2>Online manuals for any command<a class="headerlink" href="#online-manuals-for-any-command" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">man</span></code> is an <strong>on-line manual</strong>, type <code class="docutils literal"><span class="pre">man</span> <span class="pre">ls</span></code> to get help on the
+<code class="docutils literal"><span class="pre">ls</span></code> command.  The same works for almost any program.  Some are easy
+to read, some are impossible.  In general you look for what you need,
+not read everything.  Use <code class="docutils literal"><span class="pre">q</span></code> to quit or <code class="docutils literal"><span class="pre">/</span></code> to search (<code class="docutils literal"><span class="pre">n</span></code> and
+<code class="docutils literal"><span class="pre">N</span></code> to search again forward and backwards).</p>
+<p><code class="docutils literal"><span class="pre">--help</span></code> or <code class="docutils literal"><span class="pre">-h</span></code> is a standard argument that <strong>prints a short
+help</strong> directly.</p>
+<p><strong>Exercise:</strong> briefly look at the manual pages and <code class="docutils literal"><span class="pre">--help</span></code> output
+for the commands we have learned thus far.  How can you make <code class="docutils literal"><span class="pre">rm</span></code>
+ask before removing a file?</p>
+</div>
+<div class="section" id="history-and-tab-completion">
+<h2>History and tab completion<a class="headerlink" href="#history-and-tab-completion" title="Permalink to this headline">¶</a></h2>
+<p>Annoyed at typing so much?  We&#8217;ve got two ways to make work faster.</p>
+<p>First, each shell keeps its <strong>(shell) history</strong>.  By pushing the up
+arrow key, you can access previous lines.  Never type similar things
+twice, go up in history and find the previous line, modify it, then
+push enter to re-run.</p>
+<p>Shells also have <strong>tab
+completion</strong>.  Type the first few letters of any command or filename
+and push tab once or twice... it will either complete it or show you
+the options.  This is so important that it&#8217;s used often, and many command
+arguments can also be completed.</p>
+<p><strong>Exercise:</strong> Play around with tab completion.  Type <code class="docutils literal"><span class="pre">pytho</span></code> and
+push <code class="docutils literal"><span class="pre">TAB</span></code>. (erase that then start over) Then type <code class="docutils literal"><span class="pre">p</span></code> and push
+<code class="docutils literal"><span class="pre">TAB</span></code> twice.  (erase that and start over) Then <code class="docutils literal"><span class="pre">ls</span></code>, space, and
+the first few letters of a filename, then push <code class="docutils literal"><span class="pre">TAB</span></code>.</p>
+</div>
+<div class="section" id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The <a class="reference internal" href="../training/linux-shell-tutorial.html"><em>linux shell course</em></a> has
+<em>much</em> more detail.</li>
+<li>Software Carpentry has a <a class="reference external" href="http://swcarpentry.github.io/shell-novice/">basic shell course</a>.  Sections one to 3
+are details of what is above (the rest is about shell scripting).</li>
+</ul>
+<p><strong>Exercise:</strong> for some fun, look at the manual pages for <code class="docutils literal"><span class="pre">cat</span></code>,
+<code class="docutils literal"><span class="pre">head</span></code>, <code class="docutils literal"><span class="pre">tail</span></code>, <code class="docutils literal"><span class="pre">grep</span></code>.</p>
+<p><strong>Exercise (advanced):</strong> read the <a class="reference internal" href="../training/linux-shell-tutorial.html"><em>Linux shell course</em></a> and understand what &#8220;pipes&#8221; and
+&#8220;piping&#8221; are.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ssh.html" class="btn btn-neutral float-right" title="SSH" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python.html" class="btn btn-neutral" title="Python" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

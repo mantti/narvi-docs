@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="Scientific computing" href="index.html"/>
+        <link rel="next" title="Linux shell crash course" href="shell.html"/>
+        <link rel="prev" title="Pitfalls of Jupyter Notebooks" href="jupyter-pitfalls.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scientific computing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="encryption.html">Encryption for researchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter-pitfalls.html">Pitfalls of Jupyter Notebooks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-distributions">Python distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-own-packages-virtualenv-conda-and-pip">Installing own packages: Virtualenv, conda, and pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anaconda">Anaconda</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#conda-environments">Conda environments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-pip-usage">Basic pip usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-virtualenv">Python: virtualenv</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">Linux shell crash course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zen-of-scicomp.html">The Zen of Scientific computing</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Scientific computing</a> &raquo;</li>
+      
+    <li>Python</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/scicomp/python.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python">
+<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<p><em>Note</em> For triton specific instructions see
+<a class="reference internal" href="../triton/apps/python.html"><em>triton python page</em></a>.  For Aalto Linux workstation
+specific stuff, see <a class="reference internal" href="../aalto/python.html"><em>Aalto python page</em></a>.</p>
+<p>Python is widely used high level programming language that is widely
+used in many branches of science.</p>
+<div class="section" id="python-distributions">
+<h2>Python distributions<a class="headerlink" href="#python-distributions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Python to use</th>
+<th class="head">How to install own
+packages</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Simple programs with
+common packages, not
+switching between
+Pythons often</td>
+<td>Anaconda 2/3</td>
+<td><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span></code></td>
+</tr>
+<tr class="row-odd"><td>Most of the use cases,
+but sometimes different
+versions of modules
+needed</td>
+<td>Anaconda 2/3</td>
+<td>conda environment +
+conda</td>
+</tr>
+<tr class="row-even"><td>Special advanced cases.</td>
+<td>Python from module
+system</td>
+<td>virtualenv + pip install</td>
+</tr>
+</tbody>
+</table>
+<p>There are two main versions of python: 2 and 3. There are also
+different distributions: The &#8220;regular&#8221; CPython that is usually
+provided with the operating system, Anaconda (a package containing
+cpython + a lot of other scientific software all bundled togeter),
+PyPy (a just-in-time compiler, which can be much faster for some use
+cases).</p>
+<ul class="simple">
+<li>For general scientific/data science use, we suggest that you use
+Anaconda. It comes with the most common scientific software included,
+and is reasonably optimized.</li>
+<li>PyPy is still mainly for advanced use (it can be faster under certain
+cases, but does not work everywhere). It is available in a module.</li>
+</ul>
+<p>Installing your own packages with &#8220;pip install&#8221; won&#8217;t work unless you
+have administrator access, since it tries to install globally for all
+users. Instead, you have these options:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span></code>: install a package in your home directory
+(<code class="docutils literal"><span class="pre">~/.local/lib/pythonN.N/</span></code>). This is quick and effective, but if
+you start using multiple versions of Python, you will start having
+problems and the only recommendation will be to delete all modules
+and reinstall.</li>
+<li>Virtual environments: these are self-contained python environment
+with all of its own modules, separate from any other. Thus, you can
+install any combination of modules you want, and this is most
+recommended.<ul>
+<li>Anaconda: use conda, see below</li>
+<li>Normal Python: virtualenv + pip install, see below</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="installing-own-packages-virtualenv-conda-and-pip">
+<h2>Installing own packages: Virtualenv, conda, and pip<a class="headerlink" href="#installing-own-packages-virtualenv-conda-and-pip" title="Permalink to this headline">¶</a></h2>
+<p>You often need to install your own packages. Python has its own package
+manager system that can do this for you. There are three important
+related concepts:</p>
+<ul class="simple">
+<li>pip: the Python package installer. Installs Python packages globally,
+in a user&#8217;s directory (<code class="docutils literal"><span class="pre">--user</span></code>), or anywhere. Installs from the
+<a class="reference external" href="https://pypi.org/">Python Package Index</a>.</li>
+<li>virtualenv: Creates a directory that has all self-contained packages
+that is manageable by the user themself. When the virtualenv is
+activated, all the operating-system global packages are no longer
+used. Instead, you install only the packages you want. This is
+important if you need to install specific versions of software, and
+also provides isolation from the rest of the system (so that you work
+can be uninterrupted). It also allows different projects to have
+different versions of things installed. virtualenv isn&#8217;t magic, it
+could <em>almost</em> be seen as just manipulating PYTHONPATH, PATH, and the
+like. Docs: <a class="reference external" href="https://docs.python-guide.org/dev/virtualenvs/">https://docs.python-guide.org/dev/virtualenvs/</a></li>
+<li>conda: Sort of a combination of package manager and virtual
+environment. However, it <em>only</em> installed packages into environments,
+and is <em>not</em> limited to Python packages. It can also install other
+libraries (c, fortran, etc) into the environment. This is extremely
+useful for scientific computing, and the reason it was created. Docs
+for envs: <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/concepts/environments.html">https://conda.io/projects/conda/en/latest/user-guide/concepts/environments.html</a>.</li>
+</ul>
+<p>So, to install packages, there is pip and conda. To make virtual
+environments, there is venv and conda.</p>
+<p>Advanced users can see this <a class="reference external" href="https://conda.io/projects/conda/en/latest/commands.html#conda-vs-pip-vs-virtualenv-commands">rosetta
+stone</a>
+for reference.</p>
+</div>
+<div class="section" id="anaconda">
+<h2>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.anaconda.com">Anaconda</a> is a Python distribution by
+Continuum Analytics. It is nothing fancy, they just take a lot of useful
+scientific packages and put them all together, make sure they work, and
+do some sort of optimization. They also include all of the libraries
+needed. It is also all open source, and is packaged nicely so that it
+can easily be installed on any major OS. Thus, for basic use, it is a
+good base to start with. <strong>virtualenv</strong> does not work with Anaconda, use
+conda instead.</p>
+<div class="section" id="conda-environments">
+<h3>Conda environments<a class="headerlink" href="#conda-environments" title="Permalink to this headline">¶</a></h3>
+<p>A conda environment lets you install all your own packages. For
+instructions how to create, activate and deactivate conda envrionments
+see <a class="reference external" href="http://conda.pydata.org/docs/using/envs.html">http://conda.pydata.org/docs/using/envs.html</a> .</p>
+<p>A few notes about conda environments:</p>
+<ul class="simple">
+<li>Once you use a conda environment, everything goes into it. Don&#8217;t mix
+versions with, for example, local packages in your home dir.
+Eventually you&#8217;ll get dependency problems.</li>
+<li>Often the same goes for other python based modules. We have setup
+many modules that do use anaconda as a backend. So, if you know what
+you are doing this might work.</li>
+<li>The commands below will fail:<ul>
+<li><code class="docutils literal"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">foo</span> <span class="pre">pip</span></code> # tries to use the global dir, use the
+<code class="docutils literal"><span class="pre">--user</span></code> flag instead</li>
+<li><code class="docutils literal"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--prefix</span> <span class="pre">$WRKDIR/foo</span> <span class="pre">--clone</span> <span class="pre">root</span></code> # will fail as our
+anaconda module has additional packages (e.g. via pip) installed.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="basic-pip-usage">
+<h2>Basic pip usage<a class="headerlink" href="#basic-pip-usage" title="Permalink to this headline">¶</a></h2>
+<p>pip install by itself won&#8217;t work, because it tries to install globally.
+Instead, use this:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install --user
+</pre></div>
+</div>
+<p><strong>Warning!</strong> If you do this, then the module will be shared among all
+your projects. It is quite likely that eventually, you will get some
+incompatibilities between the Python you are using and the modules
+installed. In that case, you are on your own (simple recommendation is
+to remove all modules from <code class="docutils literal"><span class="pre">~/.local/lib/pythonN.N</span></code> and reinstall). <strong>If
+you get incompatible module errors, our first recommendation will be to
+remove everything installed this way and not do it anymore.</strong></p>
+</div>
+<div class="section" id="python-virtualenv">
+<h2>Python: virtualenv<a class="headerlink" href="#python-virtualenv" title="Permalink to this headline">¶</a></h2>
+<p>Virtualenv is default-Python way of making environments, but does
+<strong>not</strong> work with Anaconda.</p>
+<div class="highlight-python"><div class="highlight"><pre># Create environment
+virtualenv DIR
+
+# activate it (in each shell that uses it)
+source DIR/bin/activate
+
+# install more things (e.g. ipython, etc.)
+pip install PACKAGE_NAME
+
+# deactivate the virtualenv
+deactivate
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shell.html" class="btn btn-neutral float-right" title="Linux shell crash course" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jupyter-pitfalls.html" class="btn btn-neutral" title="Pitfalls of Jupyter Notebooks" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

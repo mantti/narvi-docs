@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data storage &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="Data: outline, requesting space, requesting access" href="aaltodata.html"/>
+        <link rel="prev" title="Aalto Windows" href="windows.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Data storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary-table">Summary table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-notes">General notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filesystem-list">Filesystem list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quota-errors">Quota errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterhub.html">JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>Data storage</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/aaltostorage.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-storage">
+<h1>Data storage<a class="headerlink" href="#data-storage" title="Permalink to this headline">¶</a></h1>
+<p>This page outlines the storage options available for your data. There
+are many options available, some provided by CSIT, some provided by
+Aalto IT Services, and some provided by Science IT. For clarity, this
+page describes them all, so that you can have an easy reference.</p>
+<p>When starting a new project, please first consider the big picture of
+good Research Data Management: See the <a class="reference internal" href="../data/index.html"><em>general data management
+pages here</em></a> and <a class="reference external" href="https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science">Aalto&#8217;s
+page</a>. On
+Aalto&#8217;s page, there are links to solutions for Opening, Collaborating
+and Archiving. Our department&#8217;s resources are just one part of that.</p>
+<p>This page is currently a bit Linux-centric, because Linux is best
+supported.</p>
+<p><strong>Other operating systems:</strong> Windows and OSX workstations do not
+currently have any of these paths mounted. In the future, project and
+archive may be automatically mounted. You can always remote mount via
+sshfs or SMB. See the <a class="reference internal" href="remoteaccess.html"><em>remote access</em></a> page for
+Linux, Mac, and Windows instructions for home,project, and archive. In
+OSX, there is a shortcut in the launcher for mounting home. In Windows
+workstations, this is Z drive.  On your own computers, you may need to
+use <code class="docutils literal"><span class="pre">AALTO\username</span></code> as your username for any of the SMB mounts.</p>
+<p><strong>Laptops:</strong> Laptops have their own filesystems, including home
+directories. These are not backed up automatically. Other directories
+can be mounted as described on the <a class="reference internal" href="remoteaccess.html"><em>remote
+access</em></a> page.</p>
+<div class="section" id="summary-table">
+<h2>Summary table<a class="headerlink" href="#summary-table" title="Permalink to this headline">¶</a></h2>
+<p>This table lists all available options in Science-IT departments, including those not managed by
+departments. In general, <strong>project</strong> is for most research data that requires
+good backups. For big data, use <strong>scratch</strong>. Request <strong>separate
+projects</strong> when needed to keep things organized.INLINE</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Filesystem</th>
+<th class="head">Path (Linux)</th>
+<th class="head">Triton?</th>
+<th class="head">Quota</th>
+<th class="head">Backups?</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>home</td>
+<td>/u/.../$user
+name/unix</td>
+<td>no</td>
+<td>40 GiB</td>
+<td>yes,
+$HOME/../.sn
+apshot/</td>
+<td>Used for
+personal and
+non-research
+files</td>
+</tr>
+<tr class="row-odd"><td>project</td>
+<td>/m/$dept/proj
+ect/$project/</td>
+<td>some</td>
+<td>per-project,
+up to 100s
+of GiB</td>
+<td>Yes,
+hourly/daily
+/weekly.
+(.snapshot)</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>archive</td>
+<td>/m/$dept/arch
+ive/
+$project/</td>
+<td>some</td>
+<td>per-project,
+up to 100s
+of GiB</td>
+<td>Yes,
+hourly/daily
+weekly.
++ off-site
+tape
+backups.
+(.snapshot)</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>scratch</td>
+<td>/m/$dept/scr
+atch/$pro
+hect/</td>
+<td>yes</td>
+<td>per-project,
+2 PiB
+available</td>
+<td>RAID6, but
+no backups.</td>
+<td>Don&#8217;t even
+think about
+leaving
+irreplaceabl
+e
+files here!
+Need Triton
+account.</td>
+</tr>
+<tr class="row-even"><td>work</td>
+<td>/m/$dept/wor
+k/$username/</td>
+<td>yes</td>
+<td>200GB
+default</td>
+<td>RAID6, but
+no backups.</td>
+<td>same as
+scratch.
+Need Triton
+account.</td>
+</tr>
+<tr class="row-odd"><td>local</td>
+<td>/l/$username
+/</td>
+<td>yes</td>
+<td>usually a
+few 100s GiB
+available</td>
+<td>No, and
+destroyed if
+computer
+reinstalled.</td>
+<td><p class="first">Directory
+needs to be
+created and
+permissions
+should be
+made
+reasonable
+(quite
+likely
+&#8216;chmod 700
+/l/$USER&#8217;,
+by default
+has read
+access for
+everyone!)</p>
+<p class="last">Space usage:
+`du -sh
+/l/`. Not
+shared among
+computers.</p>
+</td>
+</tr>
+<tr class="row-even"><td>tmpfs</td>
+<td>/run/user/$u
+id/</td>
+<td>yes</td>
+<td>local memory</td>
+<td>No</td>
+<td>Not shared.</td>
+</tr>
+<tr class="row-odd"><td>webhome</td>
+<td><p class="first">$HOME/public
+_html/</p>
+<p class="last">(/m/webhome/
+...)</p>
+</td>
+<td>no</td>
+<td>1 GiB</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="https://users.aalto.fi/~USER/">https://use
+rs.aalto.fi/
+~USER/</a></td>
+</tr>
+<tr class="row-even"><td>custom
+solutions</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Contact us
+for special
+needs, like
+sensitive
+data, etc.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="general-notes">
+<h2>General notes<a class="headerlink" href="#general-notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The table below details the types of filesystems available.</li>
+<li>The path /<strong>m/$dept/</strong> is designed to be a standard location for mounts.
+In particular, this is shared with Triton.</li>
+<li>The server <code class="docutils literal"><span class="pre">magi</span></code> is <code class="docutils literal"><span class="pre">magi.cs.aalto.fi</span></code> and is for the CS
+department. Home directory is mounted here without kerberos
+protection but directories under /m/ need active kerberos ticket
+(that can be acquired with &#8216;kinit&#8217; command) . <code class="docutils literal"><span class="pre">taltta</span></code> is
+<code class="docutils literal"><span class="pre">taltta.aalto.fi</span></code> and is for all Aalto staff. Both use normal
+Aalto credentials.</li>
+<li><strong>Common problem:</strong> The Triton <code class="docutils literal"><span class="pre">scratch</span></code>/<code class="docutils literal"><span class="pre">work</span></code> directories are
+automounted. If you don&#8217;t see it, enter the <em>full name</em> then tab
+complete and it will appear. It will appear after you try accessing
+with the <em>full name</em>.</li>
+<li><strong>Common problem:</strong> These filesystems are protected with Kerberos,
+which means that you must be authenticated with <em>Kerberos tickets</em> to
+access them. This normally happens automatically, but they expire
+after some time. If you are using systems remotely (the shell
+servers) or have stuff running in the background, this may become a
+problem. To solve, run <code class="docutils literal"><span class="pre">kinit</span></code> and it will refresh your tickets..</li>
+</ul>
+</div>
+<div class="section" id="filesystem-list">
+<h2>Filesystem list<a class="headerlink" href="#filesystem-list" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>home:</strong> your home directory<ul>
+<li>Shared with the Aalto environment, for example regular Aalto
+workstations, Aalto shell servers, etc.</li>
+<li>Should not be used for research work, personal files only. Files
+are lost once you leave the university.<ul>
+<li>Instead, use project for research files, so they are accessible
+to others after you leave.</li>
+</ul>
+</li>
+<li>Quota 20 GiB.</li>
+<li>Backups recoverable by <code class="docutils literal"><span class="pre">$HOME/../.snapshot/</span></code> (on linux
+workstations at least).</li>
+<li>SMB mounting: <code class="docutils literal"><span class="pre">smb://home.org.aalto.fi/</span></code></li>
+</ul>
+</li>
+<li><strong>project:</strong> main place for shared, backed-up project files<ul>
+<li><code class="docutils literal"><span class="pre">/m/$dept/project/$project/</span></code></li>
+<li>Research time storage for data that requires backup. Good for e.g.
+code, articles, other important data. Generally for small amount
+(10s-100s GiB) of data per project.</li>
+<li>This is the normal place for day to day working files which need
+backing up.</li>
+<li>Multi user, per-group.</li>
+<li>Quotas: from 10s to 100s of GiB</li>
+<li>Quotas are not designed to hold extremely large research data
+(TiBs). Ideal case would be 10s of GiB, and then bulk intermediate
+files on scratch.</li>
+<li>Weekly backup to tape (to recover from major failure) + snapshots
+(recover accidentally deleted files). Snapshots go back:<ul>
+<li>hourly last 26 working hours (8-20)</li>
+<li>daily last 14 days</li>
+<li>weekly last 10 weeks</li>
+<li>Can be recovered using <code class="docutils literal"><span class="pre">.snapshot/</span></code> within project
+directories</li>
+</ul>
+</li>
+<li>Accessible on <code class="docutils literal"><span class="pre">magi</span></code>/<code class="docutils literal"><span class="pre">taltta</span></code> at the same path.</li>
+<li>SMB mounting: <code class="docutils literal"><span class="pre">smb://tw-cs.org.aalto.fi/project/$group/</span></code></li>
+</ul>
+</li>
+<li><strong>archive:</strong><ul>
+<li><code class="docutils literal"><span class="pre">/m/$dept/archive/$project/</span></code></li>
+<li>For data that should be kept accessible for 1-5 years after the
+project has ended. Alternatively a good place to store a copy of a
+large original data (backup).</li>
+<li>This is practically the same as project, but retains snapshots
+for longer so that data is ensured to be written to tape
+backups.</li>
+<li>This is a disk system, so does have reasonable performance.
+(Actually, same system as project, but separation makes for easier
+management).</li>
+<li>Quotas: 10s to 1000s of GiB</li>
+<li>Backups: same as project.</li>
+<li>Accessible on <code class="docutils literal"><span class="pre">magi</span></code>/<code class="docutils literal"><span class="pre">taltta</span></code> at the same path.</li>
+<li>SMB mounting: <code class="docutils literal"><span class="pre">smb://tw-cs.org.aalto.fi/archive/$group/</span></code></li>
+</ul>
+</li>
+<li><strong>scratch:</strong> large file storage and work, not backed up (Triton).<ul>
+<li><code class="docutils literal"><span class="pre">/m/$dept/scratch/$group/</span></code></li>
+<li>Research time storage for data that does not require backup. Good
+for temporary files and large data sets where the backup of
+original copy is somewhere else (e.g. archive).</li>
+<li>This is for massive, high performance file storage. Large reads
+are extremely fast (1+ GB/s).</li>
+<li>This is a lustre file system <strong>as part of triton</strong> (which is in
+Keilaniemi).</li>
+<li>Quotas: 10s to 100s of TiB. The university has 2 PB available
+total.</li>
+<li>In order to use this, <strong>you must have a triton account</strong>. If you
+don&#8217;t, you get &#8220;input/output error&#8221; which is extremely confusing.</li>
+<li>On workstations, this is <strong>mounted via NFS</strong> (and accessing it
+transfers data from Keilaniemi on each access), so it is <strong>not</strong>
+fast on workstations, just large file storage. For high
+performance operations, work on triton and use the workstation
+mount for convenience when visualizing.</li>
+<li>This is RAID6, so is pretty well protected against single disk
+failures, but not backed up at all. It is possible that all data
+could be lost. <strong>Don&#8217;t even think about leaving irreplaceable
+files here.</strong> CSC actually had a problem in 2016 that resulted in
+data loss. It is extremely rare (decades) thing, but it can
+happen. (still, it&#8217;s better than your laptop or a drive on your
+desk. Human error is the greatest risk here).</li>
+<li>Accessible on <code class="docutils literal"><span class="pre">magi</span></code>/<code class="docutils literal"><span class="pre">taltta</span></code> at the same path.</li>
+<li>SMB mounting:
+<code class="docutils literal"><span class="pre">smb://data.triton.aalto.fi/scratch/$dept/$dir/</span></code>.  (Username
+may need to be <code class="docutils literal"><span class="pre">AALTO\yourusername</span></code>.)</li>
+</ul>
+</li>
+<li><strong>Triton work:</strong> personal large file storage and work (Triton)<ul>
+<li><code class="docutils literal"><span class="pre">/m/$dept/work/$username/</span></code></li>
+<li>This is the equivalent of scratch, but per-person. Data is lost
+once you leave.</li>
+<li>Accessible on <code class="docutils literal"><span class="pre">magi</span></code>/<code class="docutils literal"><span class="pre">taltta</span></code> at the same path.</li>
+<li>SMB mounting: <code class="docutils literal"><span class="pre">smb://data.triton.aalto.fi/work/$username</span></code>.
+(Username may need to be <code class="docutils literal"><span class="pre">AALTO\yourusername</span></code>.)</li>
+</ul>
+</li>
+<li><strong>local:</strong> local disks for high performance<ul>
+<li>You can use local disks for day to day work. These are not
+redundant or backed up at all. Also, if your computer is
+reinstalled, all data is lost.</li>
+<li>Performance is much higher than any of the other network
+filesystems, especially for small reads. Scratch+Triton is still
+faster for large reads.</li>
+<li>If you use this, make sure you set UNIX permissions to restrict
+the data properly. Ask if you are not sure.</li>
+<li>If you store sensitive data here, you are responsible for physical
+security of your machine (as in no one taking a hard drive). Unix
+permissions should protect most other cases.</li>
+<li>When you are done with the computer, you are also responsible for
+secure management/wiping/cleanup of this data.</li>
+<li>See the note about disk wiping under <a class="reference internal" href="linux.html"><em>Aalto
+Linux</em></a> (under &#8220;when you are done with your
+computer&#8221;). IT should do this, but if it&#8217;s important you must
+mention it, too.</li>
+</ul>
+</li>
+<li><strong>tmpfs</strong>: in-memory filesystem<ul>
+<li>This is a filesystem that stores all data in memory. It is
+extremely high performance, but extremely temporary (lost on each
+reboot). Also shares RAM with your processes, so don&#8217;t use too
+much and clean up when done.</li>
+<li>TODO: are these available everywhere?</li>
+</ul>
+</li>
+<li><strong>webhome:</strong> web space for <a class="reference external" href="https://users.aalto.fi">users.aalto.fi</a><ul>
+<li>This is the space for <a class="reference external" href="https://users.aalto.fi">users.aalto.fi</a>
+space can be accessed from the <code class="docutils literal"><span class="pre">public_html</span></code> link in your home
+directory.</li>
+<li>This is not a real research filesystem, but convenient to note
+here.</li>
+<li>Quota (2015) is 1 GiB. (<code class="docutils literal"><span class="pre">/m/webhome/webhome/</span></code>)</li>
+<li><a class="reference external" href="https://users.aalto.fi/~USER/">https://users.aalto.fi/~USER/</a></li>
+</ul>
+</li>
+<li><strong>triton home</strong>: triton&#8217;s home directories<ul>
+<li>Not part of departments, but documented here for convenience</li>
+<li>The home directory on Triton.</li>
+<li>Backed up daily.</li>
+<li>Not available on workstations.</li>
+<li>Quota: 1 GB</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><strong>Aalto work</strong>: Aalto&#8217;s general storage space<ul>
+<li>Not often used within Science-IT departments: we use project and
+archive above, which are managed by us and practically
+equivalent.  You could request space from here, but expect less
+personalized service.</li>
+<li>Aalto home directories are actually here now.</li>
+<li>You may request storage space from here, email the Aalto
+servicedesk and request space on work.  The procedures are not
+very well established.</li>
+<li>Data is snapshotted and backed up offsite for disaster recovery.</li>
+<li>Search <a class="reference external" href="https://it.aalto.fi">https://it.aalto.fi</a> for &#8220;work.org.aalto.fi&#8221; for the latest
+instructions.</li>
+<li>SMB mounting via <code class="docutils literal"><span class="pre">smb://work.org.aalto.fi</span></code></li>
+</ul>
+</li>
+<li><strong>Aalto teamwork</strong>: Aalto&#8217;s general storage space<ul>
+<li>Not used directly within Science-IT departments: we have our own
+direct interfaces to this, and <code class="docutils literal"><span class="pre">project</span></code> and <code class="docutils literal"><span class="pre">archive</span></code>
+directories are atually here.</li>
+<li>For information on getting teamwork space (outside of Science-IT
+departments), contact servicedesk.</li>
+<li>Teamwork is unique in that it is arbitrarily extensible, and you
+may buy the space from the vendor directly.  Thus, you can use
+external grant money to buy storage space here.</li>
+<li>SMB mounting via <code class="docutils literal"><span class="pre">smb://teamwork.org.aalto.fi</span></code></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="quota-errors">
+<h2>Quota errors<a class="headerlink" href="#quota-errors" title="Permalink to this headline">¶</a></h2>
+<p><strong>Use the ``quota`` command to see your quota</strong>. If you have scratch or
+work mounted, the quota command will hang and produce errors. For now,
+check your scratch/work quotas on Triton.</p>
+<p>The scratch and work directories do quotas by unix group, and <strong>there is
+a strange error about quota exceeded</strong> that you may get sometimes when
+the unix group of the file or directory is wrong. See the full
+information at <a class="reference internal" href="../triton/usage/quotas.html"><em>Quotas</em></a> and summary below. You
+may have to fix this on Triton if the things below don&#8217;t work.</p>
+<ul class="simple">
+<li>Symptoms: &#8220;Quota exceeded&#8221; when you are trying to make a new file in
+scratch or work directory.</li>
+<li>Root cause: quotas are by groups, and if a directory is not
+setgroupid (chmod g+s), then files being created will have a
+different group (with no quota for that location), thus quota
+exceeded by default. This often happens when you copy a directory
+from one place to another, and then <em>later</em> try to make new files in
+that directory.</li>
+<li>Solution: <code class="docutils literal"><span class="pre">chmod</span> <span class="pre">g+s</span> <span class="pre">$directory</span></code> or
+<code class="docutils literal"><span class="pre">find</span> <span class="pre">$directory</span> <span class="pre">-type</span> <span class="pre">d</span> <span class="pre">-exec</span> <span class="pre">chmod</span> <span class="pre">g+s</span> <span class="pre">{}</span> <span class="pre">\;</span></code> (you don&#8217;t
+want to make regular files g+s mode).</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aaltodata.html" class="btn btn-neutral float-right" title="Data: outline, requesting space, requesting access" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="windows.html" class="btn btn-neutral" title="Aalto Windows" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

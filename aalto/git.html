@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Aalto Gitlab &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="Python" href="python.html"/>
+        <link rel="prev" title="HTCondor" href="htcondor.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterhub.html">JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Aalto Gitlab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#git-in-general">Git in general</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aalto-gitlab-service">Aalto Gitlab service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extra-instructions-for-aalto-gitlab">Extra instructions for Aalto Gitlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coderefinery-gitlab-and-gitlab-ci-service">CodeRefinery Gitlab and Gitlab CI service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recommendations">Recommendations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>Aalto Gitlab</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/git.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aalto-gitlab">
+<h1>Aalto Gitlab<a class="headerlink" href="#aalto-gitlab" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://version.aalto.fi">https://version.aalto.fi</a> is a Gitlab installation for the Aalto
+community.  Gitlab is a <code class="docutils literal"><span class="pre">git</span></code> server and hosting facility (an open
+source Github, basically).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>This page is about <a class="reference external" href="https://version.aalto.fi">https://version.aalto.fi</a>, the Aalto gitlab
+installation.</li>
+<li><a class="reference internal" href="../scicomp/git.html"><em>scicomp/git</em></a> contains our pointers for Git
+usage in general.</li>
+<li><a class="reference internal" href="../news/git_migration.html"><em>Git migration</em></a> contains information
+on switching from subversion or other git repositories to Gitlab.</li>
+</ul>
+</div>
+<div class="section" id="git-in-general">
+<h2>Git in general<a class="headerlink" href="#git-in-general" title="Permalink to this headline">¶</a></h2>
+<p>Git seems to have become the most popular and supported version control
+system, even if it does have some rough corners.  See the general
+<a class="reference internal" href="../scicomp/git.html"><em>git page</em></a> on this site for pointers.</p>
+</div>
+<div class="section" id="aalto-gitlab-service">
+<h2>Aalto Gitlab service<a class="headerlink" href="#aalto-gitlab-service" title="Permalink to this headline">¶</a></h2>
+<p>Aalto has a self-hosted Gitlab installation at
+<a class="reference external" href="https://version.aalto.fi">https://version.aalto.fi</a>, which has replaced most department-specific
+Gitlabs.  With Aalto Gitlab, you can:</p>
+<ul class="simple">
+<li>Have unlimited private repositories</li>
+<li>Have whatever groups you need</li>
+<li>Get local support</li>
+</ul>
+<p>The <a class="reference external" href="https://version.aalto.fi/docs/aalto_version_quickstart_guide.pdf">Aalto instructions can be found here</a>, and
+general <a class="reference external" href="https://version.aalto.fi/gitlab/help">gitlab help here</a>.</p>
+<p>All support is provided by Aalto ITS. Since all data is stored within
+Aalto and is managed by Aalto, this is suitable for materials up to
+the &#8220;confidential&#8221; level.</p>
+</div>
+<div class="section" id="extra-instructions-for-aalto-gitlab">
+<h2>Extra instructions for Aalto Gitlab<a class="headerlink" href="#extra-instructions-for-aalto-gitlab" title="Permalink to this headline">¶</a></h2>
+<p>Always login with HAKA wherever you see the button.  To use your Aalto
+account otherwise, use <code class="docutils literal"><span class="pre">username&#64;aalto.fi</span></code> and your Aalto password
+(for example, use this with <code class="docutils literal"><span class="pre">https</span></code> pushing and pulling).  But, you
+really should try to configure ssh keys for pushing and pulling.</p>
+<p>For outside/public sharing read-only, you can make repositories public.</p>
+<p>If you need to share with an <strong>outside collaborator</strong>, this is supported.
+These outside partners can access repositories shared with them, but
+not make new ones.  They will get a special gitlab username/password,
+and should use that with the normal gitlab login boxes.  To request an
+collaborator account, their Aalto sponsor should <a class="reference external" href="https://workflow.aalto.fi/version_ext/">go here to the
+request form</a> (employees only).  (You can always set
+a repository as public, so anyone can clone.  Another hackish
+method is to add ssh deploy keys (read-only or read-write) for outside
+collaborators, but this wouldn&#8217;t be recommended for serious cases.)</p>
+<p>For <strong>public projects</strong> where you want to build a community, you can also consider
+Github.  There&#8217;s nothing wrong with having both sites for your group, just
+make sure people know about both.  Gitlab can have public projects,
+and Github can also have group organizations.</p>
+<p><strong>NOTE!</strong> If your work contract type changes (e.g. staff -&gt; visitor,
+student-&gt;employee, different department),
+the Aalto Version blocks the access as a &#8220;security&#8221; measure. Please
+contact Aalto ITS Servicedesk &lt;<a class="reference external" href="mailto:servicedesk&#37;&#52;&#48;aalto&#46;fi">servicedesk<span>&#64;</span>aalto<span>&#46;</span>fi</a>&gt; to unblock you.
+This is annoying, but can&#8217;t be fixed yet.</p>
+<p>The service doesn&#8217;t have quotas right now, but has limited resources
+and we expect everyone to use disk space responsibly.  If you use too
+much space, you will be contacted.  Just do your best to use the
+service well, and the admins will work with you to get your work done.</p>
+</div>
+<div class="section" id="coderefinery-gitlab-and-gitlab-ci-service">
+<h2>CodeRefinery Gitlab and Gitlab CI service<a class="headerlink" href="#coderefinery-gitlab-and-gitlab-ci-service" title="Permalink to this headline">¶</a></h2>
+<p>CodeRefinery is a publically funded project (by Nordforsk / Nordic
+e-Infrastructure Collaboration) which provides teaching and a <a class="reference external" href="https://coderefinery.org/repository/">GitLab
+platform for Nordic researchers</a>.  This is
+functionally the same as the Aalto Gitlab and may be more useful if
+you have cross-university collaboration, but requires more activation
+to set up.</p>
+<p>They also have a Gitlab CI (continuous integration) service which can
+be used for automated building and testing.  This is also free for
+Nordic researchers, and <em>can be used even with Aalto Gitlab</em>.  Check
+their <a class="reference external" href="https://coderefinery.org/repository/">repository site info</a>, if info isn&#8217;t
+there yet, then mail their support asking about it.</p>
+</div>
+<div class="section" id="recommendations">
+<h2>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">version.aalto.fi</span></code> is a great resource for research groups.  Research
+groups should create a &#8220;Gitlab group&#8221; and give all their members access to
+it.  This way, code and important data will last longer than single
+person&#8217;s time at Aalto.  Add everyone as a member to this group so
+that everyone can easily find code.</p>
+<p>Think about the long term.  Will you need access to this code in 5
+years, and if so what will you do?</p>
+<ul class="simple">
+<li>If you are a research group, put your code in a Gitlab group.  The
+users can constantly switch, but the code will stay with the group.</li>
+<li>If you are an individual, plan on needing a different location once
+you leave Aalto.  If your code can become group code, include it in
+the group repository so at least someone will keep it at Aalto.</li>
+<li><a class="reference external" href="https://zenodo.org">Zenodo</a> is a long-term data archive.  When
+you publish projects, consider archiving your code there.  (It has
+integration with Github, which you might prefer to use if you are
+actually making your code open.)  Your code is then citeable
+with a DOI.</li>
+<li>In all cases, if multiple people are working on something, think
+about licenses at the beginning.  If you don&#8217;t, you may be blocked
+from using your own work.</li>
+</ul>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>What password should I use?</strong> It is best to use HAKA to log in to
+gitlab, in which case you don&#8217;t need a separate gitlab password. To
+push, it is best to use ssh keys.</li>
+<li><strong>My account is blocked!</strong> That&#8217;s not a question, but Gitlab blocks users
+when your Aalto unit changes. This is unfortunately part of gitlab
+and hasn&#8217;t been worked around yet. Mail <a class="reference external" href="mailto:servicedesk&#37;&#52;&#48;aalto&#46;fi">servicedesk<span>&#64;</span>aalto<span>&#46;</span>fi</a> with
+your username and request &#8220;my version.aalto.fi username XXX be
+unblocked (because my aalto unit changed)&#8221; and they should do it.</li>
+<li><strong>What happens when I leave, can I still access my stuff?</strong> Aalto
+can only support it&#8217;s community, so your projects should be owned by
+a group which you can continue collaborating after you leave (note
+that this is a major reason for group-based access control!).  Email
+servicedesk for information on what to do to become an external
+collaborator.</li>
+<li><strong>When are accounts/data deleted?</strong> The deletion policy is findable
+in the <a class="reference external" href="https://version.aalto.fi/policies/version_aalto_policy_eng.pdf">privacy policy</a>.  In 2017, it&#8217;s 6 months
+after Aalto account closed, 24 months after last login, or 12 months
+after last login of an external collaborator.</li>
+<li><strong>Are there continuous integration (CI) services available?</strong>  Not
+from Aalto, but the CodeRefinery project has free CI services to
+Nordics, see <a class="reference external" href="https://coderefinery.org/repository/">their site</a>
+and the description above.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python.html" class="btn btn-neutral float-right" title="Python" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="htcondor.html" class="btn btn-neutral" title="HTCondor" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

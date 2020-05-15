@@ -1,0 +1,674 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Aalto Linux &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="Aalto Mac" href="mac.html"/>
+        <link rel="prev" title="Aalto account" href="account.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Aalto Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basics">Basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#laptops">Laptops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#workstations">Workstations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#primary-user">Primary User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#full-disk-encryption-laptops">Full disk encryption (Laptops)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#software">Software</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#already-available">Already available</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ubuntu-packages">Ubuntu packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-module-system">The module system</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#admin-rights">Admin rights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-access-to-your-workstation">Remote access to your workstation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-powerful-computers">More powerful computers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-problems">Common problems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#network-shares-are-not-accessible">Network shares are not accessible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graphical-user-interface-on-aalto-cs-linux-desktop-is-sluggish-unstable-or-does-not-start">Graphical User Interface on Aalto CS Linux desktop is sluggish, unstable or does not start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enter-password-to-unlock-your-login-keyring">Enter password to unlock your login keyring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-linux-some-process-is-stuck-and-freezez-the-whole-session">In linux some process is stuck and freezez the whole session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-do-i-use-ejournals-netmot-and-other-aalto-library-services-from-home">How do I use eJournals, Netmot and other Aalto library services from home?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rsync-complains-about-quota-even-though-there-is-plenty-left">Rsync complains about Quota, even though there is plenty left.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quota-exceeded-or-unable-to-write-files-to-project-work-scratch-archive">Quota exceeded or unable to write files to project / work / scratch / archive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i-cannot-start-firefox">I cannot start Firefox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterhub.html">JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>Aalto Linux</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/linux.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aalto-linux">
+<h1>Aalto Linux<a class="headerlink" href="#aalto-linux" title="Permalink to this headline">¶</a></h1>
+<p>Aalto Linux is provided to all departments in Aalto.  Department IT
+co-maintains this, and in some departments provides more support
+(specifically, CS, NBE, PHYS at least).  It contains a lot of software
+and features to support scientific computing and data.  Both laptop and desktop
+setups are available.</p>
+<p>This page is mainly about the Linux flavor in CS/PHYS/NBE, co-managed
+by these departments and Science-IT.  Most of it is relevant to all
+Aalto, though.</p>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Aalto home directory. In the Aalto Ubuntu workstations, your home
+directory will be your Aalto home directory. That is, the same home
+directory that you have in Aalto Windows machines and the Aalto
+Linux machines, including shell servers (kosh, taltta, lyta, brute, force).</li>
+<li>Most installations have Ubuntu 16.04, 18.04 is coming soon.</li>
+<li><a class="reference external" href="https://inside.aalto.fi/display/ITServices/Linux">Some basic information from Aalto is availiable at
+Inside</a>.</li>
+<li><strong>Login is with Aalto credentials</strong>. Anyone can
+log in to any computer.  Since login is tied to your Aalto account,
+login is tied to your contract status.  Please contact HR if you
+need to access systems after you leave the university or your
+account stops working due to contract expiration.</li>
+<li>All systems are effectively identical, except for local Ubuntu
+packages installed. Thus, switching machines is a low-cost operation.</li>
+<li>Systems are centrally managed using puppet. Any sort of configuration
+group can be set up, for example to apply custom configuration to one
+group&#8217;s computers.</li>
+<li>Large scientific computing resources are provided by the Science-IT
+project. <a class="reference internal" href="../triton/index.html"><em>The compute cluster there is named
+Triton</em></a>. Science-IT is a school of
+science collaboration, and its administrators are embedded in NBE,
+PHYS, CS IT.</li>
+<li>Workstations are on a dedicated network VLAN. The network port must be
+configured before it can be turned on and you can&#8217;t just assume
+that you can move your computer to anywhere else. You can request
+other network
+ports enabled for personal computers, just ask.</li>
+<li>Installation is fully automated via netboot. Once configuration is
+set up, you can reboot and PXE boot to get a fresh install. There is
+almost no local data (except the filesystem for tmp data on the hard
+disks which is not used for anything by default, <code class="docutils literal"><span class="pre">/l/</span></code> below), so
+reinstalling is a low-cost operation. The same should be true for
+upgrading, once the new OS is ready you reboot and netinstall.
+Installation takes less than two hours.</li>
+<li>Default user interface. The new default user interface for Aalto
+Linux is <a class="reference external" href="https://en.wikipedia.org/wiki/Unity_(user_interface)">Unity</a>. If you
+want to switch to the previous default interface (<a class="reference external" href="https://en.wikipedia.org/wiki/GNOME">Gnome</a>), before logging in please
+select &#8220;Gnome Flashback (Metacity)&#8221; by clicking the round ubuntu
+logo close to the &#8220;Login&#8221; input field.</li>
+<li>Personal web pages. What you put under <code class="docutils literal"><span class="pre">~/public_html</span></code> will be
+visible at <code class="docutils literal"><span class="pre">https://users.aalto.fi/~username</span></code>.  See
+<a class="reference internal" href="aaltostorage.html"><em>Data storage</em></a>.</li>
+</ul>
+<p><strong>When requesting a new computer:</strong></p>
+<ul class="simple">
+<li>Contact your department IT</li>
+<li>Let us know who the primary user will be, so that we can set this
+properly.</li>
+</ul>
+<p><strong>When you are done with a computer:</strong></p>
+<ul class="simple">
+<li>Ensure that data is cleaned up. Usually, disks
+will be wiped, but if this is important then you must explicitly
+confirm before you leave.
+There may be data if you use the workstation local disks (not the
+default). There is also a local cache (<code class="docutils literal"><span class="pre">$XDG_CACHE_HOME</span></code>), which
+stores things such as web browser cache. Unix permissions protect all
+data, even if the primary user changes, but it is better safe than
+sorry. Contact IT if you want wipes.</li>
+</ul>
+<div class="section" id="laptops">
+<h3>Laptops<a class="headerlink" href="#laptops" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>You can get laptops with Linux on it.</li>
+<li>Each user should log in the first time while connected to the Aalto
+network.  This will cache the authentication information, then you
+can use it wherever you want.</li>
+<li>Home directories can be synced with the Aalto home directories. This
+is done using unison. TODO: not documented, what about this?</li>
+<li>If you travel, make sure that your primary user is set correctly
+before you go. The system configuration can&#8217;t be updated remotely.</li>
+<li>Otherwise, environment is like the workstations.  You don&#8217;t have
+access to the <code class="docutils literal"><span class="pre">module</span></code> system, though.</li>
+<li>If the keychain password no longer works: see FAQ at the bottom.</li>
+</ul>
+</div>
+<div class="section" id="workstations">
+<h3>Workstations<a class="headerlink" href="#workstations" title="Permalink to this headline">¶</a></h3>
+<p>Most material on this page defaults to the workstation instructions.</p>
+</div>
+</div>
+<div class="section" id="primary-user">
+<h2>Primary User<a class="headerlink" href="#primary-user" title="Permalink to this headline">¶</a></h2>
+<p>The workstations have a concept of the &#8220;primary user&#8221;. This user can
+install software from the existing software repositories and ssh
+remotely to the desktops.</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Primary users are implemented as a group with name</dt>
+<dd><p class="first last"><code class="docutils literal"><span class="pre">$hostname-primaryuser</span></code>. You can check primary user of a computer
+by using <code class="docutils literal"><span class="pre">getent</span> <span class="pre">group</span> <span class="pre">$hostname-primaryuser</span></code> or check your
+primary-userness with <code class="docutils literal"><span class="pre">groups</span></code>.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">If you have a laptop setup, make sure you have the PrimaryUser
+set!  This can&#8217;t be set remotely.</p>
+</li>
+<li><p class="first"><strong>Make sure to let us know about primary users when you get a new
+computer set up or change computers.</strong> You don&#8217;t have to, but it
+makes it convenient for you.</p>
+</li>
+<li><p class="first">It is not currently possible to have group-based primary users (a
+group of users all have primary user capabilities across a whole set
+of computers, which would be useful in flexible office spaces). TODO:
+are we working on this? (however, one user can have primary user
+access across multiple computers, and hosts can have multiple primary
+users, but this does not scale well)</p>
+</li>
+</ul>
+</div>
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p>See the general <a class="reference internal" href="aaltostorage.html"><em>storage page</em></a> for the full story
+(this is mainly oriented towards Linux).  All of the common shared
+directories are available on department Linux by default.</p>
+<p>We recommend that most data is stored in shared group directories, to
+provide access control and sharing.  See <a class="reference internal" href="aaltodata.html"><em>the Aalto data page</em></a>.</p>
+<p>You can use the program <code class="docutils literal"><span class="pre">unison</span></code> or <code class="docutils literal"><span class="pre">unison-gtk</span></code> to synchronise
+files.</p>
+</div>
+<div class="section" id="full-disk-encryption-laptops">
+<h2>Full disk encryption (Laptops)<a class="headerlink" href="#full-disk-encryption-laptops" title="Permalink to this headline">¶</a></h2>
+<p>All new (Ubuntu 16.04) laptops come with full disk encryption by default
+(<a class="reference external" href="https://inside.aalto.fi/display/ITServices/Disk+Encryption+in+Aalto+Linux">instructions</a>).
+This is a big deal and quite secure, if you use a good password.</p>
+<p><strong>When the computer is first turned on</strong>, you will be asked for a disk
+encryption password. Enter something secure and remember it - you have
+only one chance. Should you want to change this password, take the
+computer to an Aalto ITS service desk. They can also add more passwords
+for alternative users for shared computers. Aalto ITS also has a backup
+master key.  (If you have local root access, you can do this with
+<code class="docutils literal"><span class="pre">cryptsetup</span></code>, but if you mess up there&#8217;s nothing we can do).</p>
+<p>Desktop workstations do not have full disk encryption, because data is
+not stored directly on them.</p>
+</div>
+<div class="section" id="software">
+<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="already-available">
+<h3>Already available<a class="headerlink" href="#already-available" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Python: <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda</span></code> (or anaconda2 for Python 2) (desktops)</li>
+<li>Matlab: automatically installed on desktops, Ubuntu package
+on laptops.</li>
+</ul>
+</div>
+<div class="section" id="ubuntu-packages">
+<h3>Ubuntu packages<a class="headerlink" href="#ubuntu-packages" title="Permalink to this headline">¶</a></h3>
+<p>If you have PrimaryUser privileges, you can install Ubuntu packages
+using one of the following commands:</p>
+<ul class="simple">
+<li>By going to the Ubuntu Software Center (Applications -&gt; System Tools
+-&gt; Administration -&gt; Ubuntu Software Centre).  Note: some software
+doesn&#8217;t appear here!  Use the next option.</li>
+<li><code class="docutils literal"><span class="pre">aptdcon</span> <span class="pre">--install</span> <span class="pre">$ubuntu_package_name</span></code> (search for stuff using
+<code class="docutils literal"><span class="pre">apt</span> <span class="pre">search</span></code>)</li>
+<li>By requesting IT to make a package available across all computers
+as part of the standard environment. Help us to create a good
+standard operating environment!</li>
+</ul>
+</div>
+<div class="section" id="the-module-system">
+<h3>The module system<a class="headerlink" href="#the-module-system" title="Permalink to this headline">¶</a></h3>
+<p>The command <code class="docutils literal"><span class="pre">module</span></code> provides a way to manage various installed
+versions of software across many computers. This is the way that we
+install custom software and newer versions of software, if it is not
+available in Ubuntu. Note that these are shell functions that alter
+environment variables, so this needs to be repeated in each new shell
+(or automated in login).</p>
+<ul class="simple">
+<li>See the <a class="reference internal" href="../triton/tut/modules.html"><em>Triton module docs</em></a> docs for
+details.</li>
+<li><code class="docutils literal"><span class="pre">module</span> <span class="pre">avail</span></code> to list all available package.</li>
+<li><code class="docutils literal"><span class="pre">module</span> <span class="pre">spider</span> <span class="pre">$name</span></code> to search for a particular name.</li>
+<li><code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">$name</span></code> to load a module. This adjusts environment
+variables to bring various directories into <code class="docutils literal"><span class="pre">PATH</span></code>, <code class="docutils literal"><span class="pre">LD_LIBRARY_PATH</span></code>,
+etc.</li>
+<li>We will try to keep important modules synced across the workstations
+and Triton, but let us know.</li>
+</ul>
+<p>Useful modules:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">anaconda</span></code> and <code class="docutils literal"><span class="pre">anaconda2</span></code> will always be kept up to date with the latest Python
+Anaconda distribution, and we&#8217;ll try to keep this in sync across
+Aalto Linux and Triton.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="admin-rights">
+<h2>Admin rights<a class="headerlink" href="#admin-rights" title="Permalink to this headline">¶</a></h2>
+<p>Most times you don&#8217;t need to be an admin on workstations.  Our Linux
+systems are centrally managed with non-standard improvements and
+features, and 90% of cases can be handled using existing tools:</p>
+<p>Do you want to:</p>
+<ul class="simple">
+<li>Install Ubuntu packages: <em>Use</em> <code class="docutils literal"><span class="pre">aptdcon</span> <span class="pre">--install</span> <span class="pre">$package_name</span></code> <em>as
+primary user.</em></li>
+<li>This website tells me to run <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span></code> to install
+something.  <em>Don&#8217;t, use the instructions above.</em></li>
+<li>This website gives me some random instructions involving <code class="docutils literal"><span class="pre">sudo</span></code> to
+install their program.  These are not always a good idea to run,
+especially since our computers are networked, centrally managed, and
+these instructions don&#8217;t always work.  Sometimes, these things can
+be installed as a normal user with simple modifications.  Sometimes
+their instructions will break our systems.  In this case, try to
+install as normal user and then send a support request first.  <em>If
+none of these work and you have studied enough to understand the
+risk, you can ask us.  Make sure you give details of what you want
+to do.</em></li>
+<li>I need to change network or some other settings.  Desktops are
+bound to a certain network and settings can&#8217;t be changed, users
+can&#8217;t be managed, etc.</li>
+<li>It&#8217;s a laptop: <em>then yes, there are slightly more cases you need
+this, but see above first.</em></li>
+<li>I do low-level driver, network protocol, or related systems
+development.  <em>Then this is a good reason for root, ask us.</em></li>
+</ul>
+<p>If you do have root and something goes wrong, our help is limited to
+reinstalling (wiping all data - note that most data is stored on
+network drives anyway).</p>
+<p>If you do need root admin rights, you will have to fill out a form and get a
+new <code class="docutils literal"><span class="pre">wa</span></code> account, then Aalto has to approve.  Contact your
+department IT to get the process started.</p>
+</div>
+<div class="section" id="remote-access-to-your-workstation">
+<h2>Remote access to your workstation<a class="headerlink" href="#remote-access-to-your-workstation" title="Permalink to this headline">¶</a></h2>
+<p>If you are primary user, you can ssh to your own workstation from
+certain Aalto servers, including at least <code class="docutils literal"><span class="pre">taltta</span></code>.  See the
+<a class="reference internal" href="remoteaccess.html"><em>remote access page</em></a>.</p>
+</div>
+<div class="section" id="more-powerful-computers">
+<h2>More powerful computers<a class="headerlink" href="#more-powerful-computers" title="Permalink to this headline">¶</a></h2>
+<p>There are different options for powerful computing.</p>
+<p>First, we have desktop Linux workstations that are more powerful than
+normal.  If you want one of these, just ask.  It includes a
+medium-power GPU card.  You can buy a more powerful workstation if you
+need, but...</p>
+<p>Beyond that, we recommend the use of Triton rather than constructing
+own servers which will only be used part-time.  You can either use
+Triton as-is for free, or pay for dedicated hardware for your group.
+Your own hardware as part of Triton means that you can use all Triton
+and even CSC if you need with little extra work.  You could have your
+own login node, or resources as part of the queues.</p>
+<p>Triton is Aalto&#8217;s high-performance computing cluster.  It is not a
+part of the department Linux, but is heavily used by researchers. You
+should see the main documentation at the <a class="reference internal" href="../triton/index.html"><em>Triton user guide</em></a>, but for convenience some is reproduced here:</p>
+<ul class="simple">
+<li>Triton is CentOS (compatible with the Finnish Grid and Cloud
+Infrastructure), while CS workstations are Ubuntu. So, they are not
+identical environments, but we are trying to minimize the
+differences.<ul>
+<li>Since it is is part of FGCI, it is easy to scale to more power if
+needed.</li>
+</ul>
+</li>
+<li>We will try to have similar software installed in workstation and
+Triton module systems.</li>
+<li>The paths <code class="docutils literal"><span class="pre">/m/$dept/</span></code> are designed to be standard across computers</li>
+<li>The <em>project</em> and <em>archive</em> filesystems are not available on all
+Triton nodes. This is because they are NFS shares, and if someone
+starts a massively parallel job accessing data from here, it will
+kill performance for everyone. Since history shows this will
+eventually happen, we have not yet mounted them across all nodes.<ul>
+<li>These are mounted on the login nodes, certain interactive nodes,
+and dedicated group nodes.</li>
+<li>TODO: make this actually happen.</li>
+</ul>
+</li>
+<li>Triton was renewed in 2016 and late 2018.</li>
+<li>All info in the <a class="reference internal" href="../triton/index.html"><em>triton user guide</em></a></li>
+</ul>
+</div>
+<div class="section" id="common-problems">
+<h2>Common problems<a class="headerlink" href="#common-problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="network-shares-are-not-accessible">
+<h3>Network shares are not accessible<a class="headerlink" href="#network-shares-are-not-accessible" title="Permalink to this headline">¶</a></h3>
+<p>If network shares do not work, there is usually two things to try:</p>
+<ul class="simple">
+<li>Permission denied related problems are usually solved by obtaining
+new Kerberos ticket with command &#8216;kinit&#8217;</li>
+<li>If share is not visible when listing directories, try to &#8216;cd&#8217; to that
+directory from terminal. Shares are mounted automatically when they
+are accessed, and might not be visible before you try to change to
+the directory.</li>
+</ul>
+</div>
+<div class="section" id="graphical-user-interface-on-aalto-cs-linux-desktop-is-sluggish-unstable-or-does-not-start">
+<h3>Graphical User Interface on Aalto CS Linux desktop is sluggish, unstable or does not start<a class="headerlink" href="#graphical-user-interface-on-aalto-cs-linux-desktop-is-sluggish-unstable-or-does-not-start" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><ol class="first arabic">
+<li>Check your disk quota from terminal with command <code class="docutils literal"><span class="pre">quota</span></code>. If you
+are not able to log in to GUI, you can change to text console with
+CTRL+ALT+F1 key combo and log in from there. GUI login can be
+found with key combo CTRL+ALT+F7.</li>
+<li>If you are running low on quota (blocks count is close quota), you
+should clean up some files and then reboot the workstation to try
+GUI login again.<ul>
+<li>You can find out what is consuming quota from terminal with
+command:
+<code class="docutils literal"><span class="pre">bash</span> <span class="pre">-c</span> <span class="pre">'cd</span> <span class="pre">&amp;&amp;</span> <span class="pre">du</span> <span class="pre">-sch</span> <span class="pre">.[!.]\*</span> <span class="pre">\*</span> <span class="pre">\|sort</span> <span class="pre">-h'</span></code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="enter-password-to-unlock-your-login-keyring">
+<h3>Enter password to unlock your login keyring<a class="headerlink" href="#enter-password-to-unlock-your-login-keyring" title="Permalink to this headline">¶</a></h3>
+<p>You should change your Aalto password in your main Aalto workstation. If
+you change the password through e.g. <a class="reference external" href="https://password.aalto.fi">https://password.aalto.fi</a>, then
+your workstation&#8217;s password manager (keyring) does not know the new
+password and requests you to input the old Aalto password.</p>
+<p>If you remember your old password, try this:</p>
+<ol class="arabic simple">
+<li>Start application Passwords and Keys (&#8220;seahorse&#8221;)</li>
+<li>Click the &#8220;Login&#8221; folder under &#8220;Passwords&#8221; with right mouse button
+and select &#8220;Change password&#8221;</li>
+<li>Type in your old password to the opening dialog</li>
+<li>Input your current Aalto password to the &#8220;new password&#8221; dialog</li>
+<li>Reboot the workstation / laptop</li>
+</ol>
+<p>If changing password didn&#8217;t help, then try this:</p>
+<ul class="simple">
+<li>Then instead of selecting the &#8220;change password&#8221; from the menu behind
+right mouse key select &#8220;delete&#8221; and reboot the workstation. When
+logging in, the keyring application should use your logging key
+automatically.</li>
+</ul>
+</div>
+<div class="section" id="in-linux-some-process-is-stuck-and-freezez-the-whole-session">
+<h3>In linux some process is stuck and freezez the whole session<a class="headerlink" href="#in-linux-some-process-is-stuck-and-freezez-the-whole-session" title="Permalink to this headline">¶</a></h3>
+<p>You can kill a certain (own) process via text console.</p>
+</div>
+<div class="section" id="how-do-i-use-ejournals-netmot-and-other-aalto-library-services-from-home">
+<h3>How do I use eJournals, Netmot and other Aalto library services from home?<a class="headerlink" href="#how-do-i-use-ejournals-netmot-and-other-aalto-library-services-from-home" title="Permalink to this headline">¶</a></h3>
+<p>There is a weblogin possibility at Aalto Library. After this, all
+library provided services are available. There are links for journals
+(nelli) and netmot.</p>
+</div>
+<div class="section" id="rsync-complains-about-quota-even-though-there-is-plenty-left">
+<h3>Rsync complains about Quota, even though there is plenty left.<a class="headerlink" href="#rsync-complains-about-quota-even-though-there-is-plenty-left" title="Permalink to this headline">¶</a></h3>
+<p>The reason usually is that default <code class="docutils literal"><span class="pre">rsync</span> <span class="pre">-av</span></code> tries to preserve the
+group. Thus, there is wrong group in the target. Try using
+<code class="docutils literal"><span class="pre">rsync</span> <span class="pre">-rlptDxvz</span> <span class="pre">--chmod=Dg+s</span> <span class="pre">&lt;source&gt;</span> <span class="pre">&lt;target&gt;</span></code>. This will make group
+setting correct on <code class="docutils literal"><span class="pre">/scratch/</span></code> etc and quota should then be fine.</p>
+</div>
+<div class="section" id="quota-exceeded-or-unable-to-write-files-to-project-work-scratch-archive">
+<h3>Quota exceeded or unable to write files to project / work / scratch / archive<a class="headerlink" href="#quota-exceeded-or-unable-to-write-files-to-project-work-scratch-archive" title="Permalink to this headline">¶</a></h3>
+<p>Most likely this is due to wrong Linux filesystem permissions. Quota
+is set per group (e.g. braindata) and by default file go to the
+default group (domain users). If this happens under some project,
+scratch etc directory it will complain about &#8220;Disk quota exceeded&#8221;.</p>
+<p>In general this is fixed by admins by setting the directory
+permissions such that all goes ok automatically. But sometimes this
+breaks down. Some programs often are responsible for this (rsync, tar
+for instance).</p>
+<p>There are two easy ways to fix this</p>
+<ul class="simple">
+<li>In terminal, run the command <code class="docutils literal"><span class="pre">find</span> <span class="pre">.</span> <span class="pre">-type</span> <span class="pre">d</span> <span class="pre">-exec</span> <span class="pre">chmod</span> <span class="pre">g+rwxs</span> <span class="pre">{}</span> <span class="pre">\;</span></code>
+under your project directory. After this all should be working
+normally again.</li>
+<li>If it&#8217;s on scratch or work, see the <a class="reference internal" href="../triton/usage/quotas.html"><em>Triton quotas page</em></a></li>
+<li>Contact NBE-IT and we will reset the directory permissions for the given directory</li>
+</ul>
+</div>
+<div class="section" id="i-cannot-start-firefox">
+<h3>I cannot start Firefox<a class="headerlink" href="#i-cannot-start-firefox" title="Permalink to this headline">¶</a></h3>
+<p>There are two reasons for this.</p>
+<p class="rubric">1. Your network home disk is full</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c1"># Go to your user dir</span>
+<span class="nb">cd</span> ~/..
+<span class="c1"># Check disk usage</span>
+du -sh *
+</pre></div>
+</div>
+<p>The sum should be less than the max quota which is 20GB. If your disk is full then delete something or move it to a local directory, <code class="docutils literal"><span class="pre">/l/</span></code>.</p>
+<p class="rubric">2. Something went wrong with your browser profile</p>
+<p>If you get an error like &#8220;<em>The application did not identify itself</em>&#8221;, following might solve the issue.</p>
+<p>Open terminal,</p>
+<div class="highlight-bash"><div class="highlight"><pre>firefox -P -no-remote
+</pre></div>
+</div>
+<p>This will launch Firefox and ask you to choose a profile. <strong>Note that when you delete a profile you delete passwords, bookmarks and etc.</strong> So it&#8217;s better to create a new profile, migrate bookmarks and delete the old one.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mac.html" class="btn btn-neutral float-right" title="Aalto Mac" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="account.html" class="btn btn-neutral" title="Aalto account" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

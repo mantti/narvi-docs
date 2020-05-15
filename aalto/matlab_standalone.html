@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Standalone Matlab &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="Overleaf" href="overleaf.html"/>
+        <link rel="prev" title="Open Source Policy" href="opensource-policy.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterhub.html">JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Standalone Matlab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-and-license-activation-on-staff-owned-computers">Installation and license activation on staff-owned computers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-image">Download image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation-steps">Installation steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-triton-mdcs-integration-scripts">Install Triton-MDCS integration scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#faq">FAQ</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#matlab-freezes-with-out-of-memory-errors">Matlab freezes with Out of Memory errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gpu-acceleration">GPU acceleration?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>Standalone Matlab</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/matlab_standalone.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="standalone-matlab">
+<h1>Standalone Matlab<a class="headerlink" href="#standalone-matlab" title="Permalink to this headline">¶</a></h1>
+<p>General matlab hints: <a class="reference external" href="http://math.aalto.fi/opetus/Mattie/MattieO/matlab.html">http://math.aalto.fi/opetus/Mattie/MattieO/matlab.html</a></p>
+<div class="section" id="installation-and-license-activation-on-staff-owned-computers">
+<h2>Installation and license activation on staff-owned computers<a class="headerlink" href="#installation-and-license-activation-on-staff-owned-computers" title="Permalink to this headline">¶</a></h2>
+<p>Matlab academic license permits installation on home computers for
+university personnel. Triton MDCS workers are available to anyone with a
+Triton account, which means the workers can be utilized from personal
+laptops as well.</p>
+<div class="section" id="download-image">
+<h3>Download image<a class="headerlink" href="#download-image" title="Permalink to this headline">¶</a></h3>
+<p>Log into <a class="reference external" href="http://download.aalto.fi/">http://download.aalto.fi/</a> with your Aalto account. Look for the
+link <em>Software for employees&#8217; home computers</em> which will take you to the
+Matlab download links. Download the UNIX version for Linux and OSX or
+the separate separate image for Windows.</p>
+<p>The ISO image can be burned on a DVD or mounted on a virtual DVD drive.</p>
+<ul>
+<li><p class="first">Windows: Use
+<a class="reference external" href="http://www.magiciso.com/tutorials/miso-magicdisc-overview.htm">MagicDisk</a>
+or <a class="reference external" href="http://www.slysoft.com/en/virtual-clonedrive.html">Virtual
+CloneDrive</a> OR
+burn the image on DVD. Double click on setup.exe icon.</p>
+</li>
+<li><p class="first">Linux:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1"># sudo mkdir /mnt/loop</span>
+<span class="c1"># sudo mount -o loop Download/Matlab_R2010b_UNIX.iso /mnt/loop</span>
+<span class="c1"># sudo /mnt/loop/install.sh</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Mac OS X: Double click on InstallForMacOSX.app icon.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="installation-steps">
+<h3>Installation steps<a class="headerlink" href="#installation-steps" title="Permalink to this headline">¶</a></h3>
+<p>Select the installer options as shown in the screenshots.</p>
+<p>Mathworks account is required to continue with the installation.</p>
+<ul class="simple">
+<li>Enter your account information in the installer to log in. If the
+password has been lost, Click on the <em>Forgot your password?</em> option
+to receive your password in email.
+<em>OR</em></li>
+<li>Register to Mathworks with the installer.<ol class="arabic">
+<li>Click on <em>I need to create an account</em>.</li>
+<li>Enter your name and email address. To be recognized as Aalto
+academic user the email address must end in one of aalto.fi,
+tkk.fi, hut.fi, hse.fi, hkkk.fi or uiah.fi domains.</li>
+<li>The installer will ask for an activation key, which is shown here
+in the last screenshot.</li>
+</ol>
+</li>
+</ul>
+<p>You may leave out unnecessary toolboxes and change the installation
+location. Remember however, that the Parallel Computing Toolbox is
+necessary to run any Matlab batch jobs on Triton.</p>
+</div>
+<div class="section" id="install-triton-mdcs-integration-scripts">
+<h3>Install Triton-MDCS integration scripts<a class="headerlink" href="#install-triton-mdcs-integration-scripts" title="Permalink to this headline">¶</a></h3>
+<p>Continue MDCS setup from <a class="reference external" href="LINK/Matlab%20Distributed%20Computing%20Server">Matlab Distributed Computing
+Server</a>.</p>
+</div>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="matlab-freezes-with-out-of-memory-errors">
+<h3>Matlab freezes with Out of Memory errors<a class="headerlink" href="#matlab-freezes-with-out-of-memory-errors" title="Permalink to this headline">¶</a></h3>
+<p>Q: Matlabs freezes and I get errors like this.  What to do?:</p>
+<div class="highlight-python"><div class="highlight"><pre>Exception in thread &quot;Explorer NavigationContext request queue&quot; java.lang.OutOfMemoryError: GC overhead limit exceeded
+      at com.mathworks.matlab.api.explorer.FileLocation.&lt;init&gt;(FileLocation.java:89)
+      at com.mathworks.matlab.api.explorer.FileLocation.getParent(FileLocation.java:126)
+     ... ... ...
+</pre></div>
+</div>
+<p>A1: Add more memory in Home -&gt; Preferences -&gt; General -&gt; Java Heap
+memory</p>
+<p>A2: Can you free up memory in your code sooner using the <code class="docutils literal"><span class="pre">clear</span></code> command?
+<a class="reference external" href="https://se.mathworks.com/help/matlab/ref/clear.html">https://se.mathworks.com/help/matlab/ref/clear.html</a></p>
+</div>
+<div class="section" id="gpu-acceleration">
+<h3>GPU acceleration?<a class="headerlink" href="#gpu-acceleration" title="Permalink to this headline">¶</a></h3>
+<p>Q: is there functional GPU acceleration?  Does the acceleration even work?</p>
+<p>A: run code:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt; g = gpuDevice;
+&gt;&gt; ng
+</pre></div>
+</div>
+<p>A2: Just query some feature:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt; fprintf(&#39;%s\n&#39;, g.ComputeCapability)
+</pre></div>
+</div>
+<p>a3: Show multiple devices if found:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt; for ii = 1:gpuDeviceCount
+g = gpuDevice(ii);
+fprintf(1,&#39;Device %i has ComputeCapability %s \n&#39;, ...
+g.Index,g.ComputeCapability)
+end
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="overleaf.html" class="btn btn-neutral float-right" title="Overleaf" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="opensource-policy.html" class="btn btn-neutral" title="Open Source Policy" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

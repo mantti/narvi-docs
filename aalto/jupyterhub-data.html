@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Accessing JupyterHub data &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="JupyterHub" href="jupyterhub.html"/>
+        <link rel="next" title="JupyterHub for instructors" href="jupyterhub-instructors/index.html"/>
+        <link rel="prev" title="JupyterHub" href="jupyterhub.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="jupyterhub.html">JupyterHub</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="jupyterhub.html#basic-usage">Basic usage</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">Accessing JupyterHub data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="jupyterhub.html#terms-of-use">Terms of use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyterhub.html#courses-and-assignments">Courses and assignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyterhub.html#instructors">Instructors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyterhub.html#privacy-policy">Privacy policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyterhub.html#faq-and-bugs">FAQ and bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyterhub.html#more-info">More info</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+          <li><a href="jupyterhub.html">JupyterHub</a> &raquo;</li>
+      
+    <li>Accessing JupyterHub data</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/jupyterhub-data.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="accessing-jupyterhub-data">
+<h1>Accessing JupyterHub data<a class="headerlink" href="#accessing-jupyterhub-data" title="Permalink to this headline">¶</a></h1>
+<p>Unlike many JupyterHub deployments, your data is <em>yours</em> and have many
+different ways to access it.  Thus, we don&#8217;t just have jupyter.cs, but
+a whole constellation of ways to access and do <em>your work</em>, depending on what
+suits you best for each part.</p>
+<p>Your data (and as an instructor, your course&#8217;s data) can be accessed
+many ways:</p>
+<ul class="simple">
+<li>On jupyter.cs.</li>
+<li>Via network drive <em>on your own computer as local files</em>.</li>
+<li>On Aalto shell servers (such as kosh.aalto.fi).</li>
+<li>On other department/university workstations.</li>
+</ul>
+<div class="section" id="on-paniikki-and-aalto-computers">
+<h2>On Paniikki and Aalto computers<a class="headerlink" href="#on-paniikki-and-aalto-computers" title="Permalink to this headline">¶</a></h2>
+<p>On Paniikki, and the Aalto servers <code class="docutils literal"><span class="pre">kosh.aalto.fi</span></code>,
+<code class="docutils literal"><span class="pre">lyta.aalto.fi</span></code>, <code class="docutils literal"><span class="pre">brute.aalto.fi</span></code>, and <code class="docutils literal"><span class="pre">force.aalto.fi</span></code> (and
+possibly more), the JupyterHub is available automatically.  <strong>You can,
+for example, use the Paniikki GPUs.</strong></p>
+<p>Data is available within the paths <code class="docutils literal"><span class="pre">/m/jhnas/jupyter</span></code>.  The path on
+Linux servers is also available on the hub, if you want to write
+portable files.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Path on hub</th>
+<th class="head">Path on Linux servers</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>personal notebooks</td>
+<td><code class="docutils literal"><span class="pre">/notebooks</span></code></td>
+<td><code class="docutils literal"><span class="pre">/m/jhnas/jupyter/u/$nn/$username/</span></code></td>
+</tr>
+<tr class="row-odd"><td>course data</td>
+<td><code class="docutils literal"><span class="pre">/coursedata</span></code></td>
+<td><code class="docutils literal"><span class="pre">/m/jhnas/jupyter/course/$course_slug/data/</span></code></td>
+</tr>
+<tr class="row-even"><td>course instructor files</td>
+<td><code class="docutils literal"><span class="pre">/course</span></code></td>
+<td><code class="docutils literal"><span class="pre">/m/jhnas/jupyter/course/$course_slug/files/</span></code></td>
+</tr>
+<tr class="row-odd"><td>shared data</td>
+<td><code class="docutils literal"><span class="pre">/m/jhnas/jupyter/shareddata/</span></code></td>
+<td><code class="docutils literal"><span class="pre">/m/jhnas/jupyter/shareddata/</span></code></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variable seen above</th>
+<th class="head">Meaning</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$username</span></code></td>
+<td>Your Aalto username</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$nn</span></code></td>
+<td>The two numbers you see in <code class="docutils literal"><span class="pre">echo</span> <span class="pre">$HOME</span></code> (the last two digits of your Aalto uid, <code class="docutils literal"><span class="pre">id</span></code>)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$course_slug</span></code></td>
+<td>The short name of your course.</td>
+</tr>
+</tbody>
+</table>
+<p>You can change directly to your notebook directory by using <code class="docutils literal"><span class="pre">cd</span>
+<span class="pre">/m/jhnas/jupyter/${HOME%/unix}</span></code>.</p>
+<p><strong>You can link it to your home directory so that it&#8217;s easily
+available</strong>.  In a terminal, run <code class="docutils literal"><span class="pre">/m/jhnas/u/makedir.sh</span></code> and you
+will automatically get a link from <code class="docutils literal"><span class="pre">~/jupyter</span></code> in your home
+directory to your user data.</p>
+<p><strong>Permission denied?</strong> Run <code class="docutils literal"><span class="pre">kinit</span></code> in the shell - this authenticates
+yourself to the Aalto server and is required for secure access.  If
+you log in with ssh keys, you may need to do this.</p>
+</div>
+<div class="section" id="remote-access-via-network-drive">
+<h2>Remote access via network drive<a class="headerlink" href="#remote-access-via-network-drive" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basic-info">
+<h3>Basic info<a class="headerlink" href="#basic-info" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Network drive path</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>personal notebooks</td>
+<td><code class="docutils literal"><span class="pre">smb://jhnas.org.aalto.fi/$username/</span></code></td>
+</tr>
+<tr class="row-odd"><td>course data</td>
+<td><code class="docutils literal"><span class="pre">smb://jhnas.org.aalto.fi/course/$course_slug/data/</span></code></td>
+</tr>
+<tr class="row-even"><td>course instructor files</td>
+<td><code class="docutils literal"><span class="pre">smb://jhnas.org.aalto.fi/course/$course_slug/files/</span></code></td>
+</tr>
+<tr class="row-odd"><td>shared data</td>
+<td><code class="docutils literal"><span class="pre">smb://jhnas.org.aalto.fi/shareddata/</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>You can do a SMB mount, which makes the data available as a network
+drive.  You will have the same copy of the data as on the hub -
+actually, same data, so edits immediately take effect on both places,
+just like your home directory.  <em>You must be on an Aalto network,
+which for students practically means you must be connected to the</em>
+<strong>Aalto VPN</strong> (see <a class="reference external" href="https://it.aalto.fi/searchpage?search_api_fulltext=vpn">vpn instructions</a>) or use an
+Aalto computer.  The &#8220;aalto&#8221; wifi network does <em>not</em> work unless you
+have an <em>Aalto</em> computer.</p>
+<ul class="simple">
+<li>Linux: use &#8220;Connect to Server&#8221; from the file browser.  The path is
+<code class="docutils literal"><span class="pre">smb://jhnas.org.aalto.fi/$username</span></code>.  You may need to use
+<code class="docutils literal"><span class="pre">AALTO\username</span></code> as your username.  If there is separate &#8220;domain&#8221;
+option, use <code class="docutils literal"><span class="pre">AALTO</span></code> for domain and just your username for the username.</li>
+<li>Mac: same path as Linux above, &#8220;Connect to Server&#8221;.  Use
+<code class="docutils literal"><span class="pre">AALTO\your_username</span></code> as the username.</li>
+<li>Windows: <code class="docutils literal"><span class="pre">\\jhnas.org.aalto.fi\$username</span></code>, and use username
+<code class="docutils literal"><span class="pre">AALTO\your_username</span></code>.  Windows sometimes caches the
+username/password for a long time, so if it does not work try
+rebooting.</li>
+</ul>
+<p>You can also access course data and shared data by using
+<code class="docutils literal"><span class="pre">jhnas.org.aalto.fi/course/</span></code> or <code class="docutils literal"><span class="pre">jhnas.org.aalto.fi/shareddata/</span></code>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://www.aalto.fi/en/services/deployment-of-a-network-drive-in-windows">Mounting network drives in Windows</a>
+is the same instructions, but for Aalto home directories.  Anything
+there should apply here, too.</p>
+</div>
+</div>
+</div>
+<div class="section" id="using-gpus">
+<span id="jupyter-gpu-paniikki"></span><h2>Using GPUs<a class="headerlink" href="#using-gpus" title="Permalink to this headline">¶</a></h2>
+<p>One problem with our JupyterHub so far is that we don&#8217;t have GPUs
+available.  But, because our data is available to other computers, you
+can use the <a class="reference internal" href="paniikki.html"><em>Paniikki: Computer Lab For Students</em></a> GPUs (quite good ones) to get all the
+power you need.  To do this, you just need to access the Jupyter data
+on these classroom computers.</p>
+<p><strong>Terminal</strong>: First, start a terminal.  You can navigate to your data
+following the instructions above: <code class="docutils literal"><span class="pre">cd</span>
+<span class="pre">/m/jhnas/jupyter/${HOME%/unix}</span></code>.  From there, navigate to the right
+directories and do what is needed.</p>
+<p><strong>File browser</strong>: Navigate to the path
+<code class="docutils literal"><span class="pre">/m/jhnas/jupyter/u/$nn/$username</span></code>, where <code class="docutils literal"><span class="pre">$nn</span></code> is the two numbers
+you see when you do <code class="docutils literal"><span class="pre">echo</span> <span class="pre">$HOME</span></code> in a terminal.  To open a terminal
+from a location, right click and select &#8220;Open in Terminal&#8221;.</p>
+<p>Now that you have the terminal and the data, you can do whatever you
+want with it.  Presumably, you will start Jupyter here - but first you
+want to make the right software available.  If you course tells you
+how to do that using an Anaconda environment, go ahead and do it.
+(Please don&#8217;t go installing large amounts of software like anaconda in
+the Jupyter data directories - they are for notebooks and small-medium
+data.)</p>
+<p>Using the built-in anaconda, you can load the Python modules with
+<code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda</span></code> and start Jupyter with <code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">notebook</span></code>:</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/jupyterdata_04_startjupyter.png"><img alt="Start jupyter with the anaconda module." src="../_images/jupyterdata_04_startjupyter.png" style="width: 678.0px; height: 69.0px;" /></a>
+<p class="caption"><span class="caption-text">Note that now, you need to <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda</span></code>, not
+anaconda<strong>3</strong> like the image shows.</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jupyterhub-instructors/index.html" class="btn btn-neutral float-right" title="JupyterHub for instructors" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jupyterhub.html" class="btn btn-neutral" title="JupyterHub" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

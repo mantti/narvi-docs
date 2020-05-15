@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Zen of Scientific computing &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="Scientific computing" href="index.html"/>
+        <link rel="next" title="Training" href="../training/index.html"/>
+        <link rel="prev" title="SSH" href="ssh.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scientific computing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="encryption.html">Encryption for researchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter-pitfalls.html">Pitfalls of Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">Linux shell crash course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">The Zen of Scientific computing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#production-code-vs-research-code">Production code vs research code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#research-code-pyramid">Research code pyramid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yes-you-can-t-do-everything-perfectly">Yes, you can&#8217;t do everything perfectly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-control">Version control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modular-code">Modular code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#organized-workspaces">Organized workspaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-pipeline-automation">Workflow/pipeline automation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reproducibility-of-environment">Reproducibility of environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#licensing">Licensing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distribution">Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reuse">Reuse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collaboration">Collaboration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-future">The future</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Scientific computing</a> &raquo;</li>
+      
+    <li>The Zen of Scientific computing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/scicomp/zen-of-scicomp.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-zen-of-scientific-computing">
+<h1>The Zen of Scientific computing<a class="headerlink" href="#the-zen-of-scientific-computing" title="Permalink to this headline">¶</a></h1>
+<p>Have you ever felt like all your work was built as a house of cards,
+ready to crash down at any time?</p>
+<p>Have you ever felt that you are far too inefficient to survive?</p>
+<p>No, you&#8217;re not alone.  Yes, there is a better way.</p>
+<div class="section" id="production-code-vs-research-code">
+<h2>Production code vs research code<a class="headerlink" href="#production-code-vs-research-code" title="Permalink to this headline">¶</a></h2>
+<p>Yes, many things about software development may not apply to you:</p>
+<ul class="simple">
+<li>Production code:<ul>
+<li>you sort of know what the target is</li>
+<li>code is the main result</li>
+</ul>
+</li>
+<li>Research code:<ul>
+<li>you don&#8217;t know what the target is</li>
+<li>code is secondary</li>
+</ul>
+</li>
+</ul>
+<p>But research code still <em>can&#8217;t</em> be an unmaintainable mess...</p>
+</div>
+<div class="section" id="research-code-pyramid">
+<h2>Research code pyramid<a class="headerlink" href="#research-code-pyramid" title="Permalink to this headline">¶</a></h2>
+<p>I know that <em>not all</em> research code will be perfect.</p>
+<p>But if you don&#8217;t build on a good base, you will end up with misery.</p>
+<a class="reference internal image-reference" href="../_images/zen-of-scicomp-pyramid.svg"><div align="center" class="align-center"><img src="../_images/zen-of-scicomp-pyramid.svg" width="60%" /></div>
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/zen-of-scicomp-tower.svg"><img src="../_images/zen-of-scicomp-tower.svg" width="49%" /></a>
+<a class="reference internal image-reference" href="../_images/zen-of-scicomp-block.svg"><img src="../_images/zen-of-scicomp-block.svg" width="49%" /></a>
+</div>
+<div class="section" id="yes-you-can-t-do-everything-perfectly">
+<h2>Yes, you can&#8217;t do everything perfectly<a class="headerlink" href="#yes-you-can-t-do-everything-perfectly" title="Permalink to this headline">¶</a></h2>
+<p>Not everything you do will be perfect.  But it has to be good enough
+to:</p>
+<ul class="simple">
+<li>be correct</li>
+<li>be changed without too much difficulty</li>
+<li>be run again once reviews come in</li>
+<li>ideally, not wasted once you do something new</li>
+</ul>
+<p>Even as a scientist, you need to know the levels of maturity so that
+you can do the right thing <em>for your situation</em>.</p>
+<p>It takes skill and practice to do this right.  <em>But it is part of
+being a scientist.</em></p>
+<p>This talk&#8217;s outline:
+* Describe different factors that influence code quality
+* Describe what the maturity levels are and when you might need them</p>
+</div>
+<div class="section" id="version-control">
+<h2>Version control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h2>
+<p>Version control allows you to track changes and progress.</p>
+<p>For example, you can figure out what you just broke or when you
+introduced a bug.  You can always go back to other versions.</p>
+<p>Version control is essential to <em>any</em> type of collaboration.</p>
+<ul class="simple">
+<li>L0: no version control</li>
+<li>L1: local repo, just commit for yourself</li>
+<li>L2: shared repo, multiple collaborators push directly</li>
+<li>L3: shared repo, pull-request workflow</li>
+</ul>
+<p>Resources:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://coderefinery.org/lessons/">https://coderefinery.org/lessons/</a> (git-intro and git-collaborative)</li>
+</ul>
+</div>
+<div class="section" id="modular-code">
+<h2>Modular code<a class="headerlink" href="#modular-code" title="Permalink to this headline">¶</a></h2>
+<p>Modularity is one of the basic prerequisites to be able to understand,
+maintain, and reuse things.</p>
+<ul class="simple">
+<li>L0: bunch of copy-and-paste scripts</li>
+<li>L1: important code broken out into functions</li>
+<li>L2: separation between well-maintained libraries and daily working
+scripts.</li>
+</ul>
+<p>Resources:</p>
+<ul class="simple">
+<li>CodeRefinery: <a class="reference external" href="http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md">http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md</a></li>
+</ul>
+</div>
+<div class="section" id="organized-workspaces">
+<h2>Organized workspaces<a class="headerlink" href="#organized-workspaces" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>L0: no particular organization system</li>
+<li>L1: different types of data separated (original
+data/code/scratch/outputs)</li>
+<li>L2: projects cleanly separated, named, and with a purpose</li>
+</ul>
+<p>Resources:</p>
+<ul class="simple">
+<li>I don&#8217;t know of good sources for this.</li>
+</ul>
+</div>
+<div class="section" id="workflow-pipeline-automation">
+<h2>Workflow/pipeline automation<a class="headerlink" href="#workflow-pipeline-automation" title="Permalink to this headline">¶</a></h2>
+<p>When you are doing serious work, you can&#8217;t afford to just manage stuff
+by hand.  Task automation allows you to do more faster.</p>
+<p>Something such as <code class="docutils literal"><span class="pre">make</span></code> can automatically detect changed input
+files and code and automatically generate the outputs.</p>
+<ul class="simple">
+<li>L0: bunch of scripts you have to run and check output of by hand.</li>
+<li>L1: hand-written management scripts, each output can be traced to
+its particular input and code.</li>
+<li>L2: <code class="docutils literal"><span class="pre">make</span></code> or other workflow management tool to automate things.</li>
+<li>L3: Full automation from original data to final figures and data</li>
+</ul>
+<p>Resources:</p>
+<ul class="simple">
+<li>CodeRefinery: <a class="reference external" href="https://coderefinery.github.io/reproducible-research/">https://coderefinery.github.io/reproducible-research/</a></li>
+</ul>
+</div>
+<div class="section" id="reproducibility-of-environment">
+<h2>Reproducibility of environment<a class="headerlink" href="#reproducibility-of-environment" title="Permalink to this headline">¶</a></h2>
+<p>Is someone else able to (know and) install the libraries needed to run
+your code?  Will a change in another package break your code?</p>
+<p>Scientific software is notoriously bad at managing its dependencies.</p>
+<ul class="simple">
+<li>L0: no documentation</li>
+<li>L1: state the dependencies somewhere, tested to ensure they work</li>
+<li>L2: pin exact versions used to generate your results</li>
+<li>L3: containerized workflow or equivalent</li>
+</ul>
+<p>Resources:</p>
+<ul class="simple">
+<li>CodeRefinery: <a class="reference external" href="https://coderefinery.github.io/reproducible-research/">https://coderefinery.github.io/reproducible-research/</a></li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>If you don&#8217;t say what you do, there&#8217;s no way to understand it.  <strong>You</strong>
+won&#8217;t be able to understand it later, either.</p>
+<p>At minimum, there should be some README files that explain the big
+picture.  There are fancier systems, too.</p>
+<ul class="simple">
+<li>L0: nothing except scattered code comments</li>
+<li>L1: script-level comments and docstrings explaining overall logic</li>
+<li>L2: simple README files explaining big picture and main points</li>
+<li>L3: dedicated documenentation including tutorials, reference, etc.</li>
+</ul>
+<p>Resources:</p>
+<ul class="simple">
+<li>CodeRefinery: <a class="reference external" href="https://coderefinery.github.io/documentation/">https://coderefinery.github.io/documentation/</a></li>
+</ul>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>You have to test your code at least once when you first run it.  How
+do you know you don&#8217;t break something later?</p>
+<p>Testing gives you a way to ensure things always work (and are correct)
+in the future by letting you run <em>every</em> test automatically.</p>
+<p>There&#8217;s nothing more liberating than knowing &#8220;tests still pass, I
+didn&#8217;t break anything&#8221;.  It&#8217;s extremely useful for debugging, too.</p>
+<ul class="simple">
+<li>L0: ad-hoc and manually</li>
+<li>L1: defensive programming (assertions), possibly some test data and
+scripts</li>
+<li>L2: structured, comprehensive unit/integration/system tests (e.g. <code class="docutils literal"><span class="pre">pytest</span></code>)</li>
+<li>L3: continuous integration testing on <em>all</em> commits  (e.g. <code class="docutils literal"><span class="pre">travis-ci.org</span></code>)</li>
+</ul>
+<p>If code is easy to test, it is <em>usually</em> easy to reuse, too.
+Furthermore, making code testable makes it reusable.</p>
+<p>Resources:</p>
+<ul class="simple">
+<li>CodeRefinery: <a class="reference external" href="https://coderefinery.github.io/testing/">https://coderefinery.github.io/testing/</a></li>
+</ul>
+</div>
+<div class="section" id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p>You presumably want people to use your work so they will cite you.  If
+you don&#8217;t have a license, they won&#8217;t (or they might and not tell anyone).</p>
+<p>Equally, you want to use other people&#8217;s work.  You need to check their
+licenses.</p>
+<ul class="simple">
+<li>L0: no license given / copy and paste from other sources</li>
+<li>L1: license file in repo / careful to not copy incompatible code</li>
+<li>L2: license tracked per-file and all contributors known.</li>
+</ul>
+<p>Resources:</p>
+<ul class="simple">
+<li>CodeRefinery software-licensing: <a class="reference external" href="https://coderefinery.org/lessons/">https://coderefinery.org/lessons/</a></li>
+<li><a class="reference external" href="https://choosealicense.com/">https://choosealicense.com/</a></li>
+</ul>
+</div>
+<div class="section" id="distribution">
+<h2>Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h2>
+<p>Code can be easy to reuse, but not easy to get.  Luckily there are
+good systems for sharing code.</p>
+<ul class="simple">
+<li>L0: code not distributed</li>
+<li>L1: code provided only if someone asks</li>
+<li>L2: code on a website</li>
+<li>L3: version control system repo is public</li>
+<li>L4: packaged, tagged, and versioned releases</li>
+</ul>
+<p>Resources:</p>
+<ul class="simple">
+<li>for Python: <a class="reference external" href="https://packaging.python.org/tutorials/packaging-projects/">https://packaging.python.org/tutorials/packaging-projects/</a></li>
+</ul>
+</div>
+<div class="section" id="reuse">
+<h2>Reuse<a class="headerlink" href="#reuse" title="Permalink to this headline">¶</a></h2>
+<p>Are you aware of what what others have already figured out through
+their great effort?</p>
+<ul class="simple">
+<li>L0: reinvent everything yourself</li>
+<li>L1: use some existing tools and libraries</li>
+<li>L2: deep study of existing solutions and tools, reuse them when appropriate</li>
+</ul>
+</div>
+<div class="section" id="collaboration">
+<h2>Collaboration<a class="headerlink" href="#collaboration" title="Permalink to this headline">¶</a></h2>
+<p>Is science like monks working in their cells, or a community effort?</p>
+<p>These skills move so fast that learning peer-to-peer is one of the
+best ways to do it.</p>
+<p>There&#8217;s a whole other art of applying these skills which isn&#8217;t taught
+in classes.</p>
+<p>If you don&#8217;t work together, you will fall behind.</p>
+<ul class="simple">
+<li>L0: you work alone and re-invent everything</li>
+<li>L1: you occasionally talk about results or problems</li>
+<li>L2: collaborative package development</li>
+<li>L3: code reviews, pair programming, etc.</li>
+<li>L4: community project welcoming other contributors</li>
+</ul>
+</div>
+<div class="section" id="the-future">
+<h2>The future<a class="headerlink" href="#the-future" title="Permalink to this headline">¶</a></h2>
+<p>Science with computers can be extremely enjoyable... or miserable.</p>
+<p>We are here to help you.  You are here to others.</p>
+<p>Will we?</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../training/index.html" class="btn btn-neutral float-right" title="Training" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ssh.html" class="btn btn-neutral" title="SSH" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

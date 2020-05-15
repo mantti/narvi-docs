@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SSH &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="Scientific computing" href="index.html"/>
+        <link rel="next" title="The Zen of Scientific computing" href="zen-of-scicomp.html"/>
+        <link rel="prev" title="Linux shell crash course" href="shell.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scientific computing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="encryption.html">Encryption for researchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter-pitfalls.html">Pitfalls of Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">Linux shell crash course</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">SSH</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-use-connect-to-a-server">Basic use: connect to a server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#first-time-login">First time login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#known-servers">Known servers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ssh-keys-better-than-just-passwords">SSH keys: better than just passwords</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#generate-an-ssh-key">Generate an SSH key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-public-key-to-server">Copy public key to server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#login-with-ssh-key">Login with SSH key</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#config-file-don-t-type-so-many-options">Config file: don&#8217;t type so many options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="zen-of-scicomp.html">The Zen of Scientific computing</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Scientific computing</a> &raquo;</li>
+      
+    <li>SSH</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/scicomp/ssh.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ssh">
+<h1>SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h1>
+<p>This walk-through presumes that the user</p>
+<ul class="simple">
+<li>is working on a Linux machine or Mac</li>
+<li>has <code class="docutils literal"><span class="pre">OpenSSH</span></code> installed: <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">-V</span></code> in the terminal to check</li>
+<li>has an account on the server of interest</li>
+<li>is connected to the Aalto network</li>
+</ul>
+<p>We will be focusing on connecting to <em>Triton</em> but the methods described below are applicable to any of Aalto&#8217;s other <a class="reference internal" href="../aalto/remoteaccess.html"><em>remote servers</em></a>.</p>
+<div class="section" id="basic-use-connect-to-a-server">
+<h2>Basic use: connect to a server<a class="headerlink" href="#basic-use-connect-to-a-server" title="Permalink to this headline">¶</a></h2>
+<p>The standard login command is <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">login_name&#64;host_name</span></code>,  where <code class="docutils literal"><span class="pre">login_name</span></code> is your standard Aalto login and <code class="docutils literal"><span class="pre">host_name</span></code> is the address of the server you with to connect. In the case of Triton, the <code class="docutils literal"><span class="pre">host_name</span></code> is <code class="docutils literal"><span class="pre">triton.aalto.fi</span></code>.</p>
+<div class="section" id="first-time-login">
+<h3>First time login<a class="headerlink" href="#first-time-login" title="Permalink to this headline">¶</a></h3>
+<p>For Triton, you will be prompted to affirm that you wish to <em>ssh</em> into this server for the first time.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>The authenticity of host &#8216;triton.aalto.fi (130.233.229.116)&#8217; can&#8217;t be established.
+ECDSA key fingerprint is SHA256:04Wt813WFsYjZ7KiAyo3u6RiGBelq1R19oJd2GXIAho.
+Are you sure you want to continue connecting (yes/no)?</dd>
+</dl>
+<p>Compare the key fingerprint you get to the one for the machine at this <strong>link</strong>, and if they do not match, please contact SciComp IT <strong>immediately</strong>. If they do match, type <code class="docutils literal"><span class="pre">yes</span></code> and press enter. You will receive a notice</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>Warning: Permanently added &#8216;triton.aalto.fi,130.233.229.116&#8217; (ECDSA) to the list of known hosts.</dd>
+</dl>
+<p>The <em>public key</em> that identifies Triton will be stored in <code class="docutils literal"><span class="pre">~/.ssh/known_hosts</span></code> and you ought not get this prompt again. You will be also asked to input your Aalto password before you are fully logged in.</p>
+</div>
+<div class="section" id="known-servers">
+<h3>Known servers<a class="headerlink" href="#known-servers" title="Permalink to this headline">¶</a></h3>
+<p>You will not receive an authenticity prompt upon first login if the server&#8217;s <em>public key</em> can be found in a list of known hosts. To check whether a server, <em>Kosh</em> for example, is known</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>ssh-keygen -f /etc/ssh/ssh_known_hosts -F kosh.aalto.fi
+ssh-keygen -f ~/.ssh/known_hosts -F kosh.aalto.fi</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="ssh-keys-better-than-just-passwords">
+<h2>SSH keys: better than just passwords<a class="headerlink" href="#ssh-keys-better-than-just-passwords" title="Permalink to this headline">¶</a></h2>
+<p>By default, you will need to type your password each time you wish to ssh into Triton, which can be tiresome, particularly if you regularly have multiple sessions open simultaneously. A more secure (and faster) way to authenticate yourself is to use a <em>shh key pair</em> and encrypt the this with a strong password. <a class="reference external" href="https://www.xkcd.com/936/">xkcd</a> has good and amusing recommendations on the subject of passwords. This authentication method will allow you to log into multiple ssh sessions while only needing to enter your password once, saving you time and keystrokes.</p>
+<div class="section" id="generate-an-ssh-key">
+<h3>Generate an SSH key<a class="headerlink" href="#generate-an-ssh-key" title="Permalink to this headline">¶</a></h3>
+<p>While there are many options for the key generation program <code class="docutils literal"><span class="pre">ssh-keygen</span></code>, here are the four main ones.</p>
+<ul class="simple">
+<li><em>-t</em> -&gt; the cryptosystem used to make the unique key-pair and encrypt it.</li>
+<li><em>-b</em> -&gt; the number of key bits</li>
+<li><em>-f</em> -&gt; filename of key</li>
+<li><em>-C</em> -&gt; comment on what the key is for</li>
+</ul>
+<p>Here are our recommended input options for key generation.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_triton -C &#8220;triton key for ${USER}&#8221;</dd>
+</dl>
+<p>After running this command in the terminal, you will be prompted to enter a password. <strong>PLEASE</strong> use a strong unique password. Upon confirming the password, you will be presented with the key fingerprint as both a SHA256 hex string as well as randomart image. Your new key pair should be found in the hidden <code class="docutils literal"><span class="pre">~/.ssh</span></code> directory. If you wish to use keys for other servers, you should generate <strong>new</strong> key pairs and use <strong>different</strong> passwords.</p>
+</div>
+<div class="section" id="copy-public-key-to-server">
+<h3>Copy public key to server<a class="headerlink" href="#copy-public-key-to-server" title="Permalink to this headline">¶</a></h3>
+<p>In order to use your key-pair to login to Triton, you first need to securely copy the desired <em>public key</em> to the machine with <code class="docutils literal"><span class="pre">ssh-copy-id</span></code>. The script will also add the key to the <code class="docutils literal"><span class="pre">~/.ssh/authorized_keys</span></code> file on the server. You will be prompted to enter your Aalto password to initiate the secure copy of the file to Triton.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>ssh-copy-id -i ~/.ssh/id_rsa_triton.pub <a class="reference external" href="mailto:login_name&#37;&#52;&#48;triton&#46;aalto&#46;fi">login_name<span>&#64;</span>triton<span>&#46;</span>aalto<span>&#46;</span>fi</a></dd>
+</dl>
+</div>
+<div class="section" id="login-with-ssh-key">
+<h3>Login with SSH key<a class="headerlink" href="#login-with-ssh-key" title="Permalink to this headline">¶</a></h3>
+<p>To avoid having to type the decryption password, the <em>private key</em> it needs to be added to the <code class="docutils literal"><span class="pre">ssh-agent</span></code> with the command</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>ssh-add ~/.ssh/id_rsa_triton</dd>
+</dl>
+<p>Once the password is added, you can ssh into Triton as normal but will immediately be connected without any further prompts. If you are unsure whether a <code class="docutils literal"><span class="pre">ssh-agent</span></code> process is running on your machine, <code class="docutils literal"><span class="pre">ps</span> <span class="pre">-C</span> <span class="pre">ssh-agent</span></code> will tell you if there is. To start a new agent, use <code class="docutils literal"><span class="pre">eval</span> <span class="pre">$(ssh-agent)</span></code>.</p>
+</div>
+</div>
+<div class="section" id="config-file-don-t-type-so-many-options">
+<h2>Config file: don&#8217;t type so many options<a class="headerlink" href="#config-file-don-t-type-so-many-options" title="Permalink to this headline">¶</a></h2>
+<p>Remembering the full settings list for the server you are working on each time you log in can be tedious. A ssh <code class="docutils literal"><span class="pre">config</span></code> file allows you to store your preferred settings and map them to much simpler login commands. To create a new user-restricted <code class="docutils literal"><span class="pre">config</span></code> file</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>touch ~/.ssh/config &amp;&amp; chmod 600 ~/.ssh/config</dd>
+</dl>
+<p>For a new configuration, you need specify in <code class="docutils literal"><span class="pre">config</span></code> at minimum the</p>
+<ul class="simple">
+<li>Host: the name of the settings list</li>
+<li>User: your login name when connecting to the server</li>
+<li>Hostname: the address of the server</li>
+</ul>
+<p>So for the simple Triton example, it would be</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><p class="first"># Configuration file for simplifying SSH logins
+#
+# HPC slurm cluster
+Host triton</p>
+<blockquote class="last">
+<div>User LOGIN_NAME
+Hostname triton.aalto.fi</div></blockquote>
+</dd>
+</dl>
+<p>and you would use <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">triton</span></code> to log in. Any additional server configs can follow the first one and must start with declaring the configuration <code class="docutils literal"><span class="pre">Host</span></code>.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><p class="first"># general login server
+Host kosh</p>
+<blockquote>
+<div>User LOGIN_NAME
+Hostname kosh.aalto.fi</div></blockquote>
+<p># light-computing server
+Host brute</p>
+<blockquote class="last">
+<div>User LOGIN_NAME
+Hostname brute.aalto.fi</div></blockquote>
+</dd>
+</dl>
+<p>There are optional ssh settings that may be useful for your work, such as</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd># Turn on X11 forwarding for Xterm graphics access
+ForwardX11 yes
+# Connect through another server (eg Kosh) if not connected directly to Aalto network
+ProxyCommand ssh kosh.aalto.fi -W <a class="reference external" href="mailto:%r&#37;&#52;&#48;%h">%r<span>&#64;</span>%h</a>:%p
+# Specify which ssh private key is used for login identification
+IdentityFile ~/.ssh/id_rsa_triton</dd>
+</dl>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.ssh.com/ssh/">https://www.ssh.com/ssh/</a></li>
+<li><a class="reference external" href="https://blog.0xbadc0de.be/archives/300">https://blog.0xbadc0de.be/archives/300</a></li>
+<li><a class="reference external" href="https://www.phcomp.co.uk/Tutorials/Unix-And-Linux/ssh-passwordless-login.html">https://www.phcomp.co.uk/Tutorials/Unix-And-Linux/ssh-passwordless-login.html</a></li>
+<li><a class="reference external" href="https://en.wikibooks.org/wiki/OpenSSH/">https://en.wikibooks.org/wiki/OpenSSH/</a></li>
+<li><a class="reference external" href="https://linuxize.com/post/ssh-command-in-linux/#how-to-use-the-ssh-command">https://linuxize.com/post/ssh-command-in-linux/#how-to-use-the-ssh-command</a></li>
+<li><a class="reference external" href="https://linuxize.com/post/how-to-setup-passwordless-ssh-login/">https://linuxize.com/post/how-to-setup-passwordless-ssh-login/</a></li>
+<li><a class="reference external" href="https://hpc-uit.readthedocs.io/en/latest/account/login.html">https://hpc-uit.readthedocs.io/en/latest/account/login.html</a></li>
+<li><a class="reference external" href="https://www.mn.uio.no/geo/english/services/it/help/using-linux/ssh-tips-and-tricks.html">https://www.mn.uio.no/geo/english/services/it/help/using-linux/ssh-tips-and-tricks.html</a></li>
+<li><a class="reference external" href="https://infosec.mozilla.org/guidelines/openssh">https://infosec.mozilla.org/guidelines/openssh</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="zen-of-scicomp.html" class="btn btn-neutral float-right" title="The Zen of Scientific computing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="shell.html" class="btn btn-neutral" title="Linux shell crash course" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

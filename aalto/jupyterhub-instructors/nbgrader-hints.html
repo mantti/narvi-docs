@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nbgrader hints &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="JupyterHub for instructors" href="index.html"/>
+        <link rel="next" title="Autograding" href="autograding.html"/>
+        <link rel="prev" title="Nbgrader basics" href="nbgrader.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../jupyterhub.html">JupyterHub</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#basic-usage">Basic usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#terms-of-use">Terms of use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#courses-and-assignments">Courses and assignments</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jupyterhub.html#instructors">Instructors</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">JupyterHub for instructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#privacy-policy">Privacy policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#faq-and-bugs">FAQ and bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#more-info">More info</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">The Aalto environment</a> &raquo;</li>
+      
+          <li><a href="../jupyterhub.html">JupyterHub</a> &raquo;</li>
+      
+          <li><a href="index.html">JupyterHub for instructors</a> &raquo;</li>
+      
+    <li>nbgrader hints</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/jupyterhub-instructors/nbgrader-hints.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nbgrader-hints">
+<h1>nbgrader hints<a class="headerlink" href="#nbgrader-hints" title="Permalink to this headline">¶</a></h1>
+<p>These are practical hints on using nbgrader for grades and
+assignments.  You should also see the separate <a class="reference internal" href="autograding.html"><em>autograding hints</em></a> page if you use that.</p>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>To export grades, <code class="docutils literal"><span class="pre">nbgrader</span> <span class="pre">export</span></code> is your central point.  It will
+generate a CSV file (using a custom MyCourses exporter), which you can
+download, check, and upload to MyCourses.</p>
+</div>
+<div class="section" id="if-students-submit-assignments-you-use-autograding">
+<h2>If students submit assignments/you use autograding<a class="headerlink" href="#if-students-submit-assignments-you-use-autograding" title="Permalink to this headline">¶</a></h2>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="autograding.html"><em>Autograding</em></a></p>
+</div>
+<ul class="simple">
+<li>In each notebook (or at least the assignment zero), in the top, have
+a <code class="docutils literal"><span class="pre">STUDENT_NUMBER</span> <span class="pre">=</span> <span class="pre">xxx</span></code> which they have to fill in.  Asking each
+student to include the student number in a notebook ensures that you
+can later write a script to capture it.</li>
+</ul>
+</div>
+<div class="section" id="testing-releasing-assignments-without-students-seeing">
+<h2>Testing releasing assignments, without students seeing<a class="headerlink" href="#testing-releasing-assignments-without-students-seeing" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes instructors want to release and collect assignments as a
+test, while the course is running.  To understand how the solution is
+simpler than &#8220;make a new course&#8221;, we need to understand what &#8220;release&#8221;
+and &#8220;collect&#8221; do: they just move files around.  So, you can just move
+them to a different place (called the <strong>exchange</strong>) instead of the one
+that all students see.  Nbgrader docs sure doesn&#8217;t do a good job of
+explaining it, but behind the scenes it&#8217;s quite simple, and that
+simplicity means it&#8217;s easy to control if you know what you are up
+to...</p>
+<p>You can equally move your test files around to a test, instructor-only
+exchange for your own testing.  (Actually, this isn&#8217;t even needed, you
+can just copy them directly, test, and put back in the <code class="docutils literal"><span class="pre">submitted/</span></code>
+directory.  But some people want more.  So, from the jupyter terminal,
+we have made these extra aliases:</p>
+<div class="highlight-python"><div class="highlight"><pre># Release to test exchange (as instructor):
+nbgrader-instructor-exchange release_assignment  $assignment_id
+# Fetch from test exchange (as instructor, pretending to be a student):
+nbgrader-instructor-exchange fetch_assignment  $assignment_id
+# Submit to test exchange (as instructor, pretending to be a student):
+nbgrader-instructor-exchange submit $assignment_id
+# Collect to test exchange (as instructor):
+nbgrader-instructor-exchange collect $assignment_id
+</pre></div>
+</div>
+<p>This copies files to and from <code class="docutils literal"><span class="pre">/course/test-instructor-exchange/</span></code>,
+which you can examine and fully control.  If you are doing this, you
+probably need that control anyway.  These terms match the normal
+nbgrader terminology.</p>
+<p>There&#8217;s no easy way to make a switch between &#8220;live exchange&#8221; and
+&#8220;instructor exchange&#8221; in the web interface, but because of the power
+of the command line, we can easily do it anyway.</p>
+<p>(use <code class="docutils literal"><span class="pre">type</span> <span class="pre">-a</span> <span class="pre">nbgrader-instructor-exchange</span></code> to see just what it does.)</p>
+</div>
+<div class="section" id="known-problems">
+<h2>Known problems<a class="headerlink" href="#known-problems" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The built-in feedback functionality doesn&#8217;t work if you modify the
+submitted notebooks (for example, to make them run).  nbgrader
+upstream limitation.</li>
+</ul>
+</div>
+<div class="section" id="course-data">
+<h2>Course data<a class="headerlink" href="#course-data" title="Permalink to this headline">¶</a></h2>
+<p>If you use the <code class="docutils literal"><span class="pre">/coursedata</span></code> directory and want the notebook to be
+usable outside of JupyterHub too, try this pattern:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="k">if</span> <span class="s1">&#39;AALTO_JUPYTERHUB&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+    <span class="n">DATA</span> <span class="o">=</span> <span class="s1">&#39;/coursedata&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">DATA</span> <span class="o">=</span> <span class="s1">&#39;put_path_here&#39;</span>
+
+<span class="c1"># when loading data, always os.path.join(DATA, &#39;the_file.py&#39;)</span>
+</pre></div>
+</div>
+<p>This way, the file can be easily modified to load data from somewhere
+else.  Of course, many variations are possible.</p>
+</div>
+<div class="section" id="converting-usernames-to-emails">
+<h2>Converting usernames to emails<a class="headerlink" href="#converting-usernames-to-emails" title="Permalink to this headline">¶</a></h2>
+<p>JupyterHub has no access to emails or student numbers.  If you do need
+to link to email addresses, you can do the following.</p>
+<ul>
+<li><p class="first">ssh to kosh.aalto.fi</p>
+</li>
+<li><p class="first">cd to wherever you have exported a csv file with your grades (for
+example your course directory, <code class="docutils literal"><span class="pre">cd</span>
+<span class="pre">/m/jhnas/jupyter/course/$course_slug/files/</span></code>).</p>
+</li>
+<li><p class="first">Run <code class="docutils literal"><span class="pre">/m/jhnas/jupyter/software/bin/username-to-email.py</span>
+<span class="pre">exported_grades.csv</span></code> - this will add an email column right after
+the username column.  If the username column is not the zeroth
+(counting from zero), use the <code class="docutils literal"><span class="pre">-c</span> <span class="pre">$N</span></code> option to tell it that the
+usernames are in the <code class="docutils literal"><span class="pre">N</span></code>th column (zero indexed).</p>
+</li>
+<li><p class="first">Save the output somewhere, for example you could redirect it using
+<code class="docutils literal"><span class="pre">&gt;</span></code> to a new filename.  A full example:</p>
+<div class="highlight-python"><div class="highlight"><pre>/m/jhnas/jupyter/software/bin/username-to-email.py mycourses_export.csv &gt; mycourses_usernames.csv
+</pre></div>
+</div>
+</li>
+</ul>
+<p>This script is also <a class="reference external" href="https://github.com/AaltoScienceIT/jupyterhub-aalto/blob/master/user-scripts/username-to-email.py">available on github</a>.</p>
+</div>
+<div class="section" id="our-scripts-and-resources">
+<h2>Our scripts and resources<a class="headerlink" href="#our-scripts-and-resources" title="Permalink to this headline">¶</a></h2>
+<p>Some scripts at <a class="reference external" href="https://github.com/AaltoScienceIT/jupyter-wiki">https://github.com/AaltoScienceIT/jupyter-wiki</a> .</p>
+<p>We are soon going to revise all of our instructor info which can be
+useful to you later.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="autograding.html" class="btn btn-neutral float-right" title="Autograding" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nbgrader.html" class="btn btn-neutral" title="Nbgrader basics" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

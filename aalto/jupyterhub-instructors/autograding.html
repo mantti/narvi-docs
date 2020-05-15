@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Autograding &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="JupyterHub for instructors" href="index.html"/>
+        <link rel="next" title="Public copy of assignments" href="public-copy.html"/>
+        <link rel="prev" title="nbgrader hints" href="nbgrader-hints.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../jupyterhub.html">JupyterHub</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#basic-usage">Basic usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#terms-of-use">Terms of use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#courses-and-assignments">Courses and assignments</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jupyterhub.html#instructors">Instructors</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">JupyterHub for instructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#privacy-policy">Privacy policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#faq-and-bugs">FAQ and bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyterhub.html#more-info">More info</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">The Aalto environment</a> &raquo;</li>
+      
+          <li><a href="../jupyterhub.html">JupyterHub</a> &raquo;</li>
+      
+          <li><a href="index.html">JupyterHub for instructors</a> &raquo;</li>
+      
+    <li>Autograding</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/jupyterhub-instructors/autograding.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="autograding">
+<h1>Autograding<a class="headerlink" href="#autograding" title="Permalink to this headline">¶</a></h1>
+<p>Autograding is sometimes seen as the &#8220;holy grail&#8221; of using Jupyter for
+teaching.  But you need an appreciation of the level of the task at
+hand and how to do it.</p>
+<div class="section" id="id1">
+<h2>Autograding<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Running <code class="docutils literal"><span class="pre">nbgrader</span> <span class="pre">autograde</span></code> is not secure, because arbitrary
+student code is run with instructor permissions, including access
+to <em>all instructor files and all other student data</em>.  We have
+designed our own system to make it secure, but we must run it for
+you.  Contact us to use it.  <strong>If you autograde yourself, you are
+making a choice to risk privacy of all students (probably violating
+Finnish law) and the integrity of your grades.</strong> <a class="reference external" href="https://github.com/jupyter/nbgrader/issues/483">This is a
+long-standing design flaw of nbgrader</a> which we have
+fixed as best we can.</p>
+<p class="last">The secure autograder has to be run manually, by us.  Fetch your
+assignments and contact us in good time.</p>
+</div>
+</div>
+<div class="section" id="how-deep-do-you-go">
+<h2>How deep do you go?<a class="headerlink" href="#how-deep-do-you-go" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Normal Jupyter notebooks, no automation.  You might use our
+JupyterHub to distribute assignments and as a way for students to
+avoid running their own software, but that&#8217;s all.</li>
+<li>Use nbgrader facilities to generate a student version of
+assignments, but handle grading yourself (&#8220;manually using
+nbgrader&#8221; or via some other system).</li>
+<li>Full autograding.</li>
+</ol>
+<p>You may think &#8220;autograding will save me effort&#8221;.  It <em>may</em>, but it
+will make a whole lot of effort in another way: making your assignment
+robust to autograding.  As someone once said: plan for one day to
+write an assignment, one week to make it autogradeable, then weeks to
+make it robust.  It doesn&#8217;t help that most reference material you can
+find is about basic programming, not about advanced data science
+projects.</p>
+<p><strong>If you use autograding, you have to test your notebooks with many
+students of different levels.  Plan on weeks for this.</strong></p>
+</div>
+<div class="section" id="what-is-autograding">
+<h2>What is autograding?<a class="headerlink" href="#what-is-autograding" title="Permalink to this headline">¶</a></h2>
+<p>nbgrader is <em>not</em> a fancy thing - it just copies files around.
+Autograding is <em>only</em> running the whole notebook from top to bottom
+and looking for errors.  If there are errors, subtract points.  There
+is not some major platform running in the background that does things
+<em>actually</em> automatically.  This is also the primary benefit: a simple
+system allows your notebooks to be more portable and reusable, and
+match more closely to real work.</p>
+</div>
+<div class="section" id="autograding-at-aalto">
+<h2>Autograding at Aalto<a class="headerlink" href="#autograding-at-aalto" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Design your notebook well</li>
+<li>Collect your notebooks using the nbgrader interface.  Don&#8217;t click
+any &#8220;autograde&#8221; buttons (unless you check the notebook yourself
+first).</li>
+<li>Send an email to guru asking specifying your course and assignment
+and ask for autograding.  We will run <em>actually</em> secure autograding
+on our server soon, and send you a report on what worked or
+didn&#8217;t.  Everything gets automatically updated in your environment.</li>
+<li>Proceed as normal, for example...:</li>
+<li>If autograding didn&#8217;t work for some people, you can check them,
+modify if needed, and re-run the autograding yourself (since you
+just checked it).</li>
+</ol>
+</div>
+<div class="section" id="designing-notebooks-for-autograding">
+<h2>Designing notebooks for autograding<a class="headerlink" href="#designing-notebooks-for-autograding" title="Permalink to this headline">¶</a></h2>
+<p>(please contribute or comment on these ideas)</p>
+<p>Check out the <a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/user_guide/autograding_resources.html">upstream autograding hints</a>,
+which include: hints on writing good test cases, checking if a certain
+function has been used, checking how certain functions were called,
+grading plots, and more.  But when reading this, not how these
+examples are simple code - your cases will probably be more complex.</p>
+<p>Understand the whole loop of transferring files from you, to student
+versions, to students, and back.  Understand what the loop <em>is not</em> as
+well.  Understand that there isn&#8217;t actual <em>automatic autograding</em>.</p>
+<p>Have an <strong>assignment zero</strong> with no content and worth zero (or one)
+points, which students have to submit just to show they know how the
+system works (for example, they don&#8217;t forget to push &#8220;submit&#8221;).  Maybe
+it just has some trivial math or programming exercises.  This reduces
+the cognitive load when doing the real assignments.</p>
+<p>Design your notebook with a mindset of unit testing.  Note that this
+isn&#8217;t the way that notebooks are usually used, though.  Functions and
+testable functions are good.  But note that if you put everything in
+functions, you lose some of the main benefits of notebooks
+(interactivity made possible by having things in the top-level scope)!
+Such is life.</p>
+<p>Have sufficient tests that are visible to the students, so that they
+can tell if their answers are reasonable.  For example,
+student-visible tests might check for the shape of arrays, hidden
+tests check for the actual values.  This also ensures that they are
+approaching it the way you expect.</p>
+<p>Similarly, some instructors have found that you must have plenty of
+structure so that students only have to fill in well-defined chucks,
+with instructor code before and after.  This ensures that students do
+&#8220;the right thing&#8221;, but also means that students lose the experience of
+the &#8220;big picture&#8221;: loading, preprocessing, and finalization -
+important skills for the future.  Instead, they learn to fill in
+blanks and no more, no less.  So, in this way autograding is a
+trade-off: more grade able, less realistic.</p>
+<p>Within your tests, use variable names that won&#8217;t have a conflict (for
+example, a random suffix like <code class="docutils literal"><span class="pre">testval_randomstring36456165</span></code> instead of
+<code class="docutils literal"><span class="pre">testval</span></code>).  This reduces the chance of one of your tests
+conflicting/overwriting something that the students have added.</p>
+<p>Expect students to do everything wrong, and fail in weird ways.  Your
+tests need to be <em>robust</em>.</p>
+<p>Consider if your assignment is more open-ended, or there is one
+specific way to solve it.  If it&#8217;s more open-ended, consider if you
+think you&#8217;ll be able to make it autogradeable.</p>
+<p>nbgrader relies on metadata in order to do the autograding.  In order
+for this to work, the cell metadata needs to be intact.  Normally, you
+can&#8217;t even see it for a cell, but it can be affected if: a) cells are
+copied and pasted to another notebook file (metadata lost, autograding
+fails), or b) cells are split (metadata duplicated, nbgrader halts
+then).  You should ask students to copy the whole notebook file around
+when needed.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="public-copy.html" class="btn btn-neutral float-right" title="Public copy of assignments" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nbgrader-hints.html" class="btn btn-neutral" title="nbgrader hints" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

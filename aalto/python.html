@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="Open Source at Aalto" href="opensource.html"/>
+        <link rel="prev" title="Aalto Gitlab" href="git.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterhub.html">JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-neuroimaging-environment">The &#8220;neuroimaging&#8221; environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mne-analyze">MNE Analyze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mayavi">Mayavi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation-of-additional-packages">Installation of additional packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#notes-for-admins">Notes for admins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>Python</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/python.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python">
+<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<p>The scientific python ecosystem is also available on Aalto Linux
+workstations, including the anaconda (Python 3) and anaconda2
+(Python2) modules providing
+the Anaconda python distribution. For a more indepth description see
+the generic <a class="reference internal" href="../scicomp/python.html"><em>python page under scientific computing docs</em></a>.</p>
+<div class="section" id="the-neuroimaging-environment">
+<h2>The &#8220;neuroimaging&#8221; environment<a class="headerlink" href="#the-neuroimaging-environment" title="Permalink to this headline">¶</a></h2>
+<p>On the Aalto Linux workstations there exists a conda environment under the
+anaconda3 module called &#8220;neuroimaging&#8221; which contains an extensive collection
+of Python packages for the analysis of neuroimaging data, such as fMRI, EEG and
+MEG.</p>
+<p>To use it:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ ml purge
+$ ml anaconda3
+$ source activate neuroimaging
+</pre></div>
+</div>
+<p>A more up-to-date yet under development version of the environment can be activated with:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ ml purge
+$ ml anaconda3
+$ source activate neuroimaging2
+</pre></div>
+</div>
+<p>To see the full list of packages what are installed in the environment, use:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ conda list
+</pre></div>
+</div>
+<p>Some highlights include:</p>
+<ul class="simple">
+<li>Basic scientific stack<ul>
+<li>numpy</li>
+<li>scipy</li>
+<li>matplotlib</li>
+<li>pandas</li>
+<li>statsmodels</li>
+</ul>
+</li>
+<li>fMRI:<ul>
+<li>nibabel</li>
+<li>nilearn</li>
+<li>nitime</li>
+<li>pysurfer</li>
+</ul>
+</li>
+<li>EEG/MEG:<ul>
+<li>mne</li>
+<li>pysurfer</li>
+</ul>
+</li>
+<li>Machine learning:<ul>
+<li>scikit-learn</li>
+<li>tensorflow</li>
+<li>pytorch</li>
+</ul>
+</li>
+<li>R:<ul>
+<li>rpy2 (bridge between Python and R)</li>
+<li>tidyverse</li>
+</ul>
+</li>
+</ul>
+<p>Finally, if you get binaries from the wrong environment (check with
+<code class="docutils literal"><span class="pre">which</span> <span class="pre">BINARYNAME</span></code>) you may need to update the mappings with:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rehash
+</pre></div>
+</div>
+<div class="section" id="mne-analyze">
+<h3>MNE Analyze<a class="headerlink" href="#mne-analyze" title="Permalink to this headline">¶</a></h3>
+<p>Note: this was tested only for NBE workstations. If you wish to run <code class="docutils literal"><span class="pre">mne_analyze</span></code> from your workstation you should follow this procedure. Open a new terminal and make sure you have the <em>bash</em> shell (<code class="docutils literal"><span class="pre">echo</span> <span class="pre">$SHELL</span></code>, if you do not have it, just type <code class="docutils literal"><span class="pre">bash</span></code>) and then:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module load mne
+$ source /work/modules/Ubuntu/14.04/amd64/common/mne/MNE-2.7.4-3434-Linux-x86_64/bin/mne_setup_sh
+$ export SUBJECTS_DIR=PATHTOSUBJECTFOLDER
+$ export SUBJECT=SUBJECTID
+$ mne_analyze
+</pre></div>
+</div>
+<p>Please note that the path of the &#8220;source&#8221; command might change with most up to date versions of the tool. Please note that the &#8220;PATHTOSUBJECTFOLDER&#8221; and &#8220;SUBJECTID&#8221; are specific to the data you have. Please refer to MNE documentation for more help on these.</p>
+</div>
+<div class="section" id="mayavi">
+<h3>Mayavi<a class="headerlink" href="#mayavi" title="Permalink to this headline">¶</a></h3>
+<p>If you experience problems with the 3D visualizations that use Mayavi (for
+example MNE-Python&#8217;s brain plots), you can try forcing the graphics backend to
+Qt5:</p>
+<ul class="simple">
+<li>For the Spyder IDE, set Tools -&gt; Preferences -&gt; Ipython console -&gt; Graphics
+-&gt; Backend: Qt5</li>
+<li>For the ipython consoles, append <code class="docutils literal"><span class="pre">c.InteractiveShellApp.matplotlib</span> <span class="pre">=</span> <span class="pre">'qt5'</span></code>
+to the <code class="docutils literal"><span class="pre">ipython_config.py</span></code> and <code class="docutils literal"><span class="pre">ipython_kernel_config.py</span></code> configuration
+files. By default, these can be found in <code class="docutils literal"><span class="pre">~/.ipython/profile/default/</span></code>.</li>
+<li>In Jupyter notebooks, execute the magic command <code class="docutils literal"><span class="pre">%matplotlib</span> <span class="pre">qt5</span></code> at the
+beginning of your notebook.</li>
+</ul>
+</div>
+<div class="section" id="installation-of-additional-packages">
+<h3>Installation of additional packages<a class="headerlink" href="#installation-of-additional-packages" title="Permalink to this headline">¶</a></h3>
+<p>The &#8220;neuroimaging&#8221; environment aims to provide everything you need for the
+analysis of neuroimaging data. If you feel a package is missing that may be
+useful for others as well, contact <a class="reference external" href="mailto:marijn&#46;vanvliet&#37;&#52;&#48;aalto&#46;fi">Marijn van Vliet</a>. To quickly install a package in your home folder,
+use <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&lt;package-name&gt;</span> <span class="pre">--user</span></code>.</p>
+</div>
+<div class="section" id="notes-for-admins">
+<h3>Notes for admins<a class="headerlink" href="#notes-for-admins" title="Permalink to this headline">¶</a></h3>
+<p>The trick to getting Mayavi to play nicely with a modern Python environment is
+to install it from Git:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ ml purge
+$ ml anaconda3
+$ source activate neuroimaging
+$ pip install git+https://github.com/enthought/traits.git@a7a83182048c08923953e302658b51b68c802132
+$ pip install git+https://github.com/enthought/pyface.git@13a064de48adda3c880350545717d8cf8929afad
+$ pip install git+https://github.com/enthought/traitsui.git@ee8ef0a34dfc1db18a8e2c0301cc18d96b7a3e2f
+$ pip install git+https://github.com/enthought/mayavi.git
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="opensource.html" class="btn btn-neutral float-right" title="Open Source at Aalto" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="git.html" class="btn btn-neutral" title="Aalto Gitlab" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

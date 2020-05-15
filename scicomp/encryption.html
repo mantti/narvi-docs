@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Encryption for researchers &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="Scientific computing" href="index.html"/>
+        <link rel="next" title="Git" href="git.html"/>
+        <link rel="prev" title="Scientific computing" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scientific computing</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Encryption for researchers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#key-management">Key management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#symmetric-vs-asymmetric-encryption">Symmetric vs asymmetric encryption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#encryption-programs">Encryption programs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#zip">7zip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pgp">PGP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#full-disk-encryption">Full disk encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-symmetric-encryption-with-gpg">Using symmetric encryption with gpg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-asymmetric-encryption-with-gpg">Using asymmetric encryption with gpg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-warnings">General warnings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-to-do">Advanced / to do</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter-pitfalls.html">Pitfalls of Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">Linux shell crash course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zen-of-scicomp.html">The Zen of Scientific computing</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Scientific computing</a> &raquo;</li>
+      
+    <li>Encryption for researchers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/scicomp/encryption.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="encryption-for-researchers">
+<h1>Encryption for researchers<a class="headerlink" href="#encryption-for-researchers" title="Permalink to this headline">¶</a></h1>
+<p>This page describes the basics of encryption to an audience of
+researchers. It describes how it may be useful (nd when not needed) in a
+professional researcher environment, in order to secure data. It doesn&#8217;t
+describe encryption for personal use (there are plenty of other guides
+for that). It doesn&#8217;t go into very deep details about cryptography. It
+doesn&#8217;t get go into deep details. Cryptography is the type of things
+where there are a huge number of subtle details, and everyone has their
+own opinion. This guide is designed to provide an understanding for
+basic use, not cover every single subtle point.</p>
+<p>Status: this is somewhat complete, but is not a complete guide. It will
+be extended as needed.</p>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Modern cryptography is quite well developed, and available many places.
+However, the human side is very difficult. Encrypting something, but not
+keeping the key or password secure, has no benefits. To use your
+encryption, you need to decide what your goals are (who should access,
+who you want to keep safe from) and then plan accordingly. The security
+of cryptography is decided more by how you manage the keys and process
+than the deepest technical details.</p>
+</div>
+<div class="section" id="key-management">
+<h2>Key management<a class="headerlink" href="#key-management" title="Permalink to this headline">¶</a></h2>
+<p>The point of encryption is to trade a hard problem (keeping a lot of
+data secure) to a more limited problem (keeping a single key or password
+secure). These keys can be managed separately from the data. This
+immediately takes us to the importance of key management. Let&#8217;s say you
+can&#8217;t send data over email unless it is encrypted. If you encrypt it and
+send the password in the same email as the encrypted data, you have
+managed to technically satisfy the requirement while adding no real
+security at all. A better strategy would be to give the password to
+someone when you meet them in person, send it by another channel (e.g.
+SMS, but then it is only secure as SMS+email), or even better use
+asymmetric encryption (see below).</p>
+<p>Deciding how you will manage keys is the hardest part of using
+encryption. For some fun, next time you hear someone talk about using
+encryption, see if they mention how they keep the keys secure. Usually,
+the don&#8217;t, and you have no way of knowing if they actually are doing it
+securely.</p>
+</div>
+<div class="section" id="symmetric-vs-asymmetric-encryption">
+<h2>Symmetric vs asymmetric encryption<a class="headerlink" href="#symmetric-vs-asymmetric-encryption" title="Permalink to this headline">¶</a></h2>
+<p>There are two main types of cryptography. They can both be considered
+equally secure, but have different ways of managing keys.</p>
+<p><strong>Symmetric encryption</strong> uses the same password/key for encrypting and
+decrypting. It is good because it is simple, because there is only one
+key or password you need to know and it is easy to think &#8220;one data=one
+password&#8221;. However, everyone needs to know the same password, and it
+can&#8217;t be changed. Since the same password has to be everywhere, this can
+be a bit insecure depending on the use, and you can argue it&#8217;s a bit
+complicated to keep that key password secure (if there are many people,
+or if it needs to be automated).</p>
+<p><strong>Asymmetric encryption</strong> has different keys for encrypting and
+decrypting. So, you use a &#8220;public key&#8221; to do an encryption (which
+requires no password - everyone in the world can know this key and your
+data is still secure). You have a separate private key (+password) which
+allows only you to decrypt it. This separation of encryption and
+decryption was a major mathematical breakthrough. Then, anyone who
+needed to receive data securely would have their own public/private key,
+and all the public keys are, well, public. When you want to send data to
+someone, you just encrypt it using their public key, and there is no
+need to manage sharing a password. This allows you to: encrypt so that
+multiple people can read it, encrypt automatically without password, and
+encrypt to someone not involved in the initial process.</p>
+<p>With asymmetric encryption, there are some more things to consider. How
+do you make sure that you have the right public key?</p>
+</div>
+<div class="section" id="encryption-programs">
+<h2>Encryption programs<a class="headerlink" href="#encryption-programs" title="Permalink to this headline">¶</a></h2>
+<p>This lists some common programs, but this should not be taken to mean
+that using these programs makes your data safe. Security depends no how
+you use the program, and security will only decrease over time as new
+analysis is done. It is usually best to choose well-supported open
+source programs where possible. More detailed instructions will be
+provided as needed.</p>
+<div class="section" id="zip">
+<h3>7zip<a class="headerlink" href="#zip" title="Permalink to this headline">¶</a></h3>
+<p>7zip is a file archiver (like zip). It can symmetrically encrypt files
+with a passphrase.</p>
+</div>
+<div class="section" id="pgp">
+<h3>PGP<a class="headerlink" href="#pgp" title="Permalink to this headline">¶</a></h3>
+<p>PGP is a set of encryption standards (and also a program). It has a full
+suite of encryption tools, and is quite stable and well-supported. You
+ofter hear about PGP in the context of email encryption, but it can be
+used for many things.</p>
+<p>On Linux systems, it is normally found as the program gpg (Gnu Privacy
+Guard). This guide uses gpg.</p>
+</div>
+<div class="section" id="full-disk-encryption">
+<h3>Full disk encryption<a class="headerlink" href="#full-disk-encryption" title="Permalink to this headline">¶</a></h3>
+<p>Programs can encrypt the entire hard disk of your computer. This means
+that any data on it is safe, should your computer be lost. There are
+programs to do this for every operating system, and Aalto laptops now
+come encrypted by default.</p>
+</div>
+</div>
+<div class="section" id="using-symmetric-encryption-with-gpg">
+<h2>Using symmetric encryption with gpg<a class="headerlink" href="#using-symmetric-encryption-with-gpg" title="Permalink to this headline">¶</a></h2>
+<p>Encryption:</p>
+<div class="highlight-python"><div class="highlight"><pre>gpg --symmetric input.file
+</pre></div>
+</div>
+<p>Decryption:</p>
+<div class="highlight-python"><div class="highlight"><pre>gpg input.file.gpg
+</pre></div>
+</div>
+<p>This will ask you for a password. If you do not want it to, you can use
+&#8211;passphrase-fd to pass it automatically. Normally, keeping a password
+in a file is considered quite insecure! Make sure that the permissions
+are restrictive. Anyone that can read this file once be able to read
+your data forever. The file could be backed up and spread all over the
+place - is that what you want? IT admins will be technically able to see
+the passphrase (though they do not). Is this all within the scope of
+your requirements?</p>
+<div class="highlight-python"><div class="highlight"><pre>cat pass.txt | gpg --passphrase-fd 0 --symmetric input.file
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-asymmetric-encryption-with-gpg">
+<h2>Using asymmetric encryption with gpg<a class="headerlink" href="#using-asymmetric-encryption-with-gpg" title="Permalink to this headline">¶</a></h2>
+<p>When using asymmetric (public key) encryption, you have to generate two
+keys: public and private (they are made at the same time). The private
+key must be kept private, and has a passphrase on it too. This provides
+an added level of security on top of the file permissions.</p>
+<p>There are plenty of guides on this available. Some examples:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.madboa.com/geek/gpg-quickstart/">https://www.madboa.com/geek/gpg-quickstart/</a></li>
+<li><a class="reference external" href="https://gnupg.org/documentation/index.html">https://gnupg.org/documentation/index.html</a></li>
+</ul>
+<p>You can encrypt a single files to multiple keys. This means that the
+owner of any of the private keys can decrypt the file. This can be
+useful for backups and disaster recovery.</p>
+</div>
+<div class="section" id="general-warnings">
+<h2>General warnings<a class="headerlink" href="#general-warnings" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Strong encryption is serious business. It is designed so that no one
+can read the data should the keys or passwords be lost. If you mess
+this up and lose the key/password, your data is gone forever. You
+must have backups (and those backups must also be secure), ...</li>
+<li>If you keep passwords in files, or send them insecurely anyhow, then
+the technical security of your data is only as great as of that
+key/password.</li>
+<li>The strength of your encryption also depends on the strength of your
+password (there is the reason it is often called a &#8220;passphrase&#8221; - a
+phrase is more secure than a standard password). Choose it carefuly.</li>
+</ul>
+</div>
+<div class="section" id="advanced-to-do">
+<h2>Advanced / to do<a class="headerlink" href="#advanced-to-do" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>How much security is enough?</li>
+<li>Set cipher to AES (pre 16.04)</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="git.html" class="btn btn-neutral float-right" title="Git" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Scientific computing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

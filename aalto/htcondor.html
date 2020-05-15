@@ -1,0 +1,656 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HTCondor &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="Aalto Gitlab" href="git.html"/>
+        <link rel="prev" title="Paniikki: Computer Lab For Students" href="paniikki.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterhub.html">JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">HTCondor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htcondor-status-at-aalto-and-support">HTCondor status at Aalto and support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htcondor-official-manuals">HTCondor official manuals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#before-you-run-with-condor">Before you run with Condor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-your-code-with-condor">Run your code with Condor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#job-script-examples">Job script examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#condor-commands">Condor commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#checkpointing-and-condor-compile">Checkpointing and condor_compile</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#htcondor-config">HTCondor config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#faq">FAQ</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#condor-has-support-on-running-jobs-under-shared-filesystem-should-i-use-this">Condor has support on running jobs under shared filesystem. Should I use this?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my-job-is-in-idle-state-while-there-are-resources-available">My job is in &#8216;Idle&#8217; state, while there are resources available</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i-ve-copy-pasted-example-files-from-this-page-but-when-try-to-run-they-produce-some-errors">I&#8217;ve copy/pasted example files from this page, but when try to run they produce some errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-files-scripts">Additional files/scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>HTCondor</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/htcondor.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="htcondor">
+<h1>HTCondor<a class="headerlink" href="#htcondor" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>SCIP courses: look for <a class="reference external" href="http://science-it.aalto.fi/scip">Introduction to distributed computing with
+HTCondor</a></li>
+<li>HTCondor official manuals: <a class="reference external" href="https://research.cs.wisc.edu/htcondor/manual/">https://research.cs.wisc.edu/htcondor/manual/</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>HTCondor (formerly known as just Condor) is a computing scheduler
+developed at University of Wisconsin-Madison. This allows users to run
+their binaries on Aalto Linux workstations without explicit logging to
+desktop machines. Condor takes care of choosing the right workstation,
+setting correct job priority and taking care of cleaning the output.
+Condor distributes, schedules, executes and returns the result. So
+handmade farming is not needed.</p>
+</div>
+<div class="section" id="htcondor-status-at-aalto-and-support">
+<h2>HTCondor status at Aalto and support<a class="headerlink" href="#htcondor-status-at-aalto-and-support" title="Permalink to this headline">¶</a></h2>
+<p>Condor installations are department specific. Here is a list of
+departments that have HTCondor software installed on their Ubuntu
+workstations.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="29%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Department / school</th>
+<th class="head">Support contact</th>
+<th class="head">Comments</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>PHYS &amp; NBE / SCI</td>
+<td>Aalto IT servicedesk *</td>
+<td>joint installation, installed on all the Ubuntu workstations</td>
+</tr>
+<tr class="row-odd"><td>CS / SCI</td>
+<td>Aalto IT servicedesk *</td>
+<td>installed on all the Ubuntu workstations</td>
+</tr>
+<tr class="row-even"><td>MATH / SCI</td>
+<td>Matti Harjula and Kenrick Bingham</td>
+<td>installed on about 50 newer Ubuntu workstations</td>
+</tr>
+</tbody>
+</table>
+<p>The instructions below are common to all the departments if not
+mentioned otherwise.</p>
+<p>* Getting help: your department IT guys have responsibility over the
+HTCondor installation. Best way to reach them is to drop an email to
+the Aalto IT servicedesk including info like: your department, Linux
+workstation name and type of problem.</p>
+</div>
+<div class="section" id="htcondor-official-manuals">
+<h2>HTCondor official manuals<a class="headerlink" href="#htcondor-official-manuals" title="Permalink to this headline">¶</a></h2>
+<p>The detailed manual can be found from
+<a class="reference external" href="https://research.cs.wisc.edu/htcondor/manual/">https://research.cs.wisc.edu/htcondor/manual/</a>. Current version of Condor we have
+can be checked with <code class="docutils literal"><span class="pre">condor_q</span> <span class="pre">-version</span></code>.</p>
+</div>
+<div class="section" id="before-you-run-with-condor">
+<h2>Before you run with Condor<a class="headerlink" href="#before-you-run-with-condor" title="Permalink to this headline">¶</a></h2>
+<p>It is recommended that you compile you binary statically. If you have
+used shared libs (or you get from someone code that has not been
+compiled statically), make sure that you set your environment correctly
+and use <code class="docutils literal"><span class="pre">getenv</span> <span class="pre">=</span> <span class="pre">true</span></code> option in Condor submit script.</p>
+<p>No large MPI jobs (over the net) are allowed with Condor. For any large
+MPI or multithread job, please either run on your local workstation only
+or on other resources like <a class="reference internal" href="../triton/index.html"><em>Triton</em></a>.</p>
+<p>Condor is well suited for short time serial runs (like overnight), or
+for small (2-4 CPUs) parallel runs that can be run within one machine.
+Long runs (over 12 hours) are possible, but remember that Condor runs on
+local workstations, and uses only idle CPU cycles, i.e. some currently
+unused workstation during the day and all of them during night. Local
+usage is of higher priority and thus submitted Condor job that hurts
+local user will be suspended.</p>
+<p>Always use <code class="docutils literal"><span class="pre">should_transfer_files</span> <span class="pre">=</span> <span class="pre">yes</span></code> in your Condor submit script.
+This way you make sure that all IOs will go to local directory assigned
+to HTCondor on a local worker instead of shared NFS (be it /home or
+alike).</p>
+</div>
+<div class="section" id="run-your-code-with-condor">
+<h2>Run your code with Condor<a class="headerlink" href="#run-your-code-with-condor" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Discover condor pool status with <code class="docutils literal"><span class="pre">condor_status</span></code> or with
+<code class="docutils literal"><span class="pre">condor_status</span> <span class="pre">-available</span></code> to find out which machines are
+available for jobs. This step is to make sure that condor pool is
+available.</li>
+<li>Compile a statically linked binary.</li>
+<li>Create a condor submission script, like job<code class="docutils literal"><span class="pre">.cond</span></code> below</li>
+<li>Submit the job to condor pool with <code class="docutils literal"><span class="pre">condor_submit</span> <span class="pre">job.cond</span></code></li>
+<li>Manage your job(s) with <code class="docutils literal"><span class="pre">condor_q</span></code>, <code class="docutils literal"><span class="pre">condor_rm</span></code></li>
+</ul>
+<p>It may take several minutes for code to start running. Check out
+<code class="docutils literal"><span class="pre">condor.log</span></code> for any useful log information.</p>
+<div class="section" id="job-script-examples">
+<h3>Job script examples<a class="headerlink" href="#job-script-examples" title="Permalink to this headline">¶</a></h3>
+<p>CS users should use <code class="docutils literal"><span class="pre">universe</span> <span class="pre">=</span> <span class="pre">local</span></code></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1"># job_1.cond -- ready to run serial code example</span>
+
+<span class="n">executable</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">bin</span>
+<span class="n">universe</span> <span class="o">=</span> <span class="n">vanilla</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">out</span>
+<span class="n">error</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">err</span>
+<span class="n">log</span> <span class="o">=</span> <span class="n">condor</span><span class="o">.</span><span class="n">log</span>
+<span class="n">should_transfer_files</span> <span class="o">=</span> <span class="n">YES</span>
+<span class="n">queue</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre># job_2.cond -- Condor serial job submission script example
+
+# define job specific vars to be used later in this script
+# this should be an absolute path, or path from current working dir
+DIR=myrun
+
+# setting up base directory for input, output, error and log files, executable path is not affected
+initialdir = $(DIR)
+
+# Define executable to run, it can be arch specific, or just some generic code
+executable = mycode
+
+# memory requirements, if any
+#request_memory = 512 MB
+
+# Condor universe. Default Vanilla, others haven&#39;t been configured/tested
+universe = vanilla
+
+# the file name specified with &#39;input&#39; should contain any keyboard input the program requires
+# note, that command-line arguments are specified by the &#39;arguments&#39; command below
+input = input.txt
+
+# and output files
+# note, that input, output, log and error files will/should be in &#39;initialdir&#39; directory
+output = $(cluster).out
+
+# Errors, if any, will go here
+error = $(cluster).err
+
+# Always define log file, so that you know what haapened to your job(s)
+log = condor.log
+
+# email for job notifications, when it is completed or finished with errors
+#notify_user = firstname.lastname@aalto.fi
+#notification = Complete
+# Additional environment vars
+#environment = &quot;PATH=$ENV(PATH):/home/user/bin&quot;
+
+# replicate your current working environment on the worker node
+# useful when you have some specific vars like PATH, LD_LIBRARY_PATH or other defined with &#39;module&#39;
+getenv = true
+
+# code arguments, if any
+#arguments = -c cmd_input.conf
+
+# Trasferring your files to a system the job is going to run on
+# that is the recommended method, to avoid NFS traffic
+should_transfer_files = yes
+transfer_input_files = cmd_input.conf,input.txt
+when_to_transfer_output = ON_EXIT_OR_EVICT
+
+# Some specific requirements, if any. By default Condor will run job on a machine which has
+# the same architecture and operating system family as the machine from which it was submitted.
+# Here is we want the worker node would be Ubuntu 12.04 with 4 CPU cores or more
+#requirements = (OpSysLongName &gt;= &quot;Ubuntu 12.04&quot;) &amp;&amp; (TotalCPus &gt;= 4)
+
+queue
+</pre></div>
+</div>
+</div>
+<div class="section" id="condor-commands">
+<h3>Condor commands<a class="headerlink" href="#condor-commands" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">condor_q</span> <span class="pre">-analyze</span> <span class="pre">&lt;condor_job_id&gt;</span></code> # your
+running/pending jobs diagnostics (for all your jobs at once if
+<code class="docutils literal"><span class="pre">job_id</span></code> is missing)</li>
+<li><code class="docutils literal"><span class="pre">condor_q</span> <span class="pre">-global</span></code> # list all/everyone&#8217;s jobs at pool</li>
+<li><code class="docutils literal"><span class="pre">condor_q</span> <span class="pre">-version</span></code> # find out installed condor version</li>
+<li><code class="docutils literal"><span class="pre">condor_status</span> <span class="pre">-available</span></code> # list available computers for your job</li>
+<li><code class="docutils literal"><span class="pre">condor_status</span> <span class="pre">-state</span> <span class="pre">-total</span></code> # Condor pool resources in total</li>
+<li><code class="docutils literal"><span class="pre">condor_status</span> <span class="pre">HOSTNAME</span></code> # show status for a specific host
+(HOSTNAME.hut.fi in this case), where number
+of slots gives number of CPU cores available</li>
+<li><code class="docutils literal"><span class="pre">condor_status</span> <span class="pre">-long</span> <span class="pre">vesku</span></code> # show all details for a specific host</li>
+<li><code class="docutils literal"><span class="pre">condor_status</span> <span class="pre">-constraint</span> <span class="pre">'OpSysLongName&gt;=&quot;Ubuntu</span> <span class="pre">12.04&quot;'</span></code> # list
+Ubuntu 12.04 workstations only</li>
+<li><code class="docutils literal"><span class="pre">condor_rm</span> <span class="pre">&lt;condor_job_id&gt;</span></code> # remove particular job</li>
+<li><code class="docutils literal"><span class="pre">condor_rm</span> <span class="pre">-all</span></code> # remove all user jobs</li>
+<li><code class="docutils literal"><span class="pre">condor_rm</span> <span class="pre">-constraint</span> <span class="pre">'JobStatus</span> <span class="pre">=!=</span> <span class="pre">2'</span></code> # remove all user jobs
+that are not currently running</li>
+<li><code class="docutils literal"><span class="pre">condor_hold</span> <span class="pre">&lt;job_id&gt;</span></code> # hold your Condor job(s) in the queue</li>
+<li><code class="docutils literal"><span class="pre">condor_release</span> <span class="pre">&lt;job_id&gt;</span></code> # release job(s) previously holded in the
+queue</li>
+<li>(NOTE: doesn&#8217;t work on Ubuntu, so anywhere at Aalto)
+<code class="docutils literal"><span class="pre">condor_compile</span></code> <code class="docutils literal"><span class="pre">[cc</span> <span class="pre">\|</span> <span class="pre">f77</span> <span class="pre">\|</span> <span class="pre">g++</span> <span class="pre">\|</span> <span class="pre">make</span> <span class="pre">\|</span> <span class="pre">...]</span></code> #
+relink an executable for checkpointing with Standard universe; not
+installed on Ubuntu 12.04, see Checkpointing section below</li>
+<li><code class="docutils literal"><span class="pre">condor_history</span></code> # list the completed jobs submitted from the
+workstation you run this command on</li>
+</ul>
+<p>Startup script <code class="docutils literal"><span class="pre">requirements=</span></code> can be always tested with
+<code class="docutils literal"><span class="pre">condor_status</span> <span class="pre">-constraint</span></code>. Like in the above <code class="docutils literal"><span class="pre">job_2.cond</span></code> example:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">condor_status</span> <span class="pre">-constraint</span> <span class="pre">'(OpSysLongName&gt;=&quot;Ubuntu</span> <span class="pre">12.04&quot;)</span> <span class="pre">&amp;&amp;</span> <span class="pre">(TotalCPus</span> <span class="pre">&gt;=</span> <span class="pre">4)'</span> <span class="pre">-available</span></code></li>
+</ul>
+<p>More commands and their usage examples you can find at <a class="reference external" href="https://research.cs.wisc.edu/htcondor/manual/v7.9/index.html">Condor User
+Manual</a>.</p>
+<p>Additional &#8220;requirements&#8221;/&#8221;constraints&#8221; options that have been
+configured on PHYS workstations only: CPUModel, CPUModelName,
+TotalFreeMemory. The later one in MB, reports currently available free
+memory according to /proc/meminfo. Can be useful for large memory jobs,
+see example below.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1"># ask for machine with more than 4GB of free memory</span>
+<span class="n">requirements</span> <span class="o">=</span> <span class="p">(</span><span class="n">TotalFreeMemory</span> <span class="o">&gt;=</span> <span class="mi">4000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="checkpointing-and-condor-compile">
+<h3>Checkpointing and condor_compile<a class="headerlink" href="#checkpointing-and-condor-compile" title="Permalink to this headline">¶</a></h3>
+<p>HTCondor has no checkpoitning or remote system calls support on Ubuntu
+(according to<a class="reference external" href="https://research.cs.wisc.edu/htcondor/manual/v8.0/1_5Availability.html">manual
+pages</a>).</p>
+</div>
+</div>
+<div class="section" id="htcondor-config">
+<h2>HTCondor config<a class="headerlink" href="#htcondor-config" title="Permalink to this headline">¶</a></h2>
+<p>Machine in considered to be free if: no user activity within 15 min
+(keyboard or mouse), average load &lt; 30%, and no condor job already
+running.</p>
+<p>Running job will be suspended if: local workstation user became active
+(on hold) or CPU busy for more than 2 min and job has been running more
+than 90 sec.</p>
+<p>Suspended job will be resumed if: machine has been free for 5 min.</p>
+<p>Suspended job is killed if: it has been suspended for 4 hours (Vanilla
+universe) or hasn&#8217;t completed checkpointing within 10 min (Standard
+universe) or higher priority job is waiting in the queue.</p>
+<p>Job will be preempted if: it uses more memory than available for its
+slot (killed and send back to queue).</p>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="condor-has-support-on-running-jobs-under-shared-filesystem-should-i-use-this">
+<h3>Condor has support on running jobs under shared filesystem. Should I use this?<a class="headerlink" href="#condor-has-support-on-running-jobs-under-shared-filesystem-should-i-use-this" title="Permalink to this headline">¶</a></h3>
+<p>This is a bad idea. Keep using Condor&#8217;s default local directory
+(somewhere on the local harddrive, department specific settings),
+otherwise, several jobs using NFS constantly (either home or any other
+remotely mounted) would make it really slow. Use</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">should_transfer_files</span>  <span class="o">=</span> <span class="n">YES</span>
+<span class="n">transfer_input_files</span>   <span class="o">=</span> <span class="n">file1</span><span class="o">.</span><span class="n">dat</span><span class="p">,</span><span class="n">file2</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>options instead. Then condor will copy all required (specified) files
+to its local spool directory and run jobs locally. Only when finished,
+it will return files back to the original submitting directory.  This
+original submitting directory should <em>not</em> be a NFS mounted directory
+such as your home directory, as in the Aalto environment those are
+mounted with Kerberos security, and if the Kerberos ticket has expired
+because you aren&#8217;t working on your workstations, condor will not be
+able to access this directory and your job results will be lost.</p>
+</div>
+<div class="section" id="my-job-is-in-idle-state-while-there-are-resources-available">
+<h3>My job is in &#8216;Idle&#8217; state, while there are resources available<a class="headerlink" href="#my-job-is-in-idle-state-while-there-are-resources-available" title="Permalink to this headline">¶</a></h3>
+<p>Job may take several minutes to start, if it takes longer, check out job
+log (defined with <code class="docutils literal"><span class="pre">log</span> <span class="pre">=</span></code> directive in the submit script) and then run
+<code class="docutils literal"><span class="pre">condor_q</span> <span class="pre">-analyze</span> <span class="pre">&lt;job_id&gt;</span></code> to see possible reasons. More debugging
+options at <a class="reference external" href="https://research.cs.wisc.edu/htcondor/manual/v7.9/condor_q.html">condor_q
+manual</a>.</p>
+</div>
+<div class="section" id="i-ve-copy-pasted-example-files-from-this-page-but-when-try-to-run-they-produce-some-errors">
+<h3>I&#8217;ve copy/pasted example files from this page, but when try to run they produce some errors<a class="headerlink" href="#i-ve-copy-pasted-example-files-from-this-page-but-when-try-to-run-they-produce-some-errors" title="Permalink to this headline">¶</a></h3>
+<p>Should be this wiki specific. Noticed (with <code class="docutils literal"><span class="pre">cat</span> <span class="pre">-A</span> <span class="pre">filename</span></code>) that
+copy/pasted text includes bunch of non-ascii characters.</p>
+<p>Got it fixed with <code class="docutils literal"><span class="pre">perl</span> <span class="pre">-pi</span> <span class="pre">-e</span> <span class="pre">'s/[[:^ascii:]]</span> <span class="pre">//g'</span> <span class="pre">filename</span></code></p>
+</div>
+</div>
+<div class="section" id="additional-files-scripts">
+<h2>Additional files/scripts<a class="headerlink" href="#additional-files-scripts" title="Permalink to this headline">¶</a></h2>
+<p>Files that may be useful with condor:</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">cq</span></code> – A script that works as <code class="docutils literal"><span class="pre">condor_q</span></code>but also prints the
+executing host</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/usr/bin/perl
+
+use POSIX;
+
+$user=$ENV{&#39;LOGNAME&#39;};
+$now=`date +%s`;
+$now=~s/\n//;
+
+$str=&quot; -cputime -submitter $user &quot;;
+for $i (0..$#ARGV) {
+ $str.=&quot; $ARGV[$i-1]&quot;;
+}
+
+if($ARGV[0] eq &quot;all&quot;) {$str=&quot; -global -cputime -currentrun&quot;;}
+if($ARGV[0] eq &quot;j&quot;) {system(&quot;condor_q -global -cputime -currentrun -submitter $user|egrep &#39;(jobs|Schedd)&#39;&quot;);exit(0);}
+if($ARGV[0] eq &quot;rm&quot;) {$str=`condor_q -submitter $user -format \&quot;%d\\n\&quot; ClusterId|xargs`;print &quot;condor_rm $str&quot;;exit(0);}
+
+foreach(`condor_q -long $str`) {
+  s/\n//;
+  s/\&quot;//g;
+
+  if(m/^Iwd\s*=\s*(\S+)/) { $iwd=$1; }
+  if(m/^RemoteHost\s*=\s*(\S+)/) { $rh=$1; }
+
+  if(m/ServerTime/) {
+    $iwd=~s/.*\/(.*\/.*)$/$1/;
+    push(@iwds, &quot;$rh\t $iwd&quot;);
+  }
+
+}
+
+foreach(`condor_q $str`) {
+  s/\n//;
+  if(/^\s*\d+\.\d/) {
+    $iwd=shift(@iwds);
+    $_.=&quot; &quot;.$iwd;
+  }
+  print &quot;$_\n&quot;;
+}
+
+sub runtime() {
+
+  my($now, $st)=@_;
+  $str=localtime($now-$st-7200);
+  $str=~s/\t/ /g;
+  $str=~s/^\s*//g;
+  $str=~s/\s+/ /g;
+  split(/ /,$str);
+  $d=$_[2]-1;
+  $t=$_[3];
+
+  if($d&gt;0) {$ret=&quot;$d+$t&quot;;}else{$ret=$t;}
+
+  return $ret;
+
+}
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">turbomole.cond</span></code>, <code class="docutils literal"><span class="pre">run_ridft510_condor.scr</span></code>– pair of scripts for
+running TurboMole or AMBER (thanks to Markus Kaukonen)</p>
+<div class="highlight-python"><div class="highlight"><pre># turbomole.cond
+Executable = ./run_ridft510_condor.scr
+Universe = vanilla
+Error = err.$(cluster)
+Output = out.$(cluster)
+Log = log.$(cluster)
+environment = &quot;OMP_NUM_THREADS=1&quot;
+
+Requirements = Memory &gt; 1000
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = run_ridft510_condor.scr, auxbasis, basis, control, coord,
+mos
+
+#Arguments =
+Queue
+</pre></div>
+</div>
+<p>and run_ridft510_condor.scr</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/sh
+source /etc/profile
+source /etc/bashrc
+source /etc/profile.d/fyslab-env.sh
+
+AMBERHOME=${HOME}/bin/Amber10
+TURBODIR=${HOME}/bin/Turbo5.10/
+
+PATH=$PATH:$TURBODIR/scripts
+PATH=$PATH:$TURBODIR/bin/`sysname`
+
+export PATH
+export PATH=&quot;${AMBERHOME}/exe:${AMBERHOME}/bin:${PATH}&quot;
+export PATH=&quot;${HOME}/bin:${PATH}&quot;
+
+ulimit -s unlimited
+#ulimit -a &gt; mylimits.out
+
+jobex -ri -c 200 &gt; jobex.out
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="git.html" class="btn btn-neutral float-right" title="Aalto Gitlab" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="paniikki.html" class="btn btn-neutral" title="Paniikki: Computer Lab For Students" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

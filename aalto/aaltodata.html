@@ -1,0 +1,762 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data: outline, requesting space, requesting access &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="Science-IT data policy" href="datapolicy.html"/>
+        <link rel="prev" title="Data storage" href="aaltostorage.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Data: outline, requesting space, requesting access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-data-management">What is data management?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-storage-at-aalto-sci-principles-and-policies">Data storage at Aalto SCI (principles and policies)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#groups">Groups</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#common-data-management-considerations">Common data management considerations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#organizing-data">Organizing data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backups">Backups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#confidential-or-sensitive-data">Confidential or sensitive data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal-data-research-data-about-others-not-about-you">Personal data (research data about others, not about you)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openness">Openness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-management-plans">Data management plans</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#long-term-archival">Long-term archival</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#archival-when-you-leave">Archival when you leave</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#summary-of-data-locations">Summary of data locations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instructions-for-storage-and-access">Instructions for storage and access</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#requesting-to-be-added-to-a-group">Requesting to be added to a group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requesting-a-new-group">Requesting a new group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterhub.html">JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>Data: outline, requesting space, requesting access</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/aaltodata.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-outline-requesting-space-requesting-access">
+<h1>Data: outline, requesting space, requesting access<a class="headerlink" href="#data-outline-requesting-space-requesting-access" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Need a place to store your data?  This is the place to look.
+First, we expect you to read and understand the top information.
+Then, see the <a class="reference internal" href="#instructions"><span>instructions</span></a> at bottom.</p>
+</div>
+<p>This page is about how to handle data - not the raw storage part, which
+you can find at <a class="reference internal" href="aaltostorage.html"><em>data storage</em></a>.  Aalto has high-level
+information on <a class="reference external" href="https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science">research data management</a>, too.</p>
+<div class="section" id="what-is-data-management">
+<h2>What is data management?<a class="headerlink" href="#what-is-data-management" title="Permalink to this headline">¶</a></h2>
+<p>Data management is much more than just storage. It concerns everything
+from data collection, to data rights, to end-of-life (archival,
+opening, etc). This may seem far-removed from research practicalities,
+but funding agencies are beginning to require advanced
+planning. Luckily, there are plenty of resources at Aalto (especially
+in SCI), and it&#8217;s just a matter of connecting the dots.</p>
+<p>Oh, and data management is also important because without data management,
+data becomes disorganized, you lose track, and as people come and go,
+you lose knowledge of what you have. Don&#8217;t let this happen to you or
+your group!</p>
+<p>Another good starting point is the <a class="reference external" href="https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science">Aalto research data management pages</a>. These pages can also help with preparing a data
+management plan.</p>
+<p><strong>Data management is an important part of modern science! We are here
+to help.</strong> These pages both describe the resources available at Aalto
+(via Science-IT), and provide pointers to issues that may be relevant
+to your research.</p>
+</div>
+<div class="section" id="data-storage-at-aalto-sci-principles-and-policies">
+<h2>Data storage at Aalto SCI (principles and policies)<a class="headerlink" href="#data-storage-at-aalto-sci-principles-and-policies" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This especially applies to CS, NBE, and PHYS (the core Science-IT
+departments).  The same is true for everyone using Triton storage.  These
+policies are a good idea for everyone at Aalto, and are slowly
+being developed at the university level.</p>
+</div>
+<p>Most data should be stored in a <strong>group (project) directory</strong>, so that
+multiple people can access it and there is a plan for after you leave.
+Ask your supervisor/colleagues what your group&#8217;s existing groups are and
+where the data is stored. <strong>Work data should always be stored in a
+project directory, not personal home directories.</strong> See below for how to
+create or join a group. Home directory data can not be accessed by IT
+staff, according to law and policy - data there dies when you leave.</p>
+<p>All data in group directories is considered accessible to all members
+(see below).</p>
+<p>All data stored should be Aalto or research related. Should there
+be questions, ask. Finnish law and Aalto policies must be followed (in
+that order), including by IT staff. Should there be agreements with
+third-parties regarding data rights, those will also be followed by
+IT staff, but these must be planned in advance.</p>
+<p>All data must have an owner and lifespan. We work with large amount of
+data from many different people, and data without clear ownership
+becomes a problem. (&#8220;ownership&#8221; refers to decision-making
+responsibility, not IPR ownership). Also, there must be a clear
+successor for when people leave or become unavailable. By default, this
+is supervisor.</p>
+<p>Personal workstations are considered stateless and, unless there is
+special agreement, could be reinstalled at any time and are not backed
+up. This should not concern day to day operations, since by default all
+data is stored on network filesystems.</p>
+<p>We will, in principle, make space for whatever data is
+needed. However, it is required that it be managed well. If you can
+answer what the data contains, why it&#8217;s stored, and how the space is
+used, and why it&#8217;s needed, it&#8217;s probably managed well for these
+purposes.</p>
+<p>Read the full <a class="reference internal" href="datapolicy.html"><em>Science-IT data management policy here</em></a>.</p>
+<p>Information on all physical locations how to use them is on the <a class="reference internal" href="aaltostorage.html"><em>storage
+page</em></a>.</p>
+<div class="section" id="groups">
+<h3>Groups<a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h3>
+<p>Everywhere on this page, &#8220;group&#8221; refers to a certain file access group
+groups (such as a unix group), not an organizational (research) group. They will often be the
+same, but there can be many
+more access groups made for more fine-grained data access.</p>
+<p>Data is stored in group directories. A group may represent a real
+research group, a specific project, or specific access-controlled data.
+These are easy to make, and they should be extensively used to keep data
+organized.  If you need either finer-grained or more wide data access,
+request that more groups are made.</p>
+<p>Please note, that by design all project data is accessible to every
+member in the group. This means that, when needed, IT can fix all
+permissions so that all group members can read all data. For limiting
+the access more fine-grained than these project groups, please have a
+separate group created. Data in a group is considered &#8220;owned and
+managed&#8221; by the group owner on file. The owner may grant access to
+others and change permissions as needed. Unless otherwise agreed, any
+group member may also request permissions to be corrected so that
+everyone in the group has access.</p>
+<ul class="simple">
+<li><strong>Access control is provided by unix groups</strong> (managed in the Aalto
+active directory). There can be one group per group leader, project,
+or data that needs isolation. You should use many groups, they make
+overall management easier. A group can be a sub-group of another.</li>
+<li><strong>Each group can get its own quota</strong> and fileystem directories
+(project, archive, scratch, etc). Quota is per-filesystem. Tell us
+requested quota when you set up a project.<ul>
+<li>A typical setup would be: one unix group for a research group,
+with more groups for specific project when that is helpful. If
+there are fixed multi-year projects, they can also get a group.</li>
+</ul>
+</li>
+<li>Groups are managed by IT staff. To request a group, mail us with
+the necessary information (see next point).</li>
+<li>Each group has an owner, quota on filesystems, and some other
+metadata (see below),</li>
+<li><strong>To have a group created and storage space allocated</strong>, see below.</li>
+<li><strong>To get added to a group</strong>, see instructions below.</li>
+<li>To see your groups: use the <code class="docutils literal"><span class="pre">groups</span></code> command or
+<code class="docutils literal"><span class="pre">groups</span> <span class="pre">$username</span></code></li>
+<li>To see all members of a group: <code class="docutils literal"><span class="pre">getent</span> <span class="pre">group</span> <span class="pre">$groupname</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="common-data-management-considerations">
+<h2>Common data management considerations<a class="headerlink" href="#common-data-management-considerations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="organizing-data">
+<h3>Organizing data<a class="headerlink" href="#organizing-data" title="Permalink to this headline">¶</a></h3>
+<p>This may seem kind of obvious, but you want to keep data organized.
+Data is always growing in volume and variety, so if you don&#8217;t organize
+it as it is being made, you have no chance of doing it later.
+Organize by:</p>
+<ul class="simple">
+<li>Project</li>
+<li>To be backed up vs can be recreated</li>
+<li>Original vs processed.</li>
+<li>Confidential or not confidential</li>
+<li>To be archived long-term vs to be deleted</li>
+</ul>
+<p>Of course, make different directories to sort things.  But also the
+group system described above is one of the pillars of good data
+organization: sort things by group and storage location based on how
+it needs to be handled.</p>
+</div>
+<div class="section" id="backups">
+<h3>Backups<a class="headerlink" href="#backups" title="Permalink to this headline">¶</a></h3>
+<p>Backups are extremely important, not just for hardware failure, but
+consider user error (delete the wrong file), device lost or stolen, etc. Not all
+locations are backed up. It is your responsibility to make sure that
+data gets stored in a place with sufficient backups. Note that personal
+workstations and mobile devices (laptops) are not backed up.</p>
+</div>
+<div class="section" id="confidential-or-sensitive-data">
+<h3>Confidential or sensitive data<a class="headerlink" href="#confidential-or-sensitive-data" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The following description is written for the CS department, but
+applies almost equally to NBE and PHYS.  This is being expanded and
+generalized to other department as well.  Regardless of your
+department, these are good steps to follow for any confidential
+data at Aalto.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This meets the requirements for &#8220;Confidential&#8221; data, which covers
+most use cases.  If you have extreme requirements, you will need
+something more (but be careful about making custom solutions).</p>
+</div>
+<p>Aalto has some <a class="reference external" href="https://inside.aalto.fi/display/ArchiveandRegistryServices/Guidelines+-+Classification+of+Information">guidelines for classification of confidential
+information</a>,
+but they tend to deal with documents as opposed to practical guidelines
+for research data. If you have data which needs special attention, you
+should put it in a separate group and tell us when creating the
+group.</p>
+<p>The following paragraph is a &#8220;summary for proposals&#8221;, which can be
+used when the CS data security needs to be documented.  This is for
+the CS department, but similar thing can be created for other
+departments.  A longer description is also available.</p>
+<blockquote>
+<div>Aalto CS provides secure data storage for confidential data. This data
+is stored centrally in protected datacenters and is managed by dedicated
+staff. All access is through individual Aalto accounts, and all data is
+stored in group-specific directories with per-person access control.
+Access rights via groups is managed by IT, but data access is only
+provided upon request of the data owner. All data is made available only
+through secure, encrypted, and password-protected systems: it is
+impossible for any person to get data access without a currently active
+user account, password, and group access rights. Backups are made and
+also kept confidential. All data is securely deleted at the end of life.
+CS-IT provides training and consulting for confidential data management.</div></blockquote>
+<p>If you have confidential data at CS, follow these steps. CS-IT takes
+responsibility that data managed this way is secure, and it is your
+responsibility to follow CS-IT&#8217;s rules. Otherwise you are on your own:</p>
+<ul class="simple">
+<li>Request a new data folder in the project from CS-IT. Notify them that
+it will hold confidential data and any special considerations or
+requirements. Consider how fine-grained you would like the group: you
+can use an existing group, but consider how many people will have
+access.</li>
+<li>Store data only in this directory on the network drive. It can be
+accessed from CS computers, see <a class="reference internal" href="aaltostorage.html"><em>data
+storage</em></a>.</li>
+<li>To access data from laptops (Aalto or your own), use <a class="reference internal" href="remoteaccess.html"><em>network drive
+mounting</em></a>, not copying. Also consider if
+temporary files: don&#8217;t store intermediate work or let your programs
+save temporary files to your own computer.</li>
+<li>Don&#8217;t transfer the data to external media (USB drives, external hard
+drives, etc) or your own laptops or computers. Access over the
+network.</li>
+<li>All data access should go through Aalto accounts. Don&#8217;t send data to
+others and or create other access methods. Aalto accounts provide
+central auditing and access control.</li>
+<li>Realize that you are responsible for the day to day management of
+data and using best practices. You are also responsible for ensuring
+that people who have access to the data follow this policy.</li>
+<li>In principle, one can store data on laptops or external devices with
+full disk encryption. However, in this case we does not take
+responsibility unless you ask us first.you must ask us about this. In
+general it&#8217;s best to try to adapt to the network drive workflow.
+(Laptop full disk encryption is a good idea anyway).</li>
+</ul>
+<p>We can assist in creating more secure data systems, as can Aalto IT
+security. It&#8217;s probably more efficient to contact us first.</p>
+</div>
+<div class="section" id="personal-data-research-data-about-others-not-about-you">
+<h3>Personal data (research data about others, not about you)<a class="headerlink" href="#personal-data-research-data-about-others-not-about-you" title="Permalink to this headline">¶</a></h3>
+<p>&#8220;Personal data&#8221; is any data concerning an identifiable person. Personal
+data is very highly regulated (mainly by the Personal Data Act, soon by
+the General Data Protection Regulation). Aalto has a <a class="reference external" href="https://www.aalto.fi/en/services/how-to-handle-personal-data-in-research">document that
+describes what is needed to process personal data for
+research</a>,
+which is basically a research-oriented summary of the Personal Data Act.
+Depending on the type of project, approval from the <a class="reference external" href="https://inside.aalto.fi/display/AboutAalto/Research+Ethics+Committee">Research Ethics
+Committee</a>
+may be needed (either for publication, or for human interaction. The
+second one would not usually cover pure data analysis of existing data).
+Personal data handling procedures are currently not very well defined at
+Aalto, so you will need to use your judgment.</p>
+<p>However, most research does not need data to be personally identifiable,
+and thus research is made much simpler. Thus, you want to try to always
+make sure that data is not identifiable, even to yourself using any
+technique (anonymization). The legal requirement is &#8220;reasonable
+likelihood of identification&#8221;, which can include technical and
+confidentiality measures, but in the end is still rather subjective.
+Always anonymize before data arrives at Aalto, if possible. Let us know
+when you have personal data, so we can make a note of it in the data
+project.</p>
+<p>However, should you need to use personal data, the process is not
+excessively involved beyond what you might expect (informed consent,
+ethics, but then a notification of personal data file). Contact us for
+initial help in navigating the issues and RIS for full advice.</p>
+</div>
+<div class="section" id="openness">
+<h3>Openness<a class="headerlink" href="#openness" title="Permalink to this headline">¶</a></h3>
+<p>Aalto strongly encourages to share the data openly or under controlled
+access with a goal of 50% data shared by 2020 (see
+<a class="reference external" href="https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science">The Aalto RDM pages</a>).
+In short, Aalto says that you &#8220;must&#8221; make
+strategic decisions about openness for the best benefits (which
+practically probably means you can do what you would like).
+Regardless, being open is usually a good idea when you can: it builds
+impact for your work and benefits society more.</p>
+<p>Zenodo (<a class="reference external" href="https://zenodo.org/">https://zenodo.org/</a>) is an excellent platform for sharing data, getting
+your data cited (it provides a DOI), and control what you share with
+different policies (<a class="reference external" href="https://about.zenodo.org/policies/">https://about.zenodo.org/policies/</a>).  For
+larger data, there are other resources, such as IDA/AVAA provided by CSC
+(see below).</p>
+<p>There are lists of data repositories:
+<a class="reference external" href="https://www.re3data.org/">r3data</a>, and <a class="reference external" href="https://www.nature.com/sdata/policies/repositories">Nature Scientific Data&#8217;s
+list</a>.</p>
+<p>Datasets can and should also be listed on <a class="reference external" href="https://acris.aalto.fi">ACRIS</a>, just like papers - this allows you to get
+credit for them in the university&#8217;s academic reporting.</p>
+</div>
+<div class="section" id="data-management-plans">
+<h3>Data management plans<a class="headerlink" href="#data-management-plans" title="Permalink to this headline">¶</a></h3>
+<p>Many funders now require data management plans when submitting
+grants.  (Aside from this, it&#8217;s useful to do a practical consideration
+of how you&#8217;ll deal with data)</p>
+<p>Please see:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../data/index.html#scicomp-dmp"><span>The DMP section on this site</span></a></li>
+<li>The <a class="reference external" href="https://www.aalto.fi/en/services/data-management-plan-dmp">Aalto data management plan
+page</a></li>
+</ul>
+</div>
+<div class="section" id="long-term-archival">
+<h3>Long-term archival<a class="headerlink" href="#long-term-archival" title="Permalink to this headline">¶</a></h3>
+<p>Long-term archival is important to make sure that you have ability to
+access your group&#8217;s own data in the long term. Aalto resources are not
+currently intended for long-term archival. There are other resources
+available for this, such as</p>
+<ul class="simple">
+<li>the EU-funded <a class="reference external" href="https://zenodo.org/">Zenodo</a> for open published
+data (embargoed data and closed data is also somewhat supported).</li>
+<li>Finland&#8217;s <a class="reference external" href="https://www.fairdata.fi/en/ida/">IDA</a> (for large data,
+closed or open). There are <a class="reference internal" href="../data/ida.html"><em>Aalto-specific instructions
+for IDA here</em></a>.</li>
+<li>There is supposed to be an alternate <a class="reference external" href="https://www.fairdata.fi/en/fairdata-pas/">Finnish digital preservation
+service</a> coming in
+2017, and it&#8217;s unclear what the intention of IDA is in light of that.</li>
+</ul>
+</div>
+<div class="section" id="archival-when-you-leave">
+<h3>Archival when you leave<a class="headerlink" href="#archival-when-you-leave" title="Permalink to this headline">¶</a></h3>
+<p>Unfortunately, everyone leaves Aalto sometime. Have you considered
+what will happen to your data?  Do you want to be remembered? This
+section currently is written from the perspective of a researcher, not
+a professor-level staff member, but if you are a group leader you need
+to make sure your data will stay available! Science-IT (and most of
+these resources) are focused on research needs, not archiving a
+person&#8217;s personal research data  (if we archive it for a person who
+has left, it&#8217;s not accessible anyway!  Our philosophy is that it
+should be part of a group as described above.). In general, we can archive data as
+part of a professor&#8217;s group data (managed in the group directories the
+normal ways), but not for individuals.</p>
+<ul class="simple">
+<li>Remember that your home directories get removed when your account
+expires (we think in only two weeks!).</li>
+<li>Data in the group directories it won&#8217;t be automatically deleted. But
+you should clean up all your junk and leave only what is needed for
+future people. Remember, if you don&#8217;t take care of it, it becomes
+extremely hard for anyone else to. The owner of the group (professor)
+will be responsible for deciding what to do with the data, so make
+sure to discuss with them and easy for them to do the right thing!</li>
+<li>Make sure that the data is documented well.  If it&#8217;s undocemented,
+then it&#8217;s unusable anyway.</li>
+<li>Can your data be released openly? If you can release something as
+open data on a reputable archive site like Zenodo, you can ensure
+that you will always have access to it.  (The best way to back up
+is to let the whole internet do it for you.)</li>
+<li>For lightweight archival (~5 years past last use, not too big), the
+archive filesystem is suitable. The data must be in a group directory
+(probably your professor&#8217;s). Make sure that you discuss the plans
+with them, since they will have to manage it.</li>
+<li>IDA (see above) could be used for archival of any data, but you will
+have to maintain a CSC account (TODO: can this work, and how?). Also,
+these projects have to be owned by a senior-level staff person, so
+you have to transfer it to a group anyway.</li>
+<li>Finland aims to have a long-term archival service by 2017
+(<a class="reference external" href="https://www.avointiede.fi/en/digital-preservation">PAS</a>), but this is
+probably not intended for own data, only well-curated data. Anyway,
+if you need something
+that long and it isn&#8217;t confidential, consider opening it.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="summary-of-data-locations">
+<h2>Summary of data locations<a class="headerlink" href="#summary-of-data-locations" title="Permalink to this headline">¶</a></h2>
+<p>Below is a summary of the core Science-IT data storage locations.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Solution</th>
+<th class="head">Purpose</th>
+<th class="head">Where available?</th>
+<th class="head">Backup?</th>
+<th class="head">Group management?</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>project</td>
+<td>Research time storage for data that requires backup. Good for
+e.g. code, articles, other important data.  Generally for a
+small amount of data per project.</td>
+<td>Workstations, triton login node</td>
+<td><p class="first">Weekly backup to tape (to recover from major failure)
++ snapshots (recover accidentally deleted files).</p>
+<p>Snapshots go back</p>
+<ul class="last simple">
+<li>hourly last 26 working hours (8-20)</li>
+<li>daily last 14 days
+- weekly last 10 weeks</li>
+</ul>
+</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td>Archive</td>
+<td>Data which a longer life that project.  Practically the same,
+but better to sort things out early.  Also longer snapshot and
+guaranteed to get backed up to tape.</td>
+<td>Workstations, Triton login node.  /m/$dept/project/$group.</td>
+<td>Same as above</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td>Scratch (group based)/work (per-user)</td>
+<td>Large research data that doesn&#8217;t need backup.  Temporary
+working storage.  Very fast access on Triton.</td>
+<td>/m/$dept/$scratch/$groupname, /m/$dept/work/$username.</td>
+<td>no</td>
+<td>scratch: yes, work: no</td>
+</tr>
+</tbody>
+</table>
+<p>See <a class="reference internal" href="aaltostorage.html"><em>data storage</em></a> for full info.</p>
+</div>
+<div class="section" id="instructions-for-storage-and-access">
+<span id="instructions"></span><h2>Instructions for storage and access<a class="headerlink" href="#instructions-for-storage-and-access" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This applies to the Science-IT departments.  If you want to apply
+for storage space from Aalto-IT, you can use these instructions as
+a model, but their processes are not yet fully developed.</p>
+<p class="last">You and users must accept the <a class="reference internal" href="datapolicy.html"><em>data policy</em></a>
+(summary above).</p>
+</div>
+<p>Existing data groups and responsible contacts:</p>
+<ul class="simple">
+<li>CS: <a class="reference external" href="https://wiki.aalto.fi/display/CSdept/Data+groups">Existing groups</a>
+and <a class="reference external" href="http://do.cs.aalto.fi">CS-IT (guru) email here</a></li>
+<li>NBE: <a class="reference external" href="https://wiki.aalto.fi/display/NBE/Data+groups">Existing groups</a> and
+<a class="reference external" href="https://wiki.aalto.fi/display/NBE/IT+Information">NBE IT (it-nbe) email here</a></li>
+<li>PHYS:</li>
+<li>Aalto: Aalto IT servicedesk</li>
+</ul>
+<div class="section" id="requesting-to-be-added-to-a-group">
+<h3>Requesting to be added to a group<a class="headerlink" href="#requesting-to-be-added-to-a-group" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>CS department</strong>: New!  Group owners/managers can add members to
+their groups self-service.  Go to <a class="reference external" href="https://domesti.cs.aalto.fi">https://domesti.cs.aalto.fi</a> from
+Aalto networks, over VPN, or remote desktop at
+<a class="reference external" href="https://vdi.aalto.fi">https://vdi.aalto.fi</a>, and it should be obvious.</p>
+</div>
+<p>Send an email to the responsible contact (see above) and <strong>CC the
+group owner or responsible person</strong>, and include this information:</p>
+<ul>
+<li><p class="first">Group name that you request to join</p>
+</li>
+<li><p class="first">copy and paste this statement, or something similar: &#8220;I am aware that
+all data stored here is managed by the group&#8217;s owner and have read
+the data management policies.&#8221;</p>
+</li>
+<li><p class="first">Ask the group owner to reply with confirmation.</p>
+</li>
+<li><p class="first">Do you need access to scratch or work? If so, you need a Triton
+account and you can request it now. If you don&#8217;t, you&#8217;ll get
+&#8220;input/output error&#8221; and be <em>very</em> confused.</p>
+</li>
+<li><p class="first">Example:</p>
+<blockquote>
+<div><p>Hi, I (account=omes1) would like to join the group <code class="docutils literal"><span class="pre">myprof</span></code>.  I
+am aware that all data stored here is managed by the group&#8217;s
+owner and have read the data management policies.
+<code class="docutils literal"><span class="pre">$professor_name</span></code>, please reply confirming my addition.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="requesting-a-new-group">
+<h3>Requesting a new group<a class="headerlink" href="#requesting-a-new-group" title="Permalink to this headline">¶</a></h3>
+<p>Send an email to the responsible contact (see above) with the following information. Group
+owners should be long-term (e.g. professor level) staff.</p>
+<ul>
+<li><p class="first">Requested group name (you can check the name from the lists below)</p>
+</li>
+<li><p class="first">Owner of data (prof or long-term staff member)</p>
+</li>
+<li><p class="first">Other responsible people who can authorized adding new members to the
+group. (they can reply and say &#8220;yes&#8221; when someone asks to join the
+group.)</p>
+</li>
+<li><p class="first">Who is responsible for data should you become unavailable (default:
+supervisor who is probably head of department).</p>
+</li>
+<li><p class="first">Initial members</p>
+</li>
+<li><p class="first">Expiration time (default=max 2 years, extendable. max 5 years
+archive). We will ping you for management/renewal then.</p>
+</li>
+<li><p class="first">Which filesystems and what quota. (project, archive, scratch). See
+the <a class="reference internal" href="aaltostorage.html"><em>the storage page</em></a>.</p>
+</li>
+<li><p class="first">Basic description of purpose of group.</p>
+</li>
+<li><p class="first">Is there any confidential or personal data (see above for disclaimer).</p>
+</li>
+<li><p class="first">Any other notes that CS-IT should enforce, for example check NDA
+before giving access.</p>
+</li>
+<li><p class="first">Example:</p>
+<blockquote>
+<div><p>I would like to request a new group <code class="docutils literal"><span class="pre">coolproject</span></code>. I am the
+owner, but my postdoc Tiina Tekkari can also approve adding
+members.  (Should I become unavailable, my colleague Anna
+Algorithmi (also a professor here) can provide advice on what
+to do with the data)</p>
+<p>We would like 20GB on the <code class="docutils literal"><span class="pre">project</span></code> filesystem.</p>
+<p>This is for our day to day work in algorithms development, we
+don&#8217;t expect anything too confidential.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="datapolicy.html" class="btn btn-neutral float-right" title="Science-IT data policy" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="aaltostorage.html" class="btn btn-neutral" title="Data storage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

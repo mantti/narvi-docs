@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>JupyterHub &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="The Aalto environment" href="index.html"/>
+        <link rel="next" title="Accessing JupyterHub data" href="jupyterhub-data.html"/>
+        <link rel="prev" title="Remote Access" href="remoteaccess.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Aalto environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Aalto account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Aalto Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Aalto Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Aalto Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltostorage.html">Data storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aaltodata.html">Data: outline, requesting space, requesting access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datapolicy.html">Science-IT data policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remoteaccess.html">Remote Access</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">JupyterHub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-usage">Basic usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jupyterhub-data.html">Accessing JupyterHub data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#terms-of-use">Terms of use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#courses-and-assignments">Courses and assignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instructors">Instructors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jupyterhub-instructors/index.html">JupyterHub for instructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#privacy-policy">Privacy policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#faq-and-bugs">FAQ and bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-info">More info</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="remotejupyter.html">Remote Jupyter Notebook on shell servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paniikki.html">Paniikki: Computer Lab For Students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htcondor.html">HTCondor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Aalto Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensource.html">Open Source at Aalto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_standalone.html">Standalone Matlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overleaf.html">Overleaf</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">The Aalto environment</a> &raquo;</li>
+      
+    <li>JupyterHub</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/aalto/jupyterhub.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jupyterhub">
+<h1>JupyterHub<a class="headerlink" href="#jupyterhub" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This page is about the JupyterHub for light use and teaching,
+<a class="reference external" href="https://jupyter.cs.aalto.fi">https://jupyter.cs.aalto.fi</a>.  The <a class="reference internal" href="../triton/index.html"><em>Triton</em></a>
+JupyterHub for research is documented at
+<a class="reference internal" href="../triton/apps/jupyter.html"><em>Jupyter</em></a>.</p>
+</div>
+<p><a class="reference external" href="https://jupyter.cs.aalto.fi">https://jupyter.cs.aalto.fi</a> is a JupyterHub installation for teaching
+and light usage.  Anyone at Aalto may use this for generic light
+computing needs, teachers may create courses with assignments using
+<a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/">nbgrader</a>.  Jupyter
+has a <a class="reference external" href="https://jupyter.org/">rich ecosystem</a> of tools for modern
+computing.</p>
+<div class="section" id="basic-usage">
+<h2>Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<p>Log in with any valid Aalto account.  Our environment may be used for light
+computing and programming by anyone.</p>
+<p>Your persistent storage has a quota of 1GB.  Your data belongs to you,
+may be accessed from outside, and currently is planned to last no more
+than one year from last login.  You are
+limited to several CPUs and 1GB memory.</p>
+<p>Your notebook server is stopped after 60 minutes of idle time, or 8 hours
+max time.  Please close the Jupyter tab if you are not using it, or
+else it may still appear as active.</p>
+<p>There are some general use computing environments.  You will began with
+Jupyter in the <code class="docutils literal"><span class="pre">/notebooks</span></code> directory, which is your persistent
+storage.  Your server is completely re-created each time it restarts.
+Everything in your home directory is re-created, only <code class="docutils literal"><span class="pre">/notebooks</span></code>
+is preserved.  (Certain files like <code class="docutils literal"><span class="pre">.gitconfig</span></code> are preserved by
+linking into <code class="docutils literal"><span class="pre">/notebooks/.home/...</span></code>.)</p>
+<p>You begin with a computing server with the usual scipy
+stack installed, plus a lot of other software used in courses here.</p>
+<p>You may access your data as a network drive by SMB mounting it on your own
+computer - see <a class="reference internal" href="jupyterhub-data.html"><em>Accessing JupyterHub data</em></a>.  This allows you total control
+over your data.</p>
+<p>JupyterHub has no GPUs, but you can check out the <a class="reference internal" href="jupyterhub-data.html#jupyter-gpu-paniikki"><span>instructions
+for using the Paniikki GPUs with the JupyterHub data</span></a>.  These instructions are still under
+development.</p>
+<p>Each notebook server is basically a Linux container primarily running a
+Juptyer notebook server.  You may create Jupyter notebooks to interact
+with code in notebooks.  To access a Linux bash shell, create a new
+terminal - this is a great place to learn something new.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="terms-of-use">
+<h2>Terms of use<a class="headerlink" href="#terms-of-use" title="Permalink to this headline">¶</a></h2>
+<p>This service must be used according to the general IT usage policy of
+Aalto university (including no unlawful purposes).  It should only be
+used for academic purposes (but note that self-exploration and
+programming for own interests is considered an academic purpose,
+though commercial purposes is not allowed).  For more information, see
+<a class="reference external" href="https://www.aalto.fi/en/services/it-policies-and-guidelines">the Aalto policies</a>.
+Heavy non-interactive computational use is not allowed (basically,
+don&#8217;t script stuff to run in the background when you are not around.
+If you are using this service is person, it is OK).  For research
+computing, see <a class="reference internal" href="../triton/index.html"><em>Triton user guide</em></a>.</p>
+</div>
+<div class="section" id="courses-and-assignments">
+<h2>Courses and assignments<a class="headerlink" href="#courses-and-assignments" title="Permalink to this headline">¶</a></h2>
+<p>Some courses may use the <a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/">nbgrader</a> system to give and
+grade assignments.  These courses have special entries in the list.
+If you are a student in such a course, you will have a special
+environment for that course.  Your instructor may customize the
+environment, or it may one of our generic environments.</p>
+<p>If your course is using <strong>nbgrader</strong>, there are some built-in features
+for dealing with assignments.  Under the <strong>Assignment list</strong> tab, you
+can see the assignments for your course (only the course you selected
+when starting your notebook server).  You can fetch assignments to
+work on them - they are then copied to your personal <code class="docutils literal"><span class="pre">/notebooks</span></code>
+directory.  You can edit the assignments there - fill out the
+solutions and validate them.  Once you are done, you can submit them
+from the same assignment list.</p>
+<p>A course may give you access to a <code class="docutils literal"><span class="pre">/coursedata</span></code> folder with any
+course-specific data.</p>
+<p>By default, everyone may access every course&#8217;s environment and fetch
+their assignments.  We don&#8217;t stop you from submitting assignments to
+courses you are not enrolled in - but please don&#8217;t submit assignments
+unless you are registered, because the instructors must then deal with
+it.  Some courses may restrict who can launch their notebook servers:
+if you can not see or launch the notebook server for a course you are
+registered for, please contact your instructor in this case.</p>
+<p>Note that the <code class="docutils literal"><span class="pre">/notebooks</span></code> folder is shared across all of your
+courses/servers, but the assignment list is specific to the course
+you have started for your current session.  Thus, you should pay
+attention to what you launch.  Remember to clean up your data
+sometimes.</p>
+</div>
+<div class="section" id="instructors">
+<h2>Instructors<a class="headerlink" href="#instructors" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+<p>See the separate <a class="reference internal" href="jupyterhub-instructors/index.html"><em>instructors guide</em></a>.
+This service may be either used as general light computing for your
+students, or using nbgrader to release and collect assignments.</p>
+</div>
+<div class="section" id="privacy-policy">
+<h2>Privacy policy<a class="headerlink" href="#privacy-policy" title="Permalink to this headline">¶</a></h2>
+<p>This system is managed by Aalto CS-IT.  We do not store separate
+accounts or user data beyond a minimal database of usernames and
+technical logs of notebooks which are periodically removed (this is
+separate from your data).  Your actual data is yours only and you are
+responsible for it.  We do not access your data, but when necessary
+for the operation of the system, but we use and may look at file
+metadata such as permissions, timestamp, filename (<code class="docutils literal"><span class="pre">stat</span> <span class="pre">filename</span></code>).
+Your <code class="docutils literal"><span class="pre">/notebooks</span></code> directory may be deleted once your have been
+inactive for one year, and at the latest once your Aalto home
+directory is removed (after your account expires).  Some courses will
+use the <code class="docutils literal"><span class="pre">feedback/</span></code> directory to return assignments to you.</p>
+<p>The use of your own data and submission of data to your course
+instructors is the responsibility of you and the instructors.</p>
+<p>See <a class="reference internal" href="jupyterhub-privacy.html"><em>the separate privacy policy document</em></a>
+for longer, less useful information.</p>
+</div>
+<div class="section" id="faq-and-bugs">
+<h2>FAQ and bugs<a class="headerlink" href="#faq-and-bugs" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><strong>I started the wrong environment and can&#8217;t get back to the course
+selection list.</strong>  In JupyterLab, use the menu bar, &#8220;Hub-&gt;Control
+Panel&#8221;.  On the classic notebooks, use the &#8220;Control panel&#8221; button on
+the top right.  (Emergency backup: you can
+always change the URL path to <code class="docutils literal"><span class="pre">/hub/home</span></code>).</p>
+</li>
+<li><p class="first"><strong>Is JuptyerLab available?</strong> Yes, and it&#8217;s nice.  There are two
+general use instances that are actually the same, the only
+difference is one starts JupyterLab by default and one starts
+classic notebooks by default.  Course environments always use
+classic notebooks, because the nbgrader assignment list only works
+there.  To switch back and forth in any notebook server, change
+<code class="docutils literal"><span class="pre">/tree</span></code> in the URL to <code class="docutils literal"><span class="pre">/lab/tree</span></code>.  If you want to use
+JupyterLab with a course&#8217;s files, first start that course&#8217;s server,
+get the assignments, then change to JupyterLab (change the URL, or
+stop and restart your server).</p>
+</li>
+<li><p class="first"><strong>Can I login with a shell?</strong>  Run a new terminal within the
+notebook interface.</p>
+</li>
+<li><p class="first"><strong>Can I request more software be installed?</strong>  Yes, let us know and
+we will include it if it is easy.  We aim to have featureful
+environments by default, but won&#8217;t go so far as to install large
+specialist software.  It should be in standard repositories (conda
+or pip for Python stuff).</p>
+</li>
+<li><p class="first"><strong>Can I do stuff with my class&#8217;s assignments and not have it
+submitted?</strong>  You have your personal storage space <code class="docutils literal"><span class="pre">/notebooks/</span></code>,
+which you can use for whatever you want.  You can always make a copy
+of the assignment files there and play around with them as much as
+you want - even after the course is over, of course.</p>
+</li>
+<li><p class="first"><strong>Are there other programming languages available?</strong> Currently there
+is Python, R, and Julia.  More could be added if there is a good
+Jupyter kernel for it.</p>
+</li>
+<li><p class="first"><strong>What can I use this for?</strong> Intended uses include anything related
+to courses, own exploration of programming, own data analysis, and
+so on (see Terms of Service above).  Long-term background processing
+isn&#8217;t good (but it&#8217;s OK to leave small stuff running, close the tab,
+and come back).</p>
+</li>
+<li><p class="first"><strong>When using nbgrader, how do I know what assignments I have already
+submitted?</strong> Currently you can&#8217;t beyond what is shown there.</p>
+</li>
+<li><p class="first"><strong>Can I know right away what my score is after I submit an
+assignment with nbgrader?</strong> nbgrader is not currently designed for
+this.</p>
+</li>
+<li><p class="first"><strong>Are there backups of data?</strong> Data storage is provided by the Aalto
+Teamwork system.  There are snapshots available in <code class="docutils literal"><span class="pre">.snapshot</span></code> in
+every directory (you have to <code class="docutils literal"><span class="pre">ls</span></code> this directory in a shell using
+its full name for it to appear the first time).  This service is not
+designed for long term data storage, and you should back up anything
+important because it will be lost after about one year or when your
+Aalto account expires.  You should use <code class="docutils literal"><span class="pre">git</span></code> as your primary
+backup mechanism, obviously.</p>
+</li>
+<li><p class="first"><strong>Is git installed?</strong> Yes, and you should use it.  Currently you
+have to configure your username and email each time you use it,
+because this isn&#8217;t persistent (because home directories are not
+persistent).  Git will guide you through doing this.  In the future,
+your Aalto directory name/email will be automatically set.  As a
+workaround, run <code class="docutils literal"><span class="pre">git</span> <span class="pre">config</span></code> without the <code class="docutils literal"><span class="pre">--global</span></code> option in
+each repository.</p>
+</li>
+<li><p class="first"><strong>I don&#8217;t see &#8220;Assignment list&#8221;.</strong>  You are probably not in a
+general use server instead of a course server.  Stop your
+server and go spawn the notebook server of your course.</p>
+</li>
+<li><p class="first"><strong>I&#8217;m getting an error code</strong>  Here are the ones we know about:</p>
+<ul class="simple">
+<li>504 Gateway error: The hub isn&#8217;t running in background.  This may
+be hub just restarting or us doing maintenance.  If it persists for
+more than 30 minutes, let someone know.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Stan/pystan/Rstan don&#8217;t work.</strong> Stan needs to do a
+memory-intensive compilation when your program is run.  We can&#8217;t
+increase our memory limits too much, but we have a workaround: you
+need to tell your program to use the <code class="docutils literal"><span class="pre">clang</span></code> compiler instead of
+the <code class="docutils literal"><span class="pre">gcc</span></code> compiler by setting the environment variables
+<code class="docutils literal"><span class="pre">CC=clang</span></code> and <code class="docutils literal"><span class="pre">CXX=clang++</span></code>.  For R notebooks, this should be
+done for you.  For RStudio, we don&#8217;t know.  For Python, put the
+following in your notebook:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;clang&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CXX&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;clang++&quot;</span>
+</pre></div>
+</div>
+<p>We should set this the default, but want to be sure there are no
+problems first.</p>
+</li>
+<li><p class="first"><strong>RStudio doesn&#8217;t appear</strong>.  It seems that it doesn&#8217;t work from the
+Edge browser.  We don&#8217;t know why, but try another browser.</p>
+</li>
+<li><p class="first"><strong>I&#8217;ve exceeded my quota</strong>.  You should reduce the space you use,
+the quota is 1GB.  If this isn&#8217;t enough and you actually need more
+for your classes, tell your instructor to contact us.  To find large
+directories files: open a terminal and run <code class="docutils literal"><span class="pre">du</span> <span class="pre">-h</span> <span class="pre">/notebooks/</span> <span class="pre">|</span>
+<span class="pre">sort</span> <span class="pre">-h</span></code> to find all large files.  Then clean up that stuff
+somehow, for example <code class="docutils literal"><span class="pre">rm</span> <span class="pre">-r</span></code>.  Note that
+<code class="docutils literal"><span class="pre">.home/.local/share/jupyter/nbgrader_cache</span></code> will continue to grow
+and eventually needs to be cleaned up - after the respective course
+is done.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="more-info">
+<h2>More info<a class="headerlink" href="#more-info" title="Permalink to this headline">¶</a></h2>
+<p>Students, your first point of contact for course-related matters and
+bugs with JuptyerHub should be your instructors, not us.  They will
+answer questions and send the relevant ones to us.  But, if you can
+actively help with other things, feel free to comment via Github
+repositories below.</p>
+<p>The preferred way to send feedback and development requests is via
+Github issues and pull requests.  However, we&#8217;re not saying it&#8217;s best
+to give Github all our information, so you can also send tickets to
+CS-IT.</p>
+<p>Students and others who have difficulty in usage outside of a course
+can contact CS-IT via the guru alias.</p>
+<p>Notebooks are <em>not</em> an end-all solution: for an entertaining look at
+some problems, see <a class="reference external" href="https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI">&#8220;I don&#8217;t like notebooks&#8221; by Joel Grus</a>.
+Most of these aren&#8217;t actually specific to notebooks and JupyterLab
+makes some better, but thinking hard about the downfalls of notebooks
+makes your work better no matter what you do.</p>
+<p>Our source is open and on Github:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/AaltoScienceIT/jupyter-aalto-singleuser">single-user image</a>
+(everything about a user&#8217;s environment)</li>
+<li><a class="reference external" href="https://github.com/AaltoScienceIT/jupyterhub-aalto">server itself</a> (logging in,
+course profiles, etc).</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jupyterhub-data.html" class="btn btn-neutral float-right" title="Accessing JupyterHub data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="remoteaccess.html" class="btn btn-neutral" title="Remote Access" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

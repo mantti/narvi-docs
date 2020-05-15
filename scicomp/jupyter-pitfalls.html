@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pitfalls of Jupyter Notebooks &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="Scientific computing" href="index.html"/>
+        <link rel="next" title="Python" href="python.html"/>
+        <link rel="prev" title="Git" href="git.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scientific computing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="encryption.html">Encryption for researchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Pitfalls of Jupyter Notebooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modularity">Modularity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transitioning-to-modules">Transitioning to modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#difficulty-to-test">Difficulty to test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-control">Version control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hidden-state-is-opposed-to-reproducibility">Hidden state is opposed to reproducibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notebooks-aren-t-named-by-default">Notebooks aren&#8217;t named by default</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#difficult-to-integrate-into-other-execution-systems">Difficult to integrate into other execution systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">Linux shell crash course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zen-of-scicomp.html">The Zen of Scientific computing</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Scientific computing</a> &raquo;</li>
+      
+    <li>Pitfalls of Jupyter Notebooks</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/scicomp/jupyter-pitfalls.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pitfalls-of-jupyter-notebooks">
+<h1>Pitfalls of Jupyter Notebooks<a class="headerlink" href="#pitfalls-of-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>Jupyter Notebooks are a great tool for research, data science type
+things, and teaching.  But they are not perfect - they support
+exploration, but not other parts of the coding phase such as
+modularity and scaling.  This page lists some common limitations and
+pitfalls and what you can do to avoid them.</p>
+<p><em>Do</em> use notebooks if you like, but <em>do</em> keep in mind their
+limitations, how to avoid them, and you can get the best of both
+worlds.</p>
+<p>None of the limitations on this page are specific to notebooks - in
+fact we&#8217;ve seen most of them in scripts long before notebooks were
+popular.</p>
+<div class="section" id="modularity">
+<h2>Modularity<a class="headerlink" href="#modularity" title="Permalink to this headline">¶</a></h2>
+<p>We all agree that code modularity is important - but Jupyter
+encourages you to put most code directly into cells so that you can
+best use interactive tools.  But to make code the most modular, you
+want lots of functions, classes, etc.  Put another way, the most
+modular code has nothing except function/class/variable/import
+definitions touching the left margin - but in Jupyter, almost
+everything touches the left margin.</p>
+<p>Solution: be aware of the transition to modules - do it when you need
+to.  See the next point.  Try to plan so it&#8217;s not too painful to do
+this.</p>
+</div>
+<div class="section" id="transitioning-to-modules">
+<h2>Transitioning to modules<a class="headerlink" href="#transitioning-to-modules" title="Permalink to this headline">¶</a></h2>
+<p>You may start coding in notebooks, but once your project gets larger,
+you will need to start using your code more places.  Do you copy and
+paste?  At this point, you will want to split your core code into
+regular Python modules, import them into your notebooks, and use the
+notebooks as an interface to them - so that modules are somewhat
+standard working code and notebooks are the exploration and
+interactive layer.  But when does that happen?  It is difficult to
+make that transition unless you really try hard, because it&#8217;s easier
+to just keep on going.</p>
+<p>Solution: remember that you will probably need to form a proper module
+eventually.  Plan for it and do it quickly once you need to.  You can
+set modules to automatically reload with <code class="docutils literal"><span class="pre">%load_ext</span> <span class="pre">autoreload</span></code>,
+<code class="docutils literal"><span class="pre">%autoreload</span> <span class="pre">1</span></code>, and then <code class="docutils literal"><span class="pre">%aimport</span> <span class="pre">module_name</span></code>.  Then your edits
+to the Python source code are immediately used without restarting and
+your work is not slowed down much.  See more at the <a class="reference external" href="https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html">IPython docs on
+autoreload</a>
+(note: this is Python kernel specific).</p>
+</div>
+<div class="section" id="difficulty-to-test">
+<h2>Difficulty to test<a class="headerlink" href="#difficulty-to-test" title="Permalink to this headline">¶</a></h2>
+<p>For the same reasons modularity outlined above, it&#8217;s hard to test
+notebooks using the traditional unit testing means (if you can&#8217;t
+import notebooks into other modules, you can&#8217;t do much).  Testing is
+important to ensure the accuracy of code.</p>
+<p>Solution: Include mini-tests / assertions liberally.  Split to modules
+when it is necessary - maybe you only create a proper testing system
+once you transition to modules.</p>
+</div>
+<div class="section" id="version-control">
+<h2>Version control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h2>
+<p>Notebooks can&#8217;t be version controlled well.  Of course, they <em>can</em> be
+version controlled (and should be), and tools like <a class="reference external" href="https://github.com/jupyter/nbdime">nbdime</a> (notebook diff and merge) work
+well for what they try to do.</p>
+<p>Solution: don&#8217;t let this stop you.  Do version control your notebooks
+(and don&#8217;t forget to commit often!), and use nbdime, Jupyter git
+integration, and so on well.</p>
+</div>
+<div class="section" id="hidden-state-is-opposed-to-reproducibility">
+<h2>Hidden state is opposed to reproducibility<a class="headerlink" href="#hidden-state-is-opposed-to-reproducibility" title="Permalink to this headline">¶</a></h2>
+<p>This is a bit of an obscure one: people always say that notebooks are
+good for reproducibility.  But they also allow you to run cells in
+different orders, delete cells after it has run, change code after you
+run it, and so on.  And the whole point of notebooks is to be able to
+re-edit and re-run.  So it&#8217;s very easy to get into a state where you
+have variables defined which aren&#8217;t in your current code and you don&#8217;t
+remember how you got them.  Since old output is saved, you might not
+realize this until it&#8217;s too late.</p>
+<p>Solution: Use &#8220;Restart and run all&#8221; liberally.  Unless you do, you
+can&#8217;t be sure that your code will make your output.  So do that when
+needed.  (But wait... part of the point of notebooks is that you can
+keep data in memory because it might take a while to calculate... so
+&#8220;Restart and run all&#8221; defeats the purpose of that, so... balance it
+out.)</p>
+</div>
+<div class="section" id="notebooks-aren-t-named-by-default">
+<h2>Notebooks aren&#8217;t named by default<a class="headerlink" href="#notebooks-aren-t-named-by-default" title="Permalink to this headline">¶</a></h2>
+<p>This is really small, but notebooks aren&#8217;t named by default.  If you
+don&#8217;t name them well, you will end up with a big mess.  Also somewhat
+related, notebooks tend to purpose drift: they start for one thing
+then end up with a lot of random stuff in them.  How do you find what
+you need?  Obviously this isn&#8217;t specific to notebooks, but the
+interactive nature and modularity-second makes the problem more
+visible.</p>
+<p>Solution: Remember to name notebooks well.  Keep mind of when they
+start to feature drift too much, and take some time to sort your code
+logically once that happens.</p>
+</div>
+<div class="section" id="difficult-to-integrate-into-other-execution-systems">
+<h2>Difficult to integrate into other execution systems<a class="headerlink" href="#difficult-to-integrate-into-other-execution-systems" title="Permalink to this headline">¶</a></h2>
+<p>A notebook is designed for interactive use - you <em>can</em> run them all
+with <code class="docutils literal"><span class="pre">nbconvert</span> <span class="pre">--to</span> <span class="pre">notebook</span> <span class="pre">--execute</span> <span class="pre">input.ipynb</span> <span class="pre">--output</span>
+<span class="pre">executed.ipynb</span></code>.  But there&#8217;s no good command line interface to pass
+arguments, input and output, and so on.  So you write one notebook,
+but can&#8217;t easily turn it into a flexible script to be used many
+times.</p>
+<p>Solution: Probably a lot of the solution is the same as modularizing.
+Use notebooks to explore, scripts to run in bulk.  Run notebooks in
+batch using nbconvert if you think you can manage it well enough and
+not have it become a mess.  I&#8217;ve had an idea that environment
+variables could be used to pass parameters into notebooks for batch
+execution, but could that be trying too hard?</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>The notebooks can be great for starting projects and interactive
+exploration.  However, as a project gets more advanced, you will
+eventually find that the linear nature of notebooks is a limitation
+because code can not really be reused.  It is possible to define
+functions/classes within the notebook, but you lose the power of
+inspection (they are just seen as single blocks) and can&#8217;t share code
+across notebooks (and copy and paste is bad).  This doesn&#8217;t mean to
+not use notebooks: but do keep this in mind, and once your methods are
+mature enough (you are using the same code in multiple places), try to
+move the core functions and classes out into a separate library, and
+import this into the day-to-day exploration notebooks.  For more about
+problems with notebooks and how to avoid them, see this fun talk <a class="reference external" href="https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit">&#8220;I
+don&#8217;t like notebooks&#8221; by Joel Grus</a>.
+These problems are <em>not</em> specific to notebooks, and will make your
+science better.</p>
+<p>In a cluster environment, notebooks are inefficient for big
+calculations because you must reserve your resources in advance, but
+most of the time the notebooks are not using all their resources.
+Instead, use notebooks for exploration and light calculation.  When
+you need to scale up and run on the cluster, separate the calculation
+from the exploration.  Best is to create actual programs
+(start, run, end, non-interactive) and <a class="reference internal" href="../triton/tut/serial.html"><em>submit those to the queue</em></a>.  Use notebooks to explore and process the
+output.  A general rule of thumb is &#8220;if you would be upset that your
+notebook restarted, it&#8217;s time to split out the calculation&#8221;.</p>
+<p>Notebooks are hard to <a class="reference internal" href="git.html"><em>version control</em></a>, so you
+should look at the <a class="reference external" href="https://github.com/jupyter/nbdime">Jupyter diff and merge tools</a>.  Just because notebooks is
+interactive doesn&#8217;t mean version control is any less important!  The
+&#8220;split core functions into a library&#8221; is also related: that library
+should be in version control at least.</p>
+<p>Don&#8217;t open the same notebook more than once at the same time - you
+will get conflicts.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>This funny talk <a class="reference external" href="https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI">&#8220;I don&#8217;t like notebooks&#8221; by Joel Grus</a>
+provided a starting point of this list.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python.html" class="btn btn-neutral float-right" title="Python" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="git.html" class="btn btn-neutral" title="Git" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
