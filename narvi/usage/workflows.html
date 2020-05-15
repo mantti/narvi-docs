@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Remote workflows at Tampere University &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>Remote workflows at Tampere University</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/narvi/usage/workflows.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="remote-workflows-at-tampere-university">
+<h1>Remote workflows at Tampere University<a class="headerlink" href="#remote-workflows-at-tampere-university" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The more specific remote access instructions for scicomp is at
+<a class="reference external" href="https://wiki.eduuni.fi/display/tuttcsc/Connecting+to+cluster">https://wiki.eduuni.fi/display/tuttcsc/Connecting+to+cluster</a>.
+This page explains the options, including other systems.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">How can you work from home?  For that matter, how can you work on more than your desktop/laptop while at work?  There are many options which trade off between graphical interfaces and more power.  Read more for details.</p>
+</div>
+<p>You have most likely created your own workflow to analyse data at TAU and most likely you are using a dedicated desktop workstation in Tampere. However, with increased mobility of working conditions and recent global events that recommend tele-working, you might be asking yourself: &#8220;how do I stop using my workstation at the dept, and get analysis/figures/papers done from home?&#8221;.</p>
+<p>The data analysis workflows from remote might not be familiar to everyone. We list here few possible cases, this page will expand according to the needs and requests of the users.</p>
+<div class="section" id="what-s-your-style">
+<h2>What&#8217;s your style?<a class="headerlink" href="#what-s-your-style" title="Permalink to this headline">¶</a></h2>
+<p>If you need the most power or flexibility, use Narvi for your data storage and computation. For prototyping and testing you can use your own workstation or maybe <code class="xref any docutils literal"><span class="pre">Linux</span> <span class="pre">desktops</span></code>. Then to scale up, you can use the Narvi options: 4, 5, 6 which have access to the same data. (<a class="reference external" href="https://wiki.eduuni.fi/display/tuttcsc/User+Account">Narvi account required</a> for 4-6).</p>
+<p>If you need simple applications with a graphical interface, try 3 (Remote desktop).</p>
+<p>If you use your own laptop/desktop (1, 2), then it&#8217;s good for getting started but you have to copy your data and code back and forth once you need to scale up.</p>
+</div>
+<div class="section" id="summary-table-for-remote-data-analysis-workflows">
+<h2>Summary table for remote data analysis workflows<a class="headerlink" href="#summary-table-for-remote-data-analysis-workflows" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Good for data security: 3, 4, 5, 6</li>
+<li>Good for prototyping, working on the go, doing tests, interactive work: 1, 2, 3</li>
+<li>Shares Narvi data (e.g. scratch folders): 4, 5, 6</li>
+<li>Easy to scale up, shares software, data, etc: 4, 5, 6</li>
+<li>Largest resources available 6 (medium: 5)</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Workflow</th>
+<th class="head">Pros</th>
+<th class="head">Cons</th>
+<th class="head">Recommendation</th>
+<th class="head">Narvi data Y/N</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><ol class="first last arabic simple">
+<li>Own laptop/desktop computer</li>
+</ol>
+</td>
+<td>Can work from anywhere. Does not require internet connection.  You are in control.</td>
+<td>Not good for personal or confidential data. Computing resources might not be enough. Accessing large data remotely stored at Aalto might be problematic - you will end up having to copy a lot.  You have to manage software yourself.</td>
+<td>Excellent for prototyping, working on the go, doing tests, interactive work (e.g. making figures). Don’t use it with large data or confidential / personal data.</td>
+<td>N</td>
+</tr>
+<tr class="row-odd"><td><ol class="first last arabic simple" start="2">
+<li>TUNI laptop</li>
+</ol>
+</td>
+<td>Same as above, plus same tools available as Aalto employer.</td>
+<td>Same as above.</td>
+<td>Same as above.</td>
+<td>N</td>
+</tr>
+<tr class="row-even"><td><ol class="first last arabic simple" start="3">
+<li>Remote desktop ( linux-desktop.tuni.fi )</li>
+</ol>
+</td>
+<td>Computing happens on remote. Data access happens on remote, so it is more secure.</td>
+<td>Computing resources and storage space are limited.</td>
+<td>Excellent for prototyping, working on the go, doing tests, interactive work (e.g. making figures). More secure access to data.</td>
+<td>Y</td>
+</tr>
+<tr class="row-odd"><td><ol class="first last arabic simple" start="4">
+<li>Aalto Jupyterhub (<a class="reference external" href="https://jupyter.triton.aalto.fi">https://jupyter.triton.aalto.fi</a>)</li>
+</ol>
+</td>
+<td>Cloud based - resume work from anywhere.  Includes command line (#6) and batch (#7) easily.  Same data as seen on Triton (/scratch/dept/ and /work/ folders)</td>
+<td>Jupyter can <a class="reference external" href="https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html">become a mess if you aren&#8217;t careful</a>.  You need to plan to scale up with #7 eventually, once your needs increase.</td>
+<td>Excellent for prototyping, working on the go, doing tests, interactive work (e.g. making figures).  Secure access to data. Use if you know you need to switch to batch jobs eventually (7).</td>
+<td>Y</td>
+</tr>
+<tr class="row-even"><td><ol class="first last arabic simple" start="4">
+<li>Interactive graphical session on narvi HPC (ssh -X <a href="#id1"><span class="problematic" id="id2">`</span></a>narvi-shell &lt;<a class="reference external" href="https://wiki.eduuni.fi/display/tuttcsc/Narvi+Shell">https://wiki.eduuni.fi/display/tuttcsc/Narvi+Shell</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>__)</li>
+</ol>
+</td>
+<td>Graphical programs.</td>
+<td>Lost once your internet connection dies, needs fast internet connection.</td>
+<td>If you need specific graphical applications which are only on Narvi.</td>
+<td>Y</td>
+</tr>
+<tr class="row-odd"><td><ol class="first last arabic simple" start="5">
+<li>Interactive command line session on Narvi HPC (ssh + sinteractive)</li>
+</ol>
+</td>
+<td>Works from anywhere.  Can get lots of resources for a short time.</td>
+<td>Limited time limits, must be used manually.</td>
+<td>A general workhorse once you get comfortable with shell - many people work here + #7.</td>
+<td>Y</td>
+</tr>
+<tr class="row-even"><td><ol class="first last arabic simple" start="6">
+<li>Non-interactive batch HPC computing on Narvi (ssh + sbatch)</li>
+</ol>
+</td>
+<td>Largest resources, bulk computing</td>
+<td>Need to script your computation</td>
+<td>When you have the largest computational needs.</td>
+<td>Y</td>
+</tr>
+<tr class="row-odd"><td><ol class="first last arabic simple" start="7">
+<li>Non-interactive batch HPC computing on CSC (ssh + sbatch)</li>
+</ol>
+</td>
+<td>Similar to #6 but at CSC</td>
+<td>Similar to #6</td>
+<td>Similar to #6</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="own-laptop-desktop-computer">
+<h2>1. Own laptop/desktop computer<a class="headerlink" href="#own-laptop-desktop-computer" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description</strong>: Here you are the administrator. You might be working from a cafe with your own laptop, or from home with a desktop. You should be able to install any tool you need. As an TUNI employer you get access to many nice commercial tools for your private computers. Visit: <a class="reference external" href="https://intra.tuni.fi/handbook/2677/11307/3234?role=staff&amp;university=uni">Intra</a>  and <a class="reference external" href="https://tuni.onthehub.com/">https://tuni.onthehub.com/</a>  for some options.</p>
+<p><strong>Pros</strong>: Computing freedom! You can work anywhere, you can work when there is no internet connection, you do not share the computing resources with other users so you can fully use the power of your computer.</p>
+<p><strong>Cons</strong>: If you work with personal or confidential data, the chances of a data breach increase significantly, especially if you work from public spaces. Even if you encrypt your hard disks and even if you are careful, you might be forgetting to lock your computer or somebody behind you might see which password you type. Furthermore, personal computers have limited resources when it comes to RAM/CPUs/GPUs. When you need to scale up your analysis, you want to move it to an HPC cluster, rather than leaving scripts running for days. Finally, although you can connect your Tuni folders to your laptop, when the data size is too big, it is very inefficient to analyse large datasets over the internet.</p>
+<p><strong>Recommendation</strong>: Own computer is excellent for prototyping data analysis scripts, working on the go, doing tests or new developments. You shouldn’t use this option if you are working with personal data or with other confidential data. You shouldn’t use this option if your computational needs are much bigger.</p>
+</div>
+<div class="section" id="tuni-workstation">
+<h2>2. Tuni workstation<a class="headerlink" href="#tuni-workstation" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description</strong>: As an university employer, you are usually provided with a desktop workstation or with an laptop. With an TUNI-laptop you can apply for administrator rights basically everything you have read for option 1 above is valid also in this case.  See &#8220;{Linux|Mac|Windows}&#8221; on <a class="reference external" href="https://intra.tuni.fi/handbook/2677/2724?role=staff&amp;university=uni">Tuni-intra</a>.</p>
+<p><strong>Pros/Cons/Recommendation</strong>: see option 1 above.  But, when on TUNI networks, you have easier access to TUNI storage systems.</p>
+</div>
+<div class="section" id="remote-virtual-machine-with-vdi">
+<h2>3. Remote virtual machine with VDI<a class="headerlink" href="#remote-virtual-machine-with-vdi" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description</strong>: You might be working with very large datasets or with confidential/personal data, so that you cannot or do not want to copy the data to your local computer. Sometimes you use many computers, but would like to connect to “the same computer” from remote where a longer analysis script might be crunching numbers. Aalto has a solution called VDI <a class="reference external" href="https://vdi.aalto.fi">https://vdi.aalto.fi</a> (<a class="reference external" href="https://www.aalto.fi/en/services/vdiaaltofi-how-to-use-aalto-virtual-desktop-infrastructure">description at aalto.fi</a>) where you can get access to a dedicated virtual machine from remote within the web browser. Once logged in, you can pick if you prefer Aalto Linux or Aalto Windows, and then you see the same interface that you would see if you logged in from an Aalto dedicated workstation.  To access Triton data from the Linux one, use the path /m/{dept}/scratch/ (just like Aalto desktops).</p>
+<p><strong>Pros</strong>: The computing processes are not going to run on your local computer, computing happens on remote which means that you can close your internet connection, have a break, and resume the work where you left it. There is no need to copy the data locally as all data stays on remote and is accessed as if it was a desktop computer from the campus.</p>
+<p><strong>Cons</strong>: VDI machines have a limited computing power (2 CPUs, 8GB of RAM). So they are great for small prototyping, but for a large scale computation you might want to consider Aalto Triton HPC cluster. The VDI session is not kept alive forever. If you close the connection you can still resume the same session within 24h, after that you are automatically logged out to free resources for others. If you have a script that needs more than 24h, you might want to consider Aalto Triton HPC.</p>
+<p><strong>Recommendation</strong>: VDI is excellent when you need a graphic interactive session and access to large data or to personal/confidential data without the risks of data breach. Use VDI for small analysis or interactive development, we do not recommend it when the executing time of your scripts starts to be bigger than a 7 hours working day.</p>
+</div>
+<div class="section" id="aalto-jupyterhub">
+<h2>4. Aalto Jupyterhub<a class="headerlink" href="#aalto-jupyterhub" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description</strong>: Jupyter notebooks are a way of interactive, web-based computing: instead of either scripts or interactive shells, the notebooks allow you to see a whole script + output and experiment interactively and visually. They are good for developing and testing things, but once things work and you need to scale up, it is best to put your code into proper programs. Triton’s JupyterHub is available at <a class="reference external" href="https://jupyter.triton.aalto.fi">https://jupyter.triton.aalto.fi</a> . Read more about it at: <a class="reference external" href="https://scicomp.aalto.fi/triton/apps/jupyter.html">https://scicomp.aalto.fi/triton/apps/jupyter.html</a>. <a class="reference external" href="https://scicomp.aalto.fi/triton/accounts.html">Triton account required</a>.</p>
+<p><strong>Pros</strong>: JupyterHub it has similar advantages than #4, although data and code are accessed through the JupyterHub interface.  In addition, things can stay running in the cloud.  Although it can be used with R or Matlab, Python users will most likely find this to be a very familiar and comfortable prototyping environment. Similar to the VDI case, you can resume workflow (there are sessions of different lengths).  You also also access Triton shell and batch (#6, #7) in the Jupyter interface, and it&#8217;s easy to scale up and use them all together.</p>
+<p><strong>Cons</strong>: You are limited to the Jupyter interface (but you can upload/download data, and integrate with many other things). Jupyter can <a class="reference external" href="https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html">become a mess if you aren&#8217;t careful</a>. Computationally, an instance will always have limited CPUs and memory.  Once you need more CPU/RAM, look into options #6 and #7 - they work seamlessly with the same data, software, etc.</p>
+<p><strong>Recommendation</strong>: Good for exploration and prototyping, access to large dataset, access to confidential/personal data. For more computational needs, be ready to switch to batch jobs (#7) once you are done prototyping.</p>
+</div>
+<div class="section" id="interactive-graphical-session-on-triton-hpc">
+<h2>5. Interactive graphical session on Triton HPC<a class="headerlink" href="#interactive-graphical-session-on-triton-hpc" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description</strong>: Sometimes what you can achieve with your own laptop or with VDI is not enough when it comes to computing resources. However, your workflow does not yet allow you to go fully automatic as you still need to manually interact with the analysis process (e.g. point-click analysis interfaces, doing development work, making figures, etc). An option is to connect to triton.aalto.fi with a graphical interface. This is usually done with ssh -X triton.aalto.fi. For example you can do it from a terminal within a VDI Linux session. Once connected to the triton log-in node, you can then request a dedicated interactive node with command <code class="docutils literal"><span class="pre">sinteractive</span></code>, and you can also specify the amount of CPU or RAM you need (link to sinteractive help page). <a class="reference external" href="https://scicomp.aalto.fi/triton/accounts.html">Triton account required</a>.</p>
+<p><strong>Pros</strong>: This is similar to the VDI case above (#3) without the computing limitation imposed by VDI.</p>
+<p><strong>Cons</strong>: If you connect from triton.aalto.fi from your own desktop/laptop, your internet connection might be limiting the speed of the graphical session making it very difficult to use graphical IDEs or other tools. Move to VDI, which optimises how the images are transferred over the internet. Sinteractive sessions cannot last for more than 24 hours, if you need to run scripts that have high computational requirements AND long time of execution, the solution for you is to go fully non-interactive using Triton HPC with slurm (case #6)</p>
+<p><strong>Recommendation</strong>: This might be one of the best scenarios for working from remote with an interactive graphical session. Although you cannot keep the session open for more than 24 hours, you can still work on your scripts/code/figures interactively without any limitation and without any risks of data breaches.</p>
+</div>
+<div class="section" id="interactive-command-line-only-session-on-triton-hpc-dept-workstation">
+<h2>6. Interactive command line only session on Triton HPC/dept workstation<a class="headerlink" href="#interactive-command-line-only-session-on-triton-hpc-dept-workstation" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description</strong>: sometimes you do not really need a graphical interface because you are running interactively scripts that do not produce or need a graphical output. This is the same case as sinteractive above, but without the limitation of the 24h session. The best workflow is to: 1) connect to triton <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">triton.aalto.fi</span></code> 2) start a screen/tmux session that can be detached / reattached in case you lose the internet connection or in case you need to leave the interactive script running for days 3) request a dedicated interactive terminal with command <code class="docutils literal"><span class="pre">srun</span> <span class="pre">-p</span> <span class="pre">interactive</span> <span class="pre">--time=HH:MM:SS</span> <span class="pre">--mem=nnG</span> <span class="pre">--pty</span> <span class="pre">bash</span></code> (see other examples at <a class="reference external" href="https://scicomp.aalto.fi/triton/tut/interactive.html">https://scicomp.aalto.fi/triton/tut/interactive.html</a> or <a class="reference external" href="https://scicomp.aalto.fi/triton/usage/gpu.html">https://scicomp.aalto.fi/triton/usage/gpu.html</a> for interactive GPU) 4) get all your numbers crunched and remember to close it once you are done. Please note that, if you have a dedicated Linux workstation at a department at Aalto, you can also connect to your workstation and use it as a remote computing node fully dedicated to you. The resources are limited to your workstation, but here you won’t have the time constraint or the need to queue for resources if Triton’s queue is overcrowded. <a class="reference external" href="https://scicomp.aalto.fi/triton/accounts.html">Triton account required</a>.</p>
+<p><strong>Pros</strong>: when you do not need a graphical interface and when you need to run something interactively for days, this is the best option: high computing resources, secure access to data, persistent interactive session.</p>
+<p><strong>Cons</strong>: when you request an interactive command line session you are basically submitting a slurm job. As with all jobs, you might need to wait in the queue according to the amount of resources you have requested. Furthermore, jobs cannot last more than 5 days. In general, if you have an analysis script that needs more than 5 days to operate, you might want to identify if it can be parallelized or split into sub-parts with checkpoints.</p>
+<p><strong>Recommendation</strong>: this is the best option when you need long-lasting computing power and large data/confidential data access with interactive input from the user. This is useful once you have your analysis pipeline/code fully developed so that you can just run the scripts in command line mode. Post processing/figure making can then happen interactively once your analysis is over.</p>
+</div>
+<div class="section" id="non-interactive-batch-computing-on-triton-hpc">
+<h2>7. Non-interactive batch computing on Triton HPC<a class="headerlink" href="#non-interactive-batch-computing-on-triton-hpc" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description</strong>: this is the case when no interactive input is needed to process your data. This is extremely useful when you are going to perform the same analysis code for hundreds of time. Please check more detailed descriptions at <a class="reference external" href="https://scicomp.aalto.fi/triton/index.html">https://scicomp.aalto.fi/triton/index.html</a> and if you havent, go through the tutorials <a class="reference external" href="https://scicomp.aalto.fi/triton/index.html#tutorials">https://scicomp.aalto.fi/triton/index.html#tutorials</a>. <a class="reference external" href="https://scicomp.aalto.fi/triton/accounts.html">Triton account required</a>.</p>
+<p><strong>Pros</strong>: when it comes to large scale data analysis, this is the most efficient way to do it. Having a fully non-interactive workflow also makes your analysis reproducible as it does not require any human input which can sometimes be the source of errors or other irreproducible/undocumented steps.</p>
+<p><strong>Cons</strong>: as this is a non-interactive workflow, this is not recommended for generating figures or with graphical tools that does not allow “batch” mode operations.</p>
+<p><strong>Recommendation</strong>: this is the best option when you need long-lasting parallel computing power and large data/confidential data access. This is also recommended from reproducibility/replicability perspective since, by fully removing human input, the workflow can be made fully replicable.</p>
+</div>
+<div class="section" id="non-interactive-batch-hpc-computing-at-csc">
+<h2>8. Non-interactive batch HPC computing at CSC<a class="headerlink" href="#non-interactive-batch-hpc-computing-at-csc" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description</strong>: this case is similar to #7. You can read/learn more about this option at <a class="reference external" href="https://research.csc.fi/guides">https://research.csc.fi/guides</a></p>
+<p><strong>Pro/Cons/Recommendation</strong>: see #7.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
