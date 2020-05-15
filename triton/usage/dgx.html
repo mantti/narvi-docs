@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nvidia DGX machines &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Frequently asked questions" href="faq.html"/>
+        <link rel="prev" title="Debugging" href="debugging.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="compilers.html">Available compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Nvidia DGX machines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#access-and-prerequisites">Access and prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basics">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nvidia-containers">Nvidia containers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-notes">Other notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#known-bugs">Known bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html">Running programs on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid2.html">Grid computing 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jobs.html">Monitoring jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html">Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="localstorage.html">Storage: local drives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lustre.html">Storage: Lustre (scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mpilibs.html">MPI on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quotas.html">Quotas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="singularity.html">Singularity Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smallfiles.html">Small files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolchains.html">Compilers and toolchains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">Remote workflows at Aalto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Nvidia DGX machines</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/usage/dgx.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nvidia-dgx-machines">
+<h1>Nvidia DGX machines<a class="headerlink" href="#nvidia-dgx-machines" title="Permalink to this headline">¶</a></h1>
+<p>Triton currently has two <a class="reference external" href="https://en.wikipedia.org/wiki/Nvidia_DGX-1">Nvidia DGX-1 machines</a> machines
+which contain 8 V100 GPUs and are optimized for deep learning.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The DGX usage in Slurm, and this page in general, are under
+development and testing.  For latest changes, you can check git
+history using the link in the top right corner.</p>
+</div>
+<div class="section" id="access-and-prerequisites">
+<h2>Access and prerequisites<a class="headerlink" href="#access-and-prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>The DGX machines have been specifically bought by several groups and
+these groups have priority access.</p>
+<p><strong>General access:</strong> you should us the <code class="docutils literal"><span class="pre">dgx-common</span></code> partition.  This has
+preemption enabled, which means that if a higher priority job comes,
+you job can be cancelled <em>at any time, even if it is running</em>.  The
+job will then be added back to the queue and possibly run again.  Design
+your code to take this into account.  Furthermore, your job will only
+start running when the priority partition is empty... so in effect
+jobs happen very slowly.  If you are using general access, all of the
+<code class="docutils literal"><span class="pre">-p</span> <span class="pre">dgx</span></code> in the examples below need to be changed to <code class="docutils literal"><span class="pre">-p</span>
+<span class="pre">dgx-common</span></code>.</p>
+<p><strong>Dedicated group access:</strong> You can check the groups which may access
+it by running <code class="docutils literal"><span class="pre">grep</span> <span class="pre">PartitionName=dgx</span> <span class="pre">/etc/slurm/slurm.conf</span></code> and
+checking <code class="docutils literal"><span class="pre">AllowedGroups=</span></code>, check your groups with <code class="docutils literal"><span class="pre">groups</span></code>, and
+check all group members with <code class="docutils literal"><span class="pre">getent</span> <span class="pre">group</span> <span class="pre">$groupname</span></code>. If you
+should have access but don&#8217;t, <a class="reference internal" href="../help.html"><em>email our support alias</em></a>
+with a CC to your group leader, and we will fix this.</p>
+<p>You also need a <a class="reference internal" href="../accounts.html"><em>Triton account</em></a>.</p>
+</div>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>The DGX machines have a special operating system from Nvidia based on
+Ubuntu 16.04, and thus form a very special of a Triton node because
+the rest of Triton is CentOS.  We have done work to make them work
+together, but it will require special effort to make code run on both
+halves.  You may find some problems, so please be aggressive about
+filing issues (but also aggressive about checking the background
+yourself and giving us good information).</p>
+<p>Basic reading: <a class="reference internal" href="../tut/connecting.html"><em>Connecting to Triton</em></a>.</p>
+<p>Unlike before, direct access is not available: you should connect to
+the login node and submit jobs via Slurm, not running directly
+interactively.</p>
+<div class="section" id="software-and-modules">
+<h3>Software and modules<a class="headerlink" href="#software-and-modules" title="Permalink to this headline">¶</a></h3>
+<p>Basic reading: <a class="reference internal" href="../tut/modules.html"><em>Software Modules</em></a>.</p>
+<p>You should load software using the <code class="docutils literal"><span class="pre">module</span></code> command, just like the
+rest of Triton.  However, since the base operating system is
+different, modules are not automatically compatible.  So, you can&#8217;t
+automatically reuse the modules you use on the rest of Triton.</p>
+<p>The current available modules are:</p>
+<div class="highlight-python"><div class="highlight"><pre>----------------------- /share/apps/anaconda-ci/modules ------------------------
+   anaconda2/5.1.0-cpu        anaconda3/5.1.0-cpu
+   anaconda2/5.1.0-gpu (D)    anaconda3/5.1.0-gpu (D)
+
+---------------- /share/apps/singularity-ci/dgx/modules/common -----------------
+   nvidia-caffe/18.02-py2          nvidia-pytorch/18.11-py3      (D)
+   nvidia-cntk/18.02-py3           nvidia-tensorflow/18.02-py2
+   nvidia-mxnet/18.02-py2          nvidia-tensorflow/18.02-py3
+   nvidia-mxnet/18.02-py3          nvidia-tensorflow/18.05-py3
+   nvidia-mxnet/18.08-py3          nvidia-tensorflow/19.01-py3   (D)
+   nvidia-mxnet/18.11-py3   (D)    nvidia-theano/18.02
+   nvidia-pytorch/18.02-py3        nvidia-torch/18.02-py2
+   nvidia-pytorch/18.08-py3        singularity-tensorflow/latest
+
+------------------------- /share/apps/modulefiles/dgx --------------------------
+   matlab/r2012a    matlab/r2015b    matlab/r2016b    matlab/r2018a
+   matlab/r2014a    matlab/r2016a    matlab/r2017b    matlab/r2018b (D)
+
+-------------------- /usr/share/lmod/lmod/modulefiles/Core ---------------------
+   lmod/6.6    settarg/6.6
+</pre></div>
+</div>
+<p>Unlike the rest of Triton, you can&#8217;t see which modules are available
+on the login node: currently see above (which might go out of date)
+or get an interactive shell on the DGX node (see below) and run
+<code class="docutils literal"><span class="pre">module</span> <span class="pre">avail</span></code> yourself.</p>
+</div>
+<div class="section" id="running-jobs">
+<h3>Running jobs<a class="headerlink" href="#running-jobs" title="Permalink to this headline">¶</a></h3>
+<p>Basic reading: tutorials on <a class="reference internal" href="../tut/interactive.html"><em>interactive jobs</em></a>, <a class="reference internal" href="../tut/serial.html"><em>serial jobs</em></a></p>
+<p>All runs on the DGX machines go via Slurm.  For an introduction to
+slurm, see the tutorials linked above, and in general all the rest of
+the Triton user guide.  Slurm is a cluster scheduling system, which
+takes job requests (code, CPU/memory/time/hardware requirements) and
+distributes it to nodes.  You basically need to declare what your jobs
+require, and tell it to run on DGX nodes.</p>
+<div class="section" id="basic-required-slurm-options">
+<h4>Basic required slurm options<a class="headerlink" href="#basic-required-slurm-options" title="Permalink to this headline">¶</a></h4>
+<p>The necessary Slurm parameters are:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">-p</span> <span class="pre">dgx</span></code> (dedicated group access) or <code class="docutils literal"><span class="pre">-p</span> <span class="pre">dgx-common</span></code> (general
+access, jobs may be killed at any time, see above) to indicate that
+we want to run in the DGX partitions.</li>
+<li><code class="docutils literal"><span class="pre">--gres=gpu:v100:1</span></code> to request GPUs (Slurm also manages GPUs and
+limits you to the proper devices).<ul>
+<li>To request more than one graphics card, <code class="docutils literal"><span class="pre">--gres=gpu:v100:2</span></code></li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">--export=HOME,USER,TERM,WRKDIR</span></code> to limit the environment exported.
+Because these are a different operating system, you need to clear
+most environment variables.  If there are extra environment
+variables you need, add them here.</li>
+<li><code class="docutils literal"><span class="pre">/bin/bash</span> <span class="pre">-l</span></code>: you need to give the full path to <code class="docutils literal"><span class="pre">bash</span></code> and
+request a login shell, or else the environment won&#8217;t be properly
+set by Slurm.</li>
+<li>To set the run time, <code class="docutils literal"><span class="pre">--time=HH:MM:SS</span></code>.  If you want more CPUs,
+add <code class="docutils literal"><span class="pre">-c</span> <span class="pre">N</span></code>.  If you want more (system) memory, use <code class="docutils literal"><span class="pre">--mem=5GB</span></code>
+and so on.  (These are completely generic slurm options.)</li>
+</ul>
+<p>To check running and jobs: <code class="docutils literal"><span class="pre">squeue</span> <span class="pre">-p</span> <span class="pre">dgx,dgx-common</span></code> (whole cluster) or
+<code class="docutils literal"><span class="pre">slurm</span> <span class="pre">q</span></code> (for your own jobs).</p>
+</div>
+<div class="section" id="getting-an-interactive-shell-for-own-work">
+<h4>Getting an interactive shell for own work<a class="headerlink" href="#getting-an-interactive-shell-for-own-work" title="Permalink to this headline">¶</a></h4>
+<p>For example, to get an interactive shell, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>srun -p dgx --gres=gpu:v100:1 --export=HOME,USER,TERM,WRKDIR --pty /bin/bash -l
+</pre></div>
+</div>
+<p>From here, you can do whatever you want interactively with your
+dedicated resources almost as if you logged in directly.  Remember to
+log out when done, otherwise your resources stay dedicated to you and
+no one else can use them!</p>
+</div>
+<div class="section" id="batch-scripts">
+<h4>Batch scripts<a class="headerlink" href="#batch-scripts" title="Permalink to this headline">¶</a></h4>
+<p>Similarly to the rest of Triton, you can make batch scripts:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash -l
+#SBATCH -p dgx
+#SBATCH --gres=gpu:1
+#SBATCH --mem=5G --time=5:00
+#SBATCH --export=HOME,USER,TERM,WRKDIR
+
+your shell commands here
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nvidia-containers">
+<h2>Nvidia containers<a class="headerlink" href="#nvidia-containers" title="Permalink to this headline">¶</a></h2>
+<p>Some of the Nvidia containers designed for the DGX machines are
+available as modules - see above.  They are integrated with our Triton
+<a class="reference internal" href="singularity.html"><em>singularity</em></a> setup, so you can use those same
+procedures:</p>
+<div class="highlight-python"><div class="highlight"><pre>module load nvidia-tensorflow
+
+# Get a shell within the image:
+singularity_wrapper shell
+
+# Execute Python within the image
+singularity_wrapper exec python3 code.py
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">singularity_wrapper</span></code> sets the image file (from the module you
+loaded), important options (to bind-mount things), and starts it.</p>
+<p>This is a minimum slurm script (submit with <code class="docutils literal"><span class="pre">sbatch</span></code>, see the slurm
+info above and tutorials for more info):</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash -l
+#SBATCH -p dgx
+#SBATCH --gres=gpu:1
+#SBATCH --mem=5G --time=5:00
+#SBATCH --export=HOME,USER,TERM,WRKDIR
+
+module load nvidia-tensorflow
+singularity_wrapper exec python -V
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-notes">
+<h2>Other notes<a class="headerlink" href="#other-notes" title="Permalink to this headline">¶</a></h2>
+<p>Note: if you are using tensorboard, just have it write data to the
+scratch filesystem, mount that on your workstation, and follow it that
+way.  See the <a class="reference internal" href="../tut/storage.html"><em>data storage tutorial</em></a>.</p>
+<p>Within jobs, us <code class="docutils literal"><span class="pre">/tmp</span></code> for temporary local files.  This is
+bind-mounted per user (not per job, make sure that you prefix by job
+ID or something to not get conflicts) to the <code class="docutils literal"><span class="pre">/raid</span></code> SSD area.
+(note: see below, this doesn&#8217;t work yet)</p>
+</div>
+<div class="section" id="known-bugs">
+<h2>Known bugs<a class="headerlink" href="#known-bugs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>You have to give the full path to <code class="docutils literal"><span class="pre">/bin/bash</span></code> and give the <code class="docutils literal"><span class="pre">-l</span></code>
+option to make a login shell to read necessary shell initialization.</li>
+<li>You have to limit the environment variables you export, because they
+are different.  But you have to export at least <code class="docutils literal"><span class="pre">HOME</span></code> and
+possibly more (see above).</li>
+<li>You can&#8217;t figure out modules are available without getting an
+interactive shell there.</li>
+<li>The <code class="docutils literal"><span class="pre">/tmp</span></code> directory is not automatically to a per-user tmpdir (or
+<code class="docutils literal"><span class="pre">/raid</span></code>).  For large amounts of intermediates, use a per-user
+subdirectory of <code class="docutils literal"><span class="pre">/raid</span></code> for your work.</li>
+<li><code class="docutils literal"><span class="pre">/scratch</span></code> isn&#8217;t automatically mounted for some reason.  For now,
+we manually mount it on each reboot but this needs fixing.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="Frequently asked questions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="debugging.html" class="btn btn-neutral" title="Debugging" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

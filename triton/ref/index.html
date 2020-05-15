@@ -1,0 +1,1043 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Triton quick reference &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Examples" href="../examples/index.html"/>
+        <link rel="prev" title="VisIT" href="../apps/visit.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Triton quick reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#modules">Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storage">Storage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#partitions">Partitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job-submission">Job submission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toolchains">Toolchains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hardware">Hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/index.html">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Triton quick reference</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/ref/index.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="triton-quick-reference">
+<h1>Triton quick reference<a class="headerlink" href="#triton-quick-reference" title="Permalink to this headline">¶</a></h1>
+<p>In this page, you have all important reference information</p>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span></code> <em>NAME</em></td>
+<td>load module</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">avail</span></code></td>
+<td>list all modules</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">spider</span></code> <em>NAME</em></td>
+<td>search modules</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">list</span></code></td>
+<td>list currently loaded modules</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">show</span></code> <em>NAME</em></td>
+<td>details on a module</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">help</span></code> <em>NAME</em></td>
+<td>details on a module</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">unload</span></code> <em>NAME</em></td>
+<td>unload a module</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">save</span></code> <em>ALIAS</em></td>
+<td>save module to this alias (saved in ~/.lmod.d/)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">restore</span></code> <em>ALIAS</em></td>
+<td>load saved module set (faster than loading individually)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">purge</span></code></td>
+<td>unload all loaded modules (faster than unloading individually)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="storage">
+<h2>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Path</th>
+<th class="head">Quota</th>
+<th class="head">Backup</th>
+<th class="head">Locality</th>
+<th class="head">Purpose</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Home</td>
+<td><code class="docutils literal"><span class="pre">$HOME</span></code> or <code class="docutils literal"><span class="pre">/home/$username/</span></code></td>
+<td>hard quota 10GB</td>
+<td>Nightly</td>
+<td>all nodes</td>
+<td>Small user specific files, no calculation data.</td>
+</tr>
+<tr class="row-odd"><td>Work</td>
+<td><code class="docutils literal"><span class="pre">$WRKDIR</span></code> or <code class="docutils literal"><span class="pre">/scratch/work/$username/</span></code></td>
+<td>200GB and 1 million files</td>
+<td>x</td>
+<td>all nodes</td>
+<td>Personal working space for every user. Calculation data etc. Quota can be increased on request.</td>
+</tr>
+<tr class="row-even"><td>Scratch</td>
+<td><code class="docutils literal"><span class="pre">/scratch/$dept/$project/</span></code></td>
+<td>on request</td>
+<td>x</td>
+<td>all nodes</td>
+<td>Department/group specific project directories.</td>
+</tr>
+<tr class="row-odd"><td>Local temp</td>
+<td><code class="docutils literal"><span class="pre">/tmp/</span></code></td>
+<td>limited by disk size</td>
+<td>x</td>
+<td>single-node</td>
+<td>Primary (and usually fastest) place for single-node calculation data.  Removed once user&#8217;s jobs are finished on the node.</td>
+</tr>
+<tr class="row-even"><td>Local persistent</td>
+<td><code class="docutils literal"><span class="pre">/l/</span></code></td>
+<td>varies</td>
+<td>x</td>
+<td>dedicated group servers only</td>
+<td>Local disk persistent storage.  On servers purchased for a specific group.  Not backed up.</td>
+</tr>
+<tr class="row-odd"><td>ramfs (login nodes only)</td>
+<td><code class="docutils literal"><span class="pre">$XDG_RUNTIME_DIR</span></code></td>
+<td>limited by memory</td>
+<td>x</td>
+<td>single-node</td>
+<td>Ramfs on the <em>login node only</em>, in-memory filesystem</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="partitions">
+<h2>Partitions<a class="headerlink" href="#partitions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Partition</th>
+<th class="head">Max job size</th>
+<th class="head">Mem/core (GB)</th>
+<th class="head">Tot mem (GB)</th>
+<th class="head">Cores/node</th>
+<th class="head">Limits</th>
+<th class="head">Use</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&lt;default&gt;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>If you leave off all possible partitions will be used (based on time/mem)</td>
+</tr>
+<tr class="row-odd"><td>debug</td>
+<td>2 nodes</td>
+<td>2.66 - 12</td>
+<td>32-256</td>
+<td>12,20,24</td>
+<td>15 min</td>
+<td>testing and debugging short interactive. work.  1 node of each arch.</td>
+</tr>
+<tr class="row-even"><td>batch</td>
+<td>16 nodes</td>
+<td>2.66 - 12</td>
+<td>32-256</td>
+<td>12, 20,24</td>
+<td>5d</td>
+<td><strong>primary partition</strong>, all serial &amp; parallel jobs</td>
+</tr>
+<tr class="row-odd"><td>short</td>
+<td>8 nodes</td>
+<td>4 - 12</td>
+<td>48-256</td>
+<td>12, 20,24</td>
+<td>4h</td>
+<td>short serial &amp; parallel jobs, +96 dedicated CPU cores</td>
+</tr>
+<tr class="row-even"><td>hugemem</td>
+<td>1 node</td>
+<td>43</td>
+<td>1024</td>
+<td>24</td>
+<td>3d</td>
+<td>huge memory jobs, 1 node only</td>
+</tr>
+<tr class="row-odd"><td>gpu</td>
+<td>1 node, 2-8GPUs</td>
+<td>2 - 10</td>
+<td>24-128</td>
+<td>12</td>
+<td>5d</td>
+<td><a class="reference internal" href="../usage/gpu.html"><em>GPU computing</em></a></td>
+</tr>
+<tr class="row-even"><td>gpushort</td>
+<td>4 nodes, 2-8 GPUs</td>
+<td>2 - 10</td>
+<td>24-128</td>
+<td>12</td>
+<td>4h</td>
+<td><a class="reference internal" href="../usage/gpu.html"><em>GPU computing</em></a></td>
+</tr>
+<tr class="row-odd"><td>interactive</td>
+<td>2 nodes</td>
+<td>5</td>
+<td>128</td>
+<td>24</td>
+<td>1d</td>
+<td>for <code class="docutils literal"><span class="pre">sinteractive</span></code> command, longer interactive work</td>
+</tr>
+</tbody>
+</table>
+<p>Use <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">partitions</span></code> to see more details.</p>
+</div>
+<div class="section" id="job-submission">
+<h2>Job submission<a class="headerlink" href="#job-submission" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">sbatch</span></code></td>
+<td>submit a job to queue (see standard options below)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">srun</span></code></td>
+<td>Within a running job script/environment: Run code using the allocated resources (see options below)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">srun</span></code></td>
+<td>On frontend: submit to queue, wait until done, show output. (see options below)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">sinteractive</span></code></td>
+<td>Submit job, wait, provide shell on node for interactive playing (X forwarding works, default partition interactive).  Exit shell when done. (see options below)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">srun</span> <span class="pre">--pty</span> <span class="pre">bash</span></code></td>
+<td>(advanced) Another way to run interactive jobs, no X forwarding but simpler.  Exit shell when done.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">scancel</span></code> <em>&lt;jobid&gt;</em></td>
+<td>Cancel a job in queue</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">salloc</span></code></td>
+<td>(advanced) Allocate resources from frontend node.  Use <code class="docutils literal"><span class="pre">srun</span></code> to run using those resources, <code class="docutils literal"><span class="pre">exit</span></code> to close shell when done. Read <a class="reference internal" href="../usage/general.html"><em>the description</em></a>! (see options below)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">scontrol</span></code></td>
+<td>View/modify job and slurm configuration</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Option</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">sbatch</span></code>/<code class="docutils literal"><span class="pre">srun</span></code>/etc</td>
+<td><code class="docutils literal"><span class="pre">-t</span></code>, <code class="docutils literal"><span class="pre">--time=</span></code><em>hh:mm:ss</em></td>
+<td><strong>time limit</strong></td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-t,</span> <span class="pre">--time=</span></code><em>dd-hh</em></td>
+<td><strong>time limit, days-hours</strong></td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-p,</span> <span class="pre">--partition=</span></code><em>partition</em></td>
+<td><strong>job partition.  Usually leave off and things are auto-detected.</strong></td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--mem-per-cpu=</span></code><em>n</em></td>
+<td><strong>request n MB of memory per core</strong></td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--mem=</span></code><em>n</em></td>
+<td><strong>request n MB memory per node</strong></td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-c</span></code>, <code class="docutils literal"><span class="pre">--cpus-per-task=</span></code><em>n</em></td>
+<td><strong>Allocate *n* CPU&#8217;s for each task. For multithreaded jobs. (compare ``&#8211;ntasks``: ``-c`` means the number of cores for each process started.)</strong></td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-N</span></code>, <code class="docutils literal"><span class="pre">--nodes=</span></code><em>n-m</em></td>
+<td>allocate minimum of n, maximum of m nodes.</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-n</span></code>, <code class="docutils literal"><span class="pre">--ntasks=</span></code><em>n</em></td>
+<td>allocate resources for and start <em>n</em> tasks (one task=one process started, it is up to you to make them communicate. However the main script runs only on first node, the sub-processes run with &#8220;srun&#8221; are run this many times.)</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-J</span></code>, <code class="docutils literal"><span class="pre">--job-name=</span></code><em>name</em></td>
+<td>short job name</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-o</span></code> <em>output</em></td>
+<td>print output into file <em>output</em></td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-e</span></code> <em>error</em></td>
+<td>print errors into file <em>error</em></td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--exclusive</span></code></td>
+<td>allocate exclusive access to nodes.  For large parallel jobs.</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--constraint=</span></code><em>feature</em></td>
+<td>request <em>feature</em> (see <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">features</span></code> for the current list of configured features, or Arch under the <a class="reference internal" href="#hardware-list"><span>hardware list</span></a>).  Multiple with <code class="docutils literal"><span class="pre">--constraint=&quot;hsw|skl&quot;</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--array=</span></code><em>0-5,7,10-15</em></td>
+<td>Run job multiple times, use variable <code class="docutils literal"><span class="pre">$SLURM_ARRAY_TASK_ID</span></code> to adjust parameters.</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--gres=gpu</span></code></td>
+<td>request a GPU, or <code class="docutils literal"><span class="pre">--gres=gpu:</span></code><em>n</em> for multiple</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--gres=spindle</span></code></td>
+<td>request nodes that have disks, <code class="docutils literal"><span class="pre">spindle:</span></code><em>n</em>, for a certain number of RAID0 disks</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--mail-type=</span></code><em>type</em></td>
+<td>notify of events: <code class="docutils literal"><span class="pre">BEGIN</span></code>, <code class="docutils literal"><span class="pre">END</span></code>, <code class="docutils literal"><span class="pre">FAIL</span></code>, <code class="docutils literal"><span class="pre">ALL</span></code>, <code class="docutils literal"><span class="pre">REQUEUE</span></code> (not on triton) or <code class="docutils literal"><span class="pre">ALL.</span></code> MUST BE used with <code class="docutils literal"><span class="pre">--mail-user=</span></code> only</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--mail-user=</span></code><em>your&#64;email</em></td>
+<td>whome to send the email</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">srun</span></code></td>
+<td><code class="docutils literal"><span class="pre">-N</span></code> <em>&lt;N_nodes&gt;</em> hostname</td>
+<td>Print allocated nodes (from within script)</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">q</span></code> ; <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">qq</span></code></td>
+<td>Status of your queued jobs (long/short)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">partitions</span></code></td>
+<td>Overview of partitions (A/I/O/T=active,idle,other,total)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">cpus</span></code> <em>&lt;partition&gt;</em></td>
+<td>list free CPUs in a partition</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">history</span></code> <em>[1day,2hour,...]</em></td>
+<td>Show status of recent jobs</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">seff</span></code> <em>&lt;jobid&gt;</em></td>
+<td>Show percent of mem/CPU used in job</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">j</span></code> <em>&lt;jobid&gt;</em></td>
+<td>Job details (only while running)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">s</span></code> ; <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">ss</span></code> <em>&lt;partition&gt;</em></td>
+<td>Show status of all jobs</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">sacct</span></code></td>
+<td>Full history information (advanced, needs args)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Full slurm command help:</strong></p>
+<div class="highlight-python"><div class="highlight"><pre>$ slurm
+
+Show or watch job queue:
+ slurm [watch] queue     show own jobs
+ slurm [watch] q   show user&#39;s jobs
+ slurm [watch] quick     show quick overview of own jobs
+ slurm [watch] shorter   sort and compact entire queue by job size
+ slurm [watch] short     sort and compact entire queue by priority
+ slurm [watch] full      show everything
+ slurm [w] [q|qq|ss|s|f] shorthands for above!
+ slurm qos               show job service classes
+ slurm top [queue|all]   show summary of active users
+Show detailed information about jobs:
+ slurm prio [all|short]  show priority components
+ slurm j|job      show everything else
+ slurm steps      show memory usage of running srun job steps
+Show usage and fair-share values from accounting database:
+ slurm h|history   show jobs finished since, e.g. &quot;1day&quot; (default)
+ slurm shares
+Show nodes and resources in the cluster:
+ slurm p|partitions      all partitions
+ slurm n|nodes           all cluster nodes
+ slurm c|cpus            total cpu cores in use
+ slurm cpus   cores available to partition, allocated and free
+ slurm cpus jobs         cores/memory reserved by running jobs
+ slurm cpus queue        cores/memory required by pending jobs
+ slurm features          List features and GRES
+
+Examples:
+ slurm q
+ slurm watch shorter
+ slurm cpus batch
+ slurm history 3hours
+</pre></div>
+</div>
+<p><strong>Other advanced</strong> commands (many require lots of parameters to be
+useful):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">squeue</span></code></td>
+<td>Full info on queues</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">sinfo</span></code></td>
+<td>Advanced info on partitions</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">nodes</span></code></td>
+<td>List all nodes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="toolchains">
+<h2>Toolchains<a class="headerlink" href="#toolchains" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Toolchain</th>
+<th class="head">Compiler version</th>
+<th class="head">MPI version</th>
+<th class="head">BLAS version</th>
+<th class="head">ScaLAPACK version</th>
+<th class="head">FFTW version</th>
+<th class="head">CUDA version</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>GOOLF Toolchains:</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>goolf/triton-2016a</td>
+<td>GCC/4.9.3</td>
+<td>OpenMPI/1.10.2</td>
+<td>OpenBLAS/0.2.15</td>
+<td>ScaLAPACK/2.0.2</td>
+<td>FFTW/3.3.4</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>goolf/triton-2016b</td>
+<td>GCC/5.4.0</td>
+<td>OpenMPI/1.10.3</td>
+<td>OpenBLAS/0.2.18</td>
+<td>ScaLAPACK/2.0.2</td>
+<td>FFTW/3.3.4</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>goolfc/triton-2016a</td>
+<td>GCC/4.9.3</td>
+<td>OpenMPI/1.10.2</td>
+<td>OpenBLAS/0.2.15</td>
+<td>ScaLAPACK/2.0.2</td>
+<td>FFTW/3.3.4</td>
+<td>7.5.18</td>
+</tr>
+<tr class="row-even"><td>goolfc/triton-2017a</td>
+<td>GCC/5.4.0</td>
+<td>OpenMPI/2.0.1</td>
+<td>OpenBLAS/0.2.19</td>
+<td>ScaLAPACK/2.0.2</td>
+<td>FFTW/3.3.4</td>
+<td>8.0.61</td>
+</tr>
+<tr class="row-odd"><td><strong>GMPOLF Toolchains:</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>gmpolf/triton-2016a</td>
+<td>GCC/4.9.3</td>
+<td>MPICH/3.0.4</td>
+<td>OpenBLAS/0.2.15</td>
+<td>ScaLAPACK/2.0.2</td>
+<td>FFTW/3.3.4</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>gmpolfc/triton-2016a</td>
+<td>GCC/4.9.3</td>
+<td>MPICH/3.0.4</td>
+<td>OpenBLAS/0.2.15</td>
+<td>ScaLAPACK/2.0.2</td>
+<td>FFTW/3.3.4</td>
+<td>7.5.18</td>
+</tr>
+<tr class="row-even"><td><strong>GMVOLF Toolchains:</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>gmvolf/triton-2016a</td>
+<td>GCC/4.9.3</td>
+<td>MVAPICH2/2.0.1</td>
+<td>OpenBLAS/0.2.15</td>
+<td>ScaLAPACK/2.0.2</td>
+<td>FFTW/3.3.4</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>gmvolfc/triton-2016a</td>
+<td>GCC/4.9.3</td>
+<td>MVAPICH2/2.0.1</td>
+<td>OpenBLAS/0.2.15</td>
+<td>ScaLAPACK/2.0.2</td>
+<td>FFTW/3.3.4</td>
+<td>7.5.18</td>
+</tr>
+<tr class="row-odd"><td><strong>IOOLF Toolchains:</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>ioolf/triton-2016a</td>
+<td>icc/2015.3.187</td>
+<td>OpenMPI/1.10.2</td>
+<td>OpenBLAS/0.2.15</td>
+<td>ScaLAPACK/2.0.2</td>
+<td>FFTW/3.3.4</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>IOMKL Toolchains:</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>iomkl/triton-2016a</td>
+<td>icc/2015.3.187</td>
+<td>OpenMPI/1.10.2</td>
+<td>imkl/11.3.1.150</td>
+<td>imkl/11.3.1.150</td>
+<td>imkl/11.3.1.150</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>iomkl/triton-2016b</td>
+<td>icc/2015.3.187</td>
+<td>OpenMPI/1.10.3</td>
+<td>imkl/11.3.1.150</td>
+<td>imkl/11.3.1.150</td>
+<td>imkl/11.3.1.150</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>iompi/triton-2017a</td>
+<td>icc/2017.1.132</td>
+<td>OpenMPI/2.0.1</td>
+<td>imkl/2017.1.132</td>
+<td>imkl/2017.1.132</td>
+<td>imkl/2017.1.132</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="hardware">
+<span id="hardware-list"></span><h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Node name</th>
+<th class="head">Number of nodes</th>
+<th class="head">Node type</th>
+<th class="head">Year</th>
+<th class="head">Arch (constraint)</th>
+<th class="head">CPU type</th>
+<th class="head">Memory Configuration</th>
+<th class="head">GPUs</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>wsm[1-112,137-144]</td>
+<td>120</td>
+<td>ProLiant SL390s G7</td>
+<td>&nbsp;</td>
+<td>wsm</td>
+<td>2x6 core <a class="reference external" href="https://ark.intel.com/products/47922/Intel-Xeon-Processor-X5650-%2812M-Cache-2_66-GHz-6_40-GTs-Intel-QPI%29">Intel Xeon X5650</a> 2.67GHz</td>
+<td>48GB DD3-1333</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>wsm[113-136]</td>
+<td>24</td>
+<td>ProLiant SL390s G7</td>
+<td>&nbsp;</td>
+<td>wsm</td>
+<td>2x6 core <a class="reference external" href="https://ark.intel.com/products/47922/Intel-Xeon-Processor-X5650-%2812M-Cache-2_66-GHz-6_40-GTs-Intel-QPI%29">Intel Xeon X5650</a> 2.67GHz</td>
+<td>96GB DD3-1333</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>ivb[1-24]</td>
+<td>24</td>
+<td>ProLiant SL230s G8</td>
+<td>&nbsp;</td>
+<td>ivb,avx</td>
+<td>2x10 core <a class="reference external" href="https://ark.intel.com/products/75277">Xeon E5 2680 v2</a> 2.80GHz</td>
+<td>256GB DDR3-1667</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>ivb[25-48]</td>
+<td>24</td>
+<td>ProLiant SL230s G8</td>
+<td>&nbsp;</td>
+<td>ivb,avx</td>
+<td>2x10 core <a class="reference external" href="https://ark.intel.com/products/75277">Xeon E5 2680 v2</a> 2.80GHz</td>
+<td>64GB DDR3-1667</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>pe[1-48,65-81]</td>
+<td>65</td>
+<td>Dell PowerEdge C4130</td>
+<td>2016</td>
+<td>hsw,avx,avx2</td>
+<td>2x12 core <a class="reference external" href="https://ark.intel.com/products/81908/Intel-Xeon-Processor-E5-2680-v3-30M-Cache-2_50-GHz">Xeon E5 2680 v3</a> 2.50GHz</td>
+<td>128GB DDR4-2133</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>pe[49-64,82]</td>
+<td>17</td>
+<td>Dell PowerEdge C4130</td>
+<td>2016</td>
+<td>hsw,avx,avx2</td>
+<td>2x12 core <a class="reference external" href="https://ark.intel.com/products/81908/Intel-Xeon-Processor-E5-2680-v3-30M-Cache-2_50-GHz">Xeon E5 2680 v3</a> 2.50GHz</td>
+<td>256GB DDR4-2133</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>pe[83-91]</td>
+<td>8</td>
+<td>Dell PowerEdge C4130</td>
+<td>&nbsp;</td>
+<td>bdw,avx,avx2</td>
+<td>2x14 core <a class="reference external" href="https://ark.intel.com/products/91754">Xeon E5 2680 v4</a> 2.40GHz</td>
+<td>128GB DDR4-2400</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>skl[1-48]</td>
+<td>48</td>
+<td>Dell PowerEdge C6420</td>
+<td>2019</td>
+<td>skl,avx,avx2,avx512</td>
+<td>2x20 core <a class="reference external" href="https://ark.intel.com/products/120489">Xeon Gold 6148</a> 2.40GHz</td>
+<td>192GB DDR4-2667</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>gpu[20-22]</td>
+<td>3</td>
+<td>Dell PowerEdge C4130</td>
+<td>2016</td>
+<td>hsw,avx,avx2,kepler</td>
+<td>2x6 core <a class="reference external" href="https://ark.intel.com/products/83352/Intel-Xeon-Processor-E5-2620-v3-15M-Cache-2_40-GHz">Xeon E5 2620 v3</a> 2.50GHz</td>
+<td>128GB DDR4-2133</td>
+<td>4x2 GPU <a class="reference external" href="https://www.nvidia.com/object/tesla-k80.html">K80</a></td>
+</tr>
+<tr class="row-odd"><td>gpu[23-27]</td>
+<td>5</td>
+<td>Dell PowerEdge C4130</td>
+<td>2017</td>
+<td>hsw,avx,avx2,pascal</td>
+<td>2x12 core Xeon E5-2680 v3 &#64; 2.5GHz</td>
+<td>256GB DDR4-2400</td>
+<td>4x <a class="reference external" href="https://www.nvidia.com/object/tesla-p100.html">P100</a></td>
+</tr>
+<tr class="row-even"><td>dgx[01-02]</td>
+<td>2</td>
+<td>Nvidia DGX-1</td>
+<td>2018</td>
+<td>bdw,avx,avx2,volta</td>
+<td>2x20 core <a class="reference external" href="https://ark.intel.com/products/91753/Intel-Xeon-Processor-E5-2698-v4-50M-Cache-2_20-GHz">Xeon E5-2698 v4 &#64; 2.2GHz</a></td>
+<td>512GB DDR4-2133</td>
+<td>8x <a class="reference external" href="https://www.nvidia.com/en-us/data-center/tesla-v100/">V100</a></td>
+</tr>
+<tr class="row-odd"><td>gpu[28-37]</td>
+<td>10</td>
+<td>Dell PowerEdge C4140</td>
+<td>2019</td>
+<td>skl,avx,avx2,avx512,volta</td>
+<td>2x8  core Intel Xeon Gold 6134 &#64; 3.2GHz</td>
+<td>384GB DDR4-2667</td>
+<td>4x <a class="reference external" href="https://www.nvidia.com/en-us/data-center/tesla-v100">V100</a> 32GB</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Node type</th>
+<th class="head">CPU count</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>48GB Xeon Westmere (2012)</td>
+<td>1404</td>
+</tr>
+<tr class="row-odd"><td>24GB Xeon Westmere + 2x GPU (2012)</td>
+<td>120</td>
+</tr>
+<tr class="row-even"><td>96GB Xeon Westmere (2012)</td>
+<td>288</td>
+</tr>
+<tr class="row-odd"><td>1TB Xeon Westmere (2012)</td>
+<td>48</td>
+</tr>
+<tr class="row-even"><td>256GB Xeon Ivy Bridge (2014)</td>
+<td>480</td>
+</tr>
+<tr class="row-odd"><td>64GB Xeon Ivy Bridge (2014)</td>
+<td>480</td>
+</tr>
+<tr class="row-even"><td>128GB Xeon Haswell (2016)</td>
+<td>1224</td>
+</tr>
+<tr class="row-odd"><td>256GB Xeon Haswell (2016)</td>
+<td>360</td>
+</tr>
+<tr class="row-even"><td>128GB Xeon Haswell + 4x GPU (2016)</td>
+<td>36</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../examples/index.html" class="btn btn-neutral float-right" title="Examples" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../apps/visit.html" class="btn btn-neutral" title="VisIT" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

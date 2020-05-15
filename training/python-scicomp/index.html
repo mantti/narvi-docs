@@ -1,0 +1,1137 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python for Scientific Computing &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Training" href="../index.html"/>
+        <link rel="next" title="About these docs" href="../../README.html"/>
+        <link rel="prev" title="Linux shell tutorial" href="../linux-shell-tutorial.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Training</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../scip/index.html">Scientific Computing in Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scicomp-announcements-maillist.html">Announcement maillist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux-shell-tutorial.html">Linux shell tutorial</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Python for Scientific Computing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#abstract">Abstract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#why-python">Why Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#why-not-python-for-scientific-computing">Why not Python for Scientific Computing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-2-vs-python-3">Python 2 vs Python 3</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#practical-details">Practical details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-python">Introduction to Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scalars">Scalars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#collections">Collections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control-structures">Control structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions-and-classes">Functions and classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-type-system">Python type system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#organizing-python-code">Organizing Python code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-1-1">Exercise 1.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercies-1-2">Exercies 1.2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-1-3">Exercise 1.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-1-4">Exercise 1.4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#enter-numpy">Enter NumPy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-2-1">Exercise 2.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-ways-of-creating-numpy-arrays">Other ways of creating NumPy arrays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numpy-array-slicing-syntax">NumPy array slicing syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#views-vs-copies">Views vs. copies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#array-shape-and-size">Array shape and size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#combining-splitting-and-rolling-arrays">Combining, splitting and rolling arrays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-2-2">Exercise 2.2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numpy-i-o">NumPy I/O</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#random-numbers-in-numpy">Random Numbers in NumPy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linear-algebra-in-numpy">Linear algebra in Numpy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-2-3">Exercise 2.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-2-4">Exercise 2.4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-2-5">Exercise 2.5</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scipy">SciPy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-3-1">Exercise 3.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-3-2">Exercise 3.2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#matplotlib">Matplotlib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-4-1">Exercise 4.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-4-2">Exercise 4.2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-4-3">Exercise 4.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-and-pseudocolor-plots">Image and pseudocolor plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercise-4-4">Exercise 4.4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#demo-application">Demo application</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#topological-phase-transitions">Topological phase transitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-xy-model">The XY model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-metropolis-hastings-monte-carlo-algorithm">The Metropolis-Hastings Monte Carlo algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#other-useful-scientific-python-libraries">Other useful Scientific Python libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#homework-2d-ising-model">Homework: 2D Ising model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#a-basics">A: Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#b-scientific-computing">B: Scientific computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#c-high-performance-computing">C: High performance computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d-advanced-high-performance-computing">D: Advanced high performance computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#recommended-programming-courses">Recommended programming courses</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Training</a> &raquo;</li>
+      
+    <li>Python for Scientific Computing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/training/python-scicomp/index.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-for-scientific-computing">
+<h1>Python for Scientific Computing<a class="headerlink" href="#python-for-scientific-computing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>Python is a modern, object-oriented programming language, which has
+become popular in several areas of software development. This course
+discusses how Python can be utilized in scientific computing. The
+course starts by introducing the main Python package for numerical
+computing, NumPy, and discusses then SciPy toolbox for various
+scientific computing tasks as well as visualization with the
+Matplotlib package.</p>
+</div>
+<div class="section" id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="why-python">
+<h3>Why Python<a class="headerlink" href="#why-python" title="Permalink to this headline">¶</a></h3>
+<p>Python has become popular, largely due to good reasons. It&#8217;s very easy
+to get started, there&#8217;s lots of educational material, a huge amount of
+libraries for doing everything imaginable.  Particularly in the
+scientific computing space, there is the Numpy, Scipy, and matplotlib
+libraries which form the basis of almost everything.  Numpy and Scipy
+are excellent examples of using Python as a glue language, meaning to
+glue together battle-tested and well performing code and present them
+with an easy to use interface.  Also machine learning and deep
+learning frameworks have embraced python as the glue language of
+choice.  And finally, Python is open source, meaning that anybody can
+download and install it on their computer, without having to bother
+with acquiring a license or such.  This makes it easier to distribute
+your code e.g. to collaborators in different universities.</p>
+</div>
+<div class="section" id="why-not-python-for-scientific-computing">
+<h3>Why not Python for Scientific Computing<a class="headerlink" href="#why-not-python-for-scientific-computing" title="Permalink to this headline">¶</a></h3>
+<p>While Python is extremely popular in scientific computing today, there
+are certainly things better left to other tools.</p>
+<ul class="simple">
+<li>Implementing performance-critical kernels.  Python is a <strong>very</strong>
+slow language, which often doesn&#8217;t matter if you can offload the
+heavy lifting to fast compiled code, e.g. by using Numpy array
+operations.  But if what you&#8217;re trying to do isn&#8217;t <em>vectorizable</em>
+then you&#8217;re out of luck.  An alternative to Python, albeit much less
+mature and with a smaller ecosystem, but which provides very fast
+generated code, is <em>Julia</em>.</li>
+<li>Creating libraries that can be called from other languages.  In this
+case you&#8217;ll often want to create a library with a C interface, which
+can then be called from most languages.  Suitable languages for this
+sort of task, depending on what you are doing, could be Rust, C,
+C++, or Fortran.</li>
+<li>You really like static typing, or functional programming
+approaches. <em>Haskell</em> might be what you&#8217;re looking for.</li>
+</ul>
+</div>
+<div class="section" id="python-2-vs-python-3">
+<h3>Python 2 vs Python 3<a class="headerlink" href="#python-2-vs-python-3" title="Permalink to this headline">¶</a></h3>
+<p>There are two slightly incompatible versions of Python being used
+today, 2 and 3.  Most large projects have supported 3 for a long time
+already, and have announced dropping Python 2 support for future
+versions (or have already done so), so at this point you should use
+version 3 unless you&#8217;re working on an existing project that for some
+reason hasn&#8217;t yet been ported to version 3.  Accordingly, in this
+course we will use Python 3. For more info, see <a class="reference external" href="https://python3statement.org/">Python 3
+statement</a> by many other the major
+projects.</p>
+</div>
+</div>
+<div class="section" id="practical-details">
+<h2>Practical details<a class="headerlink" href="#practical-details" title="Permalink to this headline">¶</a></h2>
+<p>The instructor will use the <code class="docutils literal"><span class="pre">anaconda3/latest</span></code> module available on
+triton.  However, if you have Python 3 with the usual scientific
+libraries installed locally on your laptop, you should be able to use
+that as well, if you prefer.</p>
+<p>For interactively testing things in Python, you can use a Jupyter
+notebook, or the <code class="docutils literal"><span class="pre">ipython</span></code> shell.  For writing Python code you will
+need a text editor or IDE; Jupyter Lab does have one, if you prefer to
+work in a browser based environment. Popular free programming text
+editors or IDE&#8217;s with good Python support include:</p>
+<ul class="simple">
+<li>Emacs</li>
+<li>Vim</li>
+<li>VS Code</li>
+<li>Spyder</li>
+<li>Eclipse + PyDev</li>
+<li>PyCharm</li>
+</ul>
+<p>You&#8217;re not expected to know much Python at the start of the course,
+but a little bit of programming proficiency is needed as a
+prerequisite.</p>
+<p>Although not necessary for this course, knowledge of a version control
+system is useful when programming (or writing papers with LaTeX or
+other text-based formats).  The most common and powerful version
+control system today is git.  To get started with git, see our list of
+<a class="reference internal" href="../../scicomp/git.html"><em>Git tutorials</em></a>.</p>
+<p>The course focuses on hands-on demonstrations and exercises rather
+than lectures.</p>
+</div>
+<div class="section" id="introduction-to-python">
+<h2>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">¶</a></h2>
+<p>If you are not familiar with Python, a <em>very</em> short introduction;
+first, the builtin scalar and collection types:</p>
+<div class="section" id="scalars">
+<h3>Scalars<a class="headerlink" href="#scalars" title="Permalink to this headline">¶</a></h3>
+<p>Scalar types, that is, single elements of various types:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">42</span>       <span class="c1"># integer</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">77</span>    <span class="c1"># Integers are arbitrary precision</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">3.14</span>     <span class="c1"># floating point number</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">3j</span>   <span class="c1"># Complex number</span>
+<span class="n">b</span> <span class="o">=</span> <span class="bp">True</span>     <span class="c1"># boolean</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello!&quot;</span> <span class="c1"># String (Unicode)</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">b</span><span class="s1">&#39;Hello&#39;</span> <span class="c1"># bytes (8-bit values)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="collections">
+<h3>Collections<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h3>
+<p>Collections are data structures capable of storing multiple values.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>                      <span class="c1"># list</span>
+<span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>                               <span class="c1"># lists are indexed by int</span>
+<span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>                        <span class="c1"># list elements can be any type</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Janne&quot;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s2">&quot;Richard&quot;</span><span class="p">:</span> <span class="mi">456</span><span class="p">}</span> <span class="c1"># dictionary</span>
+<span class="n">d</span><span class="p">[</span><span class="s2">&quot;Janne&quot;</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>                          <span class="c1"># Set of unique values</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="control-structures">
+<h3>Control structures<a class="headerlink" href="#control-structures" title="Permalink to this headline">¶</a></h3>
+<p>Python has the usual control structures, that is conditional
+statements and loops:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;x is 3&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;x is 2&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;x is something else&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>While loops loop until some condition is met:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">42</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;x is &#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mf">0.2</span>
+</pre></div>
+</div>
+<p>For loops loop over some collection of values:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Often you want to loop over a sequence of integers, in that case the
+<code class="docutils literal"><span class="pre">range</span></code> function is useful:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Another common need is to iterate over a collection, but at the same
+time also have an index number. For this there is the <code class="docutils literal"><span class="pre">enumerate</span></code>
+function:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;world&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">xs</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functions-and-classes">
+<h3>Functions and classes<a class="headerlink" href="#functions-and-classes" title="Permalink to this headline">¶</a></h3>
+<p>Python functions are defined by the <code class="docutils literal"><span class="pre">def</span></code> keyword. They take a
+number of arguments, and return a number of return values.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Say hello to the person given by the argument&quot;&quot;&quot;</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">name</span>
+</pre></div>
+</div>
+<p>Classes are defined by the <code class="docutils literal"><span class="pre">class</span></code> keyword:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Hello</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">def</span> <span class="nf">say</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-type-system">
+<h3>Python type system<a class="headerlink" href="#python-type-system" title="Permalink to this headline">¶</a></h3>
+<p>Python is strongly and dynamically typed.</p>
+<p>Strong here means, roughly, that it&#8217;s not possible to circumvent the
+type system (at least, not easily, and not without invoking undefined
+behavior).</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">+</span> <span class="s2">&quot;hello&quot;</span>
+</pre></div>
+</div>
+<p>Dynamic typing means that types are determined at runtime, and a
+variable can be redefined to refer to an instance of another type:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+</pre></div>
+</div>
+<p><em>Jargon</em>: Types are associated with rvalues, not lvalues. In
+statically typed language, types are associated with lvalues, and are
+(typically) reified during compilation.</p>
+</div>
+<div class="section" id="organizing-python-code">
+<h3>Organizing Python code<a class="headerlink" href="#organizing-python-code" title="Permalink to this headline">¶</a></h3>
+<p>Start Python scripts with</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="ch">#!/usr/bin/env python3</span>
+</pre></div>
+</div>
+<p>This ensures you get the correct python3 for the environment you are
+using.</p>
+<p>In general, don&#8217;t put executable statements directly into the top
+level scope in your files (modules), as this code is then run if you
+try to import the module.</p>
+<p>Instead, use this common idiom:</p>
+<div class="highlight-python"><div class="highlight"><pre>if __name__ == &#39;__main__&#39;:
+    # your code goes here
+</pre></div>
+</div>
+<p>When developing code it&#8217;s often convenient to be able to reload a
+module into your IPython (or IPython notebook) session without having
+to restart the entire session. This can be done with the <code class="docutils literal"><span class="pre">reload</span></code>
+function:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">importlib</span> <span class="kn">import</span> <span class="nb">reload</span>
+<span class="kn">import</span> <span class="nn">foo</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="c1"># Edit foo.py</span>
+<span class="nb">reload</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-1-1">
+<h3>Exercise 1.1<a class="headerlink" href="#exercise-1-1" title="Permalink to this headline">¶</a></h3>
+<p>Who needs numpy anyway? Implement matrix multiplication with nested
+lists as your matrix representation. <em>Hint for beginners</em>: Create one
+function</p>
+<div class="highlight-python"><div class="highlight"><pre>def creatematrix(n, m):
+    # ...
+</pre></div>
+</div>
+<p>which creates an NxM matrix filled with random values
+(e.g. random.random()). Then create another function</p>
+<div class="highlight-python"><div class="highlight"><pre>def matrixmult(a, b):
+    # ...
+</pre></div>
+</div>
+<p>which multiplies together two matrices a and b.</p>
+</div>
+<div class="section" id="exercies-1-2">
+<h3>Exercies 1.2<a class="headerlink" href="#exercies-1-2" title="Permalink to this headline">¶</a></h3>
+<p>Lets continue with the previous example, and add some object oriented
+scaffolding around our matrix code.  Create a Matrix class with a
+constructor to create the random matrix, and overload the &#8216;*&#8217; operator
+to multiply two Matrix instances. Reuse the code from the previous
+exercise.</p>
+</div>
+<div class="section" id="exercise-1-3">
+<h3>Exercise 1.3<a class="headerlink" href="#exercise-1-3" title="Permalink to this headline">¶</a></h3>
+<p>The essence of science is experiment and measurement.  So lets measure
+our matrix multiplication implementation, and calculate how fast it
+can multiply matrices, in terms of &#8220;Gflops/s&#8221; (Giga floating point
+operations per second). <em>Hint</em>: A &#8220;flop&#8221; is a floating point multiply
+or addition/subtraction.  First figure out of many flops are needed to
+multiply two matrices. Then you need to time it; for this you can use
+the IPython magic %timeit command. And finally, equipped with this
+information, you can calculate a Gflops/s score for you multiplication
+method.</p>
+</div>
+<div class="section" id="exercise-1-4">
+<h3>Exercise 1.4<a class="headerlink" href="#exercise-1-4" title="Permalink to this headline">¶</a></h3>
+<p>Basic file I/O. Run the following python snippet to create a file
+<code class="docutils literal"><span class="pre">pangrams.txt</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;pangrams.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;The quick brown fox jumps over the lazy dog</span>
+<span class="s2">Sphinx of black quartz, judge my vow</span>
+<span class="s2">The dog ate my homework</span>
+<span class="s2">Pack my box with five dozen liquor jugs</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Next, create Python code to read that file, and check each line
+whether it&#8217;s a pangram. A pangram is a sentence to uses all the
+letters of the alphabet.</p>
+</div>
+</div>
+<div class="section" id="enter-numpy">
+<h2>Enter NumPy<a class="headerlink" href="#enter-numpy" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<p>The NumPy package provides a N-dimensional array type, and syntax and
+utility functions for working with these arrays.</p>
+<p>In contrast to a python list, a numpy array can only hold elements of
+the same type. The element type can be seen via the &#8216;dtype&#8217; attribute.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)))</span>
+<span class="n">a</span><span class="o">.</span><span class="n">dtype</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>  <span class="c1"># error!</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">100</span>    <span class="c1"># error!</span>
+</pre></div>
+</div>
+<p>What these restrictions buy you is that the memory layout of a numpy
+array is very efficient, similar to what you see in low level
+languages like C or Fortran.  This means operating on these arrays is
+very efficient; in fact, much of the speed advantage of numpy comes
+from the fact that array syntax is implemented in fast C code.</p>
+<p>Due to the memory layout of numpy being compatible with C and Fortran,
+numpy arrays allows one to use functionality written in these other
+languages.  Much of the SciPy ecosystem (NumPy, SciPy, etc.) consist
+of python wrappers around widely used and battle-tested numerical
+libraries written in C or Fortran such as LAPACK and BLAS.</p>
+<p>The Python list</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>has roughly the following layout in memory:</p>
+<img src="../../_images/a_list.svg" /><p>In contrast, the NumPy array</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>has the memory layout like</p>
+<img src="../../_images/ndarray.svg" /></div>
+<div class="section" id="exercise-2-1">
+<h3>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>In the example above we saw that <code class="docutils literal"><span class="pre">2**100</span></code> was too large. What is
+the default datatype of a numpy integer array if we don&#8217;t
+explicitly specify some type, and what is the largest possible
+integer we can store in such an element.</li>
+<li>What is the smallest negative element (that is, the largest
+absolute value of a negative number)?  Is it different from the
+largest positive number, and if so, why?</li>
+<li>What is the absolute value of the smallest negative element? Why?</li>
+</ol>
+</div>
+<div class="section" id="other-ways-of-creating-numpy-arrays">
+<h3>Other ways of creating NumPy arrays<a class="headerlink" href="#other-ways-of-creating-numpy-arrays" title="Permalink to this headline">¶</a></h3>
+<p>There are many different ways to create NumPy arrays, here&#8217;s a few of
+the most common ones:</p>
+<div class="highlight-python"><div class="highlight"><pre>np.zeros((2, 3))      # 2x3 array with all elements 0
+np.ones((3, 2), bool) # 3x2 boolean array
+np.arange(3)          # Evenly spaced values in an interval
+np.linspace(..)       # similar to above
+</pre></div>
+</div>
+</div>
+<div class="section" id="numpy-array-slicing-syntax">
+<h3>NumPy array slicing syntax<a class="headerlink" href="#numpy-array-slicing-syntax" title="Permalink to this headline">¶</a></h3>
+<p>NumPy provides a convenient array syntax to reference subarrays,
+similar to MATLAB for Fortran.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">a</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">high</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>returns the array elements in the range <code class="docutils literal"><span class="pre">[low,</span> <span class="pre">high)</span></code> with a stride
+of <code class="docutils literal"><span class="pre">step</span></code>. Equivalently for multidimensional arrays.  For
+multidimensional arrays NumPy by default stores arrays in row-major
+order, like C. Note that this is in contrast to e.g. Fortran, MATLAB
+or Julia that use a column-major layout.</p>
+<p>Using array syntax efficiently is <strong>key</strong> to using NumPy in a fashion
+that leads to short as well as efficient code.</p>
+<p>NumPy also provides so-called <em>advanced indexing</em>, where you can
+select elements with a list of indices.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>    <span class="c1"># Will this modify a?</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="views-vs-copies">
+<h3>Views vs. copies<a class="headerlink" href="#views-vs-copies" title="Permalink to this headline">¶</a></h3>
+<p>When slicing an array, you <strong>DO NOT</strong> get a copy of those elements,
+but rather a <em>view</em>.  That is, the data elements are the same as in
+the original array</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Views rather than copies is more efficient, particularly for large
+arrays, but they can sometimes be confusing. Be careful!</p>
+<p>If you do need a copy, NumPy arrays have a <code class="docutils literal"><span class="pre">copy</span></code> method to create a
+copy rather than getting a view.</p>
+<p><strong>NOTE</strong> With advanced indexing, you always get a copy!</p>
+</div>
+<div class="section" id="array-shape-and-size">
+<h3>Array shape and size<a class="headerlink" href="#array-shape-and-size" title="Permalink to this headline">¶</a></h3>
+<p>NumPy arrays have a shape and size attribute.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">a</span><span class="o">.</span><span class="n">size</span>               <span class="c1"># Number of elements</span>
+<span class="n">a</span><span class="o">.</span><span class="n">shape</span>              <span class="c1"># shape tuple</span>
+</pre></div>
+</div>
+<p>We can modify the shape of an array with the <code class="docutils literal"><span class="pre">reshape</span></code> or <code class="docutils literal"><span class="pre">resize</span></code>
+methods. Or for the special case of flattening an array to a 1D array,
+<code class="docutils literal"><span class="pre">ravel</span></code>.</p>
+</div>
+<div class="section" id="combining-splitting-and-rolling-arrays">
+<h3>Combining, splitting and rolling arrays<a class="headerlink" href="#combining-splitting-and-rolling-arrays" title="Permalink to this headline">¶</a></h3>
+<p>For combining multiple arrays into a larger array, see the
+<code class="docutils literal"><span class="pre">concatenate</span></code>, <code class="docutils literal"><span class="pre">stack</span></code>, <code class="docutils literal"><span class="pre">block</span></code>, and the more specialized
+variants <code class="docutils literal"><span class="pre">hstack</span></code>, <code class="docutils literal"><span class="pre">vstack</span></code>, <code class="docutils literal"><span class="pre">dstack</span></code>.</p>
+<p>Similarly, for splitting an array into multiple parts, there&#8217;s
+<code class="docutils literal"><span class="pre">split</span></code>, <code class="docutils literal"><span class="pre">hsplit</span></code>, <code class="docutils literal"><span class="pre">vsplit</span></code>.</p>
+<p>To roll an array, that is shift the elements along a give axis, use
+<code class="docutils literal"><span class="pre">roll</span></code>.</p>
+</div>
+<div class="section" id="exercise-2-2">
+<h3>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Permalink to this headline">¶</a></h3>
+<p>Create an array <code class="docutils literal"><span class="pre">x</span></code> of 100 evenly spaced numbers in the range
+[-2*pi, 2*pi].</p>
+<p>Next, create an array <code class="docutils literal"><span class="pre">y</span></code>, where each element is the <code class="docutils literal"><span class="pre">sin</span></code> of each
+element in the previously created array.</p>
+<p>Then, figure out the indices where the array <code class="docutils literal"><span class="pre">y</span></code> changes sign. What
+are the <code class="docutils literal"><span class="pre">x</span></code> values for these indices?</p>
+</div>
+<div class="section" id="numpy-i-o">
+<h3>NumPy I/O<a class="headerlink" href="#numpy-i-o" title="Permalink to this headline">¶</a></h3>
+<p>NumPy has functionality for saving and loading NumPy arrays from
+files.  For reading/writing textfiles there is <code class="docutils literal"><span class="pre">loadtxt</span></code> and
+<code class="docutils literal"><span class="pre">savetxt</span></code>. See also <code class="docutils literal"><span class="pre">genfromtxt</span></code> with more sophisticated handling
+of missing values etc.</p>
+<p>For large arrays, it&#8217;s faster to use a binary format. For these NumPy
+defines a <code class="docutils literal"><span class="pre">.npy</span></code> format. Loading and saving these files can be done
+with the <code class="docutils literal"><span class="pre">load</span></code> and <code class="docutils literal"><span class="pre">save</span></code> methods.  There&#8217;s also the <code class="docutils literal"><span class="pre">.npz</span></code>
+format, which is a zip archive containing several numpy ndarrays in
+one file. <code class="docutils literal"><span class="pre">.npz</span></code> format files can be read/written with <code class="docutils literal"><span class="pre">load</span></code>,
+<code class="docutils literal"><span class="pre">savez</span></code> and <code class="docutils literal"><span class="pre">savez_compressed</span></code> methods. This is a good choice for
+temporary or intermediate files such as checkpoints etc. Note that the
+format is Numpy-specific, and other languages might not easily be able
+to read it. Similarly, for long-term archiving other formats might be
+a better choice.</p>
+</div>
+<div class="section" id="random-numbers-in-numpy">
+<h3>Random Numbers in NumPy<a class="headerlink" href="#random-numbers-in-numpy" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">numpy.random</span></code> module contains functionality to create
+pseudorandom numbers following different distributions.</p>
+</div>
+<div class="section" id="linear-algebra-in-numpy">
+<h3>Linear algebra in Numpy<a class="headerlink" href="#linear-algebra-in-numpy" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">dot</span></code> method provides a generalized dot product. It can compute
+dot products of 1D vectors, matrix-vector products as well as
+matrix-matrix products.  It is an interface to the famous BLAS
+library, of which multiple highly optimized versions exist.  The
+<code class="docutils literal"><span class="pre">numpy.linalg</span></code> module contains interfaces to the most common linear
+algebra operations, such as calculating eigenvalues, Cholesky and
+singular value decompositions, solving linear systems, least squares,
+(pseudo)inverse. This module is an interface to the LAPACK library
+(which in turn builds on top of BLAS).</p>
+</div>
+<div class="section" id="exercise-2-3">
+<h3>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Permalink to this headline">¶</a></h3>
+<p>Remember our first exercise, implementing matrix multiplication? Now
+do the same, but use NumPy arrays and the <code class="docutils literal"><span class="pre">dot</span></code> method. Compare
+performance to the code you wrote yourself earlier, using the IPython
+%timeit macro.</p>
+</div>
+<div class="section" id="exercise-2-4">
+<h3>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Permalink to this headline">¶</a></h3>
+<p>Here&#8217;s a number of quick numpy exercises to get you a feel of numpy
+functionality, index manipulation etc.</p>
+<ol class="arabic simple">
+<li>Reverse a vector. Given a vector, reverse it such that the last
+element becomes the first, e.g. [1, 2, 3] =&gt; [3, 2, 1]</li>
+<li>Create an identity matrix of size 4x4.</li>
+<li>Create a 2D array with zeros on the borders and 1 inside.</li>
+<li>Create a random array with elements [0, 1), then add 10 to all
+elements in the range [0.2, 0.7).</li>
+<li>What is <code class="docutils literal"><span class="pre">np.round(0.5)</span></code>? What is <code class="docutils literal"><span class="pre">np.round(1.5)</span></code>? Why?</li>
+<li>In addition to <code class="docutils literal"><span class="pre">np.round</span></code>, explore <code class="docutils literal"><span class="pre">np.ceil</span></code>, <code class="docutils literal"><span class="pre">np.floor</span></code>,
+<code class="docutils literal"><span class="pre">np.trunc</span></code>. In particular, take note of how they behave with
+negative numbers.</li>
+<li>Recall the identity <span class="math">\(\sin^2(x) + \cos^2(x) = 1\)</span>. Create a
+random 4x4 array with values in the range [0, 10). Now test the
+equality with <code class="docutils literal"><span class="pre">np.equal</span></code>. What result do you get with
+<code class="docutils literal"><span class="pre">np.allclose``instead</span> <span class="pre">of</span> <span class="pre">``np.equal</span></code>?</li>
+<li>Create a 1D array with 10 random elements. Sort it.</li>
+<li>What&#8217;s the difference between <code class="docutils literal"><span class="pre">np_array.sort()</span></code> and
+<code class="docutils literal"><span class="pre">np.sort(np_array)</span></code>?</li>
+<li>For the random array in question 8, instead of sorting it, perform
+an indirect sort. That is, return the list of indices which would
+index the array in sorted order.</li>
+<li>Create a 4x4 array of zeros, and another 4x4 array of ones. Next
+combine them into a single 8x4 array with the content of the zeros
+array on top and the ones on the bottom.  Finally, do the same,
+but create a 4x8 array with the zeros on the left and the ones on
+the rigth.</li>
+</ol>
+<p>More quick NumPy exercises like this one <a class="reference external" href="https://www.labri.fr/perso/nrougier/teaching/numpy.100/">over here</a>.</p>
+</div>
+<div class="section" id="exercise-2-5">
+<h3>Exercise 2.5<a class="headerlink" href="#exercise-2-5" title="Permalink to this headline">¶</a></h3>
+<p>The topic of this exercise is <code class="docutils literal"><span class="pre">np.einsum</span></code> which implements the
+&#8216;Einstein summation convention&#8217;.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Einstein_notation">Einstein summation convention</a> is a commonly used
+when working with tensors, but can also be useful for succintly
+representing array expressions.</p>
+<p>For instance, matrix multiplication can be expressed as</p>
+<div class="math">
+\[C^i_k = A^i_j B^j_k\]</div>
+<p>Implement this with the help of <code class="docutils literal"><span class="pre">np.einsum</span></code>.</p>
+<p>Einstein notation is also available in pytorch and tensorflow. For
+more information about Einstein notation in NumPy see</p>
+<ul class="simple">
+<li><a class="reference external" href="http://ajcr.net/Basic-guide-to-einsum/">A basic introduction to NumPy&#8217;s einsum</a></li>
+<li><a class="reference external" href="https://obilaniu6266h16.wordpress.com/2016/02/04/einstein-summation-in-numpy/">Einsten Summation in NumPy</a></li>
+<li><a class="reference external" href="https://rockt.github.io/2018/04/30/einsum">Einsum is all you need - Einstein summation in deep learning</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="scipy">
+<h2>SciPy<a class="headerlink" href="#scipy" title="Permalink to this headline">¶</a></h2>
+<p>SciPy is a library that builds on top of NumPy. It contains a lot of
+interfaces to battle-tested numerical routines written in Fortran or
+C, as well as python implementations of many common
+algorithms. Briefly, it contains functionality for</p>
+<ul class="simple">
+<li>Special functions (Bessel, Gamma, etc.)</li>
+<li>Numerical integration</li>
+<li>Optimization</li>
+<li>Interpolation</li>
+<li>Fast Fourier Transform (FFT)</li>
+<li>Linear algebra (more complete than in NumPy)</li>
+<li>Sparse matrices</li>
+<li>Statistics</li>
+<li>More I/O routine, e.g. Matrix Market format for sparse matrices,
+MATLAB files (.mat), etc.</li>
+</ul>
+<div class="section" id="exercise-3-1">
+<h3>Exercise 3.1<a class="headerlink" href="#exercise-3-1" title="Permalink to this headline">¶</a></h3>
+<p>Using scipy, calculate the integral of the function <code class="docutils literal"><span class="pre">sin</span></code> in the
+interval <code class="docutils literal"><span class="pre">[0,</span> <span class="pre">pi]</span></code>, and compare with the analytical result.</p>
+</div>
+<div class="section" id="exercise-3-2">
+<h3>Exercise 3.2<a class="headerlink" href="#exercise-3-2" title="Permalink to this headline">¶</a></h3>
+<p>Use the SciPy sparse matrix functionality to create a random sparse
+matrix with a probability of non-zero elements of 0.05 and size 10000
+x 10000. The use the SciPy sparse linear algebra support to calculate
+the matrix-vector product of the sparse matrix you just created and a
+random vector. Use the %timeit macro to measure how long it
+takes. Does the optional <code class="docutils literal"><span class="pre">format</span></code> argument when you create the
+sparse matrix make a difference?</p>
+<p>Then, compare to how long it takes if you&#8217;d instead first convert the
+sparse matrix to a normal NumPy dense array, and use the NumPy <code class="docutils literal"><span class="pre">dot</span></code>
+method to calculate the matrix-vector product.</p>
+<p>Can you figure out a quick rule of thumb when it&#8217;s worth using a
+sparse matrix representation vs. a dense representation?</p>
+</div>
+</div>
+<div class="section" id="matplotlib">
+<h2>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">¶</a></h2>
+<p>Matplotlib is the &#8216;standard&#8217; Python plotting library. It is quite
+full-featured, and provides a MATLAB-like plotting API.</p>
+<p>To use it, typically you start with</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="c1"># ...</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>When using Jupyter notebooks, use the magic</p>
+<div class="highlight-python"><div class="highlight"><pre>%matplotlib inline
+</pre></div>
+</div>
+<p>which will cause matplotlib plots to appear inline in the
+notebooks. Very convenient for quick analysis!</p>
+<p>Matplotlib has two slightly different interfaces, a state machine
+interface similar to MATLAB and an object based interface. The state
+machine interface is quick and easy to get started, but since it&#8217;s
+based on hidden global state behind the scenes, for more complex stuff
+it might get confusing. Below is an example using the state machine
+interface.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
+
+<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;A tale of 2 subplots&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Damped oscillation&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;.-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time (s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Undamped&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>And here is the same thing, but using the object-based interface</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
+
+<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;A tale of 2 subplots, OO style&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Damped oscillation&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;.-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;time (s)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Undamped&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="exercise-4-1">
+<h3>Exercise 4.1<a class="headerlink" href="#exercise-4-1" title="Permalink to this headline">¶</a></h3>
+<p>Try to recreate the figure below:</p>
+<img src="../../_images/sin.svg" /></div>
+<div class="section" id="exercise-4-2">
+<h3>Exercise 4.2<a class="headerlink" href="#exercise-4-2" title="Permalink to this headline">¶</a></h3>
+<p>Create 1000 normally distributed numbers with <span class="math">\(\mu = 0\)</span> and
+<span class="math">\(\sigma = 10\)</span>. Then create a histogram plot with 50 bins.</p>
+</div>
+<div class="section" id="exercise-4-3">
+<h3>Exercise 4.3<a class="headerlink" href="#exercise-4-3" title="Permalink to this headline">¶</a></h3>
+<p>Often it&#8217;s useful to be able to plot things on a logarithmic
+scale. Create a plot with 4 subplots, one with a linear scale, one
+with logarithmic scale on the x-axis, one with logarithmic scale on
+the y-axis. Then create 4 functions, such that each will produce a
+straight line in one of the plots, and plot them.</p>
+</div>
+<div class="section" id="image-and-pseudocolor-plots">
+<h3>Image and pseudocolor plots<a class="headerlink" href="#image-and-pseudocolor-plots" title="Permalink to this headline">¶</a></h3>
+<p>Matplotlib can also plot 2D data such as images.  A common type of 2D
+plot is the pseudocolor plot, where you want to convert a scalar value
+in some range into a color value.  This means that you must map the
+range of values into a <em>colormap</em>. Things to think about when
+selecting a colormap:</p>
+<ul class="simple">
+<li>The map should be perceptually uniform. From
+<a class="reference external" href="https://bids.github.io/colormap/">https://bids.github.io/colormap/</a> : A &#8220;perceptually uniform&#8221; colormap
+is one for which the &#8220;perceptual deltas&#8221; plot makes a simple
+horizontal line. (This is essentially the derivative of the colormap
+in perceptual space with respect to the data. We want our colormap
+to have the property that if your data goes from 0.1 to 0.2, this
+should create about the same perceptual change as if your data goes
+from 0.8 to 0.9. For color geeks: we&#8217;re using CAM02-UCS as our model
+of perceptual distance.)</li>
+<li>It should look good when rendered in gray-scale, e.g. if someone
+prints the picture on a black-and-white printer. Or sometimes
+per-page costs in journals are lowers if everything is BW.</li>
+<li>It should make sense to people with the most common type of color
+blindness (red-green). In practice this means the color maps
+shouldn&#8217;t use both green and red colors, so that they are not
+confused.</li>
+</ul>
+<p><strong>Bad news</strong>: The commonly used rainbow (or &#8220;jet&#8221; as it&#8217;s often
+called) is very bad when comparing against these criteria! NEVER USE
+IT! It was the default in matplotlib &lt; 2.0, and in MATLAB for a long
+time.</p>
+<p><strong>Good news</strong>: Matplotlib &gt;= 2.0 has sane defaults here! See <a class="reference external" href="https://matplotlib.org/users/dflt_style_changes.html">changes
+in default styles for matplotlib 2.0</a> . In
+particular, compare <a class="reference external" href="https://bids.github.io/colormap/images/screenshots/jet.png">matplotlib &lt; 2.0 default colormap</a> and the
+<a class="reference external" href="https://bids.github.io/colormap/images/screenshots/option_d.png">matplotlib &gt;= 2.0 default colormap</a>. As
+an aside, the 2.0 default colormap (&#8220;viridis&#8221;) is similar to the
+default colormap in current versions of MATLAB (&#8220;parula&#8221;).</p>
+<p>One case where you should NOT use viridis is if your data has some
+&#8220;natural&#8221; zero point. In that case it&#8217;s better to use a &#8220;cool-warm&#8221;
+style colormaps, see &#8220;Diverging Colormaps&#8221; at <a class="reference external" href="https://matplotlib.org/examples/color/colormaps_reference.html">the matplotlib colormap
+reference</a>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">N</span> <span class="o">=</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ogrid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="n">N</span><span class="o">*</span><span class="mi">1j</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="n">M</span><span class="o">*</span><span class="mi">1j</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">X</span><span class="o">*</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">20</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">Y</span><span class="o">*</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax2</span><span class="p">,</span> <span class="n">ax1</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;v2.0: &#39;viridis&#39;&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+
+<span class="n">im2</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;classic: &#39;jet&#39;&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-4-4">
+<h3>Exercise 4.4<a class="headerlink" href="#exercise-4-4" title="Permalink to this headline">¶</a></h3>
+<p>Find an image on the internet or already on the machine you&#8217;re working
+on, load it into a NumPy array (you can use <code class="docutils literal"><span class="pre">imageio.imread()</span></code> for
+this), and see if you can create an Andy Warhol-like print by using a
+suitable colormap.</p>
+</div>
+</div>
+<div class="section" id="demo-application">
+<h2>Demo application<a class="headerlink" href="#demo-application" title="Permalink to this headline">¶</a></h2>
+<p>To demonstrate how to make a simple simulation program, here the
+lecturer will &#8216;live-code&#8217; a small simulation program.  For a suitable
+model, lets choose a suitably fascinating problem that can be
+simulated with a relatively simple model. First, some background.</p>
+<div class="section" id="topological-phase-transitions">
+<h3>Topological phase transitions<a class="headerlink" href="#topological-phase-transitions" title="Permalink to this headline">¶</a></h3>
+<p>Historically, for a long time we believed there were two, and only
+two, kinds of phase transitions in nature.  So-called discontinous, or
+first-order, transitions which are characterized by the presence of a
+latent heat (mathematically, a discontinuity in the first derivative
+of the free energy with respect to some thermodynamic parameter),
+whereas continuous phase transitions are characterized by a
+discontinuity in the second or higher derivative of the free energy.</p>
+<p>However, in the 1970&#8217;ies, some experiments on ultrathin films of
+superfluid Helium-3 were made which produced data that existing
+theories could not describe.  Eventually Kosterlitz and Thouless (and
+independently Berezinskii in the then Soviet Union) were able to
+describe what was happening.  What they had discovered was an entirely
+new kind of phase transition which defied the existing classification
+schemes. Namely, there is <em>NO</em> discontinuity in any free energy
+derivative. So in a way, it&#8217;s an <em>infinite</em>-order phase transition.</p>
+<p>What is happening is that <em>topological defects</em> (vortices in this
+case) in the system change how they interact with each other at the
+critical temperature. At low temperatures below the transition
+temperature the correlation function between spins decays as a power
+law, whereas above the transition temperature the correlation decays
+exponentially. This results in vortex-antivortex pairs at low
+temperature, and a <em>vortex unbinding</em> transition at the transition
+temperature with free vortices at higher temperatures.</p>
+<p>This work eventually resulted in the 2016 Nobel Prize in Physics. See
+the <a class="reference external" href="https://www.nobelprize.org/uploads/2018/06/advanced-physicsprize2016-1.pdf">scientific background for the 2016 physics prize</a>.</p>
+</div>
+<div class="section" id="the-xy-model">
+<h3>The XY model<a class="headerlink" href="#the-xy-model" title="Permalink to this headline">¶</a></h3>
+<p>Topological phase transitions can be studied with a XY model (also
+called the planar model, or rotor model). Take a lattice with spins
+rotating in the plane. Each spin interacts with its neighbors, and the
+configuration energy of the system is given by</p>
+<div class="math">
+\[E = -J \sum_{i \ne j} s_i s_j,\]</div>
+<p>where the sum is over nearest neighbor spins.</p>
+<p>In this case we can ignore the constant J which determines the
+interaction strength. Also, since the spin vectors are all of equal
+lengths the dot product can be simplified, so we have</p>
+<div class="math">
+\[E = - \sum_{i \ne j} \cos(\theta_i - \theta_j).\]</div>
+</div>
+<div class="section" id="the-metropolis-hastings-monte-carlo-algorithm">
+<h3>The Metropolis-Hastings Monte Carlo algorithm<a class="headerlink" href="#the-metropolis-hastings-monte-carlo-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>The Metropolis-Hastings algorithm is a Markov chain Monte Carlo method
+that can be used for sampling a probability distribution.  In this
+case, the basic idea is that for each spin <code class="docutils literal"><span class="pre">s</span></code> we do a <em>trial move</em>,
+to change the spin. We then calculate a random trial spin <code class="docutils literal"><span class="pre">s'</span></code>, and
+calculate an acceptance probability</p>
+<div class="math">
+\[A = min(1, \frac{P(s')}{P(s)}).\]</div>
+<p>In this case the probability density is the
+Boltzmann distribution</p>
+<div class="math">
+\[P(s) = \frac{1}{Z} exp(-\beta E(s)) ,\]</div>
+<p>where <span class="math">\(\beta\)</span> is the thermodynamic beta, or</p>
+<div class="math">
+\[\beta = \frac{1}{k_B T} ,\]</div>
+<p>where <span class="math">\(k_B\)</span> is the Boltzmann constant. For this simulation we
+can set it to 1 and ignore it hereafter. <span class="math">\(\beta\)</span> is thus just
+the inverse of the temperature.</p>
+<p>Thus the quotient</p>
+<div class="math">
+\[\frac{P(s')}{P(s)}\]</div>
+<p>can be calculated as</p>
+<div class="math">
+\[exp(-\beta (E' - E)).\]</div>
+<p>Then finally, calculate a uniform random number <code class="docutils literal"><span class="pre">r</span></code> in the interval
+<code class="docutils literal"><span class="pre">[0,1)</span></code>.  If <span class="math">\(r \le A\)</span> the new state is accepted. Repeating
+this for all the spins constitutes a single Monte Carlo step in the
+algorithm.</p>
+</div>
+</div>
+<div class="section" id="other-useful-scientific-python-libraries">
+<h2>Other useful Scientific Python libraries<a class="headerlink" href="#other-useful-scientific-python-libraries" title="Permalink to this headline">¶</a></h2>
+<p>A few other widely used libraries in the Scientific Python ecosystem:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://pandas.pydata.org/">Pandas</a>: Python Data Analysis
+library. Pandas gives Python a dataframe type, similar to data
+frames in R, which is useful for representing tabular data where
+every column can be of a different type. If you&#8217;re interested in
+this topic, see the <em>Practical R and Python Data Analysis</em> course by
+Aalto Science-IT.</li>
+<li><a class="reference external" href="https://scikit-learn.org">scikit-learn</a>: Machine Learning
+library. Implementations of the most common ML algorithms such as
+SVM, random forest, k-means, etc.</li>
+<li><a class="reference external" href="https://seaborn.pydata.org/">Seaborn</a>: Statistical data
+visualization. Plotting library that builds on top of matplotlib,
+providing a higher level interface aimed at visualizing statistical
+data.</li>
+<li><a class="reference external" href="https://cython.org/">Cython</a>: C-extensions for Python. Write fast
+C code in an extended subset of Python syntax.</li>
+<li><a class="reference external" href="https://numba.pydata.org/">Numba</a>: JIT compiler that can
+accelerate (some) loops with NumPy expressions.</li>
+<li><a class="reference external" href="https://mpi4py.readthedocs.io">MPI for Python (mpi4py)</a>: Python
+bindings for the Message Passing Interface (MPI) standard for
+creating parallel applications using Python.</li>
+<li><a class="reference external" href="https://www.sympy.org">SymPy</a>: Symbolic mathematics in Python.</li>
+</ul>
+</div>
+<div class="section" id="homework-2d-ising-model">
+<h2>Homework: 2D Ising model<a class="headerlink" href="#homework-2d-ising-model" title="Permalink to this headline">¶</a></h2>
+<p>This homework exercise shares many similarities with the XY model
+studied above.  The main difference is that in the 2D Ising model, the
+spins are perpendicular to the plane, and can take only two values,
+<code class="docutils literal"><span class="pre">+1</span></code> and <code class="docutils literal"><span class="pre">-1</span></code>. This model can be used to study the ferromagnetic
+phase transition. Below the critical temperature ferromagnetic
+domains, where the spins are aligned, form. Above the critical
+temperature this order breaks down. In the Ising model the
+configuration energy is defined as</p>
+<div class="math">
+\[E = - J \sum_{i \ne j} \sigma_i \sigma_j - \mu H \sum_j \sigma_j,\]</div>
+<p>where J is the exchange energy, <span class="math">\(\mu\)</span> is the magnetic moment of
+the spins, and H is the external magnetic field in the direction
+perpendicular to the plane. To simplify, you can set J and <span class="math">\(\mu\)</span>
+to 1.</p>
+<p>Implement a simulation program simulating the 2D Ising model. Use the
+Metropolis-Hastings Monte Carlo algorithm. Visualize the results with
+matplotlib. Run the simulation at different temperatures and with
+different starting configurations (random vs. ordered), and see if you
+can find the critical temperature by observing your visualizations.</p>
+<p>If you find the above too easy, a few topics for further
+exploration. Not needed to pass the course.</p>
+<ul class="simple">
+<li>Implement the Wolff algorithm, which flips whole clusters at a time
+instead of individual spins.  This helps avoid a phenomena called
+<em>critical slowing down</em> close to the critical temperature, which is
+problematic for algorithms such as the Metropolis algorithm that
+flip one spin at a time.</li>
+<li>Calculate and plot the net magnetization, the magnetic
+susceptibility, and the heat capacity of the system as a function of
+the temperature. How do they behave around the critical temperature?</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../README.html" class="btn btn-neutral float-right" title="About these docs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../linux-shell-tutorial.html" class="btn btn-neutral" title="Linux shell tutorial" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

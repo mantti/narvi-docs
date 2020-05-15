@@ -1,0 +1,404 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>New project: Paniikki GPU machine remote utilisation for AI &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="News" href="index.html"/>
+        <link rel="next" title="Jupyter Workshop, 8 March 2019" href="2019_jupyterworkshop.html"/>
+        <link rel="prev" title="Scicomp garage" href="garage.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">News</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="garage.html">Scicomp garage</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">New project: Paniikki GPU machine remote utilisation for AI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tl-dr">TL;DR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ai-is-the-new-sexy">AI is the new sexy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#can-aalto-help-you">Can Aalto help you?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-are-we-going-to-deliver-this">How are we going to deliver this?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-could-use-it">Who could use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-will-it-be-available">When will it be available?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#last-but-not-least-let-s-make-aalto-great-together">Last but not least: let&#8217;s make Aalto great together!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#appendix">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2019_jupyterworkshop.html">Jupyter Workshop, 8 March 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="powerusers-group.html">SciComp powerusers group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../training/scicomp-announcements-maillist.html">Announcement maillist</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">News</a> &raquo;</li>
+      
+    <li>New project: Paniikki GPU machine remote utilisation for AI</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/news/new_project_paniikki_utilisation_pr.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="new-project-paniikki-gpu-machine-remote-utilisation-for-ai">
+<h1>New project: Paniikki GPU machine remote utilisation for AI<a class="headerlink" href="#new-project-paniikki-gpu-machine-remote-utilisation-for-ai" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tl-dr">
+<h2>TL;DR<a class="headerlink" href="#tl-dr" title="Permalink to this headline">¶</a></h2>
+<p>Aalto CS-IT is initiating a new project: Paniikki GPU machine remote utilisation for AI. You will be able to use Paniikki machines for your <a class="reference external" href="https://www.kaggle.com">Kaggle</a> projects or <a class="reference external" href="http://cs231n.github.io">Stanford Convolutional Neural Network course</a> from anywhere. If you find this interesting please give us a feedback :)</p>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ai-is-the-new-sexy">
+<h3>AI is the new sexy<a class="headerlink" href="#ai-is-the-new-sexy" title="Permalink to this headline">¶</a></h3>
+<p>Alphago is the new GO champion. Everyone is hiring data scientists. <a class="reference external" href="https://mycourses.aalto.fi/course/view.php?id=16918">Aalto machine learning course</a> is exploding with 600 students and everyone is teaching machine learning and deep learning. Aalto machine learning master&#8217;s program, MACADAMIA, is packed with international talents.</p>
+<p>While the topic itself is very interesting and there are many resources for studying it, there are some chanllenges that people face: GPU and dependency installations. You could always use a powerful GPU workstation in Paniikki but you may be busy to go there or you may not be familiar with remote SSH.</p>
+</div>
+<div class="section" id="can-aalto-help-you">
+<h3>Can Aalto help you?<a class="headerlink" href="#can-aalto-help-you" title="Permalink to this headline">¶</a></h3>
+<p>YES!!! We are always glad to help you and we want you to get advantage of the luxurious workstations in Paniikki(The NVIDIA Quadro P5000 GPUs in Paniikki costed us €2K/module). We will build a desktop app that allows you to use complete scientific containers on Paniikki machines, remotely without any use of Terminal. We will also prepare containers for famous ML courses so you don&#8217;t have to struggle setting the infrastructures.</p>
+</div>
+</div>
+<div class="section" id="how-are-we-going-to-deliver-this">
+<h2>How are we going to deliver this?<a class="headerlink" href="#how-are-we-going-to-deliver-this" title="Permalink to this headline">¶</a></h2>
+<p>We will distribute a cross-platform app. You install it on your Linux/Windows/Mac. When you start the app, click a container of your choice e.g. Tensorflow_py35. A jupyter notebook server will start on a most idle machine in Paniikki and you will be given an URL &amp; token for the notebook. We are considering of using <a class="reference external" href="https://www.electronjs.org/">ElectronJS</a> for the front-end and <a class="reference external" href="https://sylabs.io/docs/">Singularity</a> for the containers. We use containers because you can just take them if you want to use it somewhere else.</p>
+</div>
+<div class="section" id="who-could-use-it">
+<h2>Who could use it?<a class="headerlink" href="#who-could-use-it" title="Permalink to this headline">¶</a></h2>
+<p>All Aalto students and staffs.</p>
+</div>
+<div class="section" id="when-will-it-be-available">
+<h2>When will it be available?<a class="headerlink" href="#when-will-it-be-available" title="Permalink to this headline">¶</a></h2>
+<p>2018 spring. Hopefully April.</p>
+</div>
+<div class="section" id="last-but-not-least-let-s-make-aalto-great-together">
+<h2>Last but not least: let&#8217;s make Aalto great together!<a class="headerlink" href="#last-but-not-least-let-s-make-aalto-great-together" title="Permalink to this headline">¶</a></h2>
+<p>Our mission is to serve you the best to enhance the science. We work hard but we want to make sure that we are doing it right. So your feedbacks are tremendously invaluable to us. Tell us how you like our ideas and what you want and need, but please be nice ;) We are humans and we have feelings like you.
+If you would like to collaborate with us you are more than welcome! Please pay us a visit at A243 at CS building or send us an e-mail &#64; <a class="reference external" href="mailto:guru&#37;&#52;&#48;cs&#46;hut&#46;fi">guru<span>&#64;</span>cs<span>&#46;</span>hut<span>&#46;</span>fi</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="appendix">
+<h2>Appendix<a class="headerlink" href="#appendix" title="Permalink to this headline">¶</a></h2>
+<p>In Paniikki(panic in Finnish), a computer room in the CS building, there are 31 monster machines waiting to rock &#8216;n roll with you. Here is the spec:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">CPU properties</th>
+<th class="head">Spec</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Model</td>
+<td>Intel(R) Xeon(R) CPU E5-1650 v4 &#64; 3.60GHz</td>
+</tr>
+<tr class="row-odd"><td>Architecture</td>
+<td>x86_64</td>
+</tr>
+<tr class="row-even"><td>Byte Order</td>
+<td>Little Endian</td>
+</tr>
+<tr class="row-odd"><td>CPU(s)</td>
+<td>12</td>
+</tr>
+<tr class="row-even"><td>Thread(s) per core</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>MHz</td>
+<td>1200.796</td>
+</tr>
+<tr class="row-even"><td>max MHz</td>
+<td>4000.0000</td>
+</tr>
+<tr class="row-odd"><td>min MHz</td>
+<td>1200.0000</td>
+</tr>
+<tr class="row-even"><td>Virtualization</td>
+<td>VT-x</td>
+</tr>
+<tr class="row-odd"><td>L1d cache</td>
+<td>32K</td>
+</tr>
+<tr class="row-even"><td>L1i cache</td>
+<td>32K</td>
+</tr>
+<tr class="row-odd"><td>L2 cache</td>
+<td>256K</td>
+</tr>
+<tr class="row-even"><td>L3 cache</td>
+<td>15360K</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Model</th>
+<th class="head">NVIDIA Quadro P5000</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>GPU properties</td>
+<td>Spec</td>
+</tr>
+<tr class="row-odd"><td>Core</td>
+<td>GP104GL (Pascal-based)</td>
+</tr>
+<tr class="row-even"><td>Core clock</td>
+<td>1607 MHz</td>
+</tr>
+<tr class="row-odd"><td>Memory clock</td>
+<td>1251 MHz</td>
+</tr>
+<tr class="row-even"><td>Memory size</td>
+<td>16384 MiB</td>
+</tr>
+<tr class="row-odd"><td>Memory type</td>
+<td>256-bit GDDR5X</td>
+</tr>
+<tr class="row-even"><td>Memory bandwidth</td>
+<td>320</td>
+</tr>
+<tr class="row-odd"><td>CUDA cores</td>
+<td>2560</td>
+</tr>
+<tr class="row-even"><td>CUDA compute capability</td>
+<td>6.1</td>
+</tr>
+<tr class="row-odd"><td>OpenGL</td>
+<td>4.5</td>
+</tr>
+<tr class="row-even"><td>OpenCL</td>
+<td>1.2</td>
+</tr>
+<tr class="row-odd"><td>Near GeForce Model</td>
+<td>GeForce GTX 1080</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Memory properties</th>
+<th class="head">Spec</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>RAM</td>
+<td>32GiB</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2019_jupyterworkshop.html" class="btn btn-neutral float-right" title="Jupyter Workshop, 8 March 2019" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="garage.html" class="btn btn-neutral" title="Scicomp garage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

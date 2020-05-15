@@ -1,0 +1,445 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>VASP &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Applications: General info" href="index.html"/>
+        <link rel="next" title="VisIT" href="visit.html"/>
+        <link rel="prev" title="Theano" href="theano.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#applications">Applications</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html">Applications: General info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aims.html">FHI-aims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="armadillo.html">Armadillo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boost.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectron.html">Detectron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenics.html">Fenics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fsl.html">FSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpaw.html">GPAW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="julia.html">Julia language on triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keras.html">Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">Lammps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html">Matlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlpack.html">MLPack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mne.html">MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="octave.html">Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openpose.html">OpenPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paraview.html">Paraview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="r.html">R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstan.html">RStan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstudio.html">RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spyder.html">Spyder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theano.html">Theano</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">VASP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vasp-5-4-4">VASP 5.4.4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#potentials">Potentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#old-vasp-versions-obsolete-for-reference-only">Old VASP versions (obsolete, for reference only!)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="visit.html">VisIT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+          <li><a href="index.html">Applications: General info</a> &raquo;</li>
+      
+    <li>VASP</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/apps/vasp.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vasp">
+<h1>VASP<a class="headerlink" href="#vasp" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://www.vasp.at/">VASP</a>&nbsp; (Vienna Ab initio Simulation Package) is
+a computer program for atomic scale materials modelling, e.g. electronic
+structure calculations and quantum-mechanical molecular dynamics, from
+first principles.</p>
+<p>VASP is licensed software, requiring the licensee to keep the vasp team
+updated with a list of user names. Thus, in order to use VASP arrange
+with the &#8220;vaspmaster&#8221; for your group to be put on the vasp licensed user
+list. Afterwards, contact your local triton admin who will take care of
+the IT gymnastics, and CC the vaspmaster so that he is aware of who gets
+added to the list.</p>
+<p>For the PHYS department, the vaspmaster is Janne Blomqvist.</p>
+<p>For each VASP version, there are 3 binaries compiled. All versions are
+MPI versions.</p>
+<ul class="simple">
+<li>vasp_std: The &#8220;standard&#8221; vasp, compiled with NGZhalf</li>
+<li>vasp_gam: Gamma point only. Faster if you use only a single k-point.</li>
+<li>vasp_ncl: For non-collinear spin calculations</li>
+</ul>
+<div class="section" id="vasp-5-4-4">
+<h2>VASP 5.4.4<a class="headerlink" href="#vasp-5-4-4" title="Permalink to this headline">¶</a></h2>
+<p>The binaries are compiled with the Intel compiler suite and the MKL
+library, the used toolchain module is <code class="docutils literal"><span class="pre">intel/2019a</span></code>. Example
+batch script</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash -l
+#SBATCH -n 8
+#SBATCH -t 0-6
+#SBATCH --mem-per-cpu=1500
+ml vasp/5.4.4
+mpirun vasp_std
+</pre></div>
+</div>
+<p>Note that contrary to our usual instructions where we strongly
+recommend to use <code class="docutils literal"><span class="pre">srun</span></code> to launch MPI applications, here we must use
+<code class="docutils literal"><span class="pre">mpirun</span></code> as the <code class="docutils literal"><span class="pre">srun</span></code> launcher does not work when using Intel
+MPI.</p>
+</div>
+<div class="section" id="potentials">
+<h2>Potentials<a class="headerlink" href="#potentials" title="Permalink to this headline">¶</a></h2>
+<p>Potentials are stored at <code class="docutils literal"><span class="pre">/share/apps/vasp/pot</span></code>.</p>
+</div>
+<div class="section" id="old-vasp-versions-obsolete-for-reference-only">
+<h2>Old VASP versions (obsolete, for reference only!)<a class="headerlink" href="#old-vasp-versions-obsolete-for-reference-only" title="Permalink to this headline">¶</a></h2>
+<p>These old versions are unlikely to work as they use old MPI and IB
+libraries that have stopped working due to upgrades over the years.</p>
+<div class="section" id="vasp-5-4-1">
+<h3>VASP 5.4.1<a class="headerlink" href="#vasp-5-4-1" title="Permalink to this headline">¶</a></h3>
+<p>Currently the binaries are compiled with GFortran instead of Intel
+Fortran (the Intel Fortran binaries crashed, don&#8217;t know why yet).
+Example batch script</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash -l
+#SBATCH -n 8
+#SBATCH -p batch
+#SBATCH -t 0-6
+#SBATCH --mem-per-cpu=1500
+module load vasp/5.4.1-gmvolf-triton-2016a
+srun vasp_std
+</pre></div>
+</div>
+<p>For each VASP version, there are two binaries compiled with slightly
+different options:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">vasp</span><span class="o">.</span><span class="n">mpi</span><span class="o">.</span><span class="n">NGZhalf</span>
+<span class="n">vasp</span><span class="o">.</span><span class="n">mpi</span>
+</pre></div>
+</div>
+<p>Both are MPI versions. The first one is what you should normally use; it
+is compiled with the NGZhalf option which reduces charge density in the
+Z direction, leading to less memory usage and faster computation. The
+second version is needed for non-collinear spin calculations. The
+binaries can be found in the directory /share/apps/vasp/$VERSION/ . For
+those of you who need to compile your own version of VASP, the makefiles
+used for these builds can be used as a starting point, and are found in
+the directory /share/apps/vasp/makefiles .</p>
+</div>
+<div class="section" id="vasp-5-3-5">
+<h3>VASP 5.3.5<a class="headerlink" href="#vasp-5-3-5" title="Permalink to this headline">¶</a></h3>
+<p>The binaries are optimized for the Xeon Ivy Bridge nodes, although they
+will also work fine on the older Xeon Westmere and Opteron nodes. Note
+that for the moment only the NGZhalf version has been built. If you need
+the non-NGZhalf version for non-collinear spin calculations please
+contact triton support. Example job script below:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/sh
+#SBATCH -p batch
+#SBATCH -N 1
+#SBATCH -t 0-5 # 5 hours
+#SBATCH -n 12
+#SBATCH --mem-per-cpu=2500
+#SBATCH --constraint=[xeonib|xeon|opteron]
+
+module load vasp/5.3.5
+
+srun vasp.mpi.NGZhalf
+</pre></div>
+</div>
+<p>The relative time to run the vasptest v2 testsuite on 12 cores (so a
+full node for Xeon Westmere and Opteron nodes, and 12/20 cores on a Xeon
+Ivy Bridge node) is for Xeon IB/Xeon Westmere/Opteron 1.0/2.0/2.8. So
+one sees that the Xeon Ivy Bridge nodes are quite a lot faster per core
+than the older nodes (with the caveat that the timings may vary
+depending on other jobs that may have been running on the Xeon IB node
+during the benchmark).</p>
+</div>
+<div class="section" id="vasp-5-3-3">
+<h3>VASP 5.3.3<a class="headerlink" href="#vasp-5-3-3" title="Permalink to this headline">¶</a></h3>
+<p>The binaries are optimized for the Xeon nodes, although they also work
+on the Opteron nodes. Some simple benchmarks suggest that the Opteron
+nodes are a factor of 1.5 slower than the Xeon nodes, although it is
+recommended to write the batch script such that Opteron nodes can also
+be used, as the Opteron queue is often shorter. An example script below:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/sh
+#SBATCH -p batch
+#SBATCH -N 1
+#SBATCH -t 0-5 # 5 hours
+#SBATCH -n 12
+#SBATCH --mem-per-cpu=2500
+#SBATCH --constraint=[xeon|opteron]
+
+module load vasp/5.3.3
+
+srun vasp.mpi.NGZhalf
+</pre></div>
+</div>
+</div>
+<div class="section" id="vasp-5-3-2-and-older">
+<h3>VASP 5.3.2 and older<a class="headerlink" href="#vasp-5-3-2-and-older" title="Permalink to this headline">¶</a></h3>
+<p>The binaries are optimized for the Intel Xeon architecture nodes, and
+are not expected to work on the Opteron nodes. An example job script is
+below (Note that it is different from the script for version 5.3.3 and
+newer above!):</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/sh
+#SBATCH -p batch
+#SBATCH -N 1
+#SBATCH -t 1-0 # 1 day
+#SBATCH -n 12
+#SBATCH --mem-per-cpu=3500
+#SBATCH --constraint=xeon
+
+module load vasp/5.3.2
+
+srun vasp.mpi.NGZhalf
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Potentials<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>PAW potentials for VASP can be found in the directory
+/share/apps/vasp/pot. The recommended potentials are the ones in the
+Apr2012.52 subdirectory. For reference, an older set of potentials
+dating back to 2003 can be found in the &#8220;2003&#8221; subdirectory.</p>
+</div>
+<div class="section" id="validation">
+<h3>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h3>
+<p>The vasp.mpi.NGZhalf builds have been verified to pass all the tests in
+the <a class="reference external" href="http://www.nsc.liu.se/~pla/vasptest/">vasptest</a> suite.</p>
+</div>
+<div class="section" id="other">
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h3>
+<p>Old makefiles</p>
+<p>Here is a number of Makefiles copy-pasted from old Rocks installation.
+Can be useful in general, though may require adaptation to new
+installation. Please, send us a fully working copy if you have one.</p>
+<p>See old wiki: <a class="reference external" href="https://wiki.aalto.fi/display/Triton/Applications">https://wiki.aalto.fi/display/Triton/Applications</a></p>
+<p>Rename vasp.x.y.makefile =&gt; vasp.x.y/makefile</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="visit.html" class="btn btn-neutral float-right" title="VisIT" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="theano.html" class="btn btn-neutral" title="Theano" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

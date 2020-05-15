@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/ref/slurm.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">sbatch</span></code></td>
+<td>submit a job to queue (see standard options below)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">srun</span></code></td>
+<td>Within a running job script/environment: Run code using the allocated resources (see options below)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">srun</span></code></td>
+<td>On frontend: submit to queue, wait until done, show output. (see options below)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">sinteractive</span></code></td>
+<td>Submit job, wait, provide shell on node for interactive playing (X forwarding works, default partition interactive).  Exit shell when done. (see options below)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">srun</span> <span class="pre">--pty</span> <span class="pre">bash</span></code></td>
+<td>(advanced) Another way to run interactive jobs, no X forwarding but simpler.  Exit shell when done.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">scancel</span></code> <em>&lt;jobid&gt;</em></td>
+<td>Cancel a job in queue</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">salloc</span></code></td>
+<td>(advanced) Allocate resources from frontend node.  Use <code class="docutils literal"><span class="pre">srun</span></code> to run using those resources, <code class="docutils literal"><span class="pre">exit</span></code> to close shell when done. Read <a class="reference internal" href="../usage/general.html"><em>the description</em></a>! (see options below)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">scontrol</span></code></td>
+<td>View/modify job and slurm configuration</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Option</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">sbatch</span></code>/<code class="docutils literal"><span class="pre">srun</span></code>/etc</td>
+<td><code class="docutils literal"><span class="pre">-t</span></code>, <code class="docutils literal"><span class="pre">--time=</span></code><em>hh:mm:ss</em></td>
+<td><strong>time limit</strong></td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-t,</span> <span class="pre">--time=</span></code><em>dd-hh</em></td>
+<td><strong>time limit, days-hours</strong></td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-p,</span> <span class="pre">--partition=</span></code><em>partition</em></td>
+<td><strong>job partition.  Usually leave off and things are auto-detected.</strong></td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--mem-per-cpu=</span></code><em>n</em></td>
+<td><strong>request n MB of memory per core</strong></td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--mem=</span></code><em>n</em></td>
+<td><strong>request n MB memory per node</strong></td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-c</span></code>, <code class="docutils literal"><span class="pre">--cpus-per-task=</span></code><em>n</em></td>
+<td><strong>Allocate *n* CPU&#8217;s for each task. For multithreaded jobs. (compare ``&#8211;ntasks``: ``-c`` means the number of cores for each process started.)</strong></td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-N</span></code>, <code class="docutils literal"><span class="pre">--nodes=</span></code><em>n-m</em></td>
+<td>allocate minimum of n, maximum of m nodes.</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-n</span></code>, <code class="docutils literal"><span class="pre">--ntasks=</span></code><em>n</em></td>
+<td>allocate resources for and start <em>n</em> tasks (one task=one process started, it is up to you to make them communicate. However the main script runs only on first node, the sub-processes run with &#8220;srun&#8221; are run this many times.)</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-J</span></code>, <code class="docutils literal"><span class="pre">--job-name=</span></code><em>name</em></td>
+<td>short job name</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-o</span></code> <em>output</em></td>
+<td>print output into file <em>output</em></td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">-e</span></code> <em>error</em></td>
+<td>print errors into file <em>error</em></td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--exclusive</span></code></td>
+<td>allocate exclusive access to nodes.  For large parallel jobs.</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--constraint=</span></code><em>feature</em></td>
+<td>request <em>feature</em> (see <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">features</span></code> for the current list of configured features, or Arch under the <a class="reference internal" href="index.html#hardware-list"><span>hardware list</span></a>).  Multiple with <code class="docutils literal"><span class="pre">--constraint=&quot;hsw|skl&quot;</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--array=</span></code><em>0-5,7,10-15</em></td>
+<td>Run job multiple times, use variable <code class="docutils literal"><span class="pre">$SLURM_ARRAY_TASK_ID</span></code> to adjust parameters.</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--gres=gpu</span></code></td>
+<td>request a GPU, or <code class="docutils literal"><span class="pre">--gres=gpu:</span></code><em>n</em> for multiple</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--gres=spindle</span></code></td>
+<td>request nodes that have disks, <code class="docutils literal"><span class="pre">spindle:</span></code><em>n</em>, for a certain number of RAID0 disks</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--mail-type=</span></code><em>type</em></td>
+<td>notify of events: <code class="docutils literal"><span class="pre">BEGIN</span></code>, <code class="docutils literal"><span class="pre">END</span></code>, <code class="docutils literal"><span class="pre">FAIL</span></code>, <code class="docutils literal"><span class="pre">ALL</span></code>, <code class="docutils literal"><span class="pre">REQUEUE</span></code> (not on triton) or <code class="docutils literal"><span class="pre">ALL.</span></code> MUST BE used with <code class="docutils literal"><span class="pre">--mail-user=</span></code> only</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><code class="docutils literal"><span class="pre">--mail-user=</span></code><em>your&#64;email</em></td>
+<td>whome to send the email</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">srun</span></code></td>
+<td><code class="docutils literal"><span class="pre">-N</span></code> <em>&lt;N_nodes&gt;</em> hostname</td>
+<td>Print allocated nodes (from within script)</td>
+</tr>
+</tbody>
+</table>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

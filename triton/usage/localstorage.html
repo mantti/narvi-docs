@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Storage: local drives &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Storage: Lustre (scratch)" href="lustre.html"/>
+        <link rel="prev" title="Libraries" href="libs.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="compilers.html">Available compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgx.html">Nvidia DGX machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html">Running programs on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid2.html">Grid computing 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jobs.html">Monitoring jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html">Libraries</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Storage: local drives</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-use-local-drives-on-compute-nodes">How to use local drives on compute nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lustre.html">Storage: Lustre (scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mpilibs.html">MPI on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quotas.html">Quotas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="singularity.html">Singularity Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smallfiles.html">Small files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolchains.html">Compilers and toolchains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">Remote workflows at Aalto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Storage: local drives</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/usage/localstorage.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="storage-local-drives">
+<h1>Storage: local drives<a class="headerlink" href="#storage-local-drives" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../tut/storage.html"><em>the storage tutorial</em></a>.</p>
+</div>
+<p>Local disks on computing nodes are the preferred place for doing your
+IO. The general idea is use network storage as a backend and local disk
+for actual data processing.</p>
+<ul class="simple">
+<li>In the beginning of the job cd to <code class="docutils literal"><span class="pre">/tmp</span></code> and make a unique directory
+for your run</li>
+<li>copy needed input from WRKDIR to there</li>
+<li>run your calculation normally forwarding all the output to <code class="docutils literal"><span class="pre">/tmp</span></code></li>
+<li>in the end copy relevant output to WRKDIR for analysis and further
+usage</li>
+</ul>
+<p>Pros</p>
+<ul class="simple">
+<li>You get better and steadier IO performance. WRKDIR is shared over all
+users making per-user performance actually rather poor.</li>
+<li>You save performance for WRKDIR to those who cannot use local disks.</li>
+<li>You get much better performance when using many small files (Lustre
+works poorly here).</li>
+<li>Saves your quota if your code generate lots of data but finally you
+need only part of it</li>
+<li>In general, it is an excellent choice for single-node runs (that is
+all job&#8217;s task run on the same node).</li>
+</ul>
+<p>Cons</p>
+<ul class="simple">
+<li>Not feasible for huge files (&gt;100GB). Use WRKDIR instead.</li>
+<li>Small learning curve (must copy files before and after the job).</li>
+<li>Not feasible for cross-node IO (MPI jobs). Use WRKDIR instead.</li>
+</ul>
+<div class="section" id="how-to-use-local-drives-on-compute-nodes">
+<h2>How to use local drives on compute nodes<a class="headerlink" href="#how-to-use-local-drives-on-compute-nodes" title="Permalink to this headline">¶</a></h2>
+<p>NOT for the long-term data. Cleaned every time your job is finished.</p>
+<p>You have to use <code class="docutils literal"><span class="pre">--gres=spindle</span></code> to ensure that you get a hard
+disk (note 2019-january: except GPU nodes).</p>
+<p><code class="docutils literal"><span class="pre">/tmp</span></code> is a bind-mounted user specific directory. Directory is per-user
+(not per-job that is), if you get two jobs running on the same node, you
+get the same <code class="docutils literal"><span class="pre">/tmp</span></code>.</p>
+<div class="section" id="interactively">
+<h3>Interactively<a class="headerlink" href="#interactively" title="Permalink to this headline">¶</a></h3>
+<p>How to use /tmp when you login interactively</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sinteractive -t 1:00:00              # request a node for one hour
+(node)$ mkdir /tmp/$SLURM_JOB_ID       # create a unique directory, here we use
+(node)$ cd /tmp/$SLURM_JOB_ID
+... do what you wanted ...
+(node)$ cp your_files $WRKDIR/my/valuable/data  # copy what you need
+(node)$ cd; rm -rf /tmp/$SLURM_JOB_ID  # clean up after yourself
+(node)$ exit
+</pre></div>
+</div>
+</div>
+<div class="section" id="in-batch-script">
+<h3>In batch script<a class="headerlink" href="#in-batch-script" title="Permalink to this headline">¶</a></h3>
+<p>Batch job example that prevents data lost in case program gets
+terminated (either because of <code class="docutils literal"><span class="pre">scancel</span></code> or due to time limit).</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+
+#SBATCH --time=0-12:00:00 --mem-per-cpu=2500                  # time and memory requirements
+
+mkdir /tmp/$SLURM_JOB_ID                                      # get a directory where you will send all output from your program
+cd /tmp/$SLURM_JOB_ID
+
+## set the trap: when killed or exits abnormally you get the
+## output copied to $WRKDIR/$SLURM_JOB_ID anyway
+trap &quot;mkdir $WRKDIR/$SLURM_JOB_ID; mv -f /tmp/$SLURM_JOB_ID $WRKDIR/$SLURM_JOB_ID; exit&quot; TERM EXIT
+
+## run the program and redirect all IO to a local drive
+## assuming that you have your program and input at $WRKDIR
+srun $WRKDIR/my_program $WRKDIR/input &gt; output
+
+mv /tmp/$SLURM_JOB_ID/output $WRKDIR/SOMEDIR                   # move your output fully or partially
+</pre></div>
+</div>
+</div>
+<div class="section" id="batch-script-for-thousands-input-output-files">
+<h3>Batch script for thousands input/output files<a class="headerlink" href="#batch-script-for-thousands-input-output-files" title="Permalink to this headline">¶</a></h3>
+<p>If your job requires a large amount of files as input/output using tar
+utility can greatly reduce the load on the <code class="docutils literal"><span class="pre">$WRKDIR</span></code>-filesystem.</p>
+<p>Using methods like this is recommended if you&#8217;re working with thousands
+of files.</p>
+<p>Working with tar balls is done in a following fashion:</p>
+<ol class="arabic simple">
+<li>Determine if your input data can be collected into analysis-sized
+chunks that can be (if possible) re-used</li>
+<li>Make a tar ball out of the input data (<code class="docutils literal"><span class="pre">tar</span> <span class="pre">cf</span> <span class="pre">&lt;tar</span> <span class="pre">filename&gt;.tar</span>
+<span class="pre">&lt;input</span> <span class="pre">files&gt;</span></code>)</li>
+<li>At the beginning of job copy the tar ball into <code class="docutils literal"><span class="pre">/tmp</span></code> and untar it
+there (<code class="docutils literal"><span class="pre">tar</span> <span class="pre">xf</span> <span class="pre">&lt;tar</span> <span class="pre">filename&gt;.tar</span></code>)</li>
+<li>Do the analysis here, in the local disk</li>
+<li>If output is a large amount of files, tar them and copy them out.
+Otherwise write output to <code class="docutils literal"><span class="pre">$WRKDIR</span></code></li>
+</ol>
+<p>A sample code is below:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+
+#SBATCH --time=0-12:00:00 --mem-per-cpu=2000      # time and memory requirements
+mkdir /tmp/$SLURM_JOB_ID                          # get a directory where you will put your data
+cp $WRKDIR/input.tar /tmp/$SLURM_JOB_ID           # copy tarred input files
+cd /tmp/$SLURM_JOB_ID
+
+trap &quot;rm -rf /tmp/$SLURM_JOB_ID; exit&quot; TERM EXIT  # set the trap: when killed or exits abnormally you clean up your stuff
+
+tar xf input.tar                                  # untar the files
+srun  input/*                            # do the analysis, or what ever else
+tar cf output.tar output/*                        # tar output
+mv output.tar $WRKDIR/SOMEDIR                     # copy results back
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lustre.html" class="btn btn-neutral float-right" title="Storage: Lustre (scratch)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="libs.html" class="btn btn-neutral" title="Libraries" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

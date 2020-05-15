@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sept 2019 / Linux Shell Basics &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Scientific Computing in Practice" href="index.html"/>
+        <link rel="next" title="Linux shell tutorial" href="../linux-shell-tutorial.html"/>
+        <link rel="prev" title="Sept 2019 / GPU Computing in Practice" href="gpu-computing.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Training</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Scientific Computing in Practice</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#lectures-by-date-and-topics">Lectures by date and topics</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="triton-summer-kickstart.html">Jun 2020 / Triton Summer Kickstart</a></li>
+<li class="toctree-l4"><a class="reference external" href="https://coderefinery.org/workshops/upcoming">May 2020 / CodeRefinery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matlab-advanced.html">April 2020 / Matlab Advanced</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shell-scripting.html">March 2020 / Linux Shell Scripting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="md-with-lammps.html">Feb-March 2020 / Hands-on Molecular Dynamics with LAMMPS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mpi-introduction.html">Feb 2020 / MPI introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triton-winter-kickstart.html">Jan 2020 / Triton Winter Kickstart</a></li>
+<li class="toctree-l4"><a class="reference external" href="https://coderefinery.org/workshops/2019-12-10-espoo/">Dec 2019 / CodeRefinery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matlab-basics.html">Nov 2019 / Matlab Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="htcondor-introduction.html">Oct 2019 / Introduction to distributed computing with HTCondor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data-analysis.html">Oct 2019 / Practical R and Python data analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gpu-computing.html">Sept 2019 / GPU Computing in Practice</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Sept 2019 / Linux Shell Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#archive">Archive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../scicomp-announcements-maillist.html">Announcement maillist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux-shell-tutorial.html">Linux shell tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python-scicomp/index.html">Python for Scientific Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#a-basics">A: Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#b-scientific-computing">B: Scientific computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#c-high-performance-computing">C: High performance computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d-advanced-high-performance-computing">D: Advanced high performance computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#recommended-programming-courses">Recommended programming courses</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Training</a> &raquo;</li>
+      
+          <li><a href="index.html">Scientific Computing in Practice</a> &raquo;</li>
+      
+    <li>Sept 2019 / Linux Shell Basics</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/training/scip/linux-shell-basics.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sept-2019-linux-shell-basics">
+<h1>Sept 2019 / Linux Shell Basics<a class="headerlink" href="#sept-2019-linux-shell-basics" title="Permalink to this headline">¶</a></h1>
+<p>Part of <a class="reference internal" href="index.html"><em>Scientific Computing in Practice</em></a> lecture series at Aalto University.</p>
+<p><strong>Audience:</strong> employees and students looking for an extensive intro into Linux shell / terminal.</p>
+<p><strong>About the course:</strong> Linux shell is what you get when you open a terminal. This course will cover all the basics that we will need later on for the most part of the courses given during the year. We will unleash the power of that blinking cursor in the terminal window. Windows/Mac/Linux users are warmly welcome.</p>
+<p>We will start with somewhat basics like files and processes and go up to command line magic like redirections and pipes. This should be enough to get started with the Linux terminal.</p>
+<p>There is an advaced part of this course given later in the spring. There on we go through the programming techniques including advanced ones, while here we get familiar with the command line.</p>
+<p><strong>Lecturer:</strong> Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University</p>
+<p><strong>Time, date, place:</strong> the course consists of two hands-on sessions</p>
+<ul class="simple">
+<li>Tue 3.9.2019 klo 12:00-15:00 // Otakaari 1, U135a</li>
+<li>Thu 5.9.2019 klo 12:00-15:00 // Otakaari 1, U135a</li>
+</ul>
+<p><strong>Course material:</strong> will be mostly based on the first part of <a class="reference external" href="https://scicomp.aalto.fi/training/linux-shell-tutorial.html">scicomp.aalto.fi/training/linux-shell-tutorial</a>.</p>
+<p>Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/BASH</p>
+<p><strong>Cost:</strong> Free of charge for FGCI consortium members including Aalto employees and students.</p>
+<p><strong>Registration:</strong> closed, the course is over</p>
+<p><strong>Credits:</strong> Course certificate can be provided on request, though no official ECTS.</p>
+<p><strong>Other comments:</strong> During the tutorials we’ll use a Linux terminal, means that either you have a Linux/Mac laptop or you have a Windows laptop with the SSH client installed for accessing any of Linux server (kosh/lyta etc at Aalto). If needed participants can be provided with access to Triton for running examples. <em>Participants are expected to bring their own laptops.</em></p>
+<p><strong>Additional course info at:</strong> ivan.degtyarenko -at- aalto.fi</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../linux-shell-tutorial.html" class="btn btn-neutral float-right" title="Linux shell tutorial" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gpu-computing.html" class="btn btn-neutral" title="Sept 2019 / GPU Computing in Practice" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

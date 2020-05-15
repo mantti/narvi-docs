@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>R &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Applications: General info" href="index.html"/>
+        <link rel="next" title="RStan" href="rstan.html"/>
+        <link rel="prev" title="Python" href="python.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#applications">Applications</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html">Applications: General info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aims.html">FHI-aims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="armadillo.html">Armadillo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boost.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectron.html">Detectron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenics.html">Fenics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fsl.html">FSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpaw.html">GPAW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="julia.html">Julia language on triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keras.html">Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">Lammps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html">Matlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlpack.html">MLPack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mne.html">MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="octave.html">Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openpose.html">OpenPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paraview.html">Paraview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">R</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installing-packages">Installing packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-r-serial-job">Simple R serial job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-r-job-using-openmp-for-parallelization">Simple R job using OpenMP for parallelization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-r-parallel-job-using-parallel-package">Simple R parallel job using &#8216;parallel&#8217;-package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rstan.html">RStan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstudio.html">RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spyder.html">Spyder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theano.html">Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vasp.html">VASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visit.html">VisIT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+          <li><a href="index.html">Applications: General info</a> &raquo;</li>
+      
+    <li>R</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/apps/r.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="r">
+<h1>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h1>
+<p>R is a language and environment for statistical computing and graphics
+with wide userbase. There exists several packages that are easily
+imported to R.</p>
+<div class="section" id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>Simply load the latest R.</p>
+<div class="highlight-python"><div class="highlight"><pre>module load r
+R
+</pre></div>
+</div>
+<p>As any packages you install against R are specific to the version you
+installed them with, it is best to pick a version of R and stick with it.
+You can do this by checking the R version with <code class="docutils literal"><span class="pre">module</span> <span class="pre">spider</span> <span class="pre">r</span></code> and
+using the whole name when loading the module:</p>
+<div class="highlight-python"><div class="highlight"><pre>module load r/3.6.1-python3
+</pre></div>
+</div>
+<p>If you want to detect the number of cores, you should use the proper
+Slurm environment variables (defaulting to all cores):</p>
+<div class="highlight-python"><div class="highlight"><pre>library(parallel)
+as.integer(Sys.getenv(&#39;SLURM_CPUS_PER_TASK&#39;, parallel::detectCores()))
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-packages">
+<h2>Installing packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways to install packages.</p>
+<ol class="arabic">
+<li><p class="first">You can usually install packages yourself, which allows you to keep
+up to date and reinstall as needed. Good instructions can be
+found
+<a class="reference external" href="https://statistics.berkeley.edu/computing/R-packages">here</a>, for
+example:</p>
+<div class="highlight-python"><div class="highlight"><pre>R
+&gt; install.packages(&#39;L1pack&#39;)
+</pre></div>
+</div>
+<p>This should guide you to selecting a download mirror and offer you
+the option to install in your home directory.</p>
+<p>If you have a lot of packages, you can run out of home quota. In this
+case you should move your package directory to your work directory and
+replace it the <code class="docutils literal"><span class="pre">~/R</span></code>-directory with a symlink that points to your
+<code class="docutils literal"><span class="pre">$WRKDIR/R</span></code>.</p>
+<p>Example of doing this is here:</p>
+<div class="highlight-python"><div class="highlight"><pre>mv ~/R $WRKDIR/R
+ln -s $WRKDIR/R ~/R
+</pre></div>
+</div>
+<p>More info on R library paths can be
+found <a class="reference external" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/libPaths.html">here</a>.
+Looking at
+R <a class="reference external" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html">startup</a>
+can also be informative.</p>
+</li>
+<li><p class="first">You can also put a request to the triton issue tracker and
+mention which R-version you are using.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="simple-r-serial-job">
+<h2>Simple R serial job<a class="headerlink" href="#simple-r-serial-job" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="serial-r-example">
+<h3>Serial R example<a class="headerlink" href="#serial-r-example" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" href="../../_downloads/r_serial.slrm" download=""><code class="xref download docutils literal"><span class="pre">r_serial.slrm</span></code></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash -l
+#SBATCH -p short
+#SBATCH -t 00:05:00
+#SBATCH -n 1
+#SBATCH --mem=100
+#SBATCH -o r_serial.out
+
+module load r
+n=3
+m=2
+srun Rscript --vanilla r_serial.R $n $m
+</pre></div>
+</div>
+<p><a class="reference download internal" href="../../_downloads/r_serial.R" download=""><code class="xref download docutils literal"><span class="pre">r_serial.R</span></code></a>:</p>
+<div class="highlight-r"><div class="highlight"><pre>args <span class="o">=</span> <span class="kp">commandArgs</span><span class="p">(</span>trailingOnly<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+
+n<span class="o">&lt;-</span><span class="kp">as.numeric</span><span class="p">(</span><span class="kp">args</span><span class="p">[</span><span class="m">1</span><span class="p">])</span>
+m<span class="o">&lt;-</span><span class="kp">as.numeric</span><span class="p">(</span><span class="kp">args</span><span class="p">[</span><span class="m">2</span><span class="p">])</span>
+
+<span class="kp">print</span><span class="p">(</span>n<span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span>m<span class="p">)</span>
+
+A<span class="o">&lt;-</span><span class="kp">t</span><span class="p">(</span><span class="kt">matrix</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">5</span><span class="p">,</span>ncol<span class="o">=</span>n<span class="p">,</span>nrow<span class="o">=</span>m<span class="p">))</span>
+<span class="kp">print</span><span class="p">(</span>A<span class="p">)</span>
+B<span class="o">&lt;-</span><span class="kp">t</span><span class="p">(</span><span class="kt">matrix</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">7</span><span class="p">,</span>ncol<span class="o">=</span>n<span class="p">,</span>nrow<span class="o">=</span>m<span class="p">))</span>
+<span class="kp">print</span><span class="p">(</span>B<span class="p">)</span>
+C<span class="o">&lt;-</span><span class="kt">matrix</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span>ncol<span class="o">=</span>n<span class="p">,</span>nrow<span class="o">=</span>n<span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span>C<span class="p">)</span>
+
+C<span class="o">&lt;-</span>A <span class="o">%*%</span> <span class="kp">t</span><span class="p">(</span>B<span class="p">)</span> <span class="o">+</span> <span class="m">2</span><span class="o">*</span>C
+<span class="kp">print</span><span class="p">(</span>C<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="simple-r-job-using-openmp-for-parallelization">
+<h2>Simple R job using OpenMP for parallelization<a class="headerlink" href="#simple-r-job-using-openmp-for-parallelization" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="r-openmp-example">
+<h3>R OpenMP Example<a class="headerlink" href="#r-openmp-example" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" href="../../_downloads/r_openmp.slrm" download=""><code class="xref download docutils literal"><span class="pre">r_openmp.slrm</span></code></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -p batch
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=2G
+#SBATCH -o r_openmp.out
+
+module load r
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+time srun Rscript --default-packages=methods,utils,stats R-benchmark-25.R
+</pre></div>
+</div>
+<p>The benchmark script is available
+<a class="reference external" href="https://r.research.att.com/benchmarks/R-benchmark-25.R">here</a>
+(more information about it is available <a class="reference external" href="https://www.r-bloggers.com/r-benchmark-for-high-performance-analytics-and-computing-i/">here
+page</a>).</p>
+</div>
+</div>
+<div class="section" id="simple-r-parallel-job-using-parallel-package">
+<h2>Simple R parallel job using &#8216;parallel&#8217;-package<a class="headerlink" href="#simple-r-parallel-job-using-parallel-package" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="parallel-r-example">
+<h3>Parallel R example<a class="headerlink" href="#parallel-r-example" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" href="../../_downloads/r_parallel.slrm" download=""><code class="xref download docutils literal"><span class="pre">r_parallel.slrm</span></code></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -p short
+#SBATCH -t 00:20:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=2G
+#SBATCH -o r_parallel.out
+
+# Set the number of OpenMP-threads to 1,
+# as we&#39;re using parallel for parallelization
+export OMP_NUM_THREADS=1
+
+# Load the version of R you want to use
+module load r
+
+# Run your R script
+srun Rscript r_parallel.R
+</pre></div>
+</div>
+<p><a class="reference download internal" href="../../_downloads/r_parallel.R" download=""><code class="xref download docutils literal"><span class="pre">r_parallel.R</span></code></a>:</p>
+<div class="highlight-r"><div class="highlight"><pre><span class="kn">library</span><span class="p">(</span>pracma<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>parallel<span class="p">)</span>
+invertRandom <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>index<span class="p">)</span> <span class="p">{</span>
+    A<span class="o">&lt;-</span><span class="kt">matrix</span><span class="p">(</span>runif<span class="p">(</span><span class="m">2000</span><span class="o">*</span><span class="m">2000</span><span class="p">),</span>ncol<span class="o">=</span><span class="m">2000</span><span class="p">,</span>nrow<span class="o">=</span><span class="m">2000</span><span class="p">);</span>
+    A<span class="o">&lt;-</span>A <span class="o">+</span> <span class="kp">t</span><span class="p">(</span>A<span class="p">);</span>
+    B<span class="o">&lt;-</span>pinv<span class="p">(</span>A<span class="p">);</span>
+    <span class="kr">return</span><span class="p">(</span><span class="kp">max</span><span class="p">(</span>B <span class="o">%*%</span> A<span class="p">));</span>
+<span class="p">}</span>
+ptm<span class="o">&lt;-</span><span class="kp">proc.time</span><span class="p">()</span>
+mclapply<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">16</span><span class="p">,</span>invertRandom<span class="p">,</span> mc.cores<span class="o">=</span><span class="kp">Sys.getenv</span><span class="p">(</span><span class="s">&#39;SLURM_CPUS_PER_TASK&#39;</span><span class="p">))</span>
+<span class="kp">proc.time</span><span class="p">()</span><span class="o">-</span>ptm
+</pre></div>
+</div>
+<p>When constrained to opt-architecture, run times for different core
+numbers were</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ncores</th>
+<th class="head">1</th>
+<th class="head">2</th>
+<th class="head">4</th>
+<th class="head">8</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>runtime</td>
+<td>380.757</td>
+<td>182.185</td>
+<td>125.526</td>
+<td>84.230</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rstan.html" class="btn btn-neutral float-right" title="RStan" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python.html" class="btn btn-neutral" title="Python" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

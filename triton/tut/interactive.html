@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interactive jobs &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Serial Jobs" href="serial.html"/>
+        <link rel="prev" title="Data storage" href="storage.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#tutorials">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">About Science-IT and Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting.html">Connecting to Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="applications.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html">Software Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Data storage</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Interactive jobs: running your first command</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction-to-slurm">Introduction to slurm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#your-first-interactive-job">Your first interactive job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interactive-shell">Interactive shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interactive-shell-with-graphics">Interactive shell with graphics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#monitoring-your-usage">Monitoring your usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-resource-parameters">Setting resource parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial jobs: running in the queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">Array jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependency.html">Job dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Interactive jobs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/tut/interactive.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interactive-jobs">
+<h1>Interactive jobs<a class="headerlink" href="#interactive-jobs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction-to-slurm">
+<h2>Introduction to slurm<a class="headerlink" href="#introduction-to-slurm" title="Permalink to this headline">¶</a></h2>
+<p>Triton is a large system that combines many different individual
+computer nodes. Hundreds of people are using Triton simultaneously.
+Thus, resources (CPU time, memory, etc.) need to be shared among everyone.</p>
+<p>This resource sharing is done by a software called a job scheduler or
+workload manager. Triton&#8217;s workload manager is <strong>slurm</strong>.
+Triton users submit jobs which are then scheduled and allocated
+resources by the workload manager.</p>
+<p>There are two ways you can submit your jobs to slurm queue system:
+either interactively using <code class="docutils literal"><span class="pre">srun</span></code> or by submitting a script
+using <code class="docutils literal"><span class="pre">sbatch</span></code>.</p>
+<p>This tutorial walks you through running your jobs interactively.
+And in the next tutorial we will go through the more common and
+advanced way of submitting jobs, batch scripts.</p>
+</div>
+<div class="section" id="your-first-interactive-job">
+<h2>Your first interactive job<a class="headerlink" href="#your-first-interactive-job" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s say you want to run the following program</p>
+<div class="highlight-python"><div class="highlight"><pre>python3 -c &#39;import os; print(&quot;hi from&quot;, os.uname().nodename)&#39;
+</pre></div>
+</div>
+<p>You can submit this program to Triton using <code class="docutils literal"><span class="pre">srun</span></code>. All input/output still goes to your terminal
+(but note X forwarding for graphical applications doesn&#8217;t work - see
+below).</p>
+<div class="highlight-python"><div class="highlight"><pre>$ srun --mem=100M --time=1:00:00 python3 -c &#39;import os; print(&quot;hi from&quot;, os.uname().nodename)&#39;
+srun: job 52204499 queued and waiting for resources
+</pre></div>
+</div>
+<p>Here, we are asking for 100 Megabytes of memory for a duration of an hour.
+While your job - with <strong>jobID</strong> 52204499 - is waiting to be allocated resources, your shell
+effectively become non-interactive.</p>
+<p>You can open a new shell on triton and run the command <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">q</span></code> to see all the jobs
+you have submitted to the queue</p>
+<div class="highlight-python"><div class="highlight"><pre>$ slurm q
+JOBID              PARTITION NAME                  TIME       START_TIME    STATE NODELIST(REASON)
+52204499           short-ivb python3               0:00              N/A  PENDING (None)
+</pre></div>
+</div>
+<p>You can see information such as the state, which partition the requested node reside in, etc.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The fact that we had to open another shell can be impractical
+if you need to run other jobs or just simply use the current shell.
+Additionally, if your shell quits while waiting (your internet may disconnect),
+the process cancels and you have to run the <code class="docutils literal"><span class="pre">srun</span></code> command again.</p>
+</div>
+<p>Once resources are allocated to your job, you see the name of the machine
+in the Triton cluster your program ran on, output to your terminal</p>
+<div class="highlight-python"><div class="highlight"><pre>srun: job 52204499 has been allocated resources
+hi from ivb17.int.triton.aalto.fi
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Interactive jobs are useful for debugging purposes, to test your setup
+and configurations before you put your tasks in a batch script for later execution.
+Or if you need graphical applications - such as Matlab, RStudio, etc.
+Additionally, if your task is small and not worth writing a batch script for,
+interactive job is the way to go.</p>
+</div>
+</div>
+<div class="section" id="interactive-shell">
+<h2>Interactive shell<a class="headerlink" href="#interactive-shell" title="Permalink to this headline">¶</a></h2>
+<p>What if you want an actual shell to do things interactively?
+Put more precisely, you want access to a node in the cluster
+through an interactive bash shell.
+For this, you just need srun&#8217;s <code class="docutils literal"><span class="pre">--pty</span></code> option coupled with the shell
+you want</p>
+<div class="highlight-python"><div class="highlight"><pre>srun -p interactive --time=2:00:00 --mem=600 --pty bash
+</pre></div>
+</div>
+<p>The command prompt will appear when the job starts.
+And you will have a bash shell runnnig on one of the
+computation nodes with at least 600 Megabytes of memory,
+for a duration of 2 hours, where you can run your programs in.</p>
+<p>The option <code class="docutils literal"><span class="pre">-p</span> <span class="pre">interactive</span></code> requests a node in the interactive
+partition which is dedicated to interactive usage (more on this later).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">you can use <code class="docutils literal"><span class="pre">sinfo</span></code> to see information such as the available partitions,
+number of nodes in each, their time limits etc.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Remember to exit the shell when you are done!
+The shell will be running if you don&#8217;t and
+it will count towards your usage.
+This effectively means your priority will degrade
+in the future.</p>
+</div>
+</div>
+<div class="section" id="interactive-shell-with-graphics">
+<h2>Interactive shell with graphics<a class="headerlink" href="#interactive-shell-with-graphics" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">sinteractive</span></code> is very similar to <code class="docutils literal"><span class="pre">srun</span></code>, but more clever and thus
+allows you to do X forwarding. It starts a screen session on the node,
+then sshes to there and connects to the screen.
+You can also ssh to this node again and connect to the
+process again.</p>
+<div class="highlight-python"><div class="highlight"><pre>sinteractive --time=1:00:00 --mem=1000
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Just like with <code class="docutils literal"><span class="pre">srun</span> <span class="pre">--pty</span> <span class="pre">bash</span></code>, remember to exit the shell.
+Since there is a separate screen session running, just closing the terminal isn&#8217;t enough.
+Exit all shells in the screen session on the node (C-d or <code class="docutils literal"><span class="pre">exit</span></code>), or cancel
+the process (see below).</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are off-campus, you might want to use <a class="reference external" href="https://vdi.aalto.fi">https://vdi.aalto.fi</a> as a
+virtual desktop to connect to Triton to run graphical programs.
+Otherwise, expect things to be very slow.</p>
+</div>
+</div>
+<div class="section" id="monitoring-your-usage">
+<h2>Monitoring your usage<a class="headerlink" href="#monitoring-your-usage" title="Permalink to this headline">¶</a></h2>
+<p>When your jobs enter the queue, you need to be able to get
+information on how much time, memory, etc. your jobs are using
+in order to know what requirements to ask for.</p>
+<p>The command <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">history</span></code> gives you information such as the actual memory used by your recent jobs, total CPU time, etc.
+You will learn more about these command later on.</p>
+<p>As shown in a previous example, the command <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">queue</span></code> will tell you the currently running processes,
+which is a good way to make sure you have stopped everything.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Generally, estimating the amount of time or memory you need comes down to
+monitoring you slurm history and utilizing command-line tools such as
+<code class="docutils literal"><span class="pre">time</span></code> on a few of your jobs and averaging. This is basically a trial and error process.</p>
+</div>
+</div>
+<div class="section" id="setting-resource-parameters">
+<h2>Setting resource parameters<a class="headerlink" href="#setting-resource-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Slurm comes with a multitude of parameters which you can specify to
+ensure you will be allocated enough memory, CPU cores, time, etc.
+You saw two of them in use in the above examples (<code class="docutils literal"><span class="pre">--mem</span></code> and <code class="docutils literal"><span class="pre">--time</span></code>)
+and you will learn more in the following tutorials.</p>
+<p>Because you are sharing resource with other users, <strong>you should always estimate the amount of time, memory, etc.
+you need and then request them accordingly</strong> for efficiency reasons.
+Moreover, the default memory and time limits are intentionally set low and may not be
+sufficient for your jobs to run/finish.</p>
+<p>The general rule of thumb is to request the least possible, so that your stuff can run faster.
+That is because the <strong>less you request, the faster you are likely to be allocated resources.</strong>
+If you request something slightly less than a node size (note that we have different size nodes)
+or partition limit, you are more likely to fit into a spare spot.</p>
+<p>For example, we have many nodes with 12 cores, and some with 20 or 24. If you request 24 cores,
+you have very limited options. However, you are more likely to be allocated a node if you request 10 cores.
+The same applies to memory: most common cutoffs are 48, 64, 128, 256GB.
+It&#8217;s best to use smaller values when submitting interactive jobs, and more for batch scripts.</p>
+<p>The <a class="reference internal" href="serial.html"><em>next tutorial</em></a> covers more resource parameters and how to estimate them in more detail.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">The program <code class="docutils literal"><span class="pre">/scratch/scip/examples/slurm/memory-hog.py</span></code>
+uses up a lot of memory to do nothing.  Let&#8217;s play with it.  It&#8217;s
+run like this: <code class="docutils literal"><span class="pre">python</span>
+<span class="pre">/scratch/scip/examples/slurm/memory-hog.py</span> <span class="pre">50M</span></code>, where the
+last argument is however much memory you want to eat.  (also
+available from <a class="reference external" href="https://github.com/AaltoScienceIT/triton-examples/tree/master/slurm">triton-examples/slurm</a>)</p>
+<ol class="loweralpha simple">
+<li>Try running the program with <code class="docutils literal"><span class="pre">50M</span></code></li>
+<li>Run the program with <code class="docutils literal"><span class="pre">50M</span></code> and <code class="docutils literal"><span class="pre">srun</span> <span class="pre">--mem=500M</span></code>.</li>
+<li>Increase the amount of memory allocated until the job fails.
+What happens?</li>
+<li>Play around with different parameters: how much memory can you
+use?</li>
+<li>Look at the job history using <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">history</span></code> - can you see
+how much memory it actually used?</li>
+</ol>
+</li>
+<li><p class="first">The program <code class="docutils literal"><span class="pre">/scratch/scip/examples/slurm/pi.py</span></code> (also
+available from <a class="reference external" href="https://github.com/AaltoScienceIT/triton-examples/tree/master/slurm">triton-examples/slurm</a>)
+calculates pi using a simple stochastic algorithm.  You give it one
+argument: the number of trials.</p>
+<p>The <code class="docutils literal"><span class="pre">time</span></code> program allows you to time any program.  e.g. you can
+<code class="docutils literal"><span class="pre">time</span> <span class="pre">python</span> <span class="pre">x.py</span></code> to print the amount of time it takes.</p>
+<ol class="loweralpha simple">
+<li>Run the program, timing it with <code class="docutils literal"><span class="pre">time</span></code>, a few times,
+increasing the number of trials, until it takes about 10
+seconds: <code class="docutils literal"><span class="pre">time</span> <span class="pre">python</span> <span class="pre">/scratch/scip/examples/slurm/pi.py</span>
+<span class="pre">500</span></code> and so on.</li>
+<li>Add <code class="docutils literal"><span class="pre">srun</span></code> in front (<code class="docutils literal"><span class="pre">srun</span> <span class="pre">python</span> <span class="pre">...</span></code>).  What changes?</li>
+<li>Tell srun to use five CPUs (<code class="docutils literal"><span class="pre">-c</span> <span class="pre">5</span></code>).  Does it go any faster?</li>
+<li>Use the <code class="docutils literal"><span class="pre">--threads=5</span></code> option to the Python program to tell it
+to also use five threads.  <code class="docutils literal"><span class="pre">...</span> <span class="pre">python</span> <span class="pre">.../pi.py</span> <span class="pre">--threads=5</span></code></li>
+<li>Play around with it some.  What do you find?</li>
+<li>Look at the job history using <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">history</span></code> - can you see
+how much time each process used?  What&#8217;s the relation between
+TotalCPUTime and WallTime?</li>
+</ol>
+</li>
+<li><p class="first">Check out some of these commands: <code class="docutils literal"><span class="pre">sinfo</span></code>, <code class="docutils literal"><span class="pre">squeue</span></code>.  Run
+<code class="docutils literal"><span class="pre">slurm</span> <span class="pre">job</span> <span class="pre">$jobid</span></code> on some running job - does anything
+look interesting?</p>
+</li>
+<li><p class="first">Run <code class="docutils literal"><span class="pre">scontrol</span> <span class="pre">show</span> <span class="pre">node</span> <span class="pre">wsm1</span></code>  What is this?</p>
+</li>
+</ol>
+</div>
+<div class="section" id="what-s-next">
+<h2>What&#8217;s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<p>In the next tutorial on <a class="reference internal" href="serial.html"><em>serial batch jobs</em></a> you will learn how to put the above-mentioned
+commands in a script, namely a batch script that allows for a multitude of jobs to run unattended.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="serial.html" class="btn btn-neutral float-right" title="Serial Jobs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="storage.html" class="btn btn-neutral" title="Data storage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

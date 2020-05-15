@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Master-Worker Example &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Examples" href="index.html"/>
+        <link rel="next" title="Python OpenMP example" href="python_openmp.html"/>
+        <link rel="prev" title="Examples" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ref/index.html">Triton quick reference</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Examples</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">Master-Worker Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python_openmp.html">Python OpenMP example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="r/r_serial.html">Serial R example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="r/r_parallel.html">Parallel R example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="r/r_openmp.html">R OpenMP Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#python">Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+          <li><a href="index.html">Examples</a> &raquo;</li>
+      
+    <li>Master-Worker Example</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/examples/master_worker.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="master-worker-example">
+<h1>Master-Worker Example<a class="headerlink" href="#master-worker-example" title="Permalink to this headline">¶</a></h1>
+<p>Following example shows how to manage host list using the
+python-hostlist package and run different tasks for master task and
+worker task.</p>
+<p>This kind of structure might be needed if one wants to create a e.g.
+Spark cluster or use some other program that uses
+master-worker-paradigm, but does not use MPI.</p>
+<p>It is important to make sure that in case of job cancellation all
+programs started by the scripts will be killed gracefully. In case of
+Spark or other programs that initialize a cluster using SSH and then
+forking a process, these forked processes must be killed after job
+allocation has ended.</p>
+<p><code class="docutils literal"><span class="pre">hostlist-test.slrm</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -t 00:10:00
+#SBATCH -N 3
+#SBATCH -n 5
+#SBATCH -p batch
+#SBATCH -o hostlist-test.out
+
+# An example of a clean_up-routine if the master has to take e.g. ssh connection to start program on workers
+function clean_up {
+    echo &quot;Got SIGTERM, will clean up my workers and exit.&quot;
+    exit
+}
+trap clean_up SIGHUP SIGINT SIGTERM
+
+# Actual script that defines what each worker will do
+srun bash run.sh
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">run.sh</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+
+# Get a list of hosts using python-hostlist
+nodes=`hostlist --expand $SLURM_NODELIST|xargs`
+
+# Determine current worker name
+me=$(hostname)
+
+# Determine master process (first node, id 0)
+master=$(echo $nodes | cut -f 1 -d &#39; &#39;)
+
+# SLURM_LOCALID contains task id for the local node
+localid=$SLURM_LOCALID
+
+if [[ &quot;$me&quot; == &quot;$master&quot; &amp;&amp; &quot;$localid&quot; -eq 0 ]]
+then
+   # Run these if the process is the master task
+   echo &quot;I&#39;m the master with number &quot;$localid&quot; in node &quot;${me}&quot;. My subordinates are &quot;$nodes
+else
+   # Run these if the process is a worker
+   echo &quot;I&#39;m a worker number &quot;$localid&quot; in node &quot;${me}
+fi
+</pre></div>
+</div>
+<p>Example output:</p>
+<div class="highlight-python"><div class="highlight"><pre>I&#39;m a worker number 1 in node opt469
+I&#39;m a worker number 2 in node opt469
+I&#39;m the master with number 0 in node opt469. My subordinates are opt469 opt470 opt471
+I&#39;m a worker number 0 in node opt471
+I&#39;m a worker number 0 in node opt470
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_openmp.html" class="btn btn-neutral float-right" title="Python OpenMP example" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Examples" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

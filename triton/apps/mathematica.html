@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using Mathematica on Triton &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Applications: General info" href="index.html"/>
+        <link rel="next" title="Matlab" href="matlab.html"/>
+        <link rel="prev" title="Lammps" href="lammps.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#applications">Applications</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html">Applications: General info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aims.html">FHI-aims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="armadillo.html">Armadillo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boost.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectron.html">Detectron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenics.html">Fenics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fsl.html">FSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpaw.html">GPAW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="julia.html">Julia language on triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keras.html">Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">Lammps</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Using Mathematica on Triton</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#load-mathematica">Load Mathematica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#with-graphical-user-interface">With graphical user interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-batch-scripts">Running batch scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-problems">Common problems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#see-also">See also</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#admin-notes">Admin notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html">Matlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlpack.html">MLPack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mne.html">MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="octave.html">Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openpose.html">OpenPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paraview.html">Paraview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="r.html">R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstan.html">RStan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstudio.html">RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spyder.html">Spyder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theano.html">Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vasp.html">VASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visit.html">VisIT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+          <li><a href="index.html">Applications: General info</a> &raquo;</li>
+      
+    <li>Using Mathematica on Triton</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/apps/mathematica.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-mathematica-on-triton">
+<h1>Using Mathematica on Triton<a class="headerlink" href="#using-mathematica-on-triton" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="load-mathematica">
+<h2>Load Mathematica<a class="headerlink" href="#load-mathematica" title="Permalink to this headline">¶</a></h2>
+<p>Mathematica is loaded through a module:</p>
+<div class="highlight-python"><div class="highlight"><pre>module load mathematica
+</pre></div>
+</div>
+<p>See available versions with <code class="docutils literal"><span class="pre">module</span> <span class="pre">avail</span> <span class="pre">mathematica</span></code>.</p>
+<p>You can test by running in text-based mode:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ wolfram
+</pre></div>
+</div>
+</div>
+<div class="section" id="with-graphical-user-interface">
+<h2>With graphical user interface<a class="headerlink" href="#with-graphical-user-interface" title="Permalink to this headline">¶</a></h2>
+<p>To launch the graphical user interface (GUI), login to triton.aalto.fi
+with <code class="docutils literal"><span class="pre">-X</span></code>, i.e. X11 forwarding enabled.</p>
+<div class="highlight-python"><div class="highlight"><pre>ssh -X triton.aalto.fi
+</pre></div>
+</div>
+<p>If you need to run computationally-intensive things with the GUI, use
+<code class="docutils literal"><span class="pre">sinteractive</span></code> to get an <a class="reference internal" href="../tut/interactive.html"><em>interactive shell on a
+node</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>sinteractive --mem=10G --time=1:00
+</pre></div>
+</div>
+<p>Either way, you start the GUI with mathematica:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ mathematica &amp;
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-batch-scripts">
+<h2>Running batch scripts<a class="headerlink" href="#running-batch-scripts" title="Permalink to this headline">¶</a></h2>
+<p>Create a script file, say <code class="docutils literal"><span class="pre">script.m</span></code>.  You can run this script and
+store the outputs in <code class="docutils literal"><span class="pre">output.txt</span></code> using:</p>
+<div class="highlight-python"><div class="highlight"><pre>math -noprompt -run &#39;&lt;&lt;script.m&#39; &gt; output.txt
+</pre></div>
+</div>
+<p>To put this in a batch script, simply look at <a class="reference internal" href="../tut/serial.html"><em>the serial jobs
+tutorial</em></a>.  Here is one such example:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH --mem=5G
+#SBATCH --time=2:00
+
+module load mathematica
+math -noprompt -run &#39;&lt;&lt;script.m&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="common-problems">
+<h2>Common problems<a class="headerlink" href="#common-problems" title="Permalink to this headline">¶</a></h2>
+<p><strong>Activation</strong> If you need to activate Mathematica when you first run
+it, we recommend that you launch it in GUI mode first, choose &#8216;Other
+ways to activate&#8217;&#8221; then &#8220;Connect to a network license server&#8221;, and
+paste <code class="docutils literal"><span class="pre">lic-mathematica.aalto.fi</span></code>.  It <em>should</em> be automatically
+activated, though, if not file an issue and link this page.</p>
+</div>
+<div class="section" id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<p>Various other references also apply here once you load the module and
+adapt them to Slurm:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://wiki.hpcc.msu.edu/display/hpccdocs/Using+Mathematica+in+Batch+Mode">https://wiki.hpcc.msu.edu/display/hpccdocs/Using+Mathematica+in+Batch+Mode</a></li>
+<li><a class="reference external" href="https://hpc.llnl.gov/software/mathematical-software/interactive-math-tools">https://hpc.llnl.gov/software/mathematical-software/interactive-math-tools</a></li>
+</ul>
+</div>
+<div class="section" id="admin-notes">
+<h2>Admin notes<a class="headerlink" href="#admin-notes" title="Permalink to this headline">¶</a></h2>
+<p>When installing new versions, put <code class="docutils literal"><span class="pre">!lic-mathematica.aalto.fi</span></code> into
+<code class="docutils literal"><span class="pre">Configuration/Licensing/mathpass</span></code> in the base directory</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matlab.html" class="btn btn-neutral float-right" title="Matlab" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lammps.html" class="btn btn-neutral" title="Lammps" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

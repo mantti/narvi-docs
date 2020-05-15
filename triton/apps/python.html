@@ -1,0 +1,688 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Applications: General info" href="index.html"/>
+        <link rel="next" title="R" href="r.html"/>
+        <link rel="prev" title="Paraview" href="paraview.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#applications">Applications</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html">Applications: General info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aims.html">FHI-aims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="armadillo.html">Armadillo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boost.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectron.html">Detectron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenics.html">Fenics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fsl.html">FSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpaw.html">GPAW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="julia.html">Julia language on triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keras.html">Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">Lammps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html">Matlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlpack.html">MLPack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mne.html">MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="octave.html">Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openpose.html">OpenPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paraview.html">Paraview</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#python-distributions">Python distributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-your-own-packages-easily">Install your own packages easily</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#anaconda-and-conda-environments">Anaconda and conda environments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-virtualenv">Python: virtualenv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ipython-parallel">IPython Parallel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#background-pip-vs-python-vs-anaconda-vs-conda-vs-virtualenv">Background: <code class="docutils literal"><span class="pre">pip</span></code> vs <code class="docutils literal"><span class="pre">python</span></code> vs <code class="docutils literal"><span class="pre">anaconda</span></code> vs <code class="docutils literal"><span class="pre">conda</span></code> vs <code class="docutils literal"><span class="pre">virtualenv</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-openmp-example">Python OpenMP example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="r.html">R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstan.html">RStan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstudio.html">RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spyder.html">Spyder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theano.html">Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vasp.html">VASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visit.html">VisIT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+          <li><a href="index.html">Applications: General info</a> &raquo;</li>
+      
+    <li>Python</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/apps/python.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python">
+<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<p>Python is widely used programming language where we have installed all
+basic packages on every node. Yet, python develops quite fast and the
+system provided packages are ofter not complete or getting old.</p>
+<div class="section" id="python-distributions">
+<h2>Python distributions<a class="headerlink" href="#python-distributions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="40%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Python to use</th>
+<th class="head">How to install own
+packages</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>I don&#8217;t really care,
+I just want recent
+stuff and to not
+worry.</td>
+<td>Anaconda
+<code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda</span></code></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Simple programs with
+common packages, not
+switching between
+Pythons often</td>
+<td>Anaconda
+<code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda</span></code></td>
+<td><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span></code></td>
+</tr>
+<tr class="row-even"><td>Your own conda
+environment</td>
+<td>Miniconda
+<code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">miniconda</span></code></td>
+<td>conda environment +
+conda</td>
+</tr>
+<tr class="row-odd"><td>Your own virtual
+environment</td>
+<td>Module virtualenv
+<code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">py-virtualenv</span></code></td>
+<td>virtualenv + pip +
+setuptools</td>
+</tr>
+</tbody>
+</table>
+<p>The main version of modern Python is 3. Support for old Python 2 ended at the
+end of 2019. There are also different distributions: The &#8220;regular&#8221; CPython,
+Anaconda (a package containing CPython + a lot of other scientific software all
+bundled togeter), PyPy (a just-in-time compiler,  which can be much faster for
+some use cases). Triton supports all of these.</p>
+<ul class="simple">
+<li>For general scientific/data science use, we suggest that you use
+Anaconda. It comes with the most common scientific software included,
+and is reasonably optimized.</li>
+<li>There are many other &#8220;regular&#8221; CPython versions in the module system.
+These are compiled and optimized for Triton, and are highly
+recommended.  The default system Python is old and won&#8217;t be updated.</li>
+</ul>
+<p>Make sure your environments are <strong>reproducible</strong> - you can recreate
+them from scratch.  History shows you will probably have to do this
+eventually, and it also ensures that others can always use your code.
+We recommend a minimal <code class="docutils literal"><span class="pre">requirements.txt</span></code> (pip) or
+<code class="docutils literal"><span class="pre">environment.yml</span></code> (conda), hand-created with the minimal
+dependencies in there.</p>
+</div>
+<div class="section" id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
+<p>Use <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda</span></code> (or <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda2</span></code> for Python 2) to get a
+modern Python.</p>
+<p>If you have simple needs, use <a class="reference internal" href="#pip-install-user"><span>pip install &#8211;user</span></a> to install packages.  For complex needs, use
+<a class="reference internal" href="#conda"><span>anaconda + conda environments</span></a> to isolate your
+projects.</p>
+</div>
+<div class="section" id="install-your-own-packages-easily">
+<span id="pip-install-user"></span><h2>Install your own packages easily<a class="headerlink" href="#install-your-own-packages-easily" title="Permalink to this headline">¶</a></h2>
+<p>Installing your own packages with <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span></code> won&#8217;t work, since it
+tries to install globally for all users. Instead, you should do this
+(add <code class="docutils literal"><span class="pre">--user</span></code>) to install the package in your home directory
+(<code class="docutils literal"><span class="pre">~/.local/lib/pythonN.N/</span></code>):</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install --user $package_name
+</pre></div>
+</div>
+<p>This is quick and effective best used for leaf packages without many
+dependencies and if you don&#8217;t switch Python modules often.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span></code> can result in incompatibilities</p>
+<p>If you do this, then the module will be shared among all
+your projects. It is quite likely that eventually, you will get some
+incompatibilities between the Python you are using and the modules
+installed. In that case, you are on your own (simple recommendation is
+to remove all modules from <code class="docutils literal"><span class="pre">~/.local/lib/pythonN.N</span></code> and reinstall). <strong>If
+you get incompatible module errors, our first recommendation will be to
+remove everything installed this way and use conda/virtual
+environments instead.</strong>  It&#8217;s not a bad idea to do this when you
+switch to environments anyway.</p>
+<p>If you encounter problems, remove all your user packages:</p>
+<div class="highlight-python"><div class="highlight"><pre>rm -r ~/.local/lib/python*.*/
+</pre></div>
+</div>
+<p class="last">and reinstall everything <em>after</em> loading the environment you want.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Example of dangers of <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span></code></p>
+<p class="last">Someone did <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">tensorflow</span></code>.  Some time later,
+they noticed that they couldn&#8217;t use Tensorflow + GPUs.  We couldn&#8217;t
+reproduce the problem, but in the end found they had this local
+install that was hiding any Tensorflow in any module (forcing a CPU
+version on them).</p>
+</div>
+<p>Note: <code class="docutils literal"><span class="pre">pip</span></code> installs from the <a class="reference external" href="https://pypi.org/">Python Package Index</a>.</p>
+</div>
+<div class="section" id="anaconda-and-conda-environments">
+<span id="conda"></span><h2>Anaconda and conda environments<a class="headerlink" href="#anaconda-and-conda-environments" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.anaconda.com">Anaconda</a> is a Python distribution by
+Continuum Analytics (open source, of course). It is nothing fancy,
+they just take a lot of useful scientific packages and their dependencies
+and put them all together, make sure they work, and do some optimization.
+They also include most of the most common computing and data science packages
+and non-Python compiled software and libraries. It is also all open
+source, and is packaged nicely so that it can easily be installed on
+any major OS.</p>
+<p>To load anaconda, use the module system (you can also load specific
+versions):</p>
+<div class="highlight-python"><div class="highlight"><pre>module load anaconda     # python3
+module load anaconda2    # python2
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Before 2020, Python3 was via the <code class="docutils literal"><span class="pre">anaconda3</span></code> module (note the
+<code class="docutils literal"><span class="pre">3</span></code> on the end).  That&#8217;s still there, but in 2020 we completely
+revised our Anaconda installation system, and dropped active
+maintenance of Python 2.  All updates are in <code class="docutils literal"><span class="pre">anaconda</span></code> only in
+the future.</p>
+</div>
+<div class="section" id="conda-environments">
+<h3>Conda environments<a class="headerlink" href="#conda-environments" title="Permalink to this headline">¶</a></h3>
+<p>If you encounter a situation where you need to create your own environment,
+we recommend that you use conda environments. When you create your own
+environment the packages from the base environment (default environment
+installed by us) will not be used, but you can choose which packages you want
+to install.</p>
+<p>We nowadays recommend that you use the <code class="docutils literal"><span class="pre">miniconda</span></code>-module for installing these
+environments. Miniconda is basically a minimal Anaconda installation that can be used to
+create your own environments.</p>
+<p>Do note that these environments can be quite big and if you have multiple
+environments installed you can run into quota issues in your <code class="docutils literal"><span class="pre">/home</span></code>. If
+you encounter such issues do contact us. In the past we recommended installing
+conda environments under <code class="docutils literal"><span class="pre">$WRKDIR</span></code>, but this can cause file system problems
+when launching array jobs and is thus no longer recommended.</p>
+<p><strong>virtualenv</strong> does not work with Anaconda, use <code class="docutils literal"><span class="pre">conda</span></code> instead.</p>
+<ul>
+<li><p class="first">Load the miniconda module. You should look up the version and use
+load same version each time you source the environment:</p>
+<div class="highlight-python"><div class="highlight"><pre># Load miniconda first.  This must always be done before activating the env!
+module load miniconda
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create an environment. This needs to be done once:</p>
+<div class="highlight-python"><div class="highlight"><pre># create environment with the packages you require
+conda create -n ENV_NAME python pip ipython tensorflow-gpu pandas ...
+</pre></div>
+</div>
+</li>
+<li><p class="first">Activate the environment. This needs to be done every time you load
+the environment:</p>
+<div class="highlight-python"><div class="highlight"><pre># This must be run in each shell to set up the environment variables properly.
+# make sure module is loaded first.
+source activate ENV_NAME
+</pre></div>
+</div>
+</li>
+<li><p class="first">Activating and using the environment, installing more packages,
+etc. can be done either using <code class="docutils literal"><span class="pre">conda</span> <span class="pre">install</span></code> or <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre># Install more packages, either conda or pip
+conda search PACKAGE_NAME
+conda install PACKAGE_NAME
+pip install PACKAGE_NAME
+</pre></div>
+</div>
+</li>
+<li><p class="first">Leaving the environment when done (optional):</p>
+<div class="highlight-python"><div class="highlight"><pre># Deactivate the environment
+source deactivate
+</pre></div>
+</div>
+</li>
+<li><p class="first">Worst case, you have incompatibility problems. Remove everything,
+including the stuff installed with <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span></code>. If you&#8217;ve
+mixed your personal stuff in with this, then you will have to
+separate it out.:</p>
+<div class="highlight-python"><div class="highlight"><pre># Remove anything installed with pip install --user.
+rm -r ~/.local/lib/python*.*/
+</pre></div>
+</div>
+</li>
+</ul>
+<p>A few notes about conda environments:</p>
+<ul class="simple">
+<li>Once you use a conda environment, everything goes into it. Don&#8217;t mix
+versions with, for example, local packages in your home dir and
+<code class="docutils literal"><span class="pre">--pip</span> <span class="pre">install</span> <span class="pre">--user</span></code>.  Things installed (even previously) with
+<code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span></code> will be visible in the conda environment and
+can make your life hard!
+Eventually you&#8217;ll get dependency problems.</li>
+<li>Often the same goes for other python based modules. We have setup
+many modules that do use anaconda as a backend. So, if you know what
+you are doing this might work.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="python-virtualenv">
+<span id="virtualenv"></span><h2>Python: virtualenv<a class="headerlink" href="#python-virtualenv" title="Permalink to this headline">¶</a></h2>
+<p>Virtualenv is default-Python way of making environments, but does
+<strong>not</strong> work with Anaconda.  We generally recommend using anaconda,
+since it includes a lot more stuff by default, but <code class="docutils literal"><span class="pre">virtualenv</span></code>
+works on other systems easily so it&#8217;s good to know about.</p>
+<div class="highlight-python"><div class="highlight"><pre># Load module python
+module load py-virtualenv
+
+# Create environment
+virtualenv DIR
+
+# activate it (in each shell that uses it)
+source DIR/bin/activate
+
+# install more things (e.g. ipython, etc.)
+pip install PACKAGE_NAME
+
+# deactivate the virtualenv
+deactivate
+</pre></div>
+</div>
+</div>
+<div class="section" id="ipython-parallel">
+<span id="python-ipyparallel"></span><h2>IPython Parallel<a class="headerlink" href="#ipython-parallel" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://ipyparallel.readthedocs.io/en/latest/">ipyparallel</a> is a
+tool for running embarrassingly parallel code using Python.   The
+basic idea is that you have a <em>controller</em> and <em>engines</em>.  You have a
+<em>client</em> process which is actually running your own code.</p>
+<p>Preliminary notes: ipyparallel is installed in the
+anaconda{2,3}/latest modules.</p>
+<p>Let&#8217;s say that you are doing some basic interactive work:</p>
+<ul>
+<li><p class="first">Controller: this can run on the frontend node, or you can put it on
+a script.  To start: <code class="docutils literal"><span class="pre">ipcontroller</span> <span class="pre">--ip=&quot;*&quot;</span></code></p>
+</li>
+<li><p class="first">Engines: <code class="docutils literal"><span class="pre">srun</span> <span class="pre">-N4</span> <span class="pre">ipengine</span></code>: This runs the four engines in slurm
+interactively.  You don&#8217;t need to interact with this once it is
+running, but remember to stop the process once it is done because it
+is using resources.  You can start/stop this as needed.</p>
+</li>
+<li><p class="first">Start your Python process and use things like normal:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ipyparallel</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">ipyparallel</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="p">[:]</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">)</span>
+<span class="n">pid_map</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_dict</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pid_map</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>This method lets you turn on/off the engines as needed.  This isn&#8217;t the
+most advanced way to use ipyparallel, but works for interactive use.</p>
+<p>See also: <a class="reference internal" href="../examples/python/ipyparallel/ipyparallel.html"><em>IPython parallel</em></a> for a version
+which goes in a slurm script.</p>
+</div>
+<div class="section" id="background-pip-vs-python-vs-anaconda-vs-conda-vs-virtualenv">
+<h2>Background: <code class="docutils literal"><span class="pre">pip</span></code> vs <code class="docutils literal"><span class="pre">python</span></code> vs <code class="docutils literal"><span class="pre">anaconda</span></code> vs <code class="docutils literal"><span class="pre">conda</span></code> vs <code class="docutils literal"><span class="pre">virtualenv</span></code><a class="headerlink" href="#background-pip-vs-python-vs-anaconda-vs-conda-vs-virtualenv" title="Permalink to this headline">¶</a></h2>
+<p>Virtual environments are self-contained python environments with
+all of their own modules, separate from the system packages.  They are
+great for research where you need to be agile and install whatever
+versions and packages you need.  <strong>We highly recommend virtual
+environments or conda environments (below)</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Anaconda: use conda, see below</li>
+<li>Normal Python: virtualenv + pip install, see below</li>
+</ul>
+</div></blockquote>
+<p>You often need to install your own packages. Python has its own package
+manager system that can do this for you. There are three important
+related concepts:</p>
+<ul class="simple">
+<li>pip: the Python package installer. Installs Python packages globally,
+in a user&#8217;s directory (<code class="docutils literal"><span class="pre">--user</span></code>), or anywhere. Installs from the
+<a class="reference external" href="https://pypi.org/">Python Package Index</a>.</li>
+<li>virtualenv: Creates a directory that has all self-contained packages
+that is manageable by the user themself. When the virtualenv is
+activated, all the operating-system global packages are no longer
+used. Instead, you install only the packages you want. This is
+important if you need to install specific versions of software, and
+also provides isolation from the rest of the system (so that you work
+can be uninterrupted). It also allows different projects to have
+different versions of things installed. virtualenv isn&#8217;t magic, it
+could <em>almost</em> be seen as just manipulating <code class="docutils literal"><span class="pre">PYTHONPATH</span></code>, <code class="docutils literal"><span class="pre">PATH</span></code>, and the
+like. Docs: <a class="reference external" href="https://docs.python-guide.org/dev/virtualenvs/">https://docs.python-guide.org/dev/virtualenvs/</a></li>
+<li>conda: Sort of a combination of package manager and virtual
+environment. However, it <em>only</em> installed packages into environments,
+and is <em>not</em> limited to Python packages. It can also install other
+libraries (c, fortran, etc) into the environment. This is extremely
+useful for scientific computing, and the reason it was created. Docs
+for envs: <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/concepts/environments.html">https://conda.io/projects/conda/en/latest/user-guide/concepts/environments.html</a>.</li>
+</ul>
+<p>So, to install packages, there is <code class="docutils literal"><span class="pre">pip</span></code> and <code class="docutils literal"><span class="pre">conda</span></code>. To make virtual
+environments, there is <code class="docutils literal"><span class="pre">venv</span></code> and <code class="docutils literal"><span class="pre">conda</span></code>.</p>
+<p>Advanced users can see this <a class="reference external" href="https://conda.io/projects/conda/en/latest/commands.html#conda-vs-pip-vs-virtualenv-commands">rosetta
+stone</a>
+for reference.</p>
+<p>On Triton we have added some packages on top of the Anaconda
+installation, so cloning the entire Anaconda environment to local conda
+environment will not work (not a good idea in the first place but some
+users try this every now and then).</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="running-python-with-internal-parallelization-openmp">
+<h3>Running Python with internal parallelization (OpenMP)<a class="headerlink" href="#running-python-with-internal-parallelization-openmp" title="Permalink to this headline">¶</a></h3>
+<p>A simple parallel Python script using OpenMP. Both anaconda modules and
+optimized Python modules support OpenMP, but optimized versions are
+faster.</p>
+</div>
+</div>
+<div class="section" id="python-openmp-example">
+<h2>Python OpenMP example<a class="headerlink" href="#python-openmp-example" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">parallel_Python.slrm</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -p short
+#SBATCH -t 00:10:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=2G
+#SBATCH -o parallel_Python.out
+
+module load anaconda
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+srun -c $SLURM_CPUS_PER_TASK python parallel_Python.py
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">parallel\Python.py</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">([</span><span class="mi">2000</span><span class="p">,</span><span class="mi">2000</span><span class="p">])</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="n">T</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="section" id="running-mpi-parallelized-python-with-mpi4py">
+<h3>Running MPI parallelized Python with mpi4py<a class="headerlink" href="#running-mpi-parallelized-python-with-mpi4py" title="Permalink to this headline">¶</a></h3>
+<p>MPI parallelized Python requires a valid MPI installation that support
+our SLURM scheduler. Thus anaconda is not the best option. We have
+installed MPI-supporting Python versions to different toolchains.</p>
+<p>Using mpi4py is quite easy. Example is provided below.</p>
+<div class="section" id="python-mpi4py">
+<h4>Python MPI4py<a class="headerlink" href="#python-mpi4py" title="Permalink to this headline">¶</a></h4>
+<p>A simple script <a class="reference download internal" href="../../_downloads/mpi4py.py" download=""><code class="xref download docutils literal"><span class="pre">mpi4py.py</span></code></a> that utilizes mpi4py.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Parallel Hello World</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">size</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">COMM_WORLD</span><span class="o">.</span><span class="n">Get_size</span><span class="p">()</span>
+<span class="n">rank</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">COMM_WORLD</span><span class="o">.</span><span class="n">Get_rank</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">Get_processor_name</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+    <span class="s2">&quot;Hello, World! I am process </span><span class="si">%d</span><span class="s2"> of </span><span class="si">%d</span><span class="s2"> on </span><span class="si">%s</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="o">%</span> <span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Running mpi4py.py using only srun:</p>
+<div class="highlight-python"><div class="highlight"><pre>module load Python/2.7.11-goolf-triton-2016b
+srun --time=00:10:00 -n 4 -p debug python helloworld.py
+</pre></div>
+</div>
+<p>Example sbatch script <a class="reference download internal" href="../../_downloads/mpi4py.slrm" download=""><code class="xref download docutils literal"><span class="pre">mpi4py.slrm</span></code></a> when running mpi4py.py through
+sbatch:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH --time=00:10:00
+#SBATCH -n 4
+#SBATCH -p debug
+
+module load Python/2.7.11-goolf-triton-2016b
+mpiexec -n $SLURM_NTASKS python mpi4py.py
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="r.html" class="btn btn-neutral float-right" title="R" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="paraview.html" class="btn btn-neutral" title="Paraview" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

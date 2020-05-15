@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Git migration (2017 January) &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Git migration (2017 January)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/news/git_migration.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="git-migration-2017-january">
+<h1>Git migration (2017 January)<a class="headerlink" href="#git-migration-2017-january" title="Permalink to this headline">¶</a></h1>
+<p>This guide explains how to move projects from department Gitlab to the
+new version.aalto.fi service.</p>
+<div class="section" id="migrating-from-svn">
+<h2>Migrating from svn<a class="headerlink" href="#migrating-from-svn" title="Permalink to this headline">¶</a></h2>
+<p>There are many guides online, but a minimum guide is included below
+(this preserves all history). You
+should create the repository on version.aalto.fi yourself, get your
+computer set up to use version.aalto.fi, and then do the following:</p>
+<div class="highlight-python"><div class="highlight"><pre># If you want to convert svn usernames to email addresses (can be shared among projects):
+svn log -q %s | awk -F &#39;|&#39; &#39;/^r/ {sub(&quot;^ &quot;, &quot;&quot;, $2); sub(&quot; $&quot;, &quot;&quot;, $2); print $2&quot; = &quot;$2&quot; &lt;&quot;$2&quot;&gt;&quot;}&#39; | sort -u &gt;&gt; authors-orig.txt
+  # edit authors-orig.txt
+mv authors-orig.txt authors.txt
+
+git svn clone --authors-file=authors.txt   svn-url/ tmp_directory/
+
+cd tmp_directory
+git svn create-ignore
+git commit -a -m &#39;Add .gitignore from svn ignore&#39;
+
+# Add Aalto gitlab info
+git remote add origin $VERSION.AALTO.FI_URL
+git push -f origin master
+</pre></div>
+</div>
+<p>If you have a giant subversion repository with many different
+unrelated (or loosely related) projects, it is recommended to split
+this into separate git repositories per project.  You can also do this
+preserving all history.  If you are in a Science-IT department, we can
+help with this, <a class="reference internal" href="../triton/help.html"><em>contact Science-IT</em></a>.  If you
+aren&#8217;t, contact us anyway and we can try to help anyway.</p>
+<div class="section" id="preserving-the-working-directory">
+<h3>Preserving the working directory<a class="headerlink" href="#preserving-the-working-directory" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s say you are switching to git, but have some stuff that isn&#8217;t
+checked in yet, so you don&#8217;t want to re-get the whole repository.  You
+can keep your working directory if you want:</p>
+<div class="highlight-python"><div class="highlight"><pre># project/ is the old subversion directory
+
+mv project/.svn project/.svn-old
+# Now it won&#39;t appear to be a subversion repo anymore.  You may have
+# to move other .svn directories in subdirectories.  This step isn&#39;t
+# really needed, but prevents mistakes!
+
+git clone git@version.aalto.fi:gitlab/new/repo.git new-git-repo/
+cp -r new-git-repo/.git project/.git
+# Now project/ looks like a git repo!  You keep all your old files
+# and resume where you left off.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="migrating-from-other-gitlab-like-departments-had">
+<h2>Migrating from other Gitlab (like departments had)<a class="headerlink" href="#migrating-from-other-gitlab-like-departments-had" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The department gitlab must be upgraded to the same version as
+version.aalto.fi. Your department administrators will tell you when
+this is done (if they sent you here, it is probably done).</li>
+<li>Take and push all existing code. You can also commit all code that
+needs committing. This isn&#8217;t actually required, but</li>
+<li>For a shared repository, talk to everyone who is using it and agree
+on a time. Nothing will be lost if you don&#8217;t, but it avoids the
+possibility of confusing or accidentally making conflicts. Make sure
+everyone stops making wiki edits or issues on the old one.</li>
+</ul>
+</div>
+<div class="section" id="instructions-manually">
+<h3>Instructions: manually<a class="headerlink" href="#instructions-manually" title="Permalink to this headline">¶</a></h3>
+<p>This is easy if you only have code within the repository.</p>
+<ul class="simple">
+<li>Make a new repository on version.aalto.fi.</li>
+<li>Push the code to the new repository using the instructions under
+&#8220;finalizations&#8221; below. They also appear on the new project page, but
+you need to remove the old remote.</li>
+</ul>
+</div>
+<div class="section" id="instructions-import-a-public-repository-main-files-only">
+<h3>Instructions: import a public repository, main files only<a class="headerlink" href="#instructions-import-a-public-repository-main-files-only" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Create a new project on version.aalto.fi</li>
+<li>Import &#8220;repo by url&#8221; and give the URL. Do import.</li>
+</ul>
+</div>
+<div class="section" id="instructions-full-export-import-includes-wiki-issues-etc">
+<h3>Instructions: full export/import (includes wiki, issues, etc)<a class="headerlink" href="#instructions-full-export-import-includes-wiki-issues-etc" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="on-old-gitlab">
+<h4>On old gitlab<a class="headerlink" href="#on-old-gitlab" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Navigate to project to be exported. Go to project settings.</li>
+<li>In the &#8220;Export project&#8221;, click &#8220;Export project&#8221;. Wait a few seconds
+and refresh the page. (In theory wait for an email to come, but in
+practice it is very fast for small repositories)</li>
+<li>Scroll down to the same section and now select &#8220;Download Export&#8221; and
+save the project.</li>
+</ul>
+</div>
+<div class="section" id="on-version-aalto-fi">
+<h4>On version.aalto.fi<a class="headerlink" href="#on-version-aalto-fi" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Log in, go to projects, create new project, select the namespace and
+the project name. Leave everything else blank, it won&#8217;t be used
+anyway.</li>
+<li>Under the import project section, click &#8220;Gitlab export&#8221; and select
+the downloaded .tar.gz. Upload and click &#8220;import project&#8221;.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="instructions-advanced-scripting-using-api">
+<h3>Instructions (advanced, scripting using API)<a class="headerlink" href="#instructions-advanced-scripting-using-api" title="Permalink to this headline">¶</a></h3>
+<p>There is an <a class="reference external" href="https://docs.gitlab.com/ce/api/">Gitlab API</a>. It can
+probably be used to automate some or all of the migration, but we don&#8217;t
+have a custom script for this yet and we haven&#8217;t identified other
+scripts yet. If you develop/find such a thing, let us know and it will
+be mentioned here.</p>
+</div>
+<div class="section" id="finalizing">
+<h3>Finalizing<a class="headerlink" href="#finalizing" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">In your old gitlab, either archive or move the project to a new name.
+This prevents anyone from accidentally using the old one.</p>
+</li>
+<li><p class="first">Update the project metadata on version.aalto.fi. Especially if you
+are are migrating a lot of old stuff, use this opportunity to update
+the project description. Add publication references, etc. Remember:
+data management!</p>
+</li>
+<li><p class="first">Set the project visibility and add back all of the members, if
+needed. (Note: people do not appear on version.aalto.fi until they
+log in once)</p>
+</li>
+<li><p class="first">Set up ssh keys for your own account (once).</p>
+</li>
+<li><p class="first">Update existing cloned copies to point to the new server. This is
+easy, there is no re-downloading, and all versions match up.</p>
+<div class="highlight-python"><div class="highlight"><pre>cd existing_repo
+git remote set-url origin THE_URL
+git push -u origin master   # only pushes master branch
+
+# To push everything:
+git push -u origin --all
+git push -u origin --tags   # if you want tags mirrored
+</pre></div>
+</div>
+</li>
+<li><p class="first">Tell everyone that you are done and to use the new location.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="faq">
+<h3>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>How long does it take? In practice about one minute per project once
+you get started with it.</li>
+<li>What is migrated? From gitlab itself: Project and wiki repositories,
+Project uploads, Project configuration including web hooks and
+services, Issues with comments, merge requests with diffs and
+comments, labels, milestones, snippets, and other project entities.</li>
+<li>What is not migrated?: From gitlab itself: Build traces and
+artifacts, LFS objects, Container registry images<ul>
+<li>We also find this is not exported: project permissions, project
+descriptions, project visibility, project members.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="faq-about-version-aalto-fi">
+<h2>FAQ about version.aalto.fi<a class="headerlink" href="#faq-about-version-aalto-fi" title="Permalink to this headline">¶</a></h2>
+<p>Moved to <a class="reference internal" href="../aalto/git.html"><em>the gitlab page</em></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

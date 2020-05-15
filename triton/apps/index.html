@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Applications: General info &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="FHI-aims" href="aims.html"/>
+        <link rel="prev" title="Remote workflows at Aalto" href="../usage/workflows.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#applications">Applications</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Applications: General info</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compilers">Compilers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modules">Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#singularity">Singularity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#software-installation-and-policy">Software installation and policy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#software-list">Software list</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aims.html">FHI-aims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="armadillo.html">Armadillo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boost.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectron.html">Detectron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenics.html">Fenics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fsl.html">FSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpaw.html">GPAW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="julia.html">Julia language on triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keras.html">Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">Lammps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html">Matlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlpack.html">MLPack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mne.html">MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="octave.html">Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openpose.html">OpenPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paraview.html">Paraview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="r.html">R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstan.html">RStan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstudio.html">RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spyder.html">Spyder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theano.html">Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vasp.html">VASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visit.html">VisIT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Applications: General info</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/apps/index.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="applications-general-info">
+<h1>Applications: General info<a class="headerlink" href="#applications-general-info" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Intro tutorial: <a class="reference internal" href="../tut/applications.html"><em>Applications</em></a> (this is assumed
+knowledge for all software instructions)</p>
+</div>
+<p>When you need software, check the following for instructions (roughly in this order):</p>
+<ul class="simple">
+<li>This page.</li>
+<li>Search the SciComp site using the search function.</li>
+<li>Check <code class="docutils literal"><span class="pre">module</span> <span class="pre">spider</span></code> and <code class="docutils literal"><span class="pre">module</span> <span class="pre">avail</span></code> to see if something is
+available but undocumented.</li>
+<li>The <a class="reference external" href="https://version.aalto.fi/gitlab/AaltoScienceIT/triton">issue tracker</a> for other
+people who have asked - some instructions only live there.</li>
+</ul>
+<div class="section" id="compilers">
+<h2>Compilers<a class="headerlink" href="#compilers" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="../usage/toolchains.html"><em>Compilers and toolchains</em></a>.</p>
+</div>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="../tut/modules.html"><em>Software Modules</em></a>.  Modules are the standard way of loading
+software.</p>
+</div>
+<div class="section" id="singularity">
+<h2>Singularity<a class="headerlink" href="#singularity" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="../usage/singularity.html"><em>Singularity Containers</em></a>.  Singularity are software containers
+that provide an operating system within an operating system.  Software
+will tell you if you need to use it via Singularity.</p>
+</div>
+<div class="section" id="software-installation-and-policy">
+<h2>Software installation and policy<a class="headerlink" href="#software-installation-and-policy" title="Permalink to this headline">¶</a></h2>
+<p>We want to support all software, but unfortunately time is limited.
+In the chart below, we have these categories (which don&#8217;t really mean
+anything, but in the future should help us be more transparent about
+what we are able to support):</p>
+<ul class="simple">
+<li>A: Full support and documentation, should always work</li>
+<li>B: We install and provide best-effort documentation, but may be out
+of date.</li>
+<li>C: Basic info, no guarantees</li>
+</ul>
+<p>If you know some application which is missing from this list but is
+widely in use (anyone else than you is using it) it would make sense
+install to <code class="docutils literal"><span class="pre">/share/apps/</span></code> directory and create a module file. Send
+your request to the tracker.  We want to support as much software as
+possible, but unfortunately we don&#8217;t have the resources to do
+everything centrally.</p>
+<p>Software is generally easy to install if it is in <a class="reference external" href="https://github.com/easybuilders/easybuild-easyconfigs/find/master">Easybuild</a>
+(use the find file feature to see if an easyconfig is there) or <a class="reference external" href="https://spack.readthedocs.io/en/latest/package_list.html">Spack</a> (check
+that package list page).  If it has easy-to-install Ubuntu packages,
+it will be easy to do via <a class="reference internal" href="../usage/singularity.html"><em>singularity</em></a>.</p>
+</div>
+<div class="section" id="software-list">
+<h2>Software list<a class="headerlink" href="#software-list" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Python</td>
+<td>A</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aims.html">FHI-aims</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armadillo.html">Armadillo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boost.html">Boost</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="detectron.html">Detectron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fenics.html">Fenics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsl.html">FSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpaw.html">GPAW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia.html">Julia language on triton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keras.html">Keras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lammps.html">Lammps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab.html">Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlpack.html">MLPack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mne.html">MNE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="octave.html">Octave</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openpose.html">OpenPose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paraview.html">Paraview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="r.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rstan.html">RStan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rstudio.html">RStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="spyder.html">Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theano.html">Theano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vasp.html">VASP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visit.html">VisIT</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aims.html" class="btn btn-neutral float-right" title="FHI-aims" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../usage/workflows.html" class="btn btn-neutral" title="Remote workflows at Aalto" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

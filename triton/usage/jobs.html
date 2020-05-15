@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Monitoring jobs &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Libraries" href="libs.html"/>
+        <link rel="prev" title="Grid computing 2" href="grid2.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="compilers.html">Available compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgx.html">Nvidia DGX machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html">Running programs on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid2.html">Grid computing 2</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Monitoring jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basics">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job-priority">Job priority</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slurm-command-on-triton"><code class="docutils literal"><span class="pre">slurm</span></code> command on Triton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#native-slurm-commands">Native slurm commands</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html">Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="localstorage.html">Storage: local drives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lustre.html">Storage: Lustre (scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mpilibs.html">MPI on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quotas.html">Quotas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="singularity.html">Singularity Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smallfiles.html">Small files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolchains.html">Compilers and toolchains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">Remote workflows at Aalto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Monitoring jobs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/usage/jobs.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="monitoring-jobs">
+<h1>Monitoring jobs<a class="headerlink" href="#monitoring-jobs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>Before you start, if you have SLURM experience but new to Triton, you
+may want to check out the <code class="docutils literal"><span class="pre">slurm</span></code> command on Triton&#8217; paragraph below.
+There we introduce Triton specific tool that is widely used for jobs
+monitoring and many other issues.</p>
+<p>There are two quick ways to see your own jobs. One is to list every job
+and their current priority in the queues.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ slurm q
+PRIORITY  JOBID   PARTITION  NAME      ST  TIME      START_TIME        NODELIST(REASON)
+12971826           batch-wsm DA_vk_400k_5M         0:00              N/A  PENDING (Priority)
+12971825           batch-wsm DA_vk_400k_50M        0:00              N/A  PENDING (Priority)
+12971818           batch-hsw DA_vk_400k_5M         0:06 2016-10-17T15:12  RUNNING ivb28
+12971817           short-ivb update.12.sh          0:06 2016-10-17T15:12  RUNNING ivb13
+12971816           batch-ivb FI_vk_2000k_50        0:07 2016-10-17T15:12  RUNNING ivb28
+...
+</pre></div>
+</div>
+<p>But mostly a simple overview will do. Here is the same information as
+above, only this time formatted for brevity. The leftmost value is the
+combined job count.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ slurm qq
+1    PARTITION  CPUS  NODES  MIN_MEM  FEATURES  QOS     STATE    REASON
+1    batch-wsm  1     1      4G       ivb|wsm|  normal  PENDING  AssocGrpMemRunMinutes
+1    batch-wsm  1     1      8G       ivb|wsm|  normal  PENDING  AssocGrpMemRunMinutes
+242  batch-wsm  1     1      25G      (null)    normal  PENDING  AssocGrpMemRunMinutes
+2    coin       1     1      4G       (null)    normal  RUNNING  None
+15   batch-wsm  1     1      4G       (null)    normal  RUNNING  None
+2    coin       1     1      4G       (null)    normal  RUNNING  None
+...
+</pre></div>
+</div>
+<p>For &#8220;watching&#8221; your jobs progress, use &#8216;watch&#8217; option</p>
+<div class="highlight-python"><div class="highlight"><pre>slurm watch q
+</pre></div>
+</div>
+<p>Since the cluster is in heavy use most of the time, there are other
+users whose jobs will of course affect what happens with yours. The
+state of the entire queue, including running either <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">short</span></code> or
+<code class="docutils literal"><span class="pre">slurm</span> <span class="pre">ss</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre>slurm s
+</pre></div>
+</div>
+<p>With the <code class="docutils literal"><span class="pre">s</span></code> or <code class="docutils literal"><span class="pre">short</span></code> option, the output is sorted by priority and
+reflects the scheduler&#8217;s execution order as nodes become available. The
+queue position can change at any time, either from new or submissions or
+based on historical usage accounting.</p>
+<p>You can choose to display the one partition you are interested in:</p>
+<div class="highlight-python"><div class="highlight"><pre>slurm ss gpu
+</pre></div>
+</div>
+<p>Show detailed information about running job(s):</p>
+<div class="highlight-python"><div class="highlight"><pre>slurm j
+</pre></div>
+</div>
+<div class="section" id="job-status-while-pending">
+<h3>Job status while pending<a class="headerlink" href="#job-status-while-pending" title="Permalink to this headline">¶</a></h3>
+<p>There are a number of reasons that your job may be sitting in the queue.
+Listing your pending jobs with <code class="docutils literal"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">$USER</span> <span class="pre">-t</span> <span class="pre">PD</span></code> will help
+determine why your job is not running. Look at the <code class="docutils literal"><span class="pre">NODELIST(REASON)</span></code>.
+A pending job may have these reasons:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">(Priority)</span></code>: Other jobs have priority over your job. Just wait.</li>
+<li><code class="docutils literal"><span class="pre">(Resources):</span></code> Your job has enough priority to run, but there
+aren’t enough free resources to run it. Just wait.</li>
+<li><code class="docutils literal"><span class="pre">(ReqNodeNotAvail)</span></code>: You request something that is not available.
+Check memory requirements per CPU, CPUs per node. Possibly time limit
+is the issue. Could be that due to scheduled maintenance break, all
+nodes are reserved and thus your <code class="docutils literal"><span class="pre">-t</span></code> parameter can&#8217;t be larger
+than time left till the break.</li>
+<li><code class="docutils literal"><span class="pre">(QOSResourceLimit)</span></code>: Your job exceeds the QOS limits. The QOS
+limits include wall time, number of jobs a user can have running at
+once, number of nodes a user can use at once, etc. This may or may no
+be a permanent status. If your job requests a wall time greater than
+what is allowed or exceeds the limit on the number of nodes a single
+job can use, this status will be permanent. However, your job may be
+in this status if you currently have jobs running and the total
+number of jobs running or aggregate node usage is at your limits. In
+this case, jobs in this state will become eligible when your existing
+jobs finish.</li>
+<li><code class="docutils literal"><span class="pre">(AssociationResourceLimit)</span></code>: The job exceeds some limit set on the
+association. On triton, this in practice means the per-user
+GrpCPURunMins limit, which currently is 1.5M minutes per user. Wait a
+while for running jobs to proceed, so that new jobs may start. Also,
+shorter job time limits help. See <a class="reference external" href="https://rc.byu.edu/simulation/GrpCPURunMins-Visualizer/index.html">GrpCPURunMins
+visualizer</a>
+.</li>
+</ul>
+<p>In case of the first two one can check currently estimated time the job
+will be started. Run <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">j</span> <span class="pre">&lt;jobid&gt;</span></code>, look at <code class="docutils literal"><span class="pre">StartTime=</span></code></p>
+</div>
+<div class="section" id="job-states">
+<h3>Job states<a class="headerlink" href="#job-states" title="Permalink to this headline">¶</a></h3>
+<p>Possible states for jobs are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>PENDING  (PD)</li>
+<li>RUNNING (R)</li>
+<li>SUSPENDED (S)</li>
+<li>COMPLETING (CG)</li>
+<li>COMPLETED (CD)</li>
+<li>CONFIGURING (CF)</li>
+<li>CANCELLED (CA)</li>
+<li>FAILED (F)</li>
+<li>TIMEOUT (TO)</li>
+<li>PREEMPTED  (PR)</li>
+<li>NODE_FAIL (NF)``.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="modifying-the-job-after-submission">
+<h3>Modifying the job after submission<a class="headerlink" href="#modifying-the-job-after-submission" title="Permalink to this headline">¶</a></h3>
+<p>The question asked time to time: &#8220;Can one modify job parameters after it
+hass been submitted?&#8221;. The answer is, yes it is possible, but only some
+parameters. For instance change memory/CPU requirements for pending job
+or set another time limit ofr running/pending job. Think carefully
+before you submit a job, but if you ended up in the situation that
+modification is needed, please contact your <a class="reference internal" href="../help.html"><em>Triton support team
+member</em></a>.</p>
+<p>Needless to say that there is no way to impact on your job priority and
+make sure that it goes to run asap?</p>
+</div>
+<div class="section" id="viewing-finished-jobs">
+<h3>Viewing finished jobs<a class="headerlink" href="#viewing-finished-jobs" title="Permalink to this headline">¶</a></h3>
+<p>Information about finished and cancelled jobs are available via the
+<code class="docutils literal"><span class="pre">slurm</span> <span class="pre">history</span></code> command. Most notable pieces are memory use and also
+exit code, in case the jobs did not finish cleanly.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ slurm history 2hours
+JobID          JobName    Start             MaxVMem  MaxRes     TotalCPU     Elapsed Tasks CPUs Nodes ExitCode State
+1052748        helloe.sh  2012-04-10T19:05        -       -    00:00.015    00:00:00  none    1     1      1:0 FAILED
+ └──batch      *          2012-04-10T19:05        -       -    00:00.015    00:00:00     1    1     1      1:0 FAILED
+1052751        testarr    2012-04-10T19:07        -       -    00:00.074    00:02:30  none    5     1      0:0 COMPLETED
+ └──batch      *          2012-04-10T19:07     393M      6M    00:00.055    00:02:30     1    1     1      0:0 COMPLETED
+    1052751.0  runtask    2012-04-10T19:07      99M      1M    00:00.002    00:00:30     1    1     1      0:0 COMPLETED
+    1052751.1  runtask    2012-04-10T19:08      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
+    1052751.2  runtask    2012-04-10T19:08      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
+    1052751.3  runtask    2012-04-10T19:09      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
+    1052751.4  runtask    2012-04-10T19:09      99M      1M    00:00.003    00:00:30     1    1     1      0:0 COMPLETED
+</pre></div>
+</div>
+<p>Output time information is displayed as days-hours:minutes:seconds.</p>
+<p>Recognized time forms for the input parameter are <em>n</em> min, <em>n</em> hours, <em>n</em> days, <em>n</em> weeks
+(without space).</p>
+<p><em>Elapsed</em> is the wall clock time from job start to finish.</p>
+<p><em>MaxVMem</em> is the highest amount of virtual memory your program allocated
+during its lifetime. If the slurm job&#8217;s memory limit is set below it,
+your job would be killed.</p>
+<p><em>MaxRes</em> is the resident (physical) memory the program actually used of
+its virtual memory allocation, which may be of interest when monitoring
+program behavior.</p>
+</div>
+<div class="section" id="cancelling-jobs">
+<h3>Cancelling jobs<a class="headerlink" href="#cancelling-jobs" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>$ scancel                       # cancel a job
+$ scancel `echo {5205484..5205533}`    # cancel jobs in the range
+$ scancel --state=PENDING --user=$USER --partition=debug  # kill all of your pending jobs on debug queue
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="job-priority">
+<h2>Job priority<a class="headerlink" href="#job-priority" title="Permalink to this headline">¶</a></h2>
+<p>Triton queues are not first-in first-out, but &#8220;fairshare&#8221;.  This means
+that every person has a priority.  The more you run the lower your
+user priority.  As time passes, your user priority increases again.
+The longer a job waits in the queue, the higher its job priority goes.
+So, in the long run (if everyone is submitting an never-ending stream
+of jobs), everyone will get exactly their share.</p>
+<p>Once there are priorities, then: jobs are scheduled in order of
+priority, then any gaps are backfilled with any smaller jobs that can
+fit in.  So small jobs usually get scheduled fast regardless.</p>
+<p><em>Warning: from this point on, we get more and more technical, if you
+really want to know the details.  Summary at the end.</em></p>
+<p>What&#8217;s a share?  Currently shares are based on department and their
+respective funding of Triton (<code class="docutils literal"><span class="pre">sshare</span></code>).  Shares are shared among
+everyone in the department, but each person has their own priority.
+Thus, for medium users, the 2-week usage of the rest of your
+department can affect how fast your jobs run.  However, again, things
+are balanced per-user within departments.  (However, one heavy user in
+a department can affect all others in that department a bit too much,
+we are working on this)</p>
+<p>Your priority goes down via the &#8220;job billing&#8221;: roughly time×power.
+CPUs are billed at 1/s (but older, less powerful CPUs cost less!).
+Memory costs .2/GB/s.  But: you only get billed for the max of memory
+or CPU. So if you use one CPU and all the memory (so that no one else
+can run on it), you get billed for all memory but no CPU.  Same for
+all CPUs and little memory.  This encourages balanced use.  (this also
+applies to GPUs).</p>
+<p>GPUs also have a billing weight, currently 2/GPU/s for newer models and
+1/GPU/s for the older ones.</p>
+<p>If you submit a long job but it ends early, you are only billed for
+the actual time you use (but the longer job might take longer to start
+at the beginning).  Memory is always billed for the full reservation
+even if you use less, since it isn&#8217;t shared.</p>
+<p>The &#8220;user priority&#8221; is actually just a record how much you have
+consumed lately (the billing numbers above).  This number goes down
+with a half-life decay of 2 weeks.  Your personal priority your share
+compared to that, so we get the effect described above: the more you
+(or your department) runs lately, the lower your priority.</p>
+<p>If you want your stuff to run faster, the best way is to more
+accurately specify your time (may make that job can find a place
+sooner) and memory (avoids needlessly wasting your priority).</p>
+<p>While your job is pending in the queue SLURM checks those metrics
+regularly and recalculates job priority constantly.  If you are
+interested in details, take a look at <a class="reference external" href="https://slurm.schedmd.com/priority_multifactor.html">multifactor priority plugin</a> page (general
+info) and <a class="reference external" href="https://slurm.schedmd.com/priority_multifactor3.html">depth-oblivious fair-share factor</a> for what we
+use specifically (warning: very in depth page).  On Triton, you can
+always see the latest billing weights in <code class="docutils literal"><span class="pre">/etc/slurm/slurm.conf</span></code></p>
+<p>Numerically, job priorities range from 0 to 2^32-1.  Higher is
+sooner to run, but really the number doesn&#8217;t mean much itself.</p>
+<p>These commands can show you information about your user and job
+priorities:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">s</span></code></td>
+<td>list of jobs per user with their current priorities</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">full</span></code></td>
+<td>as above but almost all of the job parameters are listed</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">shares</span></code></td>
+<td>displays usage (RawUsage) and current FairShare weights (FairShare, higher is better) values for all users</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">j</span> <span class="pre">&lt;jobid&gt;</span></code></td>
+<td>shows <code class="docutils literal"><span class="pre">&lt;jobid&gt;</span></code> detailed info including priority, requested nodes etc.</td>
+</tr>
+</tbody>
+</table>
+<p>tl;dr: Just select the resources you think you need, and slurm
+tries to balance things out so everyone gets their share.  The best
+way to maintain high priority is to use resources efficiently so you
+don&#8217;t need to over-request.</p>
+</div>
+<div class="section" id="slurm-command-on-triton">
+<h2><code class="docutils literal"><span class="pre">slurm</span></code> command on Triton<a class="headerlink" href="#slurm-command-on-triton" title="Permalink to this headline">¶</a></h2>
+<p>A nice tool originally developed by Tapio Leipälä specifically for
+Triton user needs and developed by Triton support team nowadays.</p>
+<p>The <code class="docutils literal"><span class="pre">slurm</span></code> command can show most often needed information about jobs,
+resources and the cluster state. It&#8217;s a wrapper script to the native
+SLURM commands. New features are added from time to time. Running it
+without parameters prints a list of available commands. Most have some
+soft of shortcuts for convenience.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">q</span></code> ; <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">qq</span></code></td>
+<td>Status of your queued jobs (long/short)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">partitions</span></code></td>
+<td>Overview of partitions (A/I/O/T=active,idle,other,total)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">cpus</span></code> <em>&lt;partition&gt;</em></td>
+<td>list free CPUs in a partition</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">history</span></code> <em>[1day,2hour,...]</em></td>
+<td>Show status of recent jobs</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">seff</span></code> <em>&lt;jobid&gt;</em></td>
+<td>Show percent of mem/CPU used in job</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">j</span></code> <em>&lt;jobid&gt;</em></td>
+<td>Job details (only while running)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">s</span></code> ; <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">ss</span></code> <em>&lt;partition&gt;</em></td>
+<td>Show status of all jobs</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">sacct</span></code></td>
+<td>Full history information (advanced, needs args)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Full slurm command help:</strong></p>
+<div class="highlight-python"><div class="highlight"><pre>$ slurm
+
+Show or watch job queue:
+ slurm [watch] queue     show own jobs
+ slurm [watch] q   show user&#39;s jobs
+ slurm [watch] quick     show quick overview of own jobs
+ slurm [watch] shorter   sort and compact entire queue by job size
+ slurm [watch] short     sort and compact entire queue by priority
+ slurm [watch] full      show everything
+ slurm [w] [q|qq|ss|s|f] shorthands for above!
+ slurm qos               show job service classes
+ slurm top [queue|all]   show summary of active users
+Show detailed information about jobs:
+ slurm prio [all|short]  show priority components
+ slurm j|job      show everything else
+ slurm steps      show memory usage of running srun job steps
+Show usage and fair-share values from accounting database:
+ slurm h|history   show jobs finished since, e.g. &quot;1day&quot; (default)
+ slurm shares
+Show nodes and resources in the cluster:
+ slurm p|partitions      all partitions
+ slurm n|nodes           all cluster nodes
+ slurm c|cpus            total cpu cores in use
+ slurm cpus   cores available to partition, allocated and free
+ slurm cpus jobs         cores/memory reserved by running jobs
+ slurm cpus queue        cores/memory required by pending jobs
+ slurm features          List features and GRES
+
+Examples:
+ slurm q
+ slurm watch shorter
+ slurm cpus batch
+ slurm history 3hours
+</pre></div>
+</div>
+<p><strong>Other advanced</strong> commands (many require lots of parameters to be
+useful):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">squeue</span></code></td>
+<td>Full info on queues</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">sinfo</span></code></td>
+<td>Advanced info on partitions</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">slurm</span> <span class="pre">nodes</span></code></td>
+<td>List all nodes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="native-slurm-commands">
+<h2>Native slurm commands<a class="headerlink" href="#native-slurm-commands" title="Permalink to this headline">¶</a></h2>
+<p>While Triton has a <code class="docutils literal"><span class="pre">slurm</span></code> utility that hides most of original SLURM
+commands, you still may want to learn more. If need something else that
+<code class="docutils literal"><span class="pre">slurm</span></code> can not do, the native commands with their full functionality
+are at your service. For the details, please consult corresponding man
+pages (<code class="docutils literal"><span class="pre">man</span> <span class="pre">squeue</span></code> , etc).</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">squeue</span></code> – view information about jobs located in the Slurm
+scheduling queue</p>
+<div class="highlight-python"><div class="highlight"><pre>$ squeue -n gpu[1-22]         # reports only jobs allocated to specific nodes
+$ squeue -t PD -i 5 -u $USER  # reports your pending jobs, with the 5s interval
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">sinfo</span></code> – view node &amp; partition information</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">sshare</span></code> – show statistics from the accounting database</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">scontrol</span></code> – various function, end user mostly interested in
+<code class="docutils literal"><span class="pre">scontrol</span> <span class="pre">show</span></code> ...</p>
+<div class="highlight-python"><div class="highlight"><pre>scontrol show node ivb1    # show specific node config
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">sprio</span></code> - Show calculated priority factors for jobs waiting in the
+queue</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">sacct</span></code> - Historical info about jobs</p>
+</li>
+</ul>
+<div class="section" id="customizable-output-for-slurm">
+<h3>Customizable output for <code class="docutils literal"><span class="pre">slurm</span></code><a class="headerlink" href="#customizable-output-for-slurm" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">slurm</span></code> command output can be customized. Look in the for variable
+names in /usr/local/bin/slurm and place them into your own
+$HOME/.config/slurmvars file.</p>
+<p>For example, more detailed node info for those interested to know
+which kind of machines are free. This changes the look of <code class="docutils literal"><span class="pre">slurm</span>
+<span class="pre">partitions</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">fmt_s_parts</span><span class="o">=</span><span class="s2">&quot;%10P %.10l </span><span class="si">%.15F</span><span class="s2"> </span><span class="si">%8f</span><span class="s2"> %N&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="libs.html" class="btn btn-neutral float-right" title="Libraries" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="grid2.html" class="btn btn-neutral" title="Grid computing 2" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

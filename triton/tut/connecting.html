@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Connecting to Triton &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Applications" href="applications.html"/>
+        <link rel="prev" title="About Science-IT and Triton" href="intro.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#tutorials">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">About Science-IT and Triton</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Connecting to Triton</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#connecting-via-ssh">Connecting via ssh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connecting-via-https-jupyter-triton-aalto-fi">Connecting via https://jupyter.triton.aalto.fi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connecting-via-https-vdi-aalto-fi">Connecting via https://vdi.aalto.fi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="applications.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html">Software Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Data storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive.html">Interactive jobs: running your first command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial jobs: running in the queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">Array jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependency.html">Job dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Connecting to Triton</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/tut/connecting.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="connecting-to-triton">
+<h1>Connecting to Triton<a class="headerlink" href="#connecting-to-triton" title="Permalink to this headline">¶</a></h1>
+<p>All access to Triton is via Secure Shell (ssh).</p>
+<p>You can connect to <code class="docutils literal"><span class="pre">triton.aalto.fi</span></code> from Aalto and CSC networks.
+Aalto networks include: Wired workstation networks, <code class="docutils literal"><span class="pre">eduroam</span></code>, and
+the <code class="docutils literal"><span class="pre">aalto</span></code> wireless network <em>only if you are using an Aalto managed
+laptop</em> (otherwise <code class="docutils literal"><span class="pre">aalto</span></code> is like <code class="docutils literal"><span class="pre">aalto</span> <span class="pre">open</span></code>).  If you connect
+to the Aalto VPN, you will be on the Aalto networks.</p>
+<p>For SSHing to Triton from outside of your department or CSC, please
+login first to a university server (like <code class="docutils literal"><span class="pre">kosh.aalto.fi</span></code> or
+<code class="docutils literal"><span class="pre">taltta.org.aalto.fi</span></code>) and then open a session to
+<code class="docutils literal"><span class="pre">triton.aalto.fi</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Are you here for a SciComp KickStart course?  You just need to <a class="reference internal" href="../accounts.html"><em>make
+sure you have an account</em></a> and then be able to connect
+via ssh (first section here), and you don&#8217;t need to worry about the
+graphical application parts.  Everything else, we do tomorrow.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Triton uses Aalto accounts, but your <a class="reference internal" href="../accounts.html"><em>account must be
+activated first</em></a>.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The <a class="reference internal" href="../../scicomp/shell.html"><em>shell crash course</em></a> is a prerequisite
+to this material.</p>
+</div>
+<p>There are different ways of connecting:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Method</th>
+<th class="head">About</th>
+<th class="head">From where?</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ssh</td>
+<td>Works everywhere, from everywhere.  Firewalls may make things
+hard sometimes.</td>
+<td>Aalto networks only, otherwise ssh to kosh and then Triton</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://jupyter.triton.aalto.fi">https://jupyter.triton.aalto.fi</a></td>
+<td>Jupyter interface, but provides shell access via web browser.</td>
+<td>Whole internet</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://vdi.aalto.fi">https://vdi.aalto.fi</a></td>
+<td>Virtual desktop, from there you have to <code class="docutils literal"><span class="pre">ssh</span></code> to Triton
+anyway but gets you past firewalls and can run graphical
+programs via SSH.</td>
+<td>Whole internet</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="connecting-via-ssh">
+<h2>Connecting via ssh<a class="headerlink" href="#connecting-via-ssh" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>All Linux distributions come with an <code class="docutils literal"><span class="pre">ssh</span></code> client, so you don&#8217;t need to do
+anything.  To use graphical applications, use the standard <code class="docutils literal"><span class="pre">-X</span></code> option,
+nothing extra needed.:</p>
+<div class="highlight-python"><div class="highlight"><pre>ssh triton.aalto.fi
+# OR, if your username is different:
+ssh username@triton.aalto.fi
+</pre></div>
+</div>
+<p>If you are from outside the Aalto networks:</p>
+<div class="highlight-python"><div class="highlight"><pre>ssh kosh.aalto.fi         # or ssh username@kosh.aalto.fi
+ssh triton.aalto.fi
+</pre></div>
+</div>
+</div>
+<div class="section" id="mac">
+<h3>Mac<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">ssh</span></code> is installed by default, same as Linux.  Run it from a terminal,
+same command as Linux.  To run graphical applications, you need to
+install an X server (XQuartz).</p>
+</div>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>You need to install a ssh client yourself:  <a class="reference external" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> is
+the standard one.  If you want to run graphical programs, you need an X server on
+Windows: see this
+<a class="reference external" href="http://www.geo.mtu.edu/geoschem/docs/putty_install.html">link</a> for
+some hints.  (Side note: putty dot org is an advertisement site trying to
+get you to install something else.)</p>
+<p>You should configure this with the hostname, username, and save the
+settings so that you can connect quickly.</p>
+<p>If you are outside the Aalto networks, you need to first connect to
+<code class="docutils literal"><span class="pre">kosh.aalto.fi</span></code> or some other server, and then use the Linux
+instructions to connect to Triton.</p>
+</div>
+<div class="section" id="advanced-options">
+<h3>Advanced options<a class="headerlink" href="#advanced-options" title="Permalink to this headline">¶</a></h3>
+<p>See the <a class="reference internal" href="../../scicomp/ssh.html"><em>advanced ssh information</em></a> to learn how
+to log in without a password, automatically save your username
+and more. It really will save you time.</p>
+<p><code class="docutils literal"><span class="pre">ssh</span></code> is one of the most fundamental Linux programs: by using it
+well, you can really do almost anything from anywhere.  The
+<code class="docutils literal"><span class="pre">.ssh/config</span></code> file is valuable to set up.  If ssh is annoying to
+use, ask for some help in getting it working well.</p>
+</div>
+<div class="section" id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Connect to Triton.  List your home directory and work directory
+<code class="docutils literal"><span class="pre">$WRKDIR</span></code>.</li>
+<li>Check the uptime and load of the login node: <code class="docutils literal"><span class="pre">uptime</span></code> and
+<code class="docutils literal"><span class="pre">htop</span></code> (<code class="docutils literal"><span class="pre">q</span></code> to quit).  What else can you learn about the node?</li>
+<li>Check what your default shell is: <code class="docutils literal"><span class="pre">echo</span> <span class="pre">$SHELL</span></code>.  Go ahead and
+change your shell to bash if it&#8217;s not yet (see below).</li>
+</ol>
+</div>
+<div class="section" id="change-your-shell-to-bash-aalto">
+<h3>Change your shell to bash (Aalto)<a class="headerlink" href="#change-your-shell-to-bash-aalto" title="Permalink to this headline">¶</a></h3>
+<p><em>Only needed if you shell isn&#8217;t already</em> <code class="docutils literal"><span class="pre">bash</span></code>.</p>
+<p>The thing you are interacting with when you type is the <strong>shell</strong> -
+the layer around the operating system.  <code class="docutils literal"><span class="pre">bash</span></code> is the most common
+shell, but the Aalto default shell used to be <code class="docutils literal"><span class="pre">zsh</span></code> (which is more
+powerful in some ways, but harder to teach with).  For new users (if
+you joined Aalto after autumn 2018) you should have bash as the
+default. We recommend that you check and change your shell to bash.</p>
+<p>You can determine if your shell is bash by running <code class="docutils literal"><span class="pre">echo</span> <span class="pre">$SHELL</span></code>.
+Does it say <code class="docutils literal"><span class="pre">/bin/bash</span></code>?</p>
+<p>If not, <code class="docutils literal"><span class="pre">ssh</span></code> to <code class="docutils literal"><span class="pre">kosh.aalto.fi</span></code> and run <code class="docutils literal"><span class="pre">chsh</span> <span class="pre">-s</span> <span class="pre">/bin/bash</span></code>.
+It may take 15 minutes to update, and you will need to log in again.</p>
+</div>
+</div>
+<div class="section" id="connecting-via-https-jupyter-triton-aalto-fi">
+<h2>Connecting via <a class="reference external" href="https://jupyter.triton.aalto.fi">https://jupyter.triton.aalto.fi</a><a class="headerlink" href="#connecting-via-https-jupyter-triton-aalto-fi" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter is a web-based way of doing computing.  But what some people
+forget is that it has a full-featured terminal and console included.</p>
+<p>Go to <a class="reference external" href="https://jupyter.triton.aalto.fi">https://jupyter.triton.aalto.fi</a> (not <strong>.cs.</strong>aaalto) and log
+in.  Select &#8220;Slurm 5 day, 2G&#8221; and start.</p>
+<p>To start a terminal, click File→New→Terminal - you do anything you
+need to do from here, same as <code class="docutils literal"><span class="pre">ssh</span></code>.  If you need to edit text
+files, you can also do that through JupyterLab (note: change to the
+right directory <em>before</em> creating a new file!).</p>
+<p>To learn more about Jupyterlab, you need to read up elsewhere, there
+are plenty of tutorials.</p>
+</div>
+<div class="section" id="connecting-via-https-vdi-aalto-fi">
+<h2>Connecting via <a class="reference external" href="https://vdi.aalto.fi">https://vdi.aalto.fi</a><a class="headerlink" href="#connecting-via-https-vdi-aalto-fi" title="Permalink to this headline">¶</a></h2>
+<p>If you go to <a class="reference external" href="https://vdi.aalto.fi">https://vdi.aalto.fi</a>, you can access a cloud-based Aalto
+workstation.  HTML access works from everywhere, or download the
+&#8220;VMWare Horizon Client&#8221; for a better connection.  Start a Ubuntu
+desktop (you get Aalto Ubuntu).  From there, you <strong>have to use the
+normal ssh instructions</strong> (via the Terminal application) using the
+instructions you see above: <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">triton.aalto.fi</span></code>.</p>
+<p>For more information, see <a class="reference external" href="https://it.aalto.fi/instructions/aalto-university-virtual-desktop-infrastructure-vdiaaltofi">it.aalto.fi</a>.</p>
+</div>
+<div class="section" id="what-s-next">
+<h2>What&#8217;s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<p>The next tutorial is about <a class="reference internal" href="modules.html"><em>software and modules</em></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="applications.html" class="btn btn-neutral float-right" title="Applications" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral" title="About Science-IT and Triton" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

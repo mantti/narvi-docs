@@ -1,0 +1,588 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Software Modules &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Data storage" href="storage.html"/>
+        <link rel="prev" title="Applications" href="applications.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#tutorials">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">About Science-IT and Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting.html">Connecting to Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="applications.html">Applications</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Software Modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-a-module">What is a module?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-modules">Loading modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#making-a-module-collection">Making a module collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#full-reference">Full reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#final-notes">Final notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Data storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive.html">Interactive jobs: running your first command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial jobs: running in the queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">Array jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependency.html">Job dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Software Modules</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/tut/modules.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="software-modules">
+<h1>Software Modules<a class="headerlink" href="#software-modules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-a-module">
+<h2>What is a module?<a class="headerlink" href="#what-is-a-module" title="Permalink to this headline">¶</a></h2>
+<p>There are hundreds of people using Triton.  They all have different
+software needs, including conflicting versions required!  How do we
+handle this without making a mess?</p>
+<p>The answer is the standard &#8220;module&#8221; system <a class="reference external" href="https://lmod.readthedocs.io/en/latest/">Lmod</a>.
+It allows us to
+have unlimited number of different software packages installed, and the
+user can select what they want.  Modules include everything from
+compilers (+their required development files), libraries, and programs.
+If you need a program installed, we will put it in the module system.</p>
+<p>In a system the size of Triton, it just isn&#8217;t possible to install all
+software by default for every user.</p>
+<p>A module lets you adjust what software is available,
+and makes it easy to switch between different versions.</p>
+<p>As an example, let&#8217;s inspect the <code class="docutils literal"><span class="pre">gcc</span></code> module (abbreviated output
+shown)</p>
+<div class="highlight-none"><div class="highlight"><pre>$ module show gcc
+----------------------------------------------------------------------------------------------
+   /share/apps/spack/envs/fgci-centos7-generic/lmod/linux-centos7-x86_64/all/gcc/9.2.0.lua:
+----------------------------------------------------------------------------------------------
+whatis(&quot;Name : gcc&quot;)
+whatis(&quot;Version : 9.2.0&quot;)
+whatis(&quot;Short description : The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.&quot;)
+whatis(&quot;Configure options : --disable-multilib --enable-languages=c,c++,fortran --with-mpfr=/share/apps/spack/envs/fgci-centos7-generic/software/mpfr/3.1.6/m6xmzws --with-gmp=/share/apps/spack/envs/fgci-centos7-generic/software/gmp/6.1.2/mnsg5g2 --enable-lto --with-quad --with-system-zlib --with-mpc=/share/apps/spack/envs/fgci-centos7-generic/software/mpc/1.1.0/uaijipe --with-isl=/share/apps/spack/envs/fgci-centos7-generic/software/isl/0.19/indu5p6&quot;)
+help([[The GNU Compiler Collection includes front ends for C, C++, Objective-C,
+Fortran, Ada, and Go, as well as libraries for these languages.]])
+family(&quot;compiler&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin&quot;)
+prepend_path(&quot;MANPATH&quot;,&quot;/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/share/man&quot;)
+prepend_path(&quot;LIBRARY_PATH&quot;,&quot;/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib&quot;)
+prepend_path(&quot;LIBRARY_PATH&quot;,&quot;/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib64&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/lib64&quot;)
+prepend_path(&quot;CPATH&quot;,&quot;/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/include&quot;)
+...
+</pre></div>
+</div>
+<p>The command <code class="docutils literal"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">gcc</span></code> shows some meta-info (name of the module, its version, etc.)
+And then adjusts various environment paths,
+so that when you run <code class="docutils literal"><span class="pre">gcc</span></code> it runs the program from
+<code class="docutils literal"><span class="pre">/share/apps/spack/envs/fgci-centos7-generic/software/gcc/9.2.0/dnrscms/bin/gcc</span></code>.
+This is almost magic: we can have many versions of any software installed,
+and everyone can pick what they want, with no conflicts.</p>
+</div>
+<div class="section" id="loading-modules">
+<h2>Loading modules<a class="headerlink" href="#loading-modules" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s dive right into an example and load a module.</p>
+<p>Let&#8217;s assume you&#8217;ve written a Python script that is only compatible with Python version 3.7.0 or higher.
+You open a shell to find out where and what version our Python is. The
+<strong>which</strong> program looks up the current detected version of a program -
+very useful when testing modules.:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ which python3
+/usr/bin/python3
+$ python3 -V
+Python 3.6.8
+</pre></div>
+</div>
+<p>But you need a newer version of Python.  To this end, you can <strong>load</strong> the <code class="docutils literal"><span class="pre">anaconda</span></code> module
+using the <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda</span></code> command,
+that has a more up to date Python with lots of libraries already included:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module load anaconda
+$ which python
+/share/apps/anaconda-ci/fgci-centos7-generic/software/anaconda/2020-01-tf2/0251cd77/bin/python3
+$ python -V
+Python 3.7.6
+</pre></div>
+</div>
+<p>As you see, you now have a newer version of Python, in a different directory.</p>
+<p>You can see a list of the all the loaded modules in our working shell using the <code class="docutils literal"><span class="pre">module</span> <span class="pre">list</span></code> command:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module list
+Currently Loaded Modules:
+  1) anaconda/2020-02-tf2
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span></code> and <code class="docutils literal"><span class="pre">module</span> <span class="pre">list</span></code> commands can be abbreviated as <code class="docutils literal"><span class="pre">ml</span></code></p>
+</div>
+<p>Let&#8217;s  use the <code class="docutils literal"><span class="pre">module</span> <span class="pre">purge</span></code> command to <strong>unload</strong> all the loaded modules (<code class="docutils literal"><span class="pre">anaconda</span></code> in this case):</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module purge
+</pre></div>
+</div>
+<p>Or explicitly unload the <code class="docutils literal"><span class="pre">anaconda</span></code> module by using the <code class="docutils literal"><span class="pre">module</span> <span class="pre">unload</span> <span class="pre">anaconda</span></code> command:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module unload anaconda
+</pre></div>
+</div>
+<p>You can load any number of modules in your open shell,
+your scripts, etc.  You could load modules in your
+<code class="docutils literal"><span class="pre">~/.bash_profile</span></code>, but then it will always automatically load it -
+perhaps even if you don&#8217;t expect it.  Watch out for this if you get
+un-explainable bugs - it may be best to explicitly load what you
+need.</p>
+<div class="section" id="exercise-where-is-matlab">
+<h3>Exercise: Where is Matlab?<a class="headerlink" href="#exercise-where-is-matlab" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s say you want to use Matlab.  You log in and try in the shell:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ matlab
+-bash: matlab: command not found
+</pre></div>
+</div>
+<p>So first search for it using the <code class="docutils literal"><span class="pre">module</span> <span class="pre">spider</span></code> command:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module spider matlab
+
+----------------------------------------------------------------------------
+  matlab:
+----------------------------------------------------------------------------
+     Versions:
+        matlab/r2012a
+        matlab/r2014a
+        matlab/r2015b
+        matlab/r2016a
+        matlab/r2016b
+        matlab/r2017b
+        matlab/r2018a
+        matlab/r2018b
+        matlab/r2019a
+        matlab/r2019b
+</pre></div>
+</div>
+<p>We see there are a lot of versions available.</p>
+<p>Load the latest version of Matlab as:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module load matlab
+</pre></div>
+</div>
+<p>It never hurts to double check the version and in fact is recommended. So let&#8217;s do just that:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module list
+Currently Loaded Modules:
+  1) matlab/r2019b
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-where-is-r">
+<h3>Exercise: Where is R?<a class="headerlink" href="#exercise-where-is-r" title="Permalink to this headline">¶</a></h3>
+<p>If you don&#8217;t specify the version - just as the above Matlab example - the default version of the module is usually loaded, whichis usually the latest version.
+The default version, however,is not always latest version.  To see an example, let&#8217;s see what versions of R are available:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module spider r
+
+----------------------------------------------------------------------------
+  r:
+----------------------------------------------------------------------------
+     Versions:
+        r/3.4.3-python-2.7.14
+        r/3.4.3-python2
+        r/3.4.3-python3
+        r/3.5.0-python-2.7.14
+        r/3.5.0-python2
+        r/3.5.3-python-2.7.14
+        r/3.6.1-python3
+</pre></div>
+</div>
+<p>Let&#8217;s try loading the default version:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module load r
+</pre></div>
+</div>
+<p>You can list all the dependencies the R module requires and loads:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module list
+Currently Loaded Modules:
+  1) pcre/8.42        12) libpthread-stubs/0.4  23) libxml2/2.9.9        34) jdk/8u181-b13          45) libice/1.0.9
+  2) ncurses/6.1      13) xproto/7.0.31         24) font-util/1.3.2      35) fontconfig/2.12.3      46) libx11/1.6.7
+  3) zlib/1.2.11      14) libxau/1.0.8          25) libxft/2.3.2         36) pixman/0.34.0          47) libsm/1.2.2
+  4) readline/7.0     15) libxcb/1.13           26) tk/8.6.8             37) cairo/1.14.12-python2  48) libxt/1.1.5
+  5) sqlite/3.23.1    16) libxext/1.3.3         27) python/2.7.15        38) libjpeg-turbo/1.5.90   49) harfbuzz/1.4.6-python2
+  6) openssl/1.0.2k   17) libxscrnsaver/1.2.2   28) tar/1.31             39) libtiff/4.0.9          50) gobject-introspection/1.49.2-python2
+  7) tcl/8.6.8        18) libpng/1.6.34         29) gettext/0.19.8.1     40) bzip2/1.0.6            51) pango/1.41.0-python2
+  8) kbproto/1.0.7    19) renderproto/0.11.1    30) gdbm/1.18.1          41) freetype/2.7.1         52) openblas/0.3.2
+  9) xextproto/7.3.0  20) libxrender/0.9.10     31) perl/5.26.2          42) libssh2/1.8.0          53) r/3.4.3-python2
+ 10) libbsd/0.9.1     21) libiconv/1.15         32) libffi/3.2.1         43) curl/7.60.0
+ 11) libxdmcp/1.1.2   22) xz/5.2.4              33) glib/2.56.1-python2  44) icu4c/60.1
+</pre></div>
+</div>
+<p>The last loaded module clearly shows that the version of the R loaded is <code class="docutils literal"><span class="pre">r/3.4.3-python2</span></code>.
+To load the latest version of R, use the <em>fullName</em> of the module:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module load r/3.6.1-python3
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We upgrade the modules from time to time and so the default version may change.
+Thus, it is always a good idea to load a particular version of the modules
+when compiling and subsequently for all your future runs.</p>
+</div>
+</div>
+<div class="section" id="what-s-going-on-under-the-hood-here">
+<h3>What&#8217;s going on under the hood here?<a class="headerlink" href="#what-s-going-on-under-the-hood-here" title="Permalink to this headline">¶</a></h3>
+<p>In Linux systems, different environment variables like <code class="docutils literal"><span class="pre">$PATH</span></code> and
+<code class="docutils literal"><span class="pre">$LD_LIBRARY_PATH</span></code> help figure out how to run programs.  Modules just
+cleverly manipulate these so that you can find the software you need,
+even if there are multiple versions available.  You can see these variables
+with the <strong>echo</strong> command, e.g. <code class="docutils literal"><span class="pre">echo</span> <span class="pre">$PATH</span></code>.</p>
+<p>When you load a module in a shell, the module command changes the current shell&#8217;s environment variables,
+and the environment variables are passed on to all the child processes.</p>
+</div>
+</div>
+<div class="section" id="making-a-module-collection">
+<h2>Making a module collection<a class="headerlink" href="#making-a-module-collection" title="Permalink to this headline">¶</a></h2>
+<p>There is a basic dependency/conflict system to handle module dependency.
+Each time you load a module, it resolves all the dependencies.  This
+can mean that loading module takes a long time, but there is a
+solution: <code class="docutils literal"><span class="pre">module</span> <span class="pre">save</span> <span class="pre">$collection_name</span></code> and <code class="docutils literal"><span class="pre">module</span> <span class="pre">restore</span>
+<span class="pre">$collection_name</span></code></p>
+<p>Let&#8217;s see how to do this in an example.</p>
+<p>Try loading the <code class="docutils literal"><span class="pre">graph-tool</span></code> module. How long does it take?  Use <code class="docutils literal"><span class="pre">module</span>
+<span class="pre">list</span></code> to see how many things were actually loaded:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module load graph-tool             # 600 seconds!
+$ module list                        # 72 modules!
+</pre></div>
+</div>
+<p>Then, do <code class="docutils literal"><span class="pre">module</span> <span class="pre">save</span> <span class="pre">my-collection</span></code>.  Then <code class="docutils literal"><span class="pre">module</span> <span class="pre">purge</span></code> to
+unload everything.  Now, do <code class="docutils literal"><span class="pre">module</span> <span class="pre">restore</span> <span class="pre">my-collection</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module save my-gt
+$ module purge
+$ module restore my-gt               # only 3 seconds
+$ module list                        # same 72 modules
+</pre></div>
+</div>
+<p>Was it much faster?</p>
+<p>Generally, it is a good idea to save your modules
+as a collection to have your desired modules
+all set up each time you want to re-compile/re-build:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ module anaconda/2020-02-tf2 gcc/9.2.0
+$ module save my-modules
+</pre></div>
+</div>
+<p>So the subsequent times that you want to compile/build,
+you simply <code class="docutils literal"><span class="pre">module</span> <span class="pre">restore</span> <span class="pre">my-modules</span></code> and this way
+you can be sure you have the same previous environment.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You may occasionally need to rebuild your collections in case we
+re-organize things (it will prompt you to rebuild your collection
+and you simply save it again).</p>
+</div>
+</div>
+<div class="section" id="full-reference">
+<h2>Full reference<a class="headerlink" href="#full-reference" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span></code> <em>NAME</em></td>
+<td>load module</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">avail</span></code></td>
+<td>list all modules</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">spider</span></code> <em>NAME</em></td>
+<td>search modules</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">list</span></code></td>
+<td>list currently loaded modules</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">show</span></code> <em>NAME</em></td>
+<td>details on a module</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">help</span></code> <em>NAME</em></td>
+<td>details on a module</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">unload</span></code> <em>NAME</em></td>
+<td>unload a module</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">save</span></code> <em>ALIAS</em></td>
+<td>save module to this alias (saved in ~/.lmod.d/)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">restore</span></code> <em>ALIAS</em></td>
+<td>load saved module set (faster than loading individually)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">module</span> <span class="pre">purge</span></code></td>
+<td>unload all loaded modules (faster than unloading individually)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="final-notes">
+<h2>Final notes<a class="headerlink" href="#final-notes" title="Permalink to this headline">¶</a></h2>
+<p>If you have loaded modules when you build/install software, remember
+to load the same modules when you run the software (also in Slurm
+jobs).  You&#8217;ll learn about running jobs later, but the <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span></code>
+should usually be put into the job script.</p>
+<p>The modules used to compile and run a program become part of its
+environment and must always be loaded.</p>
+<p>If you are compiling things and want them to work in the future, load a
+particular version of the module (<code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">$name/$version</span></code>)
+Then, things will keep working even if we upgrade in the meantime (in
+fact, this is a primary advantage of modules)</p>
+<p>We use the Lmod system and Lmod works by changing environment variables.
+Thus, they must be <em>sourced</em> by a shell and are only transferred to child processes.
+Anything that clears the environment clears the loaded modules too. Module
+loading is done by special functions (not scripts) that are
+shell-specific and set environment variables.</p>
+<p>Some modules are provided by Aalto Science-IT, some by CSC.  You could
+even make your own user modules if needed.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<p>Before each exercise, <code class="docutils literal"><span class="pre">module</span> <span class="pre">purge</span></code> to clear all modules.</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">module</span> <span class="pre">avail</span></code> and check what you see.  Find a software that has
+many different versions available.
+Load the oldest version.</li>
+<li><code class="docutils literal"><span class="pre">PATH</span></code> is an environment variable that shows from where programs
+are run.  See it&#8217;s current value using <code class="docutils literal"><span class="pre">echo</span> <span class="pre">$PATH</span></code>.  Then, load
+a  module such as <code class="docutils literal"><span class="pre">py-gpaw</span></code>.  List what
+it loaded.  Check the value of <code class="docutils literal"><span class="pre">PATH</span></code> again.  Why is there so
+much stuff?</li>
+<li>(Advanced) Same as number 2, but use <code class="docutils literal"><span class="pre">env</span> <span class="pre">|</span> <span class="pre">sort</span> <span class="pre">&gt;</span>
+<span class="pre">filename</span></code> to store environment variables, then swap to
+<code class="docutils literal"><span class="pre">py-gpaw/1.3.0-openmpi-scalapack-python3</span></code>.  Do the same, and compare the two outputs
+using <code class="docutils literal"><span class="pre">diff</span></code></li>
+<li>Load a module with many dependencies, such as
+<code class="docutils literal"><span class="pre">R/3.3.2-iomkl-triton-2017a-libX11-1.6.3</span></code> and save it as a
+collection.  Compare the time needed to load the module and the
+collection.  (Does <code class="docutils literal"><span class="pre">time</span></code> not work?  Change your shell to bash,
+see the previous tutorial)</li>
+<li>(Advanced) Load GROMACS.  Use <code class="docutils literal"><span class="pre">which</span></code> to find where command <code class="docutils literal"><span class="pre">gmx</span></code> is
+and then use <code class="docutils literal"><span class="pre">ldd</span></code> to find out what libraries it uses. Load
+incompatible toolchain e.g. goolf. Check <code class="docutils literal"><span class="pre">ldd</span></code> output again.</li>
+</ol>
+</div>
+<div class="section" id="what-s-next">
+<h2>What&#8217;s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<p>The next tutorial covers <a class="reference internal" href="storage.html"><em>data storage</em></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="storage.html" class="btn btn-neutral float-right" title="Data storage" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="applications.html" class="btn btn-neutral" title="Applications" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

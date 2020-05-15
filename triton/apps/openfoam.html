@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OpenFOAM (with ParaView) &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Applications: General info" href="index.html"/>
+        <link rel="next" title="OpenPose" href="openpose.html"/>
+        <link rel="prev" title="Octave" href="octave.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#applications">Applications</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html">Applications: General info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aims.html">FHI-aims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="armadillo.html">Armadillo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boost.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectron.html">Detectron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenics.html">Fenics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fsl.html">FSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpaw.html">GPAW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="julia.html">Julia language on triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keras.html">Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">Lammps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html">Matlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlpack.html">MLPack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mne.html">MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="octave.html">Octave</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">OpenFOAM (with ParaView)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#new-image-singularity-openfoam">New image (singularity-openfoam)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#old-image-openfoam">Old image (OpenFOAM)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openpose.html">OpenPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paraview.html">Paraview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="r.html">R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstan.html">RStan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstudio.html">RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spyder.html">Spyder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theano.html">Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vasp.html">VASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visit.html">VisIT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+          <li><a href="index.html">Applications: General info</a> &raquo;</li>
+      
+    <li>OpenFOAM (with ParaView)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/apps/openfoam.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="openfoam-with-paraview">
+<h1>OpenFOAM (with ParaView)<a class="headerlink" href="#openfoam-with-paraview" title="Permalink to this headline">¶</a></h1>
+<p>This uses <a class="reference internal" href="../usage/singularity.html"><em>Singularity containers</em></a>,
+so you should refer to that page first for general information.</p>
+<p>OpenFOAM and ParaView have been installed from the Ubuntu 16.04 Docker
+image provided by OpenFOAM people. It has minimal amount of other
+software installed.</p>
+<p>Parallelization is done against Triton&#8217;s OpenMPI, so using this container
+with other OpenMPI modules is discouraged.</p>
+<div class="section" id="new-image-singularity-openfoam">
+<h2>New image (singularity-openfoam)<a class="headerlink" href="#new-image-singularity-openfoam" title="Permalink to this headline">¶</a></h2>
+<p>Loading: simply <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">singularity-openfoam</span></code> and use
+<code class="docutils literal"><span class="pre">singularity_wrapper</span></code>.</p>
+<p>OpenFOAM is installed in <code class="docutils literal"><span class="pre">/opt/OpenFOAM</span></code>.  The OpenFOAM <code class="docutils literal"><span class="pre">bashrc</span></code>
+file is automatically sourced when you exec or shell within the image
+to set <code class="docutils literal"><span class="pre">PATH</span></code> and so on.</p>
+</div>
+<div class="section" id="old-image-openfoam">
+<h2>Old image (OpenFOAM)<a class="headerlink" href="#old-image-openfoam" title="Permalink to this headline">¶</a></h2>
+<p>This is quite similar to the new image.</p>
+<p>Within the container OpenFOAM is installed under <code class="docutils literal"><span class="pre">/opt/openfoam4/</span></code> and
+ParaView under <code class="docutils literal"><span class="pre">/opt/paraviewopenfoam50/</span></code>. <code class="docutils literal"><span class="pre">PATH</span></code> is automatically appended
+with their respective paths so all program calls are available
+automatically.</p>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>(This has not been updated to the new image yet.  To change to new
+image, don&#8217;t do the <code class="docutils literal"><span class="pre">module</span> <span class="pre">use</span></code> and instead just load
+<code class="docutils literal"><span class="pre">singularity-openfoam</span></code>.)</p>
+<p>This example shows how you can run damBreak example. Firstly, let&#8217;s load
+the OpenFOAM module and create a folder for the example:</p>
+<div class="highlight-python"><div class="highlight"><pre>module use /share/apps2/singularity/modules
+module load OpenFOAM
+mkdir damBreak
+cd damBreak
+</pre></div>
+</div>
+<p>Secondly, let&#8217;s use singularity shell to copy example data files to the
+folder and to initialize the simulation.:</p>
+<div class="highlight-python"><div class="highlight"><pre>cp -r /opt/openfoam4/tutorials/multiphase/interFoam/laminar/damBreak/damBreak/0 .
+cp -r /opt/openfoam4/tutorials/multiphase/interFoam/laminar/damBreak/damBreak/system .
+cp -r /opt/openfoam4/tutorials/multiphase/interFoam/laminar/damBreak/damBreak/constant .
+blockMesh
+decomposePar
+exit
+</pre></div>
+</div>
+<p>After this one can submit the following slurm <a class="reference download internal" href="../../_downloads/openfoam.slrm" download=""><code class="xref download docutils literal"><span class="pre">script</span></code></a> with sbatch to solve the problem:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -p short
+#SBATCH -t 00:30:00
+#SBATCH -n 4
+#SBATCH --mem=4G
+
+module use /share/apps2/singularity/modules
+module purge
+module load OpenFOAM
+
+srun singularity_wrapper exec interFoam -parallel
+</pre></div>
+</div>
+<p>Paraview can be started similarly with this <a class="reference download internal" href="../../_downloads/paraview.slrm" download=""><code class="xref download docutils literal"><span class="pre">script</span></code></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -p short
+#SBATCH -t 00:10:00
+#SBATCH -n 1
+#SBATCH --mem=8G
+
+module use /share/apps2/singularity/modules
+module purge
+module load OpenFOAM
+
+singularity_wrapper exec paraview
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="openpose.html" class="btn btn-neutral float-right" title="OpenPose" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="octave.html" class="btn btn-neutral" title="Octave" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

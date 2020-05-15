@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Storage: Lustre (scratch) &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="MPI on Triton" href="mpilibs.html"/>
+        <link rel="prev" title="Storage: local drives" href="localstorage.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="compilers.html">Available compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgx.html">Nvidia DGX machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html">Running programs on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid2.html">Grid computing 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jobs.html">Monitoring jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html">Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="localstorage.html">Storage: local drives</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Storage: Lustre (scratch)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#working-with-small-files">Working with small files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#working-with-lots-of-small-files">Working with lots of small files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#working-with-large-files">Working with large files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mpilibs.html">MPI on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quotas.html">Quotas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="singularity.html">Singularity Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smallfiles.html">Small files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolchains.html">Compilers and toolchains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">Remote workflows at Aalto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Storage: Lustre (scratch)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/usage/lustre.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="storage-lustre-scratch">
+<h1>Storage: Lustre (scratch)<a class="headerlink" href="#storage-lustre-scratch" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../tut/storage.html"><em>the storage tutorial</em></a>.</p>
+</div>
+<p>Lustre is scalable high performance file system created for HPC. It
+allows MPI-IO but mainly it provides large storage capacity and high
+sequential throughput for cluster applications. Currently the total
+capacity is 2PB. The basic idea in Lustre is to spread data in each file
+over multiple storage servers. With large (larger than 1GB) files Lustre
+will significantly boost the performance.</p>
+<div class="section" id="working-with-small-files">
+<h2>Working with small files<a class="headerlink" href="#working-with-small-files" title="Permalink to this headline">¶</a></h2>
+<p>As Lustre is meant for large files, the performance with small (smaller
+than 10MB) files will not be optimal. If possible, try to avoid working
+with multiple small files.</p>
+<p><strong>Note: Triton has a default stripe of 1 already, so it is by default
+optimized for small files (but it&#8217;s still not that great).  If you use
+large files, see below.</strong></p>
+<p>If small files are needed (i.e. source codes) you can tell Lustre not to
+spread data over all the nodes. This will help in performance.</p>
+<p>To see the striping for any given file or directory you can use
+following command to check status</p>
+<div class="highlight-python"><div class="highlight"><pre>lfs getstripe -d /scratch/path/to/dir
+</pre></div>
+</div>
+<p>You can not change the striping of an existing file, but you can change
+the striping of new files created in a directory, then copy the file to
+a new name in that directory.</p>
+<div class="highlight-python"><div class="highlight"><pre>lfs setstripe -c 1 /scratch/path/to/dir
+cp somefile /scratch/path/to/dir/newfile
+</pre></div>
+</div>
+</div>
+<div class="section" id="working-with-lots-of-small-files">
+<h2>Working with lots of small files<a class="headerlink" href="#working-with-lots-of-small-files" title="Permalink to this headline">¶</a></h2>
+<p>Large datasets which consist mostly of small (&lt;1MB) files can be slow to
+process because of network overhead associated with individual files. If
+it is your case, please consult <a class="reference internal" href="localstorage.html"><em>Compute node local
+drives</em></a> page, see the <code class="docutils literal"><span class="pre">tar</span></code> example
+over there or find some other way to compact your files together into
+one.</p>
+</div>
+<div class="section" id="working-with-large-files">
+<h2>Working with large files<a class="headerlink" href="#working-with-large-files" title="Permalink to this headline">¶</a></h2>
+<p>By default Lustre on Triton is configured to stripe a single file over a
+single OST. This provides the best performance for small files, serial
+programs, parallel programs where only one process is doing I/O, and
+parallel programs using a file-per-process file I/O pattern. However,
+when working with large files (&gt;&gt; 10 GB), particularly if they are
+accessed in parallel from multiple processes in a parallel application,
+it can be advantageous to stripe over several OST&#8217;s.  In this case the
+easiest way is to create a directory for the large file(s), and set the
+striping parameters for any files subsequently created in that
+directory:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd $WRKDIR
+mkdir large_file
+lfs setstripe -c 4 large_file
+</pre></div>
+</div>
+<p>The above creates a directory <code class="docutils literal"><span class="pre">large_file</span></code> and specifies that files
+created inside that directory will be striped over 4 OST&#8217;s. For really
+really large files (hundreds of GB&#8217;s) accessed in parallel from very
+large MPI runs, set the stripe count to &#8220;-1&#8221; which tells the system to
+stripe over all the available OST&#8217;s.</p>
+<p>To reset back to the default settings, run</p>
+<div class="highlight-python"><div class="highlight"><pre>lfs setstripe -d path/to/directory
+</pre></div>
+</div>
+<div class="section" id="lustre-common-recommendations">
+<h3>Lustre: common recommendations<a class="headerlink" href="#lustre-common-recommendations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Minimize use of <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span></code> and <code class="docutils literal"><span class="pre">ls</span> <span class="pre">--color</span></code> when possible</li>
+</ul>
+<p>Several excellent recommendations are at</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.nas.nasa.gov/hecc/support/kb/Lustre-Best-Practices_226.html">https://www.nas.nasa.gov/hecc/support/kb/Lustre-Best-Practices_226.html</a></li>
+<li><a class="reference external" href="http://www.nics.tennessee.edu/computing-resources/file-systems/io-lustre-tips">http://www.nics.tennessee.edu/computing-resources/file-systems/io-lustre-tips</a>.</li>
+</ul>
+<p>They are fully applicable to our case.</p>
+<p>Be aware, that being a high performance filesystem Lustre still has its
+own bottlenecks, and even non-proper a usage by a single user can get
+whole system in stuck. See the recommendations at the link above how to
+avoid those potential situations. Common Lustre troublemakers are
+<code class="docutils literal"><span class="pre">ls</span> <span class="pre">-lR</span></code>, creating many small files, <code class="docutils literal"><span class="pre">rm</span> <span class="pre">-rf</span></code>, small random i/o,
+heavy bulk i/o.</p>
+<p>For advanced user, these slides can be interesting:
+<a class="reference external" href="https://www.eofs.eu/fileadmin/lad2012/06_Daniel_Kobras_S_C_Lustre_FS_Bottleneck.pdf">https://www.eofs.eu/fileadmin/lad2012/06_Daniel_Kobras_S_C_Lustre_FS_Bottleneck.pdf</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mpilibs.html" class="btn btn-neutral float-right" title="MPI on Triton" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="localstorage.html" class="btn btn-neutral" title="Storage: local drives" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

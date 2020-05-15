@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Singularity Containers &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Small files" href="smallfiles.html"/>
+        <link rel="prev" title="Quotas" href="quotas.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="compilers.html">Available compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgx.html">Nvidia DGX machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html">Running programs on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid2.html">Grid computing 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jobs.html">Monitoring jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html">Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="localstorage.html">Storage: local drives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lustre.html">Storage: Lustre (scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mpilibs.html">MPI on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quotas.html">Quotas</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Singularity Containers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-idea">Basic Idea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#singularity-wrapper">singularity_wrapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#power-usage">Power usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-your-own-singularity-images-to-run-in-triton">Creating your own Singularity images to run in Triton</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="smallfiles.html">Small files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolchains.html">Compilers and toolchains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">Remote workflows at Aalto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Singularity Containers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/usage/singularity.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="singularity-containers">
+<h1>Singularity Containers<a class="headerlink" href="#singularity-containers" title="Permalink to this headline">¶</a></h1>
+<p>For more information see: <a class="reference external" href="https://sylabs.io/docs/">https://sylabs.io/docs/</a></p>
+<div class="section" id="basic-idea">
+<h2>Basic Idea<a class="headerlink" href="#basic-idea" title="Permalink to this headline">¶</a></h2>
+<p>The basic idea behind Singularity containers is that software is packaged
+into a container (basically an entire self-contained operating system!)
+that is based on a Docker image that can then be run by the
+user.  This allows hard to install software to be easily packaged and
+used - because you are packaging the entire OS!</p>
+<p>During runtime, the root file system <code class="docutils literal"><span class="pre">/</span></code> is changed to the one inside the
+image and file systems are brought into the container through bind
+mounts. This sounds complicated, but in practice this is easy due to
+singularity_wrapper written for Triton.</p>
+</div>
+<div class="section" id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<p>While the image itself is read-only, remember that <code class="docutils literal"><span class="pre">/home</span></code>, <code class="docutils literal"><span class="pre">/m</span></code>, <code class="docutils literal"><span class="pre">/scratch</span></code>
+and <code class="docutils literal"><span class="pre">/l</span></code> etc. are not. If you edit/remove files in these locations within
+the image, that will happen outside the image as well.</p>
+<p>On Triton, you just need to load the proper module.  This will set
+some environment variables and enable the use of
+<code class="docutils literal"><span class="pre">singularity_wrapper</span></code>.</p>
+</div>
+<div class="section" id="singularity-wrapper">
+<h2>singularity_wrapper<a class="headerlink" href="#singularity-wrapper" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">singularity_wrapper</span></code> is written so that when you load a module written
+for a singularity image, all the important options are already handled
+for you.  It has three basic commands:</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">singularity_wrapper</span> <span class="pre">shell</span> <span class="pre">&lt;shell&gt;</span></code> - Gives user a shell
+within the image (specify <code class="docutils literal"><span class="pre">&lt;shell&gt;</span></code> to say which shell you want).</li>
+<li><code class="docutils literal"><span class="pre">singularity_wrapper</span> <span class="pre">exec</span> <span class="pre">&lt;cmd&gt;</span></code> - Executes a program within the
+image.</li>
+<li><code class="docutils literal"><span class="pre">singularity_wrapper</span> <span class="pre">run</span> <span class="pre">&lt;parameters&gt;</span></code> - Runs the singularity image. What this
+means depends on the image in question - each image will define a
+&#8220;run command&#8221; which does something.  If you don&#8217;t know what this
+is, use the first two instead.</li>
+</ol>
+<p>Under the hood, <code class="docutils literal"><span class="pre">singularity_wrapper</span></code> does this:</p>
+<ol class="arabic simple">
+<li>Choosing appropriate image based on module version</li>
+<li>Binding of basic paths (<code class="docutils literal"><span class="pre">-B</span> <span class="pre">/l:/l</span></code>, <code class="docutils literal"><span class="pre">/m:/m</span></code>, <code class="docutils literal"><span class="pre">/scratch:/scratch</span></code>)</li>
+<li>Loading of system libraries within images (if needed) (e.g. <code class="docutils literal"><span class="pre">-B</span>
+<span class="pre">/lib64/nvidia:/opt/nvidia</span></code>)</li>
+<li>Setting working directory within image (if needed)</li>
+</ol>
+</div>
+<div class="section" id="power-usage">
+<h2>Power usage<a class="headerlink" href="#power-usage" title="Permalink to this headline">¶</a></h2>
+<p>These are the &#8220;raw&#8221; singularity commands.  If you use these, you have
+to configure the images and bind mounts yourself (which is done
+automatically by <code class="docutils literal"><span class="pre">singularity_wrapper</span></code>).  If you <code class="docutils literal"><span class="pre">module</span> <span class="pre">show</span></code> the
+module you can get hints about what happens.</p>
+<p>Singularity enables three base commands to user:</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">singularity</span> <span class="pre">shell</span> <span class="pre">&lt;image&gt;</span></code> - Gives user a shell within the image (see
+<code class="docutils literal"><span class="pre">singularity</span> <span class="pre">shell</span> <span class="pre">--help</span></code> for more information on flags etc.)</li>
+<li><code class="docutils literal"><span class="pre">singularity</span> <span class="pre">exec</span> <span class="pre">&lt;image&gt;</span> <span class="pre">&lt;cmd&gt;</span></code> - Executes a program within the image
+(see <code class="docutils literal"><span class="pre">singularity</span> <span class="pre">exec</span> <span class="pre">--help</span></code> for more information on flags etc.)</li>
+<li><code class="docutils literal"><span class="pre">singularity</span> <span class="pre">run</span> <span class="pre">&lt;image&gt;</span> <span class="pre">&lt;parameters&gt;</span></code> - Runs the singularity image.
+What this means depends on the image in question. (see <code class="docutils literal"><span class="pre">singularity</span>
+<span class="pre">run</span> <span class="pre">--help</span></code> for more information on flags etc.)</li>
+</ol>
+</div>
+<div class="section" id="creating-your-own-singularity-images-to-run-in-triton">
+<h2>Creating your own Singularity images to run in Triton<a class="headerlink" href="#creating-your-own-singularity-images-to-run-in-triton" title="Permalink to this headline">¶</a></h2>
+<p>All images used in Triton are built from Docker images stored in
+our private Docker registry in
+<a class="reference external" href="https://registry.cs.aalto.fi">registry.cs.aalto.fi</a>. They build
+automatically from Docker pushes using our continuous integration builder. If
+you want to build your own Singularity image to Triton, we can create a user
+for you to the registry and add your image to the automatic build.</p>
+<div class="highlight-none"><div class="highlight"><pre>Even though the system is in production it is still being tested.
+Thus there might be changes in the future.
+</pre></div>
+</div>
+<p>Steps to get your images building are outlined below. You&#8217;ll need to do steps
+1 to 3 only once.</p>
+<div class="section" id="step-1-log-in-to-registry-cs-aalto-fi">
+<h3>Step 1: Log in to registry.cs.aalto.fi<a class="headerlink" href="#step-1-log-in-to-registry-cs-aalto-fi" title="Permalink to this headline">¶</a></h3>
+<p>Go to
+<a class="reference external" href="https://registry.cs.aalto.fi">registry.cs.aalto.fi</a> and click <code class="docutils literal"><span class="pre">Gitlab</span></code> under
+<code class="docutils literal"><span class="pre">Social</span> <span class="pre">logins</span></code>. This will redirect you to a <code class="docutils literal"><span class="pre">Gitlab</span></code> page that you can use
+for authentication. In this page use your Aalto username and password to login.</p>
+<p>In the future we&#8217;ll improve the authentication page.</p>
+</div>
+<div class="section" id="step-2-create-an-application-token">
+<h3>Step 2: Create an application token<a class="headerlink" href="#step-2-create-an-application-token" title="Permalink to this headline">¶</a></h3>
+<p>For added security you cannot use your main password for <code class="docutils literal"><span class="pre">docker</span> <span class="pre">login</span></code>.
+By clicking on your username, you&#8217;ll get to your user settings. From there, do
+the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Click <code class="docutils literal"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">token</span></code> in the Application tokens-section.</li>
+<li>Choose name for the token and click create.</li>
+<li>Copy the application token that is visible on the right side of your
+screen.</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="step-3-docker-login">
+<h3>Step 3: Docker login<a class="headerlink" href="#step-3-docker-login" title="Permalink to this headline">¶</a></h3>
+<p>On your own workstation run:</p>
+<div class="highlight-python"><div class="highlight"><pre>docker login registry.cs.aalto.fi
+</pre></div>
+</div>
+<p>Your username is same as your Aalto username. As a password give the
+application token you created in step 2.</p>
+</div>
+<div class="section" id="step-4-push-your-images-to-registry">
+<h3>Step 4: Push your images to registry<a class="headerlink" href="#step-4-push-your-images-to-registry" title="Permalink to this headline">¶</a></h3>
+<p>If you have an existing image in Dockerhub, you can run:</p>
+<div class="highlight-python"><div class="highlight"><pre>docker pull &lt;dockerhub user&gt;/&lt;image&gt;:&lt;tag&gt;
+docker tag &lt;dockerhub user&gt;/&lt;image&gt;:&lt;tag&gt; registry.cs.aalto.fi/&lt;your username&gt;/&lt;image&gt;:&lt;tag&gt;
+docker push registry.cs.aalto.fi/&lt;your username&gt;/&lt;image&gt;:&lt;tag&gt;
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>docker pull library/ubuntu:latest
+docker tag library/ubuntu:latest registry.cs.aalto.fi/$USER/ubuntu:latest
+docker push registry.cs.aalto.fi/$USER/ubuntu:latest
+</pre></div>
+</div>
+<p>If you are building your image from Dockerfile, you can run:</p>
+<div class="highlight-python"><div class="highlight"><pre>docker build -it registry.cs.aalto.fi/$USER/my_image:latest /path/to/my/dockerfile
+docker push registry.cs.aalto.fi/$USER/my_image:latest
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-5-let-us-know-what-image-you-want-to-have-in-triton">
+<h3>Step 5: Let us know what image you want to have in Triton<a class="headerlink" href="#step-5-let-us-know-what-image-you-want-to-have-in-triton" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do note that images built to Triton are visible to all users.
+Do not include sensitive code/data in the docker images. You should retreive
+such data from your project/work folder during job runtime.</p>
+</div>
+<p>We need the following information for the automatic build:</p>
+<blockquote>
+<div><ul class="simple">
+<li>What is the Docker url of the image
+(e.g. <code class="docutils literal"><span class="pre">registry.cs.aalto.fi/$USER/my_image</span></code>)?</li>
+<li>What tags do you want built (we recommend you use <code class="docutils literal"><span class="pre">latest</span></code> and <code class="docutils literal"><span class="pre">dev</span></code>)?</li>
+<li>Does the image utilize GPUs?</li>
+</ul>
+</div></blockquote>
+<p>After that we&#8217;ll set up the automated build. Every time you push a newer
+version of said <code class="docutils literal"><span class="pre">image:tag</span></code> the image will update in Triton if the build
+was successful.</p>
+<p>After the build has been done you can load up your new image in Triton with:</p>
+<div class="highlight-python"><div class="highlight"><pre>module use /share/apps/singularity-ci/centos/modules/$USER
+module load my_image:latest
+</pre></div>
+</div>
+<p>and launch the programs within using the <code class="docutils literal"><span class="pre">singularity_wrapper</span> <span class="pre">exec</span></code>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="smallfiles.html" class="btn btn-neutral float-right" title="Small files" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quotas.html" class="btn btn-neutral" title="Quotas" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

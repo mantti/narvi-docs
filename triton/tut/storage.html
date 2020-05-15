@@ -1,0 +1,651 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data storage &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Interactive jobs" href="interactive.html"/>
+        <link rel="prev" title="Software Modules" href="modules.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#tutorials">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">About Science-IT and Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting.html">Connecting to Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="applications.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html">Software Modules</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Data storage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basics">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#think-about-i-o-before-you-start-general-notes">Think about I/O before you start! - General notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-data-storage-options">Available data storage options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quotas">Quotas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#accessing-and-transferring-files-remotely">Accessing and transferring files remotely</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#accessing-files-from-department-workstations">Accessing files from Department workstations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="interactive.html">Interactive jobs: running your first command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial jobs: running in the queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">Array jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependency.html">Job dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Data storage</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/tut/storage.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-storage">
+<h1>Data storage<a class="headerlink" href="#data-storage" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we go over places to store data on Triton and how to
+access it remotely.</p>
+<p>Optimizing data storage isn&#8217;t very glamorous, but is an important
+part of high-performance computing.</p>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>Triton has various ways to store data.  Each has a purpose, and when
+you are dealing with large data sets or intensive I/O, efficiency
+becomes important.</p>
+<p>Roughly, we have small <strong>home</strong> directories (only for configuration
+files), large Lustre (<strong>scratch</strong> and <strong>work</strong>, large, primary calculation
+data), and special places for scratch during computations (<strong>local
+disks</strong>).  At Aalto, there is <strong>aalto home</strong>, <strong>project</strong>, and
+<strong>archive</strong> directories which, unlike Triton, are backed up but don&#8217;t
+scale to the size of Triton.</p>
+<p>A file consists of its contents and metadata.  The metadata is information
+like user, group, timestamps, permissions.  To view metadata, use <code class="docutils literal"><span class="pre">ls</span>
+<span class="pre">-l</span></code> or <code class="docutils literal"><span class="pre">stat</span></code>.</p>
+<p>Filesystem performance can be measured by both IOPS (input-output
+operations per second) and stream I/O speed.  <code class="docutils literal"><span class="pre">/usr/bin/time</span> <span class="pre">-v</span></code> can
+give you some hints here.  You can see the <a class="reference internal" href="../usage/profiling.html"><em>profiling</em></a> page for more information.</p>
+</div>
+<div class="section" id="think-about-i-o-before-you-start-general-notes">
+<h2>Think about I/O before you start! - General notes<a class="headerlink" href="#think-about-i-o-before-you-start-general-notes" title="Permalink to this headline">¶</a></h2>
+<p>When people think of computer speed, they usually think of CPU speed.
+But this is missing an important factor: How fast can data get to the
+CPU?  In many cases, input/output (IO) is the true bottleneck and
+must be considered just as much as processor speed.  <strong>In fact,
+modern computers and especially GPUs are so fast that it becomes very easy
+for a few GPUs with bad data access patterns to bring the cluster down for
+everyone.</strong></p>
+<p>The solution is similar to how you have to consider memory: There are
+different types of filesystems with different tradeoffs between speed,
+size, and performance, and you have to use the right one for the right
+job.  Often times.  So you have to use several in tandem: For example,
+store original data on <strong>archive</strong>, put your working copy on
+<strong>scratch</strong>, and maybe even make a per-calculation copy on <strong>local
+disks</strong>.</p>
+<p>The following factors are useful to consider:</p>
+<ul class="simple">
+<li>How much I/O are you doing in the first place?  Do you continually re-read the
+same data?</li>
+<li>What&#8217;s the pattern of your I/O and which filesystem is best for it?  If
+you read all at once, scratch is fine. But if there are many small
+files or random access, local disks may help.</li>
+<li>Do you write log files/checkpoints more often than is needed?</li>
+<li>Some programs use local disk as swap-space. Only turn on if you know
+it is reasonable.</li>
+</ul>
+<p>There&#8217;s a checklist in the <a class="reference internal" href="../usage/storage.html"><em>storage details page</em></a>.</p>
+<p>Avoid many small files! Use a few big ones instead. (we have a
+<a class="reference internal" href="../usage/smallfiles.html"><em>dedicated page</em></a> on the matter)</p>
+</div>
+<div class="section" id="available-data-storage-options">
+<h2>Available data storage options<a class="headerlink" href="#available-data-storage-options" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Path</th>
+<th class="head">Quota</th>
+<th class="head">Backup</th>
+<th class="head">Locality</th>
+<th class="head">Purpose</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Home</td>
+<td><code class="docutils literal"><span class="pre">$HOME</span></code> or <code class="docutils literal"><span class="pre">/home/$username/</span></code></td>
+<td>hard quota 10GB</td>
+<td>Nightly</td>
+<td>all nodes</td>
+<td>Small user specific files, no calculation data.</td>
+</tr>
+<tr class="row-odd"><td>Work</td>
+<td><code class="docutils literal"><span class="pre">$WRKDIR</span></code> or <code class="docutils literal"><span class="pre">/scratch/work/$username/</span></code></td>
+<td>200GB and 1 million files</td>
+<td>x</td>
+<td>all nodes</td>
+<td>Personal working space for every user. Calculation data etc. Quota can be increased on request.</td>
+</tr>
+<tr class="row-even"><td>Scratch</td>
+<td><code class="docutils literal"><span class="pre">/scratch/$dept/$project/</span></code></td>
+<td>on request</td>
+<td>x</td>
+<td>all nodes</td>
+<td>Department/group specific project directories.</td>
+</tr>
+<tr class="row-odd"><td>Local temp</td>
+<td><code class="docutils literal"><span class="pre">/tmp/</span></code></td>
+<td>limited by disk size</td>
+<td>x</td>
+<td>single-node</td>
+<td>Primary (and usually fastest) place for single-node calculation data.  Removed once user&#8217;s jobs are finished on the node.</td>
+</tr>
+<tr class="row-even"><td>Local persistent</td>
+<td><code class="docutils literal"><span class="pre">/l/</span></code></td>
+<td>varies</td>
+<td>x</td>
+<td>dedicated group servers only</td>
+<td>Local disk persistent storage.  On servers purchased for a specific group.  Not backed up.</td>
+</tr>
+<tr class="row-odd"><td>ramfs (login nodes only)</td>
+<td><code class="docutils literal"><span class="pre">$XDG_RUNTIME_DIR</span></code></td>
+<td>limited by memory</td>
+<td>x</td>
+<td>single-node</td>
+<td>Ramfs on the <em>login node only</em>, in-memory filesystem</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="home-directories">
+<h3>Home directories<a class="headerlink" href="#home-directories" title="Permalink to this headline">¶</a></h3>
+<p>The place you start when you log in.  Home directory should be used for init files,
+small config files, etc.  It is however not suitable for storing calculation data.
+Home directories are backed up daily.  You usually want to use scratch instead.</p>
+</div>
+<div class="section" id="scratch-and-work-lustre">
+<h3>scratch and work: Lustre<a class="headerlink" href="#scratch-and-work-lustre" title="Permalink to this headline">¶</a></h3>
+<p>Scratch is the big, high-performance, 2PB Triton storage.  It is the primary
+place for calculations, data analyzes etc. It is not backed up but is
+reliable against hardware failures (RAID6, redundant servers), but
+<em>not</em> safe against human error..  It is
+shared on all nodes, and has very fast access.  It is divided into two
+parts, <strong>scratch (by groups)</strong> and <strong>work (per-user)</strong>.  In general, always
+change to <code class="docutils literal"><span class="pre">$WRKDIR</span></code> or a group <code class="docutils literal"><span class="pre">scratch</span></code> directory when you first
+log in and start doing work.</p>
+<p>Lustre separates metadata and contents onto separate object and
+metadata servers.  This allows fast access to large files, but induces
+a larger overhead than normal filesystems.  See our <a class="reference internal" href="../usage/smallfiles.html"><em>small
+files</em></a> page for more information.</p>
+<p>See <a class="reference internal" href="../usage/lustre.html"><em>Storage: Lustre (scratch)</em></a></p>
+</div>
+<div class="section" id="local-disks">
+<h3>Local disks<a class="headerlink" href="#local-disks" title="Permalink to this headline">¶</a></h3>
+<p>Local disks are on each node separately.  It is used for the fastest I/Os
+with single-node jobs and is cleaned up after job is finished.  Since 2019,
+things have gotten a bit more complicated given that our newest (skl) nodes
+don&#8217;t have local disks.  If you want to ensure you have local storage,
+submit your job with <code class="docutils literal"><span class="pre">--gres=spindle</span></code>.</p>
+<p>See the <a class="reference internal" href="../usage/localstorage.html"><em>Compute
+node local drives</em></a> page for further details and script
+examples.</p>
+</div>
+<div class="section" id="ramfs-fast-and-highly-temporary-storage">
+<h3>ramfs - fast and highly temporary storage<a class="headerlink" href="#ramfs-fast-and-highly-temporary-storage" title="Permalink to this headline">¶</a></h3>
+<p><strong>On login nodes only</strong>,
+<code class="docutils literal"><span class="pre">$XDG_RUNTIME_DIR</span></code> is a ramfs, which means that it looks like files
+but is stored only in memory.  Because of this, it is extremely fast,
+but has no persistence whatsoever.  Use it if you have to make small
+temporary files that don&#8217;t need to last long.  Note that this is no
+different than just holding the data in memory, if you can hold in
+memory that&#8217;s better.</p>
+</div>
+</div>
+<div class="section" id="quotas">
+<h2>Quotas<a class="headerlink" href="#quotas" title="Permalink to this headline">¶</a></h2>
+<p>All directories under <code class="docutils literal"><span class="pre">/scratch</span></code> (as well as <code class="docutils literal"><span class="pre">/home</span></code>) have quotas. Two
+quotas are set per-filesystem: disk space and file number.</p>
+<p>Disk quota and current usage are printed with the command <code class="docutils literal"><span class="pre">quota</span></code>.
+&#8216;space&#8217; is for the disk space and &#8216;files&#8217; for the total number of files
+limit. There is a separate quota for groups on which the user is a
+member.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ quota
+User quotas for darstr1
+     Filesystem   space   quota   limit   grace   files   quota   limit   grace
+/home              484M    977M   1075M           10264       0       0
+/scratch          3237G    200G    210G       -    158M      1M      1M       -
+
+Group quotas
+Filesystem   group                  space   quota   limit   grace   files   quota   limit   grace
+/scratch     domain users            132G     10M     10M       -    310M    5000    5000       -
+/scratch     some-group              534G    524G    524G       -    7534   1000M   1000M       -
+/scratch     other-group              16T     20T     20T       -   1088M      5M      5M       -
+</pre></div>
+</div>
+<p>If you get a quota error, see the <a class="reference internal" href="../usage/quotas.html"><em>quotas</em></a>
+page for a solution.</p>
+</div>
+<div class="section" id="accessing-and-transferring-files-remotely">
+<h2>Accessing and transferring files remotely<a class="headerlink" href="#accessing-and-transferring-files-remotely" title="Permalink to this headline">¶</a></h2>
+<p>Transferring files to/from Triton is exactly the same as any other
+remote Linux server.</p>
+<div class="section" id="remote-mounting-using-smb">
+<h3>Remote mounting using SMB<a class="headerlink" href="#remote-mounting-using-smb" title="Permalink to this headline">¶</a></h3>
+<p>By far, remote mounting of files is the easiest method to transfer files.  If you are
+not on the Aalto networks (wired, <code class="docutils literal"><span class="pre">eduroam</span></code>, or <code class="docutils literal"><span class="pre">aalto</span></code> with
+Aalto-managed laptop), connect to the <a class="reference internal" href="../../aalto/remoteaccess.html"><em>Aalto VPN</em></a> first.  Note that
+this is automatically done on some department workstations (see
+below) - if not, request it!</p>
+<p>The scratch filesystem can be remote mounted using SMB inside secure
+Aalto networks at the URLs</p>
+<ul class="simple">
+<li>scratch: <code class="docutils literal"><span class="pre">smb://data.triton.aalto.fi/scratch/</span></code>.</li>
+<li>work: <code class="docutils literal"><span class="pre">smb://data.triton.aalto.fi/work/$username/</span></code>.</li>
+</ul>
+<p>On different operating systems:</p>
+<ul class="simple">
+<li>Linux (Ubuntu for example): File manager (Nautilus) → File →
+Connect to server.  Use the <code class="docutils literal"><span class="pre">smb://</span></code> URLs above.</li>
+<li>Windows: In the file manager, go to Computer (in menu bar on top, at
+least in Windows 10) → Map Network Drive) and &#8220;Map Network Drive&#8221;.
+In Windows 10 → &#8220;This PC&#8221; → right click → &#8220;Add Network Location&#8221;.
+(Note that this is different from right-click &#8220;Add network location&#8221;
+which just makes a folder link and has had some problems in the past.)
+Use the URLs above but replace <code class="docutils literal"><span class="pre">smb://</span></code> with <code class="docutils literal"><span class="pre">\\</span></code> and <code class="docutils literal"><span class="pre">/</span></code> with
+<code class="docutils literal"><span class="pre">\</span></code>.  For example, <code class="docutils literal"><span class="pre">\\data.triton.aalto.fi\scratch\</span></code>.</li>
+<li>Mac: Finder → Go → Connect to Server.  Use the <code class="docutils literal"><span class="pre">smb://</span></code> URLs above.</li>
+</ul>
+<p>Depending on your OS, you may need to use either your username
+directly or <code class="docutils literal"><span class="pre">AALTO\username</span></code>.</p>
+</div>
+<div class="section" id="remote-mounting-using-sshfs">
+<h3>Remote mounting using sshfs<a class="headerlink" href="#remote-mounting-using-sshfs" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">sshfs</span></code> is a neat program that lets you mount remote filesystems via
+ssh only.  It is well-supported in Linux, and somewhat on other
+operating systems.  It&#8217;s true advantage is that you can mount any
+remote ssh server - it doesn&#8217;t have to be set up specially for SMB or
+any other type of mounting.  On Ubuntu, you can mount by &#8220;File → Connect to
+server&#8221; and using <code class="docutils literal"><span class="pre">sftp://triton.aalto.fi/scratch/work/USERNAME</span></code>.</p>
+<p>The below uses command line programs to do the same, and makes the
+<code class="docutils literal"><span class="pre">triton_work</span></code> on your local computer access all files in
+<code class="docutils literal"><span class="pre">/scratch/work/USERNAME</span></code>.  Can be done with other folders.:</p>
+<div class="highlight-python"><div class="highlight"><pre>mkdir triton_work
+sshfs USERNAME@triton.aalto.fi:/scratch/work/USERNAME triton_work
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal"><span class="pre">ssh</span></code> binds together many ways of accessing Triton, with a
+similar syntax and options.  <code class="docutils literal"><span class="pre">ssh</span></code> is a very important program and
+binds together all types of remote access, and learning to use it well
+will help you for a long time.</p>
+</div>
+<div class="section" id="using-sftp">
+<h3>Using sftp<a class="headerlink" href="#using-sftp" title="Permalink to this headline">¶</a></h3>
+<p>The <em>SFTP</em> protocol uses ssh to transfer files.  On Linux and Mac, the
+<code class="docutils literal"><span class="pre">sftp</span></code> command line program are the must fundamental way to do this,
+and are available everywhere.</p>
+<p>A more user-friendly way of doing this (with a nice GUI) is the
+<a class="reference external" href="https://filezilla-project.org/">Filezilla program</a>. Make sure you are using
+<a class="reference external" href="https://www.aalto.fi/en/services/establishing-a-remote-connection-vpn-to-an-aalto-network">Aalto VPN</a>, then
+you can put triton.aalto.fi as SFTP server with port 22.</p>
+<p>Below is an example of the &#8220;raw&#8221; SFTP usage:</p>
+<div class="highlight-python"><div class="highlight"><pre># Copying from HOME to local PC
+user@pc123 $ sftp user12@triton.aalto.fi:filename
+Connected to triton.aalto.fi.
+Fetching /home/user12/filename to filename
+# copying to HOME
+user@pc123 $ sftp -b - user12@triton &lt;&lt;&lt; &#39;put testCluster.m&#39;
+sftp&gt; put foo
+# copying to WRKDIR
+user@pc123 $ sftp -b - user12@triton:/scratch/work/USERNAME/ &lt;&lt;&lt; &#39;put testCluster.m&#39;
+...
+</pre></div>
+</div>
+<p>With all modern OS it is also possible to just open your OS file manager (e.g. Nautilus on Linux) and just put as address in the bar:</p>
+<div class="highlight-python"><div class="highlight"><pre>sftp://triton.aalto.fi
+</pre></div>
+</div>
+<p>If you are connecting from remote and cannot use the VPN, you can connect instead to department machines like kosh.aalto.fi, taltta.aalto.fi, amor.org.aalto.fi (for NBE). The port is 22. <em>Note:</em> If you do not see your shared folder, you need to manually specify the full path (i.e. the folder is there, just not yet visible).</p>
+</div>
+<div class="section" id="using-rsync">
+<h3>Using rsync<a class="headerlink" href="#using-rsync" title="Permalink to this headline">¶</a></h3>
+<p>Rsync is similar to sftp, but is smarter at restarting files.  Use rsync
+for large file transfers.  <code class="docutils literal"><span class="pre">rsync</span></code> actually uses the ssh protocol so
+you can <code class="docutils literal"><span class="pre">rsync</span></code> from anywhere you can <code class="docutils literal"><span class="pre">ssh</span></code> from. <code class="docutils literal"><span class="pre">rsync</span></code> is installed
+by default on Linux and Mac terminals. On Windows machines we recommend using <a class="reference external" href="https://gitforwindows.org/">GIT-bash</a>.</p>
+<p>While there are better places on the internet to read about rsync, it is good
+to try it out to sychronise a local folder on your triton&#8217;s scratch. Sometimes
+the issue with copying files is related to group permissions. This command takes
+care of permissions and makes sure that all your local files are identical (= same
+MD5 fingerprint) to your remote files:</p>
+<div class="highlight-python"><div class="highlight"><pre>rsync -avzc -e &quot;ssh&quot; --chmod=g+s,g+rw --group=GROUPNAME PATHTOLOCALFOLDER USERNAME@triton.aalto.fi:/scratch/DEPT/PROJECTNAME/REMOTEFOLDER/
+</pre></div>
+</div>
+<p>Replace the bits in CAPS with your own case. Briefly, <code class="docutils literal"><span class="pre">-a</span></code> tries to preserve all attributes of the file, <code class="docutils literal"><span class="pre">-v</span></code> increases verbosity to see what rsync is doing, <code class="docutils literal"><span class="pre">-z</span></code> uses compression, <code class="docutils literal"><span class="pre">-c</span></code> skips files that have identical MD5 checksum, <code class="docutils literal"><span class="pre">-e</span></code> specifies to use ssh (not necessary but needed for the commands coming after), <code class="docutils literal"><span class="pre">--chmod</span></code> sets the group permissions to shared (as common practice on scratch project folders), and <code class="docutils literal"><span class="pre">--group</span></code> sets the groupname to the group you belong to (note that GROUPNAME == PROJECTNAME on our scratch filesystem).</p>
+<p>If you want to just check that your local files are different from the remote ones, you can run rsync in &#8220;dry run&#8221; so that you only see what the command would do, without actually doing anything.:</p>
+<div class="highlight-python"><div class="highlight"><pre>rsync --dry-run -avzc ...
+</pre></div>
+</div>
+<p>Sometimes you want to copy only certain files. E.g. go through all folders, consider only files ending with <code class="docutils literal"><span class="pre">py</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>rsync -avzc --include &#39;*/&#39; --include &#39;*.py&#39; --exclude &#39;*&#39; ...
+</pre></div>
+</div>
+<p>Sometimes you want to copy only files under a certain size (e.g. 100MB):</p>
+<div class="highlight-python"><div class="highlight"><pre>rsync -avzc --max-size=100m ...
+</pre></div>
+</div>
+<p>Rsync does NOT delete files by default, i.e. if you delete a file from the local folder, the remote file will not be deleted automatically, unless you specify the <code class="docutils literal"><span class="pre">--delete</span></code> option.</p>
+<p>Please note that when working with files containing code or simple text, git is a better option to synchronise your local folder with your remote one, because not only it will keep the two folders in sycn, but you will also gain version controlling so that you can revert to previous version of your code, or txt/csv files.</p>
+</div>
+</div>
+<div class="section" id="accessing-files-from-department-workstations">
+<h2>Accessing files from Department workstations<a class="headerlink" href="#accessing-files-from-department-workstations" title="Permalink to this headline">¶</a></h2>
+<p>This varies per department, with some strategies that work from
+everywhere.</p>
+<p>These mounts that are already on workstations require a valid Kerberos
+ticket (usually generated when you log in). On long sessions these might
+expire, and you have to renew them with <code class="docutils literal"><span class="pre">kinit</span></code> to keep going.</p>
+<div class="section" id="generic">
+<h3>Generic<a class="headerlink" href="#generic" title="Permalink to this headline">¶</a></h3>
+<p>The staff shell server <code class="docutils literal"><span class="pre">taltta.aalto.fi</span></code> has scratch and work mounted
+at <code class="docutils literal"><span class="pre">/m/triton</span></code>, and department directories are also in the standard
+paths <code class="docutils literal"><span class="pre">/m/{cs,nbe}/{scratch,work}/</span></code>.</p>
+</div>
+<div class="section" id="nbe">
+<h3>NBE<a class="headerlink" href="#nbe" title="Permalink to this headline">¶</a></h3>
+<p>Work directories are available at <code class="docutils literal"><span class="pre">/m/nbe/work</span></code> and group scratch
+directories at <code class="docutils literal"><span class="pre">/m/nbe/scratch/$project/</span></code>.</p>
+</div>
+<div class="section" id="phys">
+<h3>PHYS<a class="headerlink" href="#phys" title="Permalink to this headline">¶</a></h3>
+<p>Directories available on demand through SSHFS. See the <a class="reference external" href="https://wiki.aalto.fi/display/TFYintra/Data+transferring">Data
+transferring</a> page
+at PHYS Intranet (accessible by PHYS users only).</p>
+</div>
+<div class="section" id="cs">
+<h3>CS<a class="headerlink" href="#cs" title="Permalink to this headline">¶</a></h3>
+<p>Work directories are available at <code class="docutils literal"><span class="pre">/m/cs/work/</span></code>, and group scratch
+directories at <code class="docutils literal"><span class="pre">/m/cs/scratch/$project/</span></code>.</p>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">strace</span></code> is a command which tracks <strong>system calls</strong>, basically the
+number of times the operating system has to do something.  It can be
+used as a rudimentary way to see how much I/O load there is.</p>
+<ol class="arabic simple">
+<li>Use <code class="docutils literal"><span class="pre">strace</span> <span class="pre">-c</span></code> to compare the number of system calls in <code class="docutils literal"><span class="pre">ls</span></code>,
+<code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span></code>, <code class="docutils literal"><span class="pre">ls</span> <span class="pre">--no-color</span></code>, and <code class="docutils literal"><span class="pre">ls</span> <span class="pre">--color</span></code>.  You can use the directory
+<code class="docutils literal"><span class="pre">/scratch/scip/lustre_2017/many-files/</span></code> as a place with many
+files in it.  How many system calls per file were there for each
+option?</li>
+<li>Using <code class="docutils literal"><span class="pre">strace</span> <span class="pre">-c</span></code>, compare the times of <code class="docutils literal"><span class="pre">find</span></code> and <code class="docutils literal"><span class="pre">lfs</span> <span class="pre">find</span></code>
+on the directory mentioned above.  Why is it different?</li>
+<li>(Advanced, requires slurm knowledge from future tutorials)  You
+will find some sample files in <code class="docutils literal"><span class="pre">/scratch/scip/examples/io</span></code>.
+Create a temporary directory and...<ol class="loweralpha">
+<li>Run <code class="docutils literal"><span class="pre">create_iodata.sh</span></code> to make some data files in <code class="docutils literal"><span class="pre">data/</span></code></li>
+<li>Compare the IO operations of <code class="docutils literal"><span class="pre">find</span></code> and <code class="docutils literal"><span class="pre">lfs</span> <span class="pre">find</span></code> on this
+directory.</li>
+<li>use the <code class="docutils literal"><span class="pre">iotest.sh</span></code> script to do some basic analysis.  How
+long does it take?  Submit it as a slurm batch job.</li>
+<li>Modify the iotest.sh script to copy the <code class="docutils literal"><span class="pre">data/</span></code> directory to
+local storage, do the operations, then remove the data.  Compare
+to previous strategy.</li>
+<li>Use <code class="docutils literal"><span class="pre">tar</span></code> to compress the data while it is on lustre.  Unpack
+this tar archive to local storage, do the operations, then
+remove.  Compare to previous strategies.</li>
+</ol>
+</li>
+<li>Mount your work directory by SMB - and alternatively sftp or sshfs - and transfer a file to Triton.
+Note that you must be on <code class="docutils literal"><span class="pre">eduroam</span></code>, the <code class="docutils literal"><span class="pre">aalto</span></code> <em>with Aalto
+laptop</em>, or connected to the Aalto VPN.</li>
+<li>(Advanced) If you have a Linux on Mac computer, study the <code class="docutils literal"><span class="pre">rsync</span></code>
+manual page and try to transfer a file.</li>
+<li>What do all of the following have in common?<ol class="loweralpha">
+<li>A job is submitted but fails with no output or messages.</li>
+<li>I can&#8217;t start a Jupyter server on jupyter.triton.</li>
+<li>Some files are randomly empty.  Or the file had content, I tried
+to save it again, and now it&#8217;s empty!</li>
+<li>I can&#8217;t log in.</li>
+<li>I can log in with ssh, but <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">-X</span></code> doesn&#8217;t work for graphical programs.</li>
+<li>I get an error message about corruption, such as
+<code class="docutils literal"><span class="pre">InvalidArchiveError(&quot;Error</span> <span class="pre">with</span> <span class="pre">archive</span> <span class="pre">...</span> <span class="pre">You</span> <span class="pre">probably</span> <span class="pre">need</span>
+<span class="pre">to</span> <span class="pre">delete</span> <span class="pre">and</span> <span class="pre">re-download</span> <span class="pre">or</span> <span class="pre">re-create</span> <span class="pre">this</span> <span class="pre">file.</span></code></li>
+<li>I can&#8217;t install my own Python/R/etc libraries.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="what-s-next">
+<h2>What&#8217;s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../usage/lustre.html"><em>Storage: Lustre (scratch)</em></a></li>
+<li><a class="reference internal" href="../usage/localstorage.html"><em>Storage: local drives</em></a></li>
+<li><a class="reference internal" href="../usage/quotas.html"><em>Quotas</em></a></li>
+<li><a class="reference internal" href="../usage/smallfiles.html"><em>Small files</em></a></li>
+<li>If you are doing heavy I/O: <a class="reference internal" href="../usage/storage.html"><em>Storage</em></a></li>
+</ul>
+</div>
+<p>The next tutorial is about <a class="reference internal" href="interactive.html"><em>interactive jobs</em></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="interactive.html" class="btn btn-neutral float-right" title="Interactive jobs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral" title="Software Modules" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

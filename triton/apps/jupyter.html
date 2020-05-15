@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Jupyter &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Applications: General info" href="index.html"/>
+        <link rel="next" title="Keras" href="keras.html"/>
+        <link rel="prev" title="Julia language on triton" href="julia.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#applications">Applications</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html">Applications: General info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aims.html">FHI-aims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="armadillo.html">Armadillo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boost.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectron.html">Detectron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenics.html">Fenics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fsl.html">FSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpaw.html">GPAW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="julia.html">Julia language on triton</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Jupyter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-jupyter-notebooks-work">How Jupyter notebooks work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jupyterhub">JupyterHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#software-and-kernels">Software and kernels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#git-integration">Git integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faq-common-problems">FAQ/common problems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="keras.html">Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">Lammps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html">Matlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlpack.html">MLPack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mne.html">MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="octave.html">Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openpose.html">OpenPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paraview.html">Paraview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="r.html">R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstan.html">RStan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstudio.html">RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spyder.html">Spyder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theano.html">Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vasp.html">VASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visit.html">VisIT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+          <li><a href="index.html">Applications: General info</a> &raquo;</li>
+      
+    <li>Jupyter</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/apps/jupyter.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jupyter">
+<h1>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Quick link</p>
+<p class="last">Triton&#8217;s JupyterHub is available at
+<a class="reference external" href="https://jupyter.triton.aalto.fi">https://jupyter.triton.aalto.fi</a>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>For new users</p>
+<p>Are you new to Triton and want to access JupyterHub?  Triton is a
+high-performance computing cluster, and JupyterHub is just one of
+our services - one of the easiest ways to get started.  You still
+need a Triton account.  This site has many instructions, but you
+should read at least:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../tut/intro.html"><em>About us</em></a>, <a class="reference internal" href="../help.html"><em>how to get help</em></a>, and <a class="reference internal" href="../acknowledgingtriton.html"><em>acknowledging Triton
+usage</em></a> (this JupyterHub is part of
+Triton, and thus Science-IT must be acknowledged in publications).</li>
+<li><a class="reference internal" href="../accounts.html"><em>The accounts page</em></a>, in order to request a
+Triton account.</li>
+<li>Possibly the <a class="reference internal" href="../tut/storage.html"><em>storage page</em></a> to learn about
+the places to store data and how to transfer data.</li>
+<li>The JupyterHub section of this page (below).</li>
+</ul>
+<p class="last">If you want to use Triton more, you should finish the entire
+<a class="reference internal" href="../index.html#tutorials"><span>tutorials section</span></a>.</p>
+</div>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/jupyter_demo.gif"><img alt="alternate text" src="../../_images/jupyter_demo.gif" style="width: 400.8px; height: 304.8px;" /></a>
+<p class="caption"><span class="caption-text">&lt; Triton JupyterHub Demo &gt;</span></p>
+</div>
+<p>Jupyter notebooks are a way of interactive, web-based computing:
+instead of either scripts or interactive shells, the notebooks allow
+you to see a whole script + output and experiment interactively and
+visually.  They are good for developing and testing things, but once
+things work and you need to scale up, it is best to put your code into
+proper programs (<a class="reference internal" href="../../scicomp/jupyter-pitfalls.html"><em>more info</em></a>).  You
+must do this if you are going to large parallel
+computing.</p>
+<p>Triton&#8217;s JupyterHub is available at <a class="reference external" href="https://jupyter.triton.aalto.fi">https://jupyter.triton.aalto.fi</a>.
+You can try them online at <a class="reference external" href="https://try.jupyter.org/">try.jupyter.org</a> (there is a temporary notebook with no
+saving).</p>
+<p>You can always run notebooks yourself on your own (or remote)
+computers, but on Triton we have some facilities already set up to
+make it easier.</p>
+<div class="section" id="how-jupyter-notebooks-work">
+<h2>How Jupyter notebooks work<a class="headerlink" href="#how-jupyter-notebooks-work" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Start a notebook</li>
+<li>Enter some code into a cell.</li>
+<li>Run it with the buttons or <code class="docutils literal"><span class="pre">Control-enter</span></code> or <code class="docutils literal"><span class="pre">Shift-enter</span></code> to
+run a cell.</li>
+<li>Edit/create new cells, run again.  Repeat indefinitely.</li>
+<li>You have a visual history of what you have run, with code and
+results nicely interspersed.  With certain languages such as Python,
+you can plots and other things embedded, so that it becomes a
+complete reproducible story.</li>
+</ul>
+<p>JupyterLab is the next iteration of this and has many more features,
+making it closer to an IDE or RStudio.</p>
+<p>Notebooks are without a doubt a great tool.  However, they are only
+one tool, and you need to know their limitations.  See our other page
+on <a class="reference internal" href="../../scicomp/jupyter-pitfalls.html"><em>limitations of notebooks</em></a>.</p>
+</div>
+<div class="section" id="jupyterhub">
+<h2>JupyterHub<a class="headerlink" href="#jupyterhub" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">JupyterHub on Triton is still under development, and features will
+be added as they are needed or requested.  Please use the <a class="reference external" href="https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues">Triton
+issue tracker</a>.</p>
+</div>
+<p>The easiest way of using Jupyter is through JupyterHub - it is a
+multi-user jupyter server which takes a web-based login and spawns
+your own single-user server.  This is available on Triton.</p>
+<div class="section" id="connecting-and-starting">
+<h3>Connecting and starting<a class="headerlink" href="#connecting-and-starting" title="Permalink to this headline">¶</a></h3>
+<p>Currently jupyterHub is available only within Aalto networks, or from
+the rest of the internet after a first Aalto login:
+<a class="reference external" href="https://jupyter.triton.aalto.fi">https://jupyter.triton.aalto.fi</a>.</p>
+<p>Once you log in, you must start your single-user server.  There are
+several options available that trade off between long run time and
+short run time but more memory available.  Your server runs in the
+Slurm queue, so the first start-up takes a few seconds but after that
+it will stay running even if you log out.  The resources you request
+are managed by slurm: if you go over the memory limit, your server
+will be killed without warning or notification (but you can see it in
+the output log, <code class="docutils literal"><span class="pre">~/'jupyterhub_slurmspawner_*.log</span></code>).  The Jupyter
+server nodes are oversubscribed, which means that we can allocate more
+memory and CPU than is actually available.  We will monitor the nodes
+to try to ensure that there are enough resources available, so do
+report problems to us.  <strong>Please request the minimum amount of memory
+you think you need</strong> - you can always restart with more memory.  You
+can go over your memory request a little bit before you get problems.</p>
+<p>When you use Jupyter via this interface, the slurm billing weights are
+lower, so that the rest of your Triton priority does not decrease by
+as much.</p>
+</div>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>Once you get to your single-user server Jupyter running as your own
+user on Triton.  You begin in a convenience directory which has links to
+<code class="docutils literal"><span class="pre">home</span></code>, <code class="docutils literal"><span class="pre">scratch</span></code>, etc.  You can not make files in this directory
+(it is read-only), but you can navigate to the other folders to create
+your notebooks.  You have access to all the Triton filesystems (not
+project/archive) and all normal software.</p>
+<p>We have some basic extensions installed:</p>
+<ul class="simple">
+<li>Jupyterlab (to use it, change <code class="docutils literal"><span class="pre">/tree</span></code> in the URL to <code class="docutils literal"><span class="pre">/lab</span></code>).
+Jupyterlab will eventually be made the default.</li>
+<li>modules integration</li>
+<li>jupyter_contrib_nbextensions - check out the variable inspector</li>
+<li>diff and merge tools (currently does not work somehow)</li>
+</ul>
+<p>The log files for your single-user servers can be found in, see
+<code class="docutils literal"><span class="pre">~/jupyterhub_slurmspawner_*.log</span></code>.  When a new server starts, these
+are automatically cleaned up when they are one week old.</p>
+<p>For <a class="reference external" href="https://jupyterhub.readthedocs.io/en/latest/reference/websecurity.html">reasons of web security</a>,
+you can&#8217;t install your own extensions (but you can install your own
+kernels).  Send your requests to us instead.</p>
+</div>
+<div class="section" id="problems-requests">
+<h3>Problems?  Requests?<a class="headerlink" href="#problems-requests" title="Permalink to this headline">¶</a></h3>
+<p>This service is currently in beta and under active development.  If
+you notice problems or would like any more extensions or features, let
+us know.  If this is useful to you, please let us know your user
+store, too.  In the current development stage, the threshold for
+feedback should be very low.</p>
+<p>Currently, the service level is best effort.  The service may go down
+at any time and/or notebooks may be killed whenever there is a
+shortage of resources or need of maintenance.  However, notebooks
+auto-save and do survive service restarts, and we will try to avoid
+killing things unnecessarily.</p>
+</div>
+</div>
+<div class="section" id="software-and-kernels">
+<h2>Software and kernels<a class="headerlink" href="#software-and-kernels" title="Permalink to this headline">¶</a></h2>
+<p>We have various kernels automatically installed (these instructions
+should apply to both JupyterHub and <code class="docutils literal"><span class="pre">sjupyter</span></code>):</p>
+<ul class="simple">
+<li>Python (2 and 3 via some recent anaconda modules + a few
+more Python modules.)</li>
+<li>Matlab (latest module)</li>
+<li>Bash kernel</li>
+<li>R (a default R environment you can get by <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">r-triton</span></code>.
+(&#8220;R (safe)&#8221; is similar but tries to block some local user configuration
+which sometimes breaks things, see FAQ for more hints.)</li>
+<li>Julia: currently doesn&#8217;t seem to play nicely with global
+installations (if anyone knows something otherwise, let us know).
+Just load two modules: <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">julia</span></code>, <code class="docutils literal"><span class="pre">module</span>
+<span class="pre">load</span> <span class="pre">jupyterhub/live</span></code>, and then install the kernel <code class="docutils literal"><span class="pre">julia</span></code> and
+<code class="docutils literal"><span class="pre">Pkg.add(&quot;IJulia&quot;)</span></code> and it will install locally for you.</li>
+<li>We do not yet have a kernel management policy.  Kernels may be added
+or removed over time.  We would like to keep them synced with the
+most common Triton modules, but it will take some time to get this
+automatic.  Send requests and problem reports.</li>
+</ul>
+<p>Since these are the normal Triton modules, you can submit installation
+requests for software in these so that it is automatically available.</p>
+<div class="section" id="installing-kernels-from-virtualenvs-or-anaconda-environments">
+<h3>Installing kernels from virtualenvs or Anaconda environments<a class="headerlink" href="#installing-kernels-from-virtualenvs-or-anaconda-environments" title="Permalink to this headline">¶</a></h3>
+<p>You can do this:</p>
+<div class="highlight-python"><div class="highlight"><pre>module load jupyterhub/live
+envkernel conda --user --name INTERNAL_NAME --display-name=&quot;My conda&quot; /path/to/conda_env
+</pre></div>
+</div>
+<p>Or for Python virtualenvs:</p>
+<div class="highlight-python"><div class="highlight"><pre>module load jupyterhub/live
+envkernel virtualenv --user --name INTERNAL_NAME --display-name=&quot;My virtualenv&quot; /path/to/conda_env
+</pre></div>
+</div>
+<p>You have to have the package <code class="docutils literal"><span class="pre">ipykernel</span></code> installed in the
+environment: activate the environment and do <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span>
+<span class="pre">ipykernel</span></code>.</p>
+</div>
+<div class="section" id="installing-a-different-r-module-as-a-kernel">
+<h3>Installing a different R module as a kernel<a class="headerlink" href="#installing-a-different-r-module-as-a-kernel" title="Permalink to this headline">¶</a></h3>
+<p>Load your R modules, install R kernel normally (to some <code class="docutils literal"><span class="pre">NAME</span></code>),
+use envkernel as a wrapper to re-write the kernel (reading the
+<code class="docutils literal"><span class="pre">NAME</span></code> and rewriting to the same <code class="docutils literal"><span class="pre">NAME</span></code>), after it loads the
+modules you need:</p>
+<div class="highlight-python"><div class="highlight"><pre># Load jupyterhub/live, and R 3.6.1 with IRkernel.
+module load r-irkernel/1.1-python3
+module load jupyterhub/live
+
+# Use Rscript to install jupyter kernel
+Rscript -e &quot;library(IRkernel); IRkernel::installspec(name=&#39;NAME&#39;, displayname=&#39;R 3.6.1&#39;)&quot;
+
+# Use envkernel to re-write, loading the R modules.
+envkernel lmod --user --kernel-template=NAME --name=NAME r-irkernel/1.1-python3
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-your-own-kernels-from-other-python-modules">
+<h3>Install your own kernels from other Python modules<a class="headerlink" href="#install-your-own-kernels-from-other-python-modules" title="Permalink to this headline">¶</a></h3>
+<p>This works if the module has Python installed and working.  This has
+to be done once in any Triton shell:</p>
+<div class="highlight-python"><div class="highlight"><pre>module load jupyterhub/live
+envkernel lmod --user --name INTERNAL_NAME --display-name=&quot;Singularity my kernel&quot; MODULE_NAME
+module purge
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-your-own-kernels-from-singularity-image">
+<h3>Install your own kernels from Singularity image<a class="headerlink" href="#install-your-own-kernels-from-singularity-image" title="Permalink to this headline">¶</a></h3>
+<p>First, find the <code class="docutils literal"><span class="pre">.simg</span></code> file name.  If you are using this from one
+of the Triton modules, you can use <code class="docutils literal"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">MODULE_NAME</span></code> and
+look for <code class="docutils literal"><span class="pre">SING_IMAGE</span></code> in the output.</p>
+<p>Then, install a kernel for your own user using envkernel.  This has to
+be done once in any Triton shell:</p>
+<div class="highlight-python"><div class="highlight"><pre>module load jupyterhub/live
+envkernel singularity --user --name KERNEL_NAME --display-name=&quot;Singularity my kernel&quot; SIMG_IMAGE
+module purge
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-your-own-non-python-kernels">
+<h3>Install your own non-Python kernels<a class="headerlink" href="#install-your-own-non-python-kernels" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>First, <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">jupyterhub/live</span></code>.  This loads
+the anaconda environment which contains all the server code and
+configuration.  (This step may not be needed for all kernels)</li>
+<li>Follow the instructions you find for your kernel.  You may need to
+specify <code class="docutils literal"><span class="pre">--user</span></code> or some such to have it install in your user
+directory.</li>
+<li>You can check your own kernels in
+<code class="docutils literal"><span class="pre">~/.local/share/jupyter/kernels/</span></code>.</li>
+</ul>
+<p>If your kernel involves loading a <a class="reference internal" href="../tut/modules.html"><em>module</em></a>,
+you can either a) load the modules within the notebook server
+(&#8220;softwares&#8221; tab in the menu), or b) update your <code class="docutils literal"><span class="pre">kernel.json</span></code> to
+include the required environment variables (see <a class="reference external" href="https://jupyter-client.readthedocs.io/en/stable/kernels.html">kernelspec</a>).
+(We need to do some work to figure out just how this works).  Check
+<code class="docutils literal"><span class="pre">/share/apps/jupyterhub/live/miniconda/share/jupyter/kernels/ir/kernel.json</span></code>
+for an example of a kernel that loads a module first.</p>
+</div>
+</div>
+<div class="section" id="git-integration">
+<h2>Git integration<a class="headerlink" href="#git-integration" title="Permalink to this headline">¶</a></h2>
+<p>You can enable git integration on Triton by using the following
+lines from inside a git repository.  (This is normal nbdime, but uses
+the centrally installed one so that you don&#8217;t have to load a
+particular conda environment first.  The <code class="docutils literal"><span class="pre">sed</span></code> command fixes
+relative paths to absolute paths, so that you use the tools no matter
+what modules you have loaded):</p>
+<div class="highlight-python"><div class="highlight"><pre>/share/apps/jupyterhub/live/miniconda/bin/nbdime config-git --enable
+sed --in-place -r &#39;s@(= )[ a-z/-]*(git-nb)@\1/share/apps/jupyterhub/live/miniconda/bin/\2@&#39; .git/config
+</pre></div>
+</div>
+</div>
+<div class="section" id="faq-common-problems">
+<h2>FAQ/common problems<a class="headerlink" href="#faq-common-problems" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Jupyterhub won&#8217;t spawn my server: &#8220;Error: HTTP 500: Internal
+Server Error (Spawner failed to start [status=1].&#8221;</strong>.  Is your home
+directory quota exceeded?  If that&#8217;s not it, check the
+<code class="docutils literal"><span class="pre">~/jupyterhub_slurmspawner_*</span></code> logs then contact us.</li>
+<li><strong>My server has died mysteriously.</strong>  This may happen if resource
+usage becomes too much and exceed the limits - Slurm will kill your
+notebook.  You can check the <code class="docutils literal"><span class="pre">~/jupyterhub_slurmspawner_*</span></code> log
+files for jupyterhub to be sure.</li>
+<li><strong>My server seems inaccessible / I can&#8217;t get to the control panel to
+restart my server.  Especially with JupyterLab</strong>.  In JupyterLab,
+use File→Hub Control Panel.  If you can&#8217;t get there, you can change
+the URL to <code class="docutils literal"><span class="pre">/hub/home</span></code>.</li>
+<li><strong>My R kernel keeps dying</strong>.  Some people seem to have global R
+configuration, either in <code class="docutils literal"><span class="pre">.bashrc</span></code> or <code class="docutils literal"><span class="pre">.Renviron</span></code> or some such
+which globally, which even affects the R kernel here.  Things we
+have seen: pre-loading modules in <code class="docutils literal"><span class="pre">.bashrc</span></code> which conflict with
+the kernel R module; changing <code class="docutils literal"><span class="pre">RLIBS</span></code> in <code class="docutils literal"><span class="pre">.Renviron</span></code>.  You can
+either (temporarily or permanently) remove these changes, or you
+could <a class="reference external" href="https://irkernel.github.io/">install your own R kernel</a>.
+If you install your own, it is up to you to maintain it (and
+remember that you installed it).</li>
+<li>&#8220;Spawner pending&#8221; when you try to start - this is hopefully fixed in <a class="reference external" href="https://github.com/jupyterhub/jupyterhub/issues/1534">issue
+#1534/#1533</a> in
+JupyterHub.  Current recommendation: wait a bit and return to
+JupyterHub home page and see if the server has started.  Don&#8217;t click
+the button twice!</li>
+</ul>
+</div>
+<div class="section" id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://jupyter.org">https://jupyter.org</a><ul>
+<li>Online demos and live tutorial: <a class="reference external" href="https://jupyter.org/try">https://jupyter.org/try</a> (use the
+Python one)</li>
+</ul>
+</li>
+<li>Jupyter basic tutorial: <a class="reference external" href="https://www.youtube.com/watch?v=HW29067qVWk">https://www.youtube.com/watch?v=HW29067qVWk</a>
+(this is just the first link on youtube - there are many more too)</li>
+<li>More advanced tutorial: <a class="reference external" href="https://www.youtube.com/watch?v=EKUy0TSLg04">Data Science is Software</a> (this is not just a
+Jupyter tutorial, but about the whole data science workflow using
+Jupyter.  It is annoying long (2 hours), but <em>very</em> complete and
+could be considered good &#8220;required watching&#8221;)</li>
+<li><a class="reference internal" href="../../scicomp/jupyter-pitfalls.html"><em>Pitfalls of Jupyter Notebooks</em></a></li>
+<li>CSC has this service, too, however there is no long term storage yet
+so there is limited usefulness for research: <a class="reference external" href="https://notebooks.csc.fi/">https://notebooks.csc.fi/</a></li>
+</ul>
+<p>Our configuration is available on Github.  Theoretically, all the
+pieces are here but it is not yet documented well and not yet
+generalizable.  The Ansible role is a good start but the jupyterhub
+config and setup is hackish.</p>
+<ul class="simple">
+<li>Ansible config role:
+<a class="reference external" href="https://github.com/AaltoScienceIT/ansible-role-fgci-jupyterhub">https://github.com/AaltoScienceIT/ansible-role-fgci-jupyterhub</a></li>
+<li>Configuration and automated conda environment setup:
+<a class="reference external" href="https://github.com/AaltoScienceIT/triton-jupyterhub">https://github.com/AaltoScienceIT/triton-jupyterhub</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="keras.html" class="btn btn-neutral float-right" title="Keras" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="julia.html" class="btn btn-neutral" title="Julia language on triton" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

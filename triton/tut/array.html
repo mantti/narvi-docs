@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Array jobs &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="GPU computing" href="gpu.html"/>
+        <link rel="prev" title="Serial Jobs" href="serial.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#tutorials">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">About Science-IT and Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting.html">Connecting to Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="applications.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html">Software Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Data storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive.html">Interactive jobs: running your first command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial jobs: running in the queue</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Array jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-examples">Basic examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#more-control">More control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hints">Hints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependency.html">Job dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Array jobs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/tut/array.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="array-jobs">
+<h1>Array jobs<a class="headerlink" href="#array-jobs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>By now, you should be able to do all the basic things to run programs on
+Triton. Now, you want to do it... a lot. The easiest way to parallize
+things is to use array jobs. With array jobs, you take a single code or
+script, and Slurm (the batch system) runs it many times for you, with
+all the parameters. This is the simplest way of parallelizing things,
+but only works for <em>embarrasingly parallel</em> problems: where your code
+runs independently multiple times, and you use or combine the results
+later. Still, for most people, this is as far as you need to go.</p>
+</div>
+<div class="section" id="basic-examples">
+<h2>Basic examples<a class="headerlink" href="#basic-examples" title="Permalink to this headline">¶</a></h2>
+<p>When you run an array job (with <code class="docutils literal"><span class="pre">--array=1-5</span></code>), Slurm runs your job
+script many (5) times, with
+one difference: the environment variable <code class="docutils literal"><span class="pre">SLURM_ARRAY_TASK_ID</span></code>
+(1,2,3,4,5). You have your job script or code read this variable and take
+the right action, depending on what you need to do.</p>
+<p>Below are four examples.  The first and third are probably most
+recommended for starting out.</p>
+<div class="section" id="different-inputs">
+<h3>Different inputs<a class="headerlink" href="#different-inputs" title="Permalink to this headline">¶</a></h3>
+<p>In the example below, the <code class="docutils literal"><span class="pre">$SLURM_ARRAY_TASK_ID</span></code> is used to change to
+the right directory, make the application read the correct input file,
+and to generate output in a unique directory. This script is submitted
+with <code class="docutils literal"><span class="pre">sbatch</span> <span class="pre">script.sh</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -n 1</span>
+<span class="c1">#SBATCH -t 04:00:00</span>
+<span class="c1">#SBATCH --mem-per-cpu=2500</span>
+<span class="c1">#SBATCH --array=0-29</span>
+
+<span class="c1"># Each array task runs the same program, but with a different input file.</span>
+<span class="nb">cd</span> $SLURM_ARRAY_TASK_ID
+srun <span class="nb">echo</span> I am number $SLURM_ARRAY_TASK_ID
+<span class="c1"># e.g. srun ./my_application -input input_data_$SLURM_ARRAY_TASK_ID</span>
+<span class="nb">cd</span> ..
+</pre></div>
+</div>
+</div>
+<div class="section" id="different-parameters-in-script">
+<h3>Different parameters in script<a class="headerlink" href="#different-parameters-in-script" title="Permalink to this headline">¶</a></h3>
+<p>In the example below, we have the same program, but different command
+line parameters. In this case, everything is hard coded in the bash
+script itself. You could also do this directly inside your program, and
+generate the parameters according to some algorithm. This can be really
+powerful: not only can you both hard code and generate with algorithm,
+but if you never edit already-run parameters, you have a single place
+where you can see everything that has been run before. (Personally, I
+always try to set up a system where parameters are defined in one place,
+code in another, and I can always know what has been run for each output
+by looking in just one place. If you are going to be configuring stuff
+by hand anyway, better to have it all together.):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -n 1</span>
+<span class="c1">#SBATCH -t 04:00:00</span>
+<span class="c1">#SBATCH --mem-per-cpu=2500</span>
+<span class="c1">#SBATCH --array=0-4</span>
+
+<span class="k">case</span> $SLURM_ARRAY_TASK_ID in
+    0<span class="o">)</span> <span class="nv">ARGS</span><span class="o">=</span><span class="s2">&quot;-res 5 -arg 3&quot;</span> <span class="p">;;</span>
+    1<span class="o">)</span> <span class="nv">ARGS</span><span class="o">=</span><span class="s2">&quot;-res 6 -arg 3&quot;</span> <span class="p">;;</span>
+    2<span class="o">)</span> <span class="nv">ARGS</span><span class="o">=</span><span class="s2">&quot;-res 5 -arg 4&quot;</span> <span class="p">;;</span>
+    3<span class="o">)</span> <span class="nv">ARGS</span><span class="o">=</span><span class="s2">&quot;-res 6 -arg 4&quot;</span> <span class="p">;;</span>
+    4<span class="o">)</span> <span class="nv">ARGS</span><span class="o">=</span><span class="s2">&quot;-res 5 -arg 5&quot;</span> <span class="p">;;</span>
+<span class="k">esac</span>
+
+<span class="nb">cd</span> $SLURM_ARRAY_TASK_ID
+srun I am doing <span class="nv">$A</span>RGS !
+<span class="c1"># e.g. python input.py $ARGS</span>
+<span class="nb">cd</span> ..
+</pre></div>
+</div>
+</div>
+<div class="section" id="read-parameters-from-file">
+<h3>Read parameters from file<a class="headerlink" href="#read-parameters-from-file" title="Permalink to this headline">¶</a></h3>
+<p>Now we do basically the same thing as above, but we have all of the
+parameters stored in another file <code class="docutils literal"><span class="pre">arrayparams.txt</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>input_561 --opt1
+input_418 --opt2
+input_569 --opt1
+</pre></div>
+</div>
+<p>In our script, we use the <code class="docutils literal"><span class="pre">sed</span></code> program to read just one line from
+the file.  This is stored in the variable <code class="docutils literal"><span class="pre">line</span></code>, and then we can
+use this however: in this case by using it as the parameters to the
+program.  Don&#8217;t worry about how the <code class="docutils literal"><span class="pre">sed</span></code> command works - no one
+really knows, we just find it via a web search.  Note that the line
+numbers start at one, not zero!</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -n 1</span>
+<span class="c1">#SBATCH -t 04:00:00</span>
+<span class="c1">#SBATCH --mem-per-cpu=2500</span>
+<span class="c1">#SBATCH --array=1-3</span>
+
+<span class="nv">n</span><span class="o">=</span>$SLURM_ARRAY_TASK_ID                  <span class="c1"># define n</span>
+<span class="nv">line</span><span class="o">=</span><span class="sb">`</span>sed <span class="s2">&quot;</span><span class="si">${</span><span class="nv">n</span><span class="si">}</span><span class="s2">q;d&quot;</span> arrayparams.txt<span class="sb">`</span>    <span class="c1"># get n:th line (1-indexed) of the file</span>
+
+<span class="c1"># Do whatever with arrayparams.txt</span>
+srun <span class="nb">echo</span> I am doing $line
+<span class="c1"># e.g. srun ./my_program $line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="advanced-grouping-runs-together-in-bigger-chunks">
+<h3>(advanced) Grouping runs together in bigger chunks<a class="headerlink" href="#advanced-grouping-runs-together-in-bigger-chunks" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s say your tasks are very short - only a few minutes.  This is
+still a bit short to use array jobs, because you will still have too
+much overhead in scheduling.  We want to try for 30 minutes and if
+possible more.  So, below is an example script that uses shell</p>
+<p>In the below script, we take a chunk size of 100.  Array #0 will run
+0-99, array #1 will run 100-199, etc.  The for loop handles the
+running.  Before each one runs, it uses <code class="docutils literal"><span class="pre">test</span> <span class="pre">-s</span> <span class="pre">output_$i</span></code> to see if
+the output filename <code class="docutils literal"><span class="pre">output_$i</span></code> exists: only run the task if it does
+not exist already (see <code class="docutils literal"><span class="pre">man</span> <span class="pre">test</span></code> to see other types of tests you
+can do).  This example starts using more advanced shell scripting,
+which might be worth learning.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="o">[</span>... all the initial stuff from above<span class="o">]</span>
+
+<span class="nv">CHUNKSIZE</span><span class="o">=</span>100
+<span class="nv">arrayID</span><span class="o">=</span>$SLURM_ARRAY_TASK_ID
+<span class="nv">indexes</span><span class="o">=</span><span class="sb">`</span>seq <span class="k">$((</span>arrayID <span class="o">*</span> CHUNKSIZE<span class="k">))</span> <span class="k">$((</span><span class="o">(</span>arrayID+1<span class="o">)*</span>CHUNKSIZE <span class="o">-</span> <span class="m">1</span><span class="k">))</span><span class="sb">`</span>
+
+<span class="k">for</span> i in $indexes <span class="p">;</span> <span class="k">do</span>
+    <span class="k">if</span> ! <span class="nb">test</span> -s output_$i <span class="p">;</span> <span class="k">then</span>
+        run $i
+    <span class="k">fi</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="d-sampling">
+<h3>2D sampling<a class="headerlink" href="#d-sampling" title="Permalink to this headline">¶</a></h3>
+<p>Here is an example that lets you sample from a 2D array, with
+experiments and 10 replicas (but this might be approaching hackish, ask
+first if it makes sense to have them together):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">experiment</span><span class="o">=</span><span class="k">$((</span> $SLURM_ARRAY_TASK_ID <span class="o">/</span> <span class="m">10</span> <span class="k">))</span>
+<span class="nv">replica</span><span class="o">=</span><span class="k">$((</span> $SLURM_ARRAY_TASK_ID <span class="o">%</span> <span class="m">10</span> <span class="k">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="more-control">
+<h2>More control<a class="headerlink" href="#more-control" title="Permalink to this headline">¶</a></h2>
+<p>You can specify the <code class="docutils literal"><span class="pre">--array=</span></code> option either in the script itself
+using the <code class="docutils literal"><span class="pre">#SBATCH</span></code> syntax, or on the command line to <code class="docutils literal"><span class="pre">sbatch</span></code>. So, you can
+control what runs different ways. Let&#8217;s say you have a fixed number of
+parameters: put that directly in the script. Or if you are just running
+replicas, run them from the command line as you need more. In any case,
+us the command line when things fail and you need to repeat only
+certain runs.</p>
+<p>You don&#8217;t have to have the job script use the variable. You could
+directly pass it as a command line argument to your program, use it to
+pattern input files, or even have your own code access the process
+environment and get the variable.</p>
+<p>You can use <code class="docutils literal"><span class="pre">%N</span></code>, like <code class="docutils literal"><span class="pre">--array=1-100%10</span></code>, to limit number of jobs
+running at once.</p>
+<p>Note that arrays are <em>only</em> a feature of <code class="docutils literal"><span class="pre">sbatch</span></code>. You can&#8217;t use them
+directly from the command line with <code class="docutils literal"><span class="pre">srun</span></code>: you have to make a batch
+script and submit with <code class="docutils literal"><span class="pre">sbatch</span></code>.</p>
+</div>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<p>The array indices need not be sequential. E.g. if you discover that
+after the above array job is finished, the job task id&#8217;s 7 and 19
+failed, you can relaunch just those jobs with <code class="docutils literal"><span class="pre">--array=7,19</span></code>. While the
+array job above is a set of serial jobs, parallel array jobs are
+possible. For more information, see the <a class="reference external" href="https://slurm.schedmd.com/job_array.html">Slurm job array
+documentation</a>.</p>
+<p>How do you map from <code class="docutils literal"><span class="pre">$SLURM_ARRAY_TASK_ID</span></code> to the parameters of the
+job? There are different strategies</p>
+<ul class="simple">
+<li>Have a lookup table in your code or another config file (bash example
+in slurm script above)</li>
+<li>Pre-create different input files</li>
+<li>Programmatically generate the different configs in your code.</li>
+<li>Don&#8217;t have different config, just use them to run multiple replicas
+of the same parameters. You increase the array ID until you have
+enough statistics to get your result.</li>
+</ul>
+<p>You probably want to look at the slurm <code class="docutils literal"><span class="pre">-o</span></code> option to direct the script
+output to somewhere useful. See the <code class="docutils literal"><span class="pre">sbatch</span></code> manual page, <code class="docutils literal"><span class="pre">-o</span></code>,
+<code class="docutils literal"><span class="pre">-e</span></code>, and <code class="docutils literal"><span class="pre">--open-mode</span></code> options. In the filenames, use <code class="docutils literal"><span class="pre">%a</span></code> for array
+index and <code class="docutils literal"><span class="pre">%A</span></code> (array jobs) for array jobid.  For normal jobs, use
+<code class="docutils literal"><span class="pre">%j</span></code> for the jobid.  (If you use <code class="docutils literal"><span class="pre">%j</span></code> for array jobs, you get a
+different number even when things were started as part of the same
+array.  Maybe it&#8217;s what you want).</p>
+<p>Array jobs have less overhead for accounting and scheduling, but you
+still want them to not be too short. 30 minutes is a good target time,
+so try to combine smaller tasks to fit that.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Look at <code class="docutils literal"><span class="pre">man</span> <span class="pre">sbatch</span></code> and investigate the <code class="docutils literal"><span class="pre">--array</span></code> parameter.</li>
+<li>Using the <code class="docutils literal"><span class="pre">pi.py</span></code> example from the <a class="reference internal" href="interactive.html"><em>interactive tutorial</em></a>, make an array job that calculates pi 10 times.<ol class="loweralpha">
+<li>The <code class="docutils literal"><span class="pre">pi.py</span></code> program takes an extra option: <code class="docutils literal"><span class="pre">--seed=SEED</span></code>.
+Use the array task ID as the seed.</li>
+<li>Verify that the runs worked.  Average all values together to get
+your more accurate pi.</li>
+</ol>
+</li>
+<li>Using one of the techniques above, use <code class="docutils literal"><span class="pre">memory-hog.py</span></code> from the
+<a class="reference internal" href="interactive.html"><em>interactive tutorial</em></a>.  Make an array job that
+runs this with five different values of the memory (5M, 50M, 100M,
+200M, 500M).  You have to use one of the techniques above.</li>
+</ol>
+<ol class="arabic simple" start="3">
+<li>Make job array which runs every other index (like 1, 3, 5,
+etc).  You&#8217;ll have to look at the <code class="docutils literal"><span class="pre">sbatch</span></code> manual page.</li>
+</ol>
+</div>
+<div class="section" id="what-s-next">
+<h2>What&#8217;s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<p>The next tutorial is about <a class="reference internal" href="gpu.html"><em>GPU computing</em></a>.</p>
+<p>For more information, you can see the CSC guide on array jobs:
+<a class="reference external" href="https://docs.csc.fi/computing/running/array-jobs/">https://research.csc.fi/taito-array-jobs.</a></p>
+<p>For more detailed information about running on Triton, see the main page
+<a class="reference internal" href="../usage/general.html"><em>Running programs on Triton</em></a>.</p>
+<p>Remember to check the <a class="reference internal" href="../ref/index.html"><em>quick reference</em></a> when needed.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gpu.html" class="btn btn-neutral float-right" title="GPU computing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="serial.html" class="btn btn-neutral" title="Serial Jobs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

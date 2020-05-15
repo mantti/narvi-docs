@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data organization &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="up" title="Data" href="index.html"/>
+        <link rel="next" title="IDA data storage service" href="ida.html"/>
+        <link rel="prev" title="Data storage services available" href="services.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Data</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#applying-for-funding">Applying for funding</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#during-the-project">During the project</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="services.html">Data storage services available</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Data organization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#organize-your-projects-into-directories">Organize your projects into directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#organize-files-within-directories">Organize files within directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#projects">Projects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#internal-reporting">Internal reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sharing-and-collaboration">Sharing and collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#archival-after-the-project">Archival after the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#publication">Publication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#licensing-and-intellectual-property">Licensing and intellectual property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#other-info">Other info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#external-links">External links</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Data</a> &raquo;</li>
+      
+    <li>Data organization</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/data/organization.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-organization">
+<h1>Data organization<a class="headerlink" href="#data-organization" title="Permalink to this headline">¶</a></h1>
+<p>How should data be stored?  On the simplest level, this asks &#8220;on what
+physical disks&#8221;, but this page is concerned about something more
+high-level: how you organize data on those disks.</p>
+<p>Data organization is very important, because if you don&#8217;t do it early,
+you end up with a <em>epic</em> mess which you will never have time to clean
+up.  If you organize data well, then everything after becomes much
+easier: you can archive what you need.  Others can find what they
+need.  You can open what you need easily.</p>
+<p><strong>Everything here applies equally if you are working alone or if you
+are part of a team.</strong></p>
+<div class="section" id="organize-your-projects-into-directories">
+<h2>Organize your projects into directories<a class="headerlink" href="#organize-your-projects-into-directories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="names">
+<h3>Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h3>
+<p>As simple as it seems, choosing a good name for each distinct
+workspace is an important first step.  This serves as an identifier to you
+and others, and by having a name you are able to refer to, find, and
+organize your data now and in the future.</p>
+<p>A name should be unique among all of your work over all your career,
+and also unique among all of your colleagues, too (and any major
+public projects, too).  Don&#8217;t reuse the same names for related things.
+For example, let&#8217;s say I have a project called <code class="docutils literal"><span class="pre">xproject</span></code>.  If I
+track the code separately from the data, I&#8217;d have a different
+directory called <code class="docutils literal"><span class="pre">xproject-data</span></code> and the main projects refers to
+the data directory, instead of coping the data.</p>
+<p>How many named workspaces should you have for each project?  It
+depends on how large they are and how diverse the types of data are.
+If the data is small and not very demanding, it doesn&#8217;t matter much.
+If you have large data vs small other files, it may be good to
+separate out the data.  If you have some data/code/files which will be
+reused in different projects, it makes sense to split them.  If you
+have confidential data that can&#8217;t be shared, it&#8217;s good to separate
+them from the rest of the data.</p>
+<p>Names should be usable and directory names and identifiers.  Try to
+stick to letters, numbers, <code class="docutils literal"><span class="pre">-</span></code>, and <code class="docutils literal"><span class="pre">_</span></code> - no spaces, punctuation,
+or symbols.  Then, the name is usable on repositories and other
+services, too.</p>
+<p>Good names include <code class="docutils literal"><span class="pre">MobilityAnalysis</span></code>, <code class="docutils literal"><span class="pre">transit</span></code>, <code class="docutils literal"><span class="pre">transit-hsl</span></code>,
+and <code class="docutils literal"><span class="pre">lgm-paper</span></code>.  Bad names are too general given their purpose or
+what else you might do.</p>
+<p>Each directory&#8217;s contents moves together as a unit, as much as
+possible.</p>
+</div>
+<div class="section" id="organizing-these-directories">
+<h3>Organizing these directories<a class="headerlink" href="#organizing-these-directories" title="Permalink to this headline">¶</a></h3>
+<p>You should have a flat organization in as few places as
+possible.  For example, on your laptop you may have <code class="docutils literal"><span class="pre">~/project</span></code> for
+things for the stuff you mainly work on and <code class="docutils literal"><span class="pre">~/git</span></code> for other minor
+version controlled things.  On your workstations or servers, you may
+also have <code class="docutils literal"><span class="pre">/scratch/work/$username</span></code> which is your personal stuff
+that is not backed up, <code class="docutils literal"><span class="pre">/m/cs/project/$groupname/$username/</span></code> which
+is backed up, <code class="docutils literal"><span class="pre">/local</span></code> which is temporary stuff on your own
+computer, and so on.  The server-based locations can be easily shared
+among multiple people.</p>
+<p>Your structure should be as <strong>flat</strong> as possible, without many layers
+in each directory.  Thus, to find a given project, you only need to
+look inside each of the main locations above, not inside every other
+project.  This allows you to get the gist of your data for future
+archival or clean-up.  When two directories need to refer to each
+other, you have them directly refer to each other where they are, for
+example use <code class="docutils literal"><span class="pre">../xproject-data</span></code> from inside the <code class="docutils literal"><span class="pre">xproject</span></code>
+directory.  (You can have subdirectories inside the projects).</p>
+<p>Different types of projects go in different places.  For example,
+<code class="docutils literal"><span class="pre">xproject</span></code> can be on the backed up location because it&#8217;s your
+daily work, while <code class="docutils literal"><span class="pre">xproject-data</span></code> is on some non-backed up place
+because you can always recover the data.</p>
+</div>
+<div class="section" id="synchronizing">
+<h3>Synchronizing<a class="headerlink" href="#synchronizing" title="Permalink to this headline">¶</a></h3>
+<p>If you work on different systems, each directory of the same name
+<em>should</em> have roughly the same contents - as if you could synchronize
+it with version control.</p>
+<p>For small stuff, you might synchronize with version control.  You may
+use some other program, like Dropbox or the like.  Or in the case of
+data which has a master copy somewhere else, you just download what
+you need.</p>
+</div>
+</div>
+<div class="section" id="organize-files-within-directories">
+<h2>Organize files within directories<a class="headerlink" href="#organize-files-within-directories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="traditional-organization">
+<h3>Traditional organization<a class="headerlink" href="#traditional-organization" title="Permalink to this headline">¶</a></h3>
+<p>This is the traditional organization within a single person&#8217;s project.
+The key concept is separation of code, original data, scratch data, and
+final outputs. Each is handled properly.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">PROJECT/code/</span></code> - backed up and tracked in a version control system.</li>
+<li><code class="docutils literal"><span class="pre">PROJECT/original/</span></code> - original and irreplaceable data. Backed up at the
+same time it is placed here.</li>
+<li><code class="docutils literal"><span class="pre">PROJECT/scratch/</span></code> - bulk data, can be regenerated from code+original</li>
+<li><code class="docutils literal"><span class="pre">PROJECT/doc/</span></code> - final outputs, which should be kept for a very long
+term.</li>
+<li><code class="docutils literal"><span class="pre">PROJECT/doc/paper1/</span></code> - different papers/reports, if not stored
+in a different project directory.</li>
+<li><code class="docutils literal"><span class="pre">PROJECT/doc/paper2/</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROJECT/doc/opendata/</span></code></li>
+</ul>
+<p>When the project is over, <code class="docutils literal"><span class="pre">code/</span></code> and <code class="docutils literal"><span class="pre">doc/</span></code> can be backed up permanently
+(<code class="docutils literal"><span class="pre">original/</span></code> is already backed up) and the scratch directory can be kept
+for a reasonable time before it is removed (or put into cold storage).</p>
+<p>The most important thing is that code is kept separate from the data.
+This means no copying files over and over to minor variations. Could
+should be adjustable for different purposes (and you can always get the
+old versions from version control). Code is run from the code directory,
+no need to copy to each folder individually.</p>
+</div>
+<div class="section" id="multi-user">
+<h3>Multi-user<a class="headerlink" href="#multi-user" title="Permalink to this headline">¶</a></h3>
+<p>The system above can be trivially adapted to suit a project with
+multiple users:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">PROJECT/USER1/....</span></code> - each user directory has their own <code class="docutils literal"><span class="pre">code/</span></code>,
+<code class="docutils literal"><span class="pre">scratch/</span></code>, and <code class="docutils literal"><span class="pre">doc/</span></code> directories. Code is synced via the version
+control system. People use the original data straight from the shared
+folder in the project.</li>
+<li><code class="docutils literal"><span class="pre">PROJECT/USER2/....</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROJECT/original/</span></code> - this is the original data.</li>
+<li><code class="docutils literal"><span class="pre">PROJECT/scratch/</span></code> - shared intermediate files, if they are stable
+enough to be shared.</li>
+</ul>
+<p>For convenience, each user can create a symbolic link to the original/
+data directory from their own directory.</p>
+</div>
+<div class="section" id="master-project">
+<h3>Master project<a class="headerlink" href="#master-project" title="Permalink to this headline">¶</a></h3>
+<p>In this, you have one long-term master directory for a whole research
+group, and members project that has many different
+users and research themes with in. As time goes on, once users leave,
+their directories can be cleaned up and removed. The same can happen for
+the themes.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">PROJECT/USER1/SUBPROJECT1/...</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROJECT/USER1/SUBPROJECT2/...</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROJECT/USER2/SUBPROJECT1/...</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROJECT/original/</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROJECT/THEME/USER1/...</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROJECT/THEME/USER2/...</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROJECT/archive/</span></code></li>
+</ul>
+</div>
+<div class="section" id="common-variants">
+<h3>Common variants<a class="headerlink" href="#common-variants" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Simulations with different parameters: all parameters are stored in
+the code directory, within version control. The code knows what
+parameters to use when making a new run. This makes it easy to see
+the entire history of your simulations.</li>
+<li>Downloading data: this can be put into either original or scratch,
+depending on how much you trust the original source to stay
+available.</li>
+<li>Multiple sub-projects: this can be</li>
+<li>Multiple types of code: separate long-term code from scratch research
+code. You can separate parameters from code. And so on...</li>
+</ul>
+</div>
+</div>
+<div class="section" id="projects">
+<h2>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h2>
+<p>In Aalto, data is organized into project groups. Each project has
+members who can access the data, and different shared storage spaces
+(project, archive, scratch (see below)). You can apply for these
+whenever you need.</p>
+<p>What should a project contain? How much should go into the same project?</p>
+<ul class="simple">
+<li><strong>One project that lasts forever per research group:</strong> This is
+traditional. A professor will get a project allocated, and then
+people put data in here. There may be subdirectories for each
+researcher or topic, and some shared folders for common data. The
+problem here is that the size will grow without bound. Who will ever
+clean up all the old stuff? These have a way of growing forever so
+that the data becomes no longer manageable, but they are convenient
+because it keeps the organization flat.<ul>
+<li>If data size is small and growing slower than storage, this works
+for long-term.</li>
+<li>It can also work if particular temporary files are managed well
+and eventually removed.</li>
+</ul>
+</li>
+<li><strong>One project for each distinct theme:</strong> A research group may become
+interested in some topic (for example, a distinct funded project),
+and they get storage space just for this. The project goes on and is
+eventually closed.<ul>
+<li>You can be more fine-grained in access, if data is confidential</li>
+<li>You can ensure that the data stays together</li>
+<li>You can ensure that data end-of-life happens properly. This is
+especially useful for showing you are managing data properly as
+part of grant applications.</li>
+<li>You can have a master group as a member of the specific project.
+This allows a flat organization, where all of your members can
+access all data in different projects.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ida.html" class="btn btn-neutral float-right" title="IDA data storage service" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="services.html" class="btn btn-neutral" title="Data storage services available" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

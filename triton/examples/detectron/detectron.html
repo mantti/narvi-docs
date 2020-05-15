@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Detectron &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+    <li>Detectron</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/examples/detectron/detectron.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="detectron">
+<h1>Detectron<a class="headerlink" href="#detectron" title="Permalink to this headline">¶</a></h1>
+<p>Detectron uses <a class="reference internal" href="../../usage/singularity.html"><em>Singularity containers</em></a>,
+so you should refer to that page first for general information.</p>
+<p>Detectron-image is based on a
+<a class="reference external" href="https://github.com/facebookresearch/Detectron/blob/master/docker/Dockerfile">Dockerfile</a>
+from Detectron&#8217;s repository. In this image Detectron has been installed to /detectron.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>This example shows how you can launch Detectron on a gpu node. To run example
+given in
+<a class="reference external" href="https://github.com/facebookresearch/Detectron/blob/master/GETTING_STARTED.md">Detectron repository</a>
+one can use the following <a class="reference download internal" href="../../../_downloads/detectron.slrm" download=""><code class="xref download docutils literal"><span class="pre">Slurm</span> <span class="pre">script</span></code></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -n 1
+#SBATCH --gres=gpu:teslap100:1
+#SBATCH -t 00:30:00
+#SBATCH --mem=8G
+#SBATCH -o detectron.out
+
+module load singularity-detectron
+
+mkdir -p $WRKDIR/detectron/outputs
+
+singularity_wrapper exec python2 /detectron/tools/infer_simple.py \
+    --cfg /detectron/configs/12_2017_baselines/e2e_mask_rcnn_R-101-FPN_2x.yaml \
+    --output-dir $WRKDIR/detectron/outputs \
+    --image-ext jpg \
+    --wts https://s3-us-west-2.amazonaws.com/detectron/35861858/12_2017_baselines/e2e_mask_rcnn_R-101-FPN_2x.yaml.02_32_51.SgT4y1cO/output/train/coco_2014_train:coco_2014_valminusminival/generalized_rcnn/model_final.pkl \
+    /detectron/demo
+</pre></div>
+</div>
+<p>Now example can by run on GPU node with:</p>
+<div class="highlight-python"><div class="highlight"><pre>sbatch detectron.slrm
+</pre></div>
+</div>
+<p>In typical usage one does not want to download models for each run. To use
+stored models one needs to:</p>
+<ol class="arabic">
+<li><p class="first">Copy detectron sample configurations from the image to your own configuration folder:</p>
+<div class="highlight-python"><div class="highlight"><pre>module load singularity-detectron
+mkdir -p $WRKDIR/detectron/
+singularity_wrapper exec cp -r /detectron/configs $WRKDIR/detectron/configs
+cd $WRKDIR/detectron
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create data directory and download example models there:</p>
+<div class="highlight-python"><div class="highlight"><pre>mkdir -p data/ImageNetPretrained/MSRA
+mkdir -p data/coco_2014_train:coco_2014_valminusminival/generalized_rcnn
+wget -O data/ImageNetPretrained/MSRA/R-101.pkl \
+    https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/MSRA/R-101.pkl
+wget -O data/coco_2014_train:coco_2014_valminusminival/generalized_rcnn/model_final.pkl \
+    https://s3-us-west-2.amazonaws.com/detectron/35861858/12_2017_baselines/e2e_mask_rcnn_R-101-FPN_2x.yaml.02_32_51.SgT4y1cO/output/train/coco_2014_train:coco_2014_valminusminival/generalized_rcnn/model_final.pkl
+</pre></div>
+</div>
+</li>
+</ol>
+<ol class="arabic" start="4">
+<li><p class="first">Edit the weights-parameter in configuration file <em>12_2017_baselines/e2e_mask_rcnn_R-101-FPN_2x.yaml</em>:</p>
+<div class="highlight-python"><div class="highlight"><pre>33c33
+&lt;   WEIGHTS: $WRKDIR/detectron/data/ImageNetPretrained/MSRA/R-101.pkl
+---
+&gt;   WEIGHTS: https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/MSRA/R-101.pkl
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit <a class="reference download internal" href="../../../_downloads/detectron2.slrm" download=""><code class="xref download docutils literal"><span class="pre">Slurm</span> <span class="pre">script</span></code></a> to
+point to downloaded weigths and models:</p>
+</li>
+</ol>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -n 1
+#SBATCH --gres=gpu:teslap100:1
+#SBATCH -t 00:30:00
+#SBATCH --mem=8G
+#SBATCH -o detectron.out
+
+module load singularity-detectron
+
+mkdir -p $WRKDIR/detectron/outputs
+
+singularity_wrapper exec python2 /detectron/tools/infer_simple.py \
+    --cfg $WRKDIR/detectron/configs/12_2017_baselines/e2e_mask_rcnn_R-101-FPN_2x.yaml \
+    --output-dir $WRKDIR/detectron/outputs \
+    --image-ext jpg \
+    --wts $WRKDIR/detectron/data/coco_2014_train:coco_2014_valminusminival/generalized_rcnn/model_final.pkl \
+    /detectron/demo
+</pre></div>
+</div>
+<ol class="arabic" start="6">
+<li><p class="first">Submit job:</p>
+<div class="highlight-python"><div class="highlight"><pre>sbatch detectron.slrm
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

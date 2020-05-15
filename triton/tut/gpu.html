@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>GPU computing &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Parallel computing" href="parallel.html"/>
+        <link rel="prev" title="Array jobs" href="array.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#tutorials">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">About Science-IT and Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting.html">Connecting to Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="applications.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html">Software Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Data storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive.html">Interactive jobs: running your first command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial jobs: running in the queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">Array jobs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">GPU computing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ready-software">Ready software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compiling-code-yourself">Compiling code yourself</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#making-efficient-use-of-gpus">Making efficient use of GPUs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faq">FAQ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependency.html">Job dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>GPU computing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/tut/gpu.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gpu-computing">
+<h1>GPU computing<a class="headerlink" href="#gpu-computing" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>This tutorial assumes you have read <a class="reference internal" href="interactive.html"><em>Interactive jobs</em></a>.</p>
+<p class="last">Main article: <a class="reference internal" href="../usage/gpu.html"><em>GPU Computing</em></a></p>
+</div>
+<p>GPUs and accelerators are basically very special parallel processors:
+they can apply the same instructions to a big chunk of data at the
+same time.  The speedup can be  100x or more... but only in the
+specific cases where your code fits the model.  It happens that
+machine learning/deep learning methods are able to use this type of
+parallelism, so now these are the standard for this type of research.</p>
+<p>On Triton, we have a large number of NVIDIA GPU cards from different
+generations, and are constantly getting more.  Our GPUs are not your
+typical desktop GPUs, but specialized research-grade server GPUs with
+large memory, high bandwidth and specialized instructions. For
+scientific purposes they generally exceed the best desktop GPUs.</p>
+<p>Some nomenclature: a GPU is a graphical processing unit, CUDA is the
+software interface for Nvidia GPUs. Currently we only support CUDA.</p>
+<div class="section" id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>GPUs are, just like anything, resources which are scheduled by slurm.
+So in addition to time, memory, and CPUs, you have to specify how many
+GPUs you want.  This is done with the <code class="docutils literal"><span class="pre">--gres</span></code> (generic resources)
+option:</p>
+<div class="highlight-bash"><div class="highlight"><pre>srun --gres<span class="o">=</span>gpu:1 $my_code
+</pre></div>
+</div>
+<p>This means you request the <code class="docutils literal"><span class="pre">gpu</span></code> resources, and one of them
+(<code class="docutils literal"><span class="pre">1</span></code>).  Combining this with the other required slurm options:</p>
+<div class="highlight-bash"><div class="highlight"><pre>srun --gres<span class="o">=</span>gpu:1 -t 2:00:00 --mem<span class="o">=</span>10G -c 3
+</pre></div>
+</div>
+<p>... and you&#8217;ve got yourself the basics.  Of course, once you are ready
+for serious runs, you should put your code into <a class="reference internal" href="serial.html"><em>slurm scripts</em></a>.</p>
+<p>If you want to restrict yourself to a certain type of card, you should
+use the <code class="docutils literal"><span class="pre">--constraint</span></code> option.  For example, to restrict to Kepler
+generation (K80s), use <code class="docutils literal"><span class="pre">--constraint=kepler</span></code> or all new cards,
+<code class="docutils literal"><span class="pre">--constraint='pascal|volta'</span></code> (note the quotes - this is very
+important, because <code class="docutils literal"><span class="pre">|</span></code> is a shell pipe symbol!).</p>
+<p>Our available GPUs and architectures:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Card</td>
+<td>total amount</td>
+<td>nodes</td>
+<td>architecture</td>
+<td>compute threads per GPU</td>
+<td>memory per card</td>
+<td>CUDA compute capability</td>
+<td>Slurm feature name</td>
+<td>Slurm gres name</td>
+</tr>
+<tr class="row-even"><td>Tesla K80*</td>
+<td>12</td>
+<td>gpu[20-22]</td>
+<td>Kepler</td>
+<td>2x2496</td>
+<td>2x12GB</td>
+<td>3.7</td>
+<td><code class="docutils literal"><span class="pre">kepler</span></code></td>
+<td><code class="docutils literal"><span class="pre">teslak80</span></code></td>
+</tr>
+<tr class="row-odd"><td>Tesla P100</td>
+<td>20</td>
+<td>gpu[23-27]</td>
+<td>Pascal</td>
+<td>3854</td>
+<td>16GB</td>
+<td>6.0</td>
+<td><code class="docutils literal"><span class="pre">pascal</span></code></td>
+<td><code class="docutils literal"><span class="pre">teslap100</span></code></td>
+</tr>
+<tr class="row-even"><td>Tesla V100</td>
+<td>40</td>
+<td>gpu[28-37]</td>
+<td>Volta</td>
+<td>5120</td>
+<td>32GB</td>
+<td>7.0</td>
+<td><code class="docutils literal"><span class="pre">volta</span></code></td>
+<td><code class="docutils literal"><span class="pre">v100</span></code></td>
+</tr>
+<tr class="row-odd"><td>Tesla V100</td>
+<td>16</td>
+<td>dgx[01-02]</td>
+<td>Volta</td>
+<td>5120</td>
+<td>16GB</td>
+<td>7.0</td>
+<td><code class="docutils literal"><span class="pre">volta</span></code></td>
+<td><code class="docutils literal"><span class="pre">v100</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ready-software">
+<h2>Ready software<a class="headerlink" href="#ready-software" title="Permalink to this headline">¶</a></h2>
+<p>We support these machine learning packages out of the box:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../apps/tensorflow.html"><em>Tensorflow</em></a>:
+<code class="docutils literal"><span class="pre">anaconda</span></code> module.  Use <code class="docutils literal"><span class="pre">--constraint='kepler|pascal|volta'</span></code>.
+See the Tensorflow page for info on older versions.</li>
+<li>Keras: same module as tensorflow</li>
+<li>PyTorch: same module as tensorflow</li>
+<li><a class="reference internal" href="../apps/detectron.html"><em>Detectron</em></a>: via <a class="reference internal" href="../usage/singularity.html"><em>singularity images</em></a></li>
+<li>CNTK: via <a class="reference internal" href="../usage/singularity.html"><em>singularity images</em></a></li>
+</ul>
+<p>Do note that most of the pre-installed software has CUDA already present.
+Thus you <strong>do not need to load CUDA</strong> as a module when loading these.
+See the <a class="reference internal" href="../index.html#application-list"><span>application list</span></a> or <a class="reference internal" href="../usage/gpu.html"><em>GPU
+computing reference</em></a> for more details.</p>
+</div>
+<div class="section" id="compiling-code-yourself">
+<h2>Compiling code yourself<a class="headerlink" href="#compiling-code-yourself" title="Permalink to this headline">¶</a></h2>
+<p>To compile things for GPUs, you need to load the relevant <code class="docutils literal"><span class="pre">CUDA</span></code>
+modules:</p>
+<div class="highlight-bash"><div class="highlight"><pre>module avail cuda
+module load gcc
+module load cuda
+
+nvcc cuda_code.cu -o cuda_code         <span class="c1"># compile your CUDA code</span>
+</pre></div>
+</div>
+<p>More information is in the <a class="reference internal" href="../usage/gpu.html"><em>reference</em></a>, but most
+people will use pre-built software through channels such as Anaconda
+for Python.</p>
+</div>
+<div class="section" id="making-efficient-use-of-gpus">
+<h2>Making efficient use of GPUs<a class="headerlink" href="#making-efficient-use-of-gpus" title="Permalink to this headline">¶</a></h2>
+<p>When running a job, you want to check that the GPU is being fully
+utilized.  To do this, ssh to your node (while the job is running),
+and run <code class="docutils literal"><span class="pre">nvidia-smi</span></code>, find your process (which might take some work)
+and check the <code class="docutils literal"><span class="pre">GPU-Util</span></code> column.  It should be close to 100%,
+otherwise see below.</p>
+<p>After job has finished, you can use <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">history</span></code> to obtain the
+<code class="docutils literal"><span class="pre">JobID</span></code> and run:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sacct -j INSERT_JOBID_HERE -o comment -p
+</pre></div>
+</div>
+<p>This will show the GPU utilization.  If this is low, then what?  Check
+the normal <code class="docutils literal"><span class="pre">seff</span></code> command and see if the CPU utilization is 100%.
+This could mean that the GPUs are not able to supply data fast enough,
+see the section on CPUs below.  Similarly, your code may not be able
+to load data fast enough, see the input/output section below.</p>
+<p>Also, is your code itself efficient enough?  Are you using the
+framework pipelines the way they should work?  Is it only using GPU
+for a small portion of the entire task?  <a class="reference external" href="https://en.wikipedia.org/wiki/Amdahl's_law">Amdahl&#8217;s law</a> of parallelization
+speedup is relevant here.</p>
+<div class="section" id="enough-cpus">
+<h3>Enough CPUs<a class="headerlink" href="#enough-cpus" title="Permalink to this headline">¶</a></h3>
+<p>When using a GPU, you need to also request enough CPUs to supply the
+data to the process.  So, increase the number of CPUs you request so
+that you can provide the GPU with enough data.  However, don&#8217;t request
+too many: then, there aren&#8217;t enough CPUs for everyone to use the GPUs,
+and they go to waste!  (For the K80 nodes, we have only 1.5 CPUs per
+GPU, but on all others we have 4-6 CPUs/GPU)</p>
+</div>
+<div class="section" id="input-output">
+<h3>Input/output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h3>
+<p>Deep learning work is intrinsically very data-hungry.  Remember what
+we said about storage and input/output being important before
+(<a class="reference internal" href="storage.html"><em>in the storage tutorial</em></a>)?  Now
+it&#8217;s really important.  In fact, faster memory bandwidth is the main
+improvement of our server-grade GPUs compared to desktop models.</p>
+<p>If you are loading lots of data, package the data into a container
+format first: lots of small files are your worst enemy, and we have a
+<a class="reference internal" href="../usage/smallfiles.html"><em>dedicated page on small files</em></a>.  Each
+framework has a way to do this efficiently in a whole pipeline.</p>
+<p>If your dataset consists of individual files and it is not too big,
+it is a good idea to have the data stored in one file, which is then
+copied to nodes ramdisk <code class="docutils literal"><span class="pre">/dev/shm</span></code> or temporary disk <code class="docutils literal"><span class="pre">/tmp</span></code>.</p>
+<p>If your data is too big to fit to the disk, we recommend that you
+contact us for efficient data handling models.</p>
+</div>
+<div class="section" id="other">
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h3>
+<p>Most of the time, using more than one GPU isn&#8217;t worth it, unless you
+specially optimize, because communication takes too much time.  It&#8217;s
+better to parallelize by splitting tasks into different jobs.</p>
+</div>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<p>If you ever get <code class="docutils literal"><span class="pre">libcuda.so.1:</span> <span class="pre">cannot</span> <span class="pre">open</span> <span class="pre">shared</span> <span class="pre">object</span> <span class="pre">file:</span> <span class="pre">No</span> <span class="pre">such</span>
+<span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code>, this means you are attempting to use a CUDA
+program on a node without a GPU.  This especially happens if you try
+to test GPU code on the login node, and happens (for example) even if
+you try to import the GPU <code class="docutils literal"><span class="pre">tensorflow</span></code> module in Python on the login
+node.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="simple-tensorflow-keras-model">
+<h3>Simple Tensorflow/Keras model<a class="headerlink" href="#simple-tensorflow-keras-model" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s run the MNIST example from
+<a class="reference external" href="https://github.com/tensorflow/docs/blob/master/site/en/tutorials/_index.ipynb">Tensorflow&#8217;s tutorials</a>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">model</span> <span class="o">=</span> tf.keras.models.Sequential<span class="o">([</span>
+  tf.keras.layers.Flatten<span class="o">(</span><span class="nv">input_shape</span><span class="o">=(</span>28, 28<span class="o">))</span>,
+  tf.keras.layers.Dense<span class="o">(</span>512, <span class="nv">activation</span><span class="o">=</span>tf.nn.relu<span class="o">)</span>,
+  tf.keras.layers.Dropout<span class="o">(</span>0.2<span class="o">)</span>,
+  tf.keras.layers.Dense<span class="o">(</span>10, <span class="nv">activation</span><span class="o">=</span>tf.nn.softmax<span class="o">)</span>
+<span class="o">])</span>
+</pre></div>
+</div>
+<p>The full code for the example is in
+<a class="reference download internal" href="../../_downloads/tensorflow_mnist.py" download=""><code class="xref download docutils literal"><span class="pre">tensorflow_mnist.py</span></code></a>.
+One can run this example with <code class="docutils literal"><span class="pre">srun</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>wget https://raw.githubusercontent.com/AaltoScienceIT/scicomp-docs/master/triton/examples/tensorflow/tensorflow_mnist.py
+module load anaconda
+srun -t 00:15:00 --gres<span class="o">=</span>gpu:1 python tensorflow_mnist.py
+</pre></div>
+</div>
+<p>or with <code class="docutils literal"><span class="pre">sbatch</span></code> by submitting
+<a class="reference download internal" href="../../_downloads/tensorflow_mnist.sh" download=""><code class="xref download docutils literal"><span class="pre">tensorflow_mnist.sh</span></code></a>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --gres=gpu:1</span>
+<span class="c1">#SBATCH --time=00:15:00</span>
+
+module load anaconda
+
+python tensorflow_mnist.py
+</pre></div>
+</div>
+<p>Do note that by default Keras downloads datasets to <code class="docutils literal"><span class="pre">$HOME/.keras/datasets</span></code>.</p>
+</div>
+<div class="section" id="simple-pytorch-model">
+<h3>Simple PyTorch model<a class="headerlink" href="#simple-pytorch-model" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s run the MNIST example from
+<a class="reference external" href="https://github.com/pytorch/examples/blob/master/mnist/main.py">PyTorch&#8217;s tutorials</a>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>class Net<span class="o">(</span>nn.Module<span class="o">)</span>:
+    def __init__<span class="o">(</span>self<span class="o">)</span>:
+        super<span class="o">(</span>Net, self<span class="o">)</span>.__init__<span class="o">()</span>
+        self.conv1 <span class="o">=</span> nn.Conv2d<span class="o">(</span>1, 20, 5, 1<span class="o">)</span>
+        self.conv2 <span class="o">=</span> nn.Conv2d<span class="o">(</span>20, 50, 5, 1<span class="o">)</span>
+        self.fc1 <span class="o">=</span> nn.Linear<span class="o">(</span>4*4*50, 500<span class="o">)</span>
+        self.fc2 <span class="o">=</span> nn.Linear<span class="o">(</span>500, 10<span class="o">)</span>
+
+    def forward<span class="o">(</span>self, x<span class="o">)</span>:
+        <span class="nv">x</span> <span class="o">=</span> F.relu<span class="o">(</span>self.conv1<span class="o">(</span>x<span class="o">))</span>
+        <span class="nv">x</span> <span class="o">=</span> F.max_pool2d<span class="o">(</span>x, 2, 2<span class="o">)</span>
+        <span class="nv">x</span> <span class="o">=</span> F.relu<span class="o">(</span>self.conv2<span class="o">(</span>x<span class="o">))</span>
+        <span class="nv">x</span> <span class="o">=</span> F.max_pool2d<span class="o">(</span>x, 2, 2<span class="o">)</span>
+        <span class="nv">x</span> <span class="o">=</span> x.view<span class="o">(</span>-1, 4*4*50<span class="o">)</span>
+        <span class="nv">x</span> <span class="o">=</span> F.relu<span class="o">(</span>self.fc1<span class="o">(</span>x<span class="o">))</span>
+        <span class="nv">x</span> <span class="o">=</span> self.fc2<span class="o">(</span>x<span class="o">)</span>
+        <span class="k">return</span> F.log_softmax<span class="o">(</span>x, <span class="nv">dim</span><span class="o">=</span>1<span class="o">)</span>
+</pre></div>
+</div>
+<p>The full code for the example is in
+<a class="reference download internal" href="../../_downloads/pytorch_mnist.py" download=""><code class="xref download docutils literal"><span class="pre">tensorflow_mnist.py</span></code></a>.
+One can run this example with <code class="docutils literal"><span class="pre">srun</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>wget https://raw.githubusercontent.com/AaltoScienceIT/scicomp-docs/master/triton/examples/pytorch/pytorch_mnist.py
+module load anaconda
+srun -t 00:15:00 --gres<span class="o">=</span>gpu:1 python pytorch_mnist.py
+</pre></div>
+</div>
+<p>or with <code class="docutils literal"><span class="pre">sbatch</span></code> by submitting
+<a class="reference download internal" href="../../_downloads/pytorch_mnist.sh" download=""><code class="xref download docutils literal"><span class="pre">pytorch_mnist.sh</span></code></a>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --gres=gpu:1</span>
+<span class="c1">#SBATCH --time=00:15:00</span>
+
+module load anaconda
+
+python pytorch_mnist.py
+</pre></div>
+</div>
+<p>The Python-script will download the MNIST dataset to <code class="docutils literal"><span class="pre">data</span></code> folder.</p>
+</div>
+<div class="section" id="simple-cntk-model">
+<h3>Simple CNTK model<a class="headerlink" href="#simple-cntk-model" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s run the MNIST example from
+<a class="reference external" href="https://github.com/microsoft/CNTK/blob/release/latest/Examples/Image/Classification/MLP/Python/SimpleMNIST.py">CNTK&#8217;s tutorials</a>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>    <span class="c1"># Instantiate the feedforward classification model</span>
+    <span class="nv">scaled_input</span> <span class="o">=</span> element_times<span class="o">(</span>constant<span class="o">(</span>0.00390625<span class="o">)</span>, feature<span class="o">)</span>
+
+    <span class="nv">z</span> <span class="o">=</span> Sequential<span class="o">([</span>For<span class="o">(</span>range<span class="o">(</span>num_hidden_layers<span class="o">)</span>, lambda i: Dense<span class="o">(</span>hidden_layers_dim, <span class="nv">activation</span><span class="o">=</span>relu<span class="o">))</span>,
+                    Dense<span class="o">(</span>num_output_classes<span class="o">)])(</span>scaled_input<span class="o">)</span>
+
+    <span class="nv">ce</span> <span class="o">=</span> cross_entropy_with_softmax<span class="o">(</span>z, label<span class="o">)</span>
+    <span class="nv">pe</span> <span class="o">=</span> classification_error<span class="o">(</span>z, label<span class="o">)</span>
+</pre></div>
+</div>
+<p>The full code for the example is in
+<a class="reference download internal" href="../../_downloads/cntk_mnist.py" download=""><code class="xref download docutils literal"><span class="pre">cntk_mnist.py</span></code></a>.
+One can run this example with <code class="docutils literal"><span class="pre">srun</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>wget https://raw.githubusercontent.com/AaltoScienceIT/scicomp-docs/master/triton/examples/cntk/cntk_mnist.py
+module load anaconda
+srun -t 00:15:00 --gres<span class="o">=</span>gpu:1 python cntk_mnist.py
+</pre></div>
+</div>
+<p>or with <code class="docutils literal"><span class="pre">sbatch</span></code> by submitting
+<a class="reference download internal" href="../../_downloads/cntk_mnist.sh" download=""><code class="xref download docutils literal"><span class="pre">cntk_mnist.sh</span></code></a>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --gres=gpu:1</span>
+<span class="c1">#SBATCH --time=00:15:00</span>
+
+module load nvidia-cntk
+
+singularity_wrapper <span class="nb">exec</span> python cntk_mnist.py
+</pre></div>
+</div>
+<p>Do note that datasets in the code come from <code class="docutils literal"><span class="pre">/scratch/scip/data/cntk/MNIST</span></code>.
+Thus model won&#8217;t run outside of Triton. Check the
+<a class="reference external" href="https://github.com/microsoft/CNTK">CNTK GitHub repo</a> for the whole example.</p>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Run <code class="docutils literal"><span class="pre">nvidia-smi</span></code> on a GPU node with <code class="docutils literal"><span class="pre">srun</span></code>. Use <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">history</span></code>
+to check which GPU node you ended up on. Try setting a constraint
+to force a different GPU architecture.</p>
+</li>
+<li><p class="first">Copy <code class="docutils literal"><span class="pre">/scratch/scip/examples/gpu/pi.cu</span></code> to your work directory.
+Compile it using <code class="docutils literal"><span class="pre">cuda</span></code> module and <code class="docutils literal"><span class="pre">nvcc</span></code>. Run it. Does it say zero?
+Try running it with a GPU and see what happens.</p>
+</li>
+<li><p class="first">Run one of the samples given above. Try using <code class="docutils literal"><span class="pre">sbatch</span></code> as well.</p>
+</li>
+<li><p class="first">Modify CTNK sample slurm script in a way that it copies datasets to
+an unique folder in <code class="docutils literal"><span class="pre">/dev/shm</span></code> or <code class="docutils literal"><span class="pre">$TMPDIR</span></code> before running the
+Python code. Modify CNTK sample so that it loads data from the new
+location.</p>
+<p>HINT: Check out <code class="docutils literal"><span class="pre">mktemp</span> <span class="pre">--help</span></code>,
+<a class="reference internal" href="../../training/linux-shell-tutorial.html#linux-training-substitute-command-output"><span>command output substitutions</span></a>-section
+from our Linux shell tutorial and the API page for Python&#8217;s
+<a class="reference external" href="https://docs.python.org/3/library/os.html#os.environ">os.environ</a>.</p>
+<p>Solution to ex. 4:
+<a class="reference download internal" href="../../_downloads/cntk_mnist_ex4.py" download=""><code class="xref download docutils literal"><span class="pre">cntk_mnist_ex4.py</span></code></a>
+<a class="reference download internal" href="../../_downloads/cntk_mnist_ex4.sh" download=""><code class="xref download docutils literal"><span class="pre">cntk_mnist_ex4.sh</span></code></a>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
+<p>Check out or <a class="reference internal" href="../usage/gpu.html"><em>reference information</em></a> about GPU
+computing, including examples of different machine learning languages.</p>
+<p>If you came straight to this page, you should also read
+<a class="reference internal" href="interactive.html"><em>Interactive jobs</em></a> and <a class="reference internal" href="serial.html"><em>Serial Jobs</em></a> (actually you should have read
+them first, but don&#8217;t worry).</p>
+<p>This guide assumes you are using pre-existing GPU programs.  If you
+need to write your own, that&#8217;s a whole other story, and you can find
+some hints on the reference page.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parallel.html" class="btn btn-neutral float-right" title="Parallel computing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="array.html" class="btn btn-neutral" title="Array jobs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

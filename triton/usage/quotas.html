@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quotas &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Singularity Containers" href="singularity.html"/>
+        <link rel="prev" title="Profiling" href="profiling.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="compilers.html">Available compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgx.html">Nvidia DGX machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html">Running programs on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid2.html">Grid computing 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jobs.html">Monitoring jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html">Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="localstorage.html">Storage: local drives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lustre.html">Storage: Lustre (scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mpilibs.html">MPI on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Quotas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-quotas-work">How quotas work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disk-quota-exceeded-error-but-i-have-plenty-of-space"><code class="docutils literal"><span class="pre">Disk</span> <span class="pre">quota</span> <span class="pre">exceeded</span></code> error but I have plenty of space!</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i-can-t-rsync-sftp-etc">I can&#8217;t rsync/sftp/etc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-solutions">Other solutions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="singularity.html">Singularity Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smallfiles.html">Small files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolchains.html">Compilers and toolchains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">Remote workflows at Aalto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Quotas</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/usage/quotas.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quotas">
+<h1>Quotas<a class="headerlink" href="#quotas" title="Permalink to this headline">¶</a></h1>
+<p>Triton has quotas which limit both the space usage and number of files.
+The quota for your home directory is 10GB, for $WRKDIR by default is
+200GB, and project directories depending on request. These quotas exist
+to avoid usage exploding without anyone noticing. If you ever need more
+space, just ask. We&#8217;ll either give you more or find a solution for you.</p>
+<p>The file quota is because scratch is not that great for too many small
+files. If you have too many small files, see <a class="reference internal" href="smallfiles.html"><em>the page on small files</em></a>.</p>
+<p>Normally, things just work, but there are certain intrinsic problems in
+scratch, so if you ever get a &#8220;disk quota exceeded&#8221; error, then read on.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<dl class="last docutils">
+<dt>To try a quick fix, you can:</dt>
+<dd><code class="docutils literal"><span class="pre">quotafix</span> <span class="pre">-gs</span> <span class="pre">--fix</span> <span class="pre">/path/to/the/directory</span></code></dd>
+<dt>If that fixes something, and problem recurs, then:</dt>
+<dd><code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">teflon</span></code></dd>
+</dl>
+</div>
+<div class="section" id="how-quotas-work">
+<h2>How quotas work<a class="headerlink" href="#how-quotas-work" title="Permalink to this headline">¶</a></h2>
+<p>There are both quotas for users and projects (/m/$dept/$project).
+However, Lustre (scratch) can currently only do quotas by user or group,
+not by file path. If you <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span></code> a file or directory, you see both
+user and group. Unfortunately, with lustre it only really works for one
+of them at a time. So, on Triton, we use <strong>user private groups</strong>:
+everyone has a group with the same name as your user, and in $WRKDIR all
+files should have your group, and in project directories the group of
+that project. We have things set up so that things will Just Work if you
+do normal things.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ ls -l test
+drwxrwsr-x 3 darstr1 darstr1      4096 Jan 25 15:13 test/
+      ^      ^^^^^^^ ^^^^^^^
+      |      ^-- user  ^-- group
+      ^-- SETGID
+</pre></div>
+</div>
+<p><strong>Important!</strong> If a file has a group of <code class="docutils literal"><span class="pre">domain</span> <span class="pre">users</span></code> or
+<code class="docutils literal"><span class="pre">triton-users</span></code>, which occurs by default, then there is no quota for
+the files! To get around this, we have all directories &#8220;SETGID&#8221;
+(<code class="docutils literal"><span class="pre">chmod</span> <span class="pre">g+s</span></code>) and then files automatically are made in the correct
+group. That leads to the next point...</p>
+</div>
+<div class="section" id="disk-quota-exceeded-error-but-i-have-plenty-of-space">
+<h2><code class="docutils literal"><span class="pre">Disk</span> <span class="pre">quota</span> <span class="pre">exceeded</span></code> error but I have plenty of space!<a class="headerlink" href="#disk-quota-exceeded-error-but-i-have-plenty-of-space" title="Permalink to this headline">¶</a></h2>
+<p>If the <code class="docutils literal"><span class="pre">quota</span></code> command says you have plenty of space AND sufficient
+number of files, then you&#8217;ve hit a common problem. Probably, the
+directory does not have the SETGID bit set, so when you try to make a
+new file, it appears as group &#8216;domain users&#8217;, and there&#8217;s no quota
+assigned, so it fails!</p>
+<div class="section" id="quick-fixes">
+<h3>Quick fixes<a class="headerlink" href="#quick-fixes" title="Permalink to this headline">¶</a></h3>
+<p>Run either quotafix which will try to do things automatically, or this
+find command. You can only fix $WRKDIR on Triton, since the
+user-private-group does not exist on Aalto Linux workstations.</p>
+<div class="highlight-python"><div class="highlight"><pre># AUTOMATIC ON TRITON: Fix everything.
+#  (only for $WRKDIR or group directories, still in testing):
+/share/apps/bin/quotafix -sg --fix /path/to/dir/
+
+# MANUAL ON TRITON: use find yourself.
+# $GROUP is your username for work, or project-group name for scratch.
+lfs find /path/to/dir -type d -print0 | xargs -0 chmod g+s
+lfs find /path/to/dir  ! -group $GROUP -print0 | xargs -0 chgrp $GROUP
+
+# AALTO WORKSTATIONS: use &quot;find&quot; instead of &quot;lfs find&quot; above.
+</pre></div>
+</div>
+</div>
+<div class="section" id="details">
+<h3>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h3>
+<p>Check the SETGID bit and group ownership for directories:
+<code class="docutils literal"><span class="pre">drwxrwsr-x</span></code>. Directories must have &#8220;<strong>s</strong>&#8221; there and the right group,
+otherwise when you try to make new files in that directory, they are
+group= &#8216;domain users&#8217; and it fails.</p>
+</div>
+</div>
+<div class="section" id="i-can-t-rsync-sftp-etc">
+<h2>I can&#8217;t rsync/sftp/etc<a class="headerlink" href="#i-can-t-rsync-sftp-etc" title="Permalink to this headline">¶</a></h2>
+<p>It is related to the above mentioned issue, something like rsync -a ...
+or cp -p ... are trying to save original group ownership attribute,
+which will not work. Try this instead:</p>
+<div class="container" title="Hint: double-click to select code"><div class="highlight-python"><div class="highlight"><pre>## mainly one should avoid -g (as well as -a) since it preserves the old group (with no quota)
+$ rsync -urlptDxv --chmod=Dg+s somefile triton.aalto.fi:/path/to/work/directory
+
+## avoid &#39;-p&#39; with cp, or if you want to keep timestapms, mode etc, then use &#39;--preserve=&#39;
+$ cp -r --preserve=mode,timestamps  somefile /path/to/mounted/triton/work/directory
+</pre></div>
+</div>
+</div><p>You may need similar things for other different programs.</p>
+<p><em>Details:</em> Some programs change the group or don&#8217;t preserve the SETGID
+bit. This especially happens when you try to copy a directory from
+somewhere else to Triton while preserving the SETGID bit. You get a
+directory in the wrong group, or directory without SETGID bit so new
+files are in the wrong group, so no quota.</p>
+</div>
+<div class="section" id="other-solutions">
+<h2>Other solutions<a class="headerlink" href="#other-solutions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="teflon">
+<h3>teflon<a class="headerlink" href="#teflon" title="Permalink to this headline">¶</a></h3>
+<p>This is a new hack we are working on and hasn&#8217;t been extensively tested.
+Teflon is &#8220;anti-SETGID&#8221; which stops any program from changing either the
+group or SETGID bit, using LD_PRELOAD magic. It should work with <em>any</em>
+program, currently probably only 64-bit though. This is still under
+development. Please report problems or success stories.</p>
+<p>You have to run quotafix or chmod/chgrp commands above first.</p>
+<div class="highlight-python"><div class="highlight"><pre># Use via a module - applies to everything in this session.
+module load teflon
+
+# OR: Run a single program under teflon
+/share/apps/bin/teflon your_program [args]] ]&gt;newgrpThis changes your default group.  You can do the below commands, and it will change your default group.  This is per-shell (it makes a subshell).  When you are done, use exit to revert back.  Theoretically there&#39;s no downside to this, but if you alternate between project directories and group directories, eventually the quotas will get mixed up between the directories.newgrp $USER            # for $WRKDIR
+newgrp $PROJECT_GROUP   # for project directories - find the right group&lt;/pre&gt;&lt;/ac:plain-text-body&gt;&lt;/ac:structured-macro&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;h2&gt;Details&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Why this happens:&lt;/em&gt; $WRKDIR directory is owned by the user and user&#39;s group that has the same name and GID as UID. Quota is set per group, not per user. That is how it was implemented since 2011 when we got Lustre in use. Since spring 2015 Triton is using Aalto AD for the authentication which sets everyone a default group ID to &#39;domain users&#39;. If you copy anything to $WRKDIR/subdirectory that has no +s  bit you copy as a &#39;domain users&#39; member and file system refuses to do so due to no quota available. If g+s bit is set, all your directories/files copied/created will get the directory&#39;s group ownership instead of that default group &#39;domain users&#39;.  There can be very confusing interactions between this and user/shared directories.&lt;/p&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="singularity.html" class="btn btn-neutral float-right" title="Singularity Containers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="profiling.html" class="btn btn-neutral" title="Profiling" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

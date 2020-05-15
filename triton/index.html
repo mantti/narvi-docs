@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Triton user guide &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../index.html"/>
+        <link rel="next" title="Cluster overview" href="overview.html"/>
+        <link rel="prev" title="IDA data storage service" href="../data/ida.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Triton user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Cluster overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="help.html">Getting Triton help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts.html">Triton accounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usagepolicy.html">Usage policies and legal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acknowledgingtriton.html">Acknowledging Triton</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tutorials">Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tut/intro.html">About Science-IT and Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/connecting.html">Connecting to Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/applications.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/modules.html">Software Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/storage.html">Data storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/interactive.html">Interactive jobs: running your first command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/serial.html">Serial jobs: running in the queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/array.html">Array jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/gpu.html">GPU computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/parallel.html">Parallel computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tut/dependency.html">Job dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#detailed-instructions">Detailed instructions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage/compilers.html">Available compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/debugging.html">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/dgx.html">Nvidia DGX machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/general.html">Running programs on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/gpu.html">GPU Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/grid.html">Grid computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/grid2.html">Grid computing 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/jobs.html">Monitoring jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/libs.html">Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/localstorage.html">Storage: local drives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/lustre.html">Storage: Lustre (scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/mpilibs.html">MPI on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/quotas.html">Quotas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/singularity.html">Singularity Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/smallfiles.html">Small files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/storage.html">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/toolchains.html">Compilers and toolchains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage/workflows.html">Remote workflows at Aalto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#applications">Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="apps/index.html">Applications: General info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/aims.html">FHI-aims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/armadillo.html">Armadillo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/boost.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/detectron.html">Detectron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/fenics.html">Fenics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/fsl.html">FSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/gpaw.html">GPAW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/julia.html">Julia language on triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/jupyter.html">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/keras.html">Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/lammps.html">Lammps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/matlab.html">Matlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/mlpack.html">MLPack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/mne.html">MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/octave.html">Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/openpose.html">OpenPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/paraview.html">Paraview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/r.html">R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/rstan.html">RStan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/rstudio.html">RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/spyder.html">Spyder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/theano.html">Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/vasp.html">VASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/visit.html">VisIT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-and-examples">Reference and Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/index.html">Triton quick reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/index.html">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Triton user guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/index.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="triton-user-guide">
+<h1>Triton user guide<a class="headerlink" href="#triton-user-guide" title="Permalink to this headline">¶</a></h1>
+<p>Triton is the Aalto high-performance computing cluster.  It serves all
+researchers
+of Aalto, but is currently coordinated from within the School of
+Science.  Access is free for researchers (students not doing research
+should check out our <a class="reference internal" href="../aalto/welcomestudents.html"><em>intro for students</em></a>).  It is similar to the CSC
+clusters, though CSC clusters are larger and Triton is easier to use
+because it is more integrated into the Aalto environment.</p>
+<div class="section" id="quick-contents-and-links">
+<h2>Quick contents and links<a class="headerlink" href="#quick-contents-and-links" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first"><strong>Triton contents</strong></p>
+<ul class="simple">
+<li>About Triton<ul>
+<li><a class="reference internal" href="overview.html"><em>Cluster overview</em></a></li>
+<li><a class="reference internal" href="usagepolicy.html"><em>Usage policies and legal</em></a></li>
+<li><a class="reference internal" href="acknowledgingtriton.html"><em>Acknowledging Triton</em></a></li>
+<li><a class="reference external" href="http://science-it.aalto.fi">Aalto Science-IT</a> (external
+link)</li>
+</ul>
+</li>
+<li><a class="reference internal" href="help.html"><em>Getting Help/Contact</em></a><ul>
+<li><a class="reference external" href="https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues">Triton issue tracker</a>
+(most requests here, login with HAKA)</li>
+<li><a class="reference external" href="https://docs.csc.fi/support/support-howto/">Suggestions for good support requests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="ref/index.html"><em>Quick Reference</em></a></li>
+<li>Tutorials (start here)<ul>
+<li><a class="reference internal" href="accounts.html"><em>Triton accounts</em></a></li>
+<li><a class="reference internal" href="tut/intro.html"><em>About Science-IT and Triton</em></a></li>
+<li><a class="reference internal" href="tut/connecting.html"><em>Connecting to Triton</em></a></li>
+<li><a class="reference internal" href="tut/applications.html"><em>Applications</em></a></li>
+<li><a class="reference internal" href="tut/modules.html"><em>Software Modules</em></a></li>
+<li><a class="reference internal" href="tut/storage.html"><em>Data storage</em></a></li>
+<li><a class="reference internal" href="tut/interactive.html"><em>Interactive jobs</em></a></li>
+<li><a class="reference internal" href="tut/serial.html"><em>Serial Jobs</em></a></li>
+<li><a class="reference internal" href="tut/array.html"><em>Array jobs</em></a></li>
+<li><a class="reference internal" href="tut/dependency.html"><em>Job dependencies</em></a></li>
+<li><a class="reference internal" href="tut/gpu.html"><em>GPU computing</em></a></li>
+<li><a class="reference internal" href="tut/parallel.html"><em>Parallel computing</em></a></li>
+</ul>
+</li>
+<li>Cluster usage details<ul>
+<li>Parallel jobs (coming, for now see <a class="reference internal" href="usage/general.html"><em>Running programs on Triton</em></a>)</li>
+<li><a class="reference internal" href="usage/gpu.html"><em>GPU Computing</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#apps"><span>Applications</span></a></li>
+</ul>
+<p class="last">For full contents, see below.</p>
+</td>
+<td><p class="first"><strong>News</strong></p>
+<p><strong>Shortcuts</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues">Issue tracker</a></li>
+<li><a class="reference internal" href="ref/index.html"><em>Quick Reference</em></a></li>
+<li><a class="reference external" href="https://users.aalto.fi/~darstr1/cheatsheets/triton-cheatsheet.pdf">Triton Cheatsheet</a></li>
+<li><a class="reference internal" href="usage/faq.html"><em>Triton FAQ</em></a></li>
+<li><a class="reference internal" href="../news/garage.html"><em>Scicomp Garage</em></a></li>
+</ul>
+<p><strong>Scientific computing resources</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="http://science-it.aalto.fi/scip/">SCIP – Scientific Computing in Practice courses</a>: organized
+by Science IT. Including Triton kickstarts and many others</li>
+<li><a class="reference external" href="https://wiki.aalto.fi/download/attachments/65022076/parallel_computing.2012-04-12.pdf?version=1&amp;modificationDate=1334828664000&amp;api=v2">Parallel computing</a></li>
+<li><a class="reference external" href="https://www.aalto.fi/en/services/it-services-for-research">Aalto IT Services for Research</a></li>
+<li><a class="reference external" href="https://software-carpentry.org/">Software Carpentry</a>
+(scientific computation basics) and
+<a class="reference external" href="https://coderefinery.org/">Code Refinery</a> (more focused on
+programming techniques)</li>
+</ul>
+<p><strong>General links</strong></p>
+<ul class="last simple">
+<li><a class="reference external" href="https://www.csc.fi/">CSC</a> - Finland&#8217;s academic computing center.</li>
+<li><a class="reference external" href="https://docs.csc.fi/cloud/fgci/fgci-user-guide-overview/">FGCI user&#8217;s guide</a> at CSC: That is a
+general Guide to FGCI resources. Triton is one of them.</li>
+<li><a class="reference external" href="https://research.csc.fi/guides">CSC HPC guides</a> at CSC: a
+Triton like cluster at CSC. Similar setup, thus examples and
+instructions can be useful.</li>
+<li><a class="reference external" href="https://www.aalto.fi/en/services/research-data-management-rdm-and-open-science">Aalto research data management information</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Cluster overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Getting Triton help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accounts.html">Triton accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usagepolicy.html">Usage policies and legal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgingtriton.html">Acknowledging Triton</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="tutorials">
+<span id="id1"></span><h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<p>These are designed to be read in-order by every Triton user when they
+get their accounts (except maybe the last ones).</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tut/intro.html">About Science-IT and Triton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/connecting.html">Connecting to Triton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/applications.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/modules.html">Software Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/storage.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/interactive.html">Interactive jobs: running your first command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/serial.html">Serial jobs: running in the queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/array.html">Array jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/gpu.html">GPU computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/parallel.html">Parallel computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tut/dependency.html">Job dependencies</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="detailed-instructions">
+<h2>Detailed instructions<a class="headerlink" href="#detailed-instructions" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage/compilers.html">Available compilers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/dgx.html">Nvidia DGX machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/general.html">Running programs on Triton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/gpu.html">GPU Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/grid.html">Grid computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/grid2.html">Grid computing 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/jobs.html">Monitoring jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/libs.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/localstorage.html">Storage: local drives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/lustre.html">Storage: Lustre (scratch)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/mpilibs.html">MPI on Triton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/profiling.html">Profiling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/quotas.html">Quotas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/singularity.html">Singularity Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/smallfiles.html">Small files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/toolchains.html">Compilers and toolchains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/workflows.html">Remote workflows at Aalto</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="applications">
+<span id="apps"></span><span id="application-list"></span><h2>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
+<p>See our <a class="reference internal" href="apps/index.html"><em>general information</em></a> and the full list below:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Applications: General info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/aims.html">FHI-aims</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/armadillo.html">Armadillo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/boost.html">Boost</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/detectron.html">Detectron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/fenics.html">Fenics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/fsl.html">FSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/gpaw.html">GPAW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/julia.html">Julia language on triton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/jupyter.html">Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/keras.html">Keras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/lammps.html">Lammps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/matlab.html">Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/mlpack.html">MLPack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/mne.html">MNE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/octave.html">Octave</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/openpose.html">OpenPose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/paraview.html">Paraview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/r.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/rstan.html">RStan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/rstudio.html">RStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/spyder.html">Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/theano.html">Theano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/vasp.html">VASP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/visit.html">VisIT</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="reference-and-examples">
+<h2>Reference and Examples<a class="headerlink" href="#reference-and-examples" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ref/index.html">Triton quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="overview.html" class="btn btn-neutral float-right" title="Cluster overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../data/ida.html" class="btn btn-neutral" title="IDA data storage service" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

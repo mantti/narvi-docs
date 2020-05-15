@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tensorflow &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Applications: General info" href="index.html"/>
+        <link rel="next" title="Theano" href="theano.html"/>
+        <link rel="prev" title="Spyder" href="spyder.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#applications">Applications</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html">Applications: General info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aims.html">FHI-aims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="armadillo.html">Armadillo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boost.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cosmol.html">COMSOL Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeplearn.html">Deep learning software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectron.html">Detectron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fenics.html">Fenics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fmriprep.html">FMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer.html">Freesurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fsl.html">FSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpaw.html">GPAW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="julia.html">Julia language on triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keras.html">Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">Lammps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mathematica.html">Using Mathematica on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html">Matlab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlpack.html">MLPack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mne.html">MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="octave.html">Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openfoam.html">OpenFOAM (with ParaView)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openpose.html">OpenPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="paraview.html">Paraview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="r.html">R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstan.html">RStan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstudio.html">RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="siesta.html">Siesta &amp; Transiesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sjupyter.html">Your own notebooks via <code class="docutils literal"><span class="pre">sjupyter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spyder.html">Spyder</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Tensorflow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-usage">Basic usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-problems">Common problems</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="theano.html">Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vasp.html">VASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visit.html">VisIT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+          <li><a href="index.html">Applications: General info</a> &raquo;</li>
+      
+    <li>Tensorflow</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/apps/tensorflow.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tensorflow">
+<h1>Tensorflow<a class="headerlink" href="#tensorflow" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">supportlevel:</th><td class="field-body">A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">pagelastupdated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">2020-02-20</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">maintainer:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Tensorflow is a commonly used Python package for deep learning.</p>
+<div class="section" id="basic-usage">
+<h2>Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<p>First, check the tutorials up to and including <a class="reference internal" href="../tut/gpu.html"><em>GPU computing</em></a>.</p>
+<p>The basic way to use is via the Python in the <code class="docutils literal"><span class="pre">anaconda</span></code> module.
+The versions with <code class="docutils literal"><span class="pre">-tf2</span></code> (the default ones) have Tensorflow 2
+installed.  If you use <code class="docutils literal"><span class="pre">module</span> <span class="pre">spider</span> <span class="pre">anaconda</span></code>, you can see a
+<code class="docutils literal"><span class="pre">-tf1</span></code> version available.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Older versions of Tensorflow were CPU-only or GPU-only</p>
+<p>With older versions of tensorflow (&lt;1.15.0), you have to decide at
+<em>install time</em> if you want a version that runs on CPUs or GPUs. This
+means that we can&#8217;t install it for everyone and expect it to work
+everywhere - you have to load something different if you want it to
+run on login node/regular nodes (probably for testing) or GPU nodes.
+The old <code class="docutils literal"><span class="pre">-cpu</span></code> and <code class="docutils literal"><span class="pre">-gpu</span></code> versions in the <code class="docutils literal"><span class="pre">anaconda2</span></code>- and
+<code class="docutils literal"><span class="pre">anaconda3</span></code>-modules denoted this.</p>
+<p class="last">From tensorflow versions &gt;= 1.15.0, they solved this problem (thankfully)</p>
+</div>
+<p>Don&#8217;t load any additional CUDA modules, anaconda includes everything.</p>
+<p>If you use GPUs, you need <code class="docutils literal"><span class="pre">--constraint='kepler|pascal|volta'</span></code> in
+order to select a GPU new enough to run tensorflow.  (Note that as we
+get newer cards, this will need further updating).</p>
+<div class="section" id="simple-tensorflow-keras-model">
+<h3>Simple Tensorflow/Keras model<a class="headerlink" href="#simple-tensorflow-keras-model" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s run the MNIST example from
+<a class="reference external" href="https://github.com/tensorflow/docs/blob/master/site/en/tutorials/_index.ipynb">Tensorflow&#8217;s tutorials</a>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">model</span> <span class="o">=</span> tf.keras.models.Sequential<span class="o">([</span>
+  tf.keras.layers.Flatten<span class="o">(</span><span class="nv">input_shape</span><span class="o">=(</span>28, 28<span class="o">))</span>,
+  tf.keras.layers.Dense<span class="o">(</span>512, <span class="nv">activation</span><span class="o">=</span>tf.nn.relu<span class="o">)</span>,
+  tf.keras.layers.Dropout<span class="o">(</span>0.2<span class="o">)</span>,
+  tf.keras.layers.Dense<span class="o">(</span>10, <span class="nv">activation</span><span class="o">=</span>tf.nn.softmax<span class="o">)</span>
+<span class="o">])</span>
+</pre></div>
+</div>
+<p>The full code for the example is in
+<a class="reference download internal" href="../../_downloads/tensorflow_mnist.py" download=""><code class="xref download docutils literal"><span class="pre">tensorflow_mnist.py</span></code></a>.
+One can run this example with <code class="docutils literal"><span class="pre">srun</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>wget https://raw.githubusercontent.com/AaltoScienceIT/scicomp-docs/master/triton/examples/tensorflow/tensorflow_mnist.py
+module load anaconda
+srun -t 00:15:00 --gres<span class="o">=</span>gpu:1 python tensorflow_mnist.py
+</pre></div>
+</div>
+<p>or with <code class="docutils literal"><span class="pre">sbatch</span></code> by submitting
+<a class="reference download internal" href="../../_downloads/tensorflow_mnist.sh" download=""><code class="xref download docutils literal"><span class="pre">tensorflow_mnist.sh</span></code></a>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --gres=gpu:1</span>
+<span class="c1">#SBATCH --time=00:15:00</span>
+
+module load anaconda
+
+python tensorflow_mnist.py
+</pre></div>
+</div>
+<p>Do note that by default Keras downloads datasets to <code class="docutils literal"><span class="pre">$HOME/.keras/datasets</span></code>.</p>
+</div>
+</div>
+<div class="section" id="common-problems">
+<h2>Common problems<a class="headerlink" href="#common-problems" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>ImportError: libcuda.so.1: cannot open shared object file: No such
+file or directory</strong>. Older versions of GPU tensorflow can only be imported
+on GPU nodes (even though you&#8217;d think that you can import it and just not
+use the GPUs).  So you can only run this code in the GPU queue. Solution
+for this is to use the newer <code class="docutils literal"><span class="pre">anaconda</span></code>-modules.</li>
+<li>Random CUDA errors: don&#8217;t load any other CUDA modules, only
+<code class="docutils literal"><span class="pre">anaconda</span></code>.  Anaconda includes the necessary libraries in compatible
+versions.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="theano.html" class="btn btn-neutral float-right" title="Theano" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="spyder.html" class="btn btn-neutral" title="Spyder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

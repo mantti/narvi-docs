@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>March 2020 / Linux Shell Scripting &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Scientific Computing in Practice" href="index.html"/>
+        <link rel="next" title="Feb-March 2020 / Hands-on Molecular Dynamics with LAMMPS" href="md-with-lammps.html"/>
+        <link rel="prev" title="April 2020 / Matlab Advanced" href="matlab-advanced.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../triton/index.html">Triton user guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Training</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Scientific Computing in Practice</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#lectures-by-date-and-topics">Lectures by date and topics</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="triton-summer-kickstart.html">Jun 2020 / Triton Summer Kickstart</a></li>
+<li class="toctree-l4"><a class="reference external" href="https://coderefinery.org/workshops/upcoming">May 2020 / CodeRefinery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matlab-advanced.html">April 2020 / Matlab Advanced</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">March 2020 / Linux Shell Scripting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="md-with-lammps.html">Feb-March 2020 / Hands-on Molecular Dynamics with LAMMPS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mpi-introduction.html">Feb 2020 / MPI introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triton-winter-kickstart.html">Jan 2020 / Triton Winter Kickstart</a></li>
+<li class="toctree-l4"><a class="reference external" href="https://coderefinery.org/workshops/2019-12-10-espoo/">Dec 2019 / CodeRefinery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matlab-basics.html">Nov 2019 / Matlab Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="htcondor-introduction.html">Oct 2019 / Introduction to distributed computing with HTCondor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data-analysis.html">Oct 2019 / Practical R and Python data analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gpu-computing.html">Sept 2019 / GPU Computing in Practice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linux-shell-basics.html">Sept 2019 / Linux Shell Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#archive">Archive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../scicomp-announcements-maillist.html">Announcement maillist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux-shell-tutorial.html">Linux shell tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python-scicomp/index.html">Python for Scientific Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#a-basics">A: Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#b-scientific-computing">B: Scientific computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#c-high-performance-computing">C: High performance computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d-advanced-high-performance-computing">D: Advanced high performance computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#recommended-programming-courses">Recommended programming courses</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Training</a> &raquo;</li>
+      
+          <li><a href="index.html">Scientific Computing in Practice</a> &raquo;</li>
+      
+    <li>March 2020 / Linux Shell Scripting</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/training/scip/shell-scripting.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="march-2020-linux-shell-scripting">
+<h1>March 2020 / Linux Shell Scripting<a class="headerlink" href="#march-2020-linux-shell-scripting" title="Permalink to this headline">¶</a></h1>
+<p>Part of <a class="reference internal" href="index.html"><em>Scientific Computing in Practice</em></a> lecture series at Aalto University.</p>
+<p><strong>Audience:</strong> employees and students, intermediate or advanced level
+in Linux/Mac shell.  (We happily accept public attendance, but are
+doing limited advertisement right now - if the course was advertised
+to you, welcome.)</p>
+<p><strong>About the course:</strong> You know that SLURM batch script is a regular BASH shell script mostly? You know that when you login to Triton (our computer cluster) your terminal is a fully enabled shell scripting environment? Do you know how to create an alias, a function, how to use loops and traps in a shell? How to work with variables and arrays? The course is oriented on those who want to start using BASH programming fully and use terminal efficiently.</p>
+<p>We expect that course participants are familiar with the <a class="reference internal" href="linux-shell-basics.html"><em>shell basics</em></a> (experience with BASH, ZSH, etc). We somewhat touch the  <a class="reference internal" href="../linux-shell-tutorial.html"><em>Part 1 of the Linux Shell tutorial</em></a>, and continue to Part 2. Though we expect that participant knows how to create a directory and can edit file from the linux shell command line. We will be scripting a lot, there will be lots of demos and real practicing.</p>
+<p><strong>Lecturer:</strong> Ivan Degtyarenko, D. Sc., Science IT / Department of Applied Physics, Aalto University</p>
+<p><strong>Place:</strong> Online, common Zoom link for all the sessions <a class="reference external" href="https://aalto.zoom.us/j/947220751">aalto.zoom.us/j/947220751</a></p>
+<p><strong>Time, date (all times EET):</strong></p>
+<ul class="simple">
+<li>Mon 23.3, 10:00-13:00</li>
+<li>Wed 25.3, 10:00-13:00</li>
+<li>Mon 30.3, 10:00-13:00</li>
+<li>Wed 1.4, 10:00-13:00</li>
+</ul>
+<p><strong>Course material:</strong> will be mostly based on the second part of the <a class="reference internal" href="../linux-shell-tutorial.html"><em>scicomp.aalto.fi/training/linux-shell-tutorial</em></a>.</p>
+<p>Additional materials and homework assignments at triton.aalto.fi:/scratch/scip/BASH (will be made available for others)</p>
+<p><strong>Cost:</strong> Free of charge for FGCI consortium members including Aalto employees and students.</p>
+<p><strong>Registration:</strong> <a class="reference external" href="https://link.webropolsurveys.com/S/3F69E4C9498BAF2D">open registration</a></p>
+<p><strong>Credits:</strong> Credits available for the Aalto students and course certificate can be provided on request for the outsiders. Credits/certificate require full time participation and handling home work/assignments. Full course hours correspond roughly to 1 ECTS.</p>
+<p><strong>Setup instructions:</strong> For the online course we expect you to have Zoom client installed on your local workstation/laptop. Then we expect you to have access to Linux-like shell terminal, means that either you have a Linux/Mac laptop.  For Windows, we will provide installation instructions for git-bash, or you should install a SSH client installed for accessing any of Linux server (kosh/lyta etc at Aalto). If needed participants can be provided with access to Triton for running examples.  <em>More information upcoming</em></p>
+<p><strong>Additional course info at:</strong> ivan.degtyarenko -at- aalto.fi</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="md-with-lammps.html" class="btn btn-neutral float-right" title="Feb-March 2020 / Hands-on Molecular Dynamics with LAMMPS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matlab-advanced.html" class="btn btn-neutral" title="April 2020 / Matlab Advanced" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

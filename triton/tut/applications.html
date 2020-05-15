@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Applications &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="Software Modules" href="modules.html"/>
+        <link rel="prev" title="Connecting to Triton" href="connecting.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#tutorials">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">About Science-IT and Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting.html">Connecting to Triton</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Applications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#available-softwares">Available softwares</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modules">Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#singularity-containers">Singularity containers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requesting-new-software">Requesting new software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html">Software Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Data storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive.html">Interactive jobs: running your first command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial jobs: running in the queue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">Array jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependency.html">Job dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Applications</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/tut/applications.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="applications">
+<h1>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we talk about the overall process of finding,
+building, and compiling software.  These days, installing and managing
+scientific software is taking more and more time, thus we need to
+specifically talk about it some.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Main article: <a class="reference internal" href="../apps/index.html"><em>Applications: General info</em></a></p>
+</div>
+<div class="section" id="available-softwares">
+<h2>Available softwares<a class="headerlink" href="#available-softwares" title="Permalink to this headline">¶</a></h2>
+<p>You can find what softwares we have available in different ways:</p>
+<ul class="simple">
+<li>First, you should check our <a class="reference internal" href="../apps/index.html"><em>Applications</em></a> page
+and see if the software you need is already available and has
+instructions.</li>
+<li>If you find the software you need available, you can usually load it via a module.
+The next tutorial, <a class="reference internal" href="modules.html"><em>Software modules</em></a> explains what modules
+are and how to work with them.</li>
+<li>You can also search this tutorial to see what you can find (though
+note that not everything is in the Triton section here - some applies
+to Aalto workstations or own computers).</li>
+<li>It&#8217;s always a good idea to search the <a class="reference external" href="https://version.aalto.fi/gitlab/AaltoScienceIT/triton">issue tracker</a> to see if
+there are previous issues about it - not everything is always
+updated.</li>
+</ul>
+</div>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<p>You can learn about modules on the <a class="reference internal" href="modules.html"><em>Software modules</em></a> tutorial.
+But generally, <code class="docutils literal"><span class="pre">module</span></code> is a command that allows you to get and remove
+access to other software - because not everything can be available at once.
+The <a class="reference internal" href="modules.html"><em>Software modules</em></a> tutorial teaches how to
+load modules using the command <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">$NAME</span></code>, etc.</p>
+<p>Not all of the software we have available is documented.  You can
+<code class="docutils literal"><span class="pre">module</span> <span class="pre">spider</span> <span class="pre">$NAME</span></code> to try to see if you can find a module
+that way.  Note that this is <em>partially</em> case sensitive so it can
+be hard to find things - you might need to look through <code class="docutils literal"><span class="pre">module</span>
+<span class="pre">avail</span></code> too, to find all the available modules.</p>
+<div class="section" id="common-applications">
+<h3>Common applications<a class="headerlink" href="#common-applications" title="Permalink to this headline">¶</a></h3>
+<p>For reference, here are the most common softwares:</p>
+<ul class="simple">
+<li><strong>Python:</strong> <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda</span></code> for the Anaconda distribution
+of Python 3, including a lot of useful packages.  <a class="reference internal" href="../apps/python.html"><em>More info</em></a>.</li>
+<li><strong>R:</strong> <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">r</span></code> for a basic R package.  <a class="reference internal" href="../apps/r.html"><em>More info</em></a>.</li>
+<li><strong>Matlab:</strong> <code class="docutils literal"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">matlab</span></code> for the latest Matlab version.
+<a class="reference internal" href="../apps/matlab.html"><em>More info</em></a>.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="singularity-containers">
+<h2>Singularity containers<a class="headerlink" href="#singularity-containers" title="Permalink to this headline">¶</a></h2>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Main article: <a class="reference internal" href="../usage/singularity.html"><em>Singularity Containers</em></a></p>
+</div>
+<p>Some softwares have become so complicated that they just can&#8217;t be installed,
+and for that we use containers.  A software container is basically a
+complete self-contained operating system environment.  Another
+advantage of containers is that they make it easy to move installed
+software from system to system, so that you can have the same
+environment everywhere.</p>
+<p>You can read about singularity containers <a class="reference internal" href="../usage/singularity.html"><em>here</em></a>.
+If you load a module that uses singularity, nothing will happen at first.
+You execute your software using <code class="docutils literal"><span class="pre">singularity_wrapper</span> <span class="pre">exec</span></code>,
+or use <code class="docutils literal"><span class="pre">singularity_wrapper</span> <span class="pre">shell</span></code> to get a shell in there.</p>
+</div>
+<div class="section" id="requesting-new-software">
+<h2>Requesting new software<a class="headerlink" href="#requesting-new-software" title="Permalink to this headline">¶</a></h2>
+<p>We aim to install a good base of software for our users - but it&#8217;s not
+possible to keep up with all requests.  If you need something, submit
+a request to our <a class="reference internal" href="../help.html#issuetracker"><span>issue tracker</span></a>, but be aware
+that despite best efforts, we can&#8217;t do everything.
+See the main <a class="reference internal" href="../apps/index.html"><em>Applications</em></a> page for more information.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Figure out how to use <code class="docutils literal"><span class="pre">tensorflow</span></code> (this is not a software
+problem, but a searching the documentation problem).  Make it work
+enough to do <code class="docutils literal"><span class="pre">python</span></code> and <code class="docutils literal"><span class="pre">import</span> <span class="pre">tensorflow</span></code> &#8211; though you
+will get an error which you will learn to solve in a later lesson.</li>
+<li>Figure out how to run <code class="docutils literal"><span class="pre">openfoam</span></code> by searching the docs (use the
+new image).  Using <code class="docutils literal"><span class="pre">singularity_wrapper</span></code>, run <code class="docutils literal"><span class="pre">foamExec</span></code> so
+that it fails with the error message <code class="docutils literal"><span class="pre">no</span> <span class="pre">application</span> <span class="pre">specified</span></code>.
+Try <code class="docutils literal"><span class="pre">singularity_wrapper</span> <span class="pre">shell</span></code>, too.</li>
+</ol>
+</div>
+<div class="section" id="what-s-next">
+<h2>What&#8217;s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<p>The next tutorial covers <a class="reference internal" href="modules.html"><em>software modules</em></a> in more detail.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules.html" class="btn btn-neutral float-right" title="Software Modules" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="connecting.html" class="btn btn-neutral" title="Connecting to Triton" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

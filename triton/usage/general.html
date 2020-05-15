@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Running programs on Triton &mdash; Aalto scientific computing</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Aalto scientific computing" href="../../index.html"/>
+        <link rel="up" title="Triton user guide" href="../index.html"/>
+        <link rel="next" title="GPU Computing" href="gpu.html"/>
+        <link rel="prev" title="Frequently asked questions" href="faq.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Aalto scientific computing
+          
+
+          
+            
+            <img src="../../_static/aalto.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomeresearchers.html">Welcome, researchers!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/welcomestudents.html">Welcome, students!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../news/index.html">News</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../aalto/index.html">The Aalto environment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/index.html">Data</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Triton user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#quick-contents-and-links">Quick contents and links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tutorials">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#detailed-instructions">Detailed instructions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="compilers.html">Available compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgx.html">Nvidia DGX machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Running programs on Triton</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scheduling-policy-and-queues">Scheduling policy and queues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interactive-logins">Interactive logins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#job-examples">Job examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#links-and-other-additional-materials">Links and other additional materials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html">GPU Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid2.html">Grid computing 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jobs.html">Monitoring jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html">Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="localstorage.html">Storage: local drives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lustre.html">Storage: Lustre (scratch)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mpilibs.html">MPI on Triton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quotas.html">Quotas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="singularity.html">Singularity Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smallfiles.html">Small files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolchains.html">Compilers and toolchains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">Remote workflows at Aalto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#reference-and-examples">Reference and Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scicomp/index.html">Scientific computing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">About these docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Aalto scientific computing</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Triton user guide</a> &raquo;</li>
+      
+    <li>Running programs on Triton</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/AaltoScienceIT/scicomp-docs/blob/master/triton/usage/general.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="running-programs-on-triton">
+<h1>Running programs on Triton<a class="headerlink" href="#running-programs-on-triton" title="Permalink to this headline">¶</a></h1>
+<p>Triton differs somewhat from your regular desktop computer. The large
+numbers and complex examples may give the impression of something far
+more special than it actually is: a bunch of computers. Fundamentally
+these are just slightly more powerful computers, with much more memory
+and a faster network in between. Where the major differences begin,
+though, is that they are shared by around 100 people from different
+departments with an unusual scale and variation of applications and
+needs. In order to even begin to accommodate everyone on the cluster, we
+have to use an intermediate resource manager and scheduler through which
+certain policies can be put into effect. The <em>cluster</em> is a combination
+of the compute nodes, our site policies, and the scheduler software
+which works it all out in practice.</p>
+<p>This guide tries to give an idea of how to run programs in the cluster
+through the Slurm scheduler. While this certainly does not cover all the
+use cases, you&#8217;re welcome to ask any questions in the <a class="reference external" href="https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues">Issue
+Tracker</a>.</p>
+<div class="section" id="scheduling-policy-and-queues">
+<h2>Scheduling policy and queues<a class="headerlink" href="#scheduling-policy-and-queues" title="Permalink to this headline">¶</a></h2>
+<p>The cluster nodes (computers) are grouped into <em>partitions</em> (the
+scheduler&#8217;s concept). While the default <em>batch</em> partition may always be
+in full use, other partitions act as boundaries that keep specialized
+nodes, such as the GPU machines, ready and immediately available for
+jobs with special requirements.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Partition</th>
+<th class="head">Max job size</th>
+<th class="head">Mem/core (GB)</th>
+<th class="head">Tot mem (GB)</th>
+<th class="head">Cores/node</th>
+<th class="head">Limits</th>
+<th class="head">Use</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&lt;default&gt;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>If you leave off all possible partitions will be used (based on time/mem)</td>
+</tr>
+<tr class="row-odd"><td>debug</td>
+<td>2 nodes</td>
+<td>2.66 - 12</td>
+<td>32-256</td>
+<td>12,20,24</td>
+<td>15 min</td>
+<td>testing and debugging short interactive. work.  1 node of each arch.</td>
+</tr>
+<tr class="row-even"><td>batch</td>
+<td>16 nodes</td>
+<td>2.66 - 12</td>
+<td>32-256</td>
+<td>12, 20,24</td>
+<td>5d</td>
+<td><strong>primary partition</strong>, all serial &amp; parallel jobs</td>
+</tr>
+<tr class="row-odd"><td>short</td>
+<td>8 nodes</td>
+<td>4 - 12</td>
+<td>48-256</td>
+<td>12, 20,24</td>
+<td>4h</td>
+<td>short serial &amp; parallel jobs, +96 dedicated CPU cores</td>
+</tr>
+<tr class="row-even"><td>hugemem</td>
+<td>1 node</td>
+<td>43</td>
+<td>1024</td>
+<td>24</td>
+<td>3d</td>
+<td>huge memory jobs, 1 node only</td>
+</tr>
+<tr class="row-odd"><td>gpu</td>
+<td>1 node, 2-8GPUs</td>
+<td>2 - 10</td>
+<td>24-128</td>
+<td>12</td>
+<td>5d</td>
+<td><a class="reference internal" href="gpu.html"><em>GPU computing</em></a></td>
+</tr>
+<tr class="row-even"><td>gpushort</td>
+<td>4 nodes, 2-8 GPUs</td>
+<td>2 - 10</td>
+<td>24-128</td>
+<td>12</td>
+<td>4h</td>
+<td><a class="reference internal" href="gpu.html"><em>GPU computing</em></a></td>
+</tr>
+<tr class="row-odd"><td>interactive</td>
+<td>2 nodes</td>
+<td>5</td>
+<td>128</td>
+<td>24</td>
+<td>1d</td>
+<td>for <code class="docutils literal"><span class="pre">sinteractive</span></code> command, longer interactive work</td>
+</tr>
+</tbody>
+</table>
+<p>Use <code class="docutils literal"><span class="pre">slurm</span> <span class="pre">partitions</span></code> to see more details.</p>
+<p>The debug partition and its 60 minute time limit exists for developing
+code and testing job scripts and simply getting used to the cluster
+commands.&nbsp; Don&#8217;t run anything here unless it is your current work focus.</p>
+<p><strong>Most of the time, you should not need to specify any partition (debug,
+interactive, or your group&#8217;s dedicated partitions).</strong> When you submit a
+job, there is a script (job_submit.lua) that runs in the background and
+automatically selects partitions.&nbsp; If you notice the script doing
+something wrong, submit an issue and we can look at it.&nbsp; It roughly uses
+this logic:</p>
+<ul class="simple">
+<li>Do you use <code class="docutils literal"><span class="pre">--gres=gpu</span></code> ?  If so, do GPU partitions.</li>
+<li>Otherwise, default to batch</li>
+<li>If your time limit is less than the short time limit, also add in the
+short partitions, too</li>
+<li>If you use large amounts of memory, add hugemem.</li>
+</ul>
+<p>It can be worth looking at your job&#8217;s partition list to make sure it is
+optimal: &#8220;slurm j $jobid&#8221;</p>
+</div>
+<div class="section" id="interactive-logins">
+<h2>Interactive logins<a class="headerlink" href="#interactive-logins" title="Permalink to this headline">¶</a></h2>
+<p>Triton mainly runs non-interactive batch jobs in its current
+configuration. There is a (small) partition which is meant for
+interactive jobs. There are two main options for running interactive
+shells:</p>
+<ul class="simple">
+<li>Cluster frontend (login) machine <code class="docutils literal"><span class="pre">triton.aalto.fi</span></code> for editing,
+compiling and testing code.</li>
+<li>Interactive jobs started with the &#8220;sinteractive&#8221; command.</li>
+</ul>
+<p>We ask you to refrain from running multi-GB, many-core applications of
+the frontend. The login machine <code class="docutils literal"><span class="pre">triton.aalto.fi</span></code> is mainly intended
+for editing code and submission scripts, sorting your files, checking
+jobs and of course submitting the jobs scripts through Slurm to the
+actual execution nodes (called <code class="docutils literal"><span class="pre">cn</span></code>-something, ivy*, <code class="docutils literal"><span class="pre">gpu</span></code>* or
+<code class="docutils literal"><span class="pre">tb</span></code>*).</p>
+<p>Interactive and computationally intensive applications should be run on
+<code class="docutils literal"><span class="pre">the</span> <span class="pre">interactive</span> <span class="pre">partition</span></code>. Still, to maximise the resource usage
+it&#8217;s best to structure you workflow such that you can use normal batch
+jobs.</p>
+<p>You can access <code class="docutils literal"><span class="pre">an</span> <span class="pre">interactive</span> <span class="pre">shell</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">&quot;sinteractive&quot;</span> <span class="pre">command</span></code>
+from the frontend&nbsp;machine <code class="docutils literal"><span class="pre">tri</span></code><code class="docutils literal"><span class="pre">ton.aalto.fi</span></code>:</p>
+<p>Launch 2 hour interactive session</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sinteractive -t 2:0
+</pre></div>
+</div>
+<p>See also the interactive usage section below for advanced examples.</p>
+</div>
+<div class="section" id="job-examples">
+<h2>Job examples<a class="headerlink" href="#job-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="submit-a-short-batch-job">
+<h3>Submit a short batch job<a class="headerlink" href="#submit-a-short-batch-job" title="Permalink to this headline">¶</a></h3>
+<p>Batch job is by default a single-CPU job that will run specified
+commands in series and optionally save output into a file.</p>
+<p>A number of nodes have been dedicated for jobs that run under four
+hours, which makes it more likely that resources are immediately
+available.</p>
+<p>Short batch example</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -p short
+#SBATCH --time=04:00:00      # 4 hours
+#SBATCH --mem-per-cpu=1000   # 1G of memory
+
+cd $WRKDIR/mydata/
+srun myprog params
+srun myprog2 other params
+srun myprog3
+</pre></div>
+</div>
+<p>A batch job can have as many &#8220;srun&#8221; steps as needed or just one. At the
+end of the day SBATCH script is just a BASH script with a set of
+specific directives for SBATCH. Being so, the script can be as simple as
+a few #SBATCH lines plus &#8220;srun&#8221; or may consists of hundreds of BASH
+lines. The best practice is to join the tasks into the same job and
+avoid short runs (that take seconds or minutes).</p>
+</div>
+<div class="section" id="submit-an-array-job-batch-job-for-repeated-tasks">
+<h3>Submit an array job (batch job for repeated tasks)<a class="headerlink" href="#submit-an-array-job-batch-job-for-repeated-tasks" title="Permalink to this headline">¶</a></h3>
+<p>Slurm supports so-called array jobs, where one can easily handle a large
+number of similar jobs. An array job is essentially a set of independent
+jobs. In this example we run an array job consisting of 30 different
+array tasks. In the job script, the environment variable
+SLURM_ARRAY_TASK_ID is the ID of the current task. In the example
+below, this is used to make the application read the correct input file,
+and to generate output in a unique directory.</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -n 1
+#SBATCH -t 04:00:00
+#SBATCH --mem-per-cpu=2500
+#SBATCH --array=0-29
+
+cd $SLURM_ARRAY_TASK_ID
+srun ./my_application -input input_data_$SLURM_ARRAY_TASK_ID
+cd ..
+</pre></div>
+</div>
+<p>The array indices need not be sequential. E.g. if you discover that
+after the above array job is finished, the job task id&#8217;s 7 and 19
+failed, you can relaunch just those jobs with <code class="docutils literal"><span class="pre">--array=7,19</span></code>. While the
+array job above is a set of serial jobs, parallel array jobs are
+possible. For more information, see the <a class="reference external" href="https://slurm.schedmd.com/job_array.html">Slurm job array
+documentation</a>.</p>
+</div>
+<div class="section" id="submit-a-multithreaded-job">
+<h3>Submit a multithreaded job<a class="headerlink" href="#submit-a-multithreaded-job" title="Permalink to this headline">¶</a></h3>
+<p>Programs using multiple threads must have their behaviour described to
+Slurm in terms of the number of threads needed. To launch a
+multithreaded job we tell slurm that we want a single task, but that
+that one task requires several CPU&#8217;s. This is done with the
+<code class="docutils literal"><span class="pre">--cpus-per-task=</span></code><em>N</em> (or the short form <code class="docutils literal"><span class="pre">-c</span></code> <em>N</em>) option and should match the
+number of computational threads used by your application.</p>
+<p>When moving a program from a Linux workstation to the cluster, please
+note than simply increasing the Slurm reservation size usually does not
+affect the running behavior of the program. Take a moment to see how
+many threads were using CPU on a workstation, and use that as a starting
+point (try the <code class="docutils literal"><span class="pre">top</span></code> command and press the H key to see separate
+threads). Not all tasks scale well to 12 (or 20, 24) threads, so run a
+few benchmarks in the play partition (<code class="docutils literal"><span class="pre">-p</span> <span class="pre">debug</span></code>) to test things
+before committing a lot of cluster resources to an application that may
+not utilize all of it. Amount of threads should be no more than number
+of CPU cores on the node.</p>
+<p>For OpenMP programs the information about Slurm reservation size is
+passed with environment variable OMP_NUM_THREADS, which controls how
+many OpenMP threads will be used for the job (equal to <code class="docutils literal"><span class="pre">-n</span> <span class="pre">#</span></code>).
+However by default all allocated threads are used, so you need to
+specify OMP_NUM_THREADS only if you want to launch a job step using
+fewer than the allocated CPU&#8217;s. Other multi-threaded programs may have
+similar ways to control the number of threads launched. When using
+OpenMP, additionally one should bind threads to CPU&#8217;s with the
+OMP_PROC_BIND environment variable.</p>
+<p>OpenMP example</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH --cpus-per-task=12
+#SBATCH --time=40:00
+#SBATCH --mem-per-cpu=2000
+export OMP_PROC_BIND=true
+srun /path/to/openMP_executable
+</pre></div>
+</div>
+</div>
+<div class="section" id="submit-a-mpi-job">
+<h3>Submit a MPI job<a class="headerlink" href="#submit-a-mpi-job" title="Permalink to this headline">¶</a></h3>
+<p>Slurm&#8217;s &#8220;srun&#8221; works as a wrapper to traditional &#8220;mpirun&#8221; command, it
+takes care of setting up a correct environment for MPI. For more
+information, see the <a class="reference external" href="https://slurm.schedmd.com/mpi_guide.html">slurm MPI
+guide</a>.</p>
+<p>Triton has several generations of different architectures, as of Oct
+2018 we have Westmere, IvyBridge, Haswell, and Broadwell Xeons.  They
+have different number on CPU cores per node: 12 for Westmere, 20 on
+IvyBridge, 24 on Haswell, and 28 on Broadwell.</p>
+</div>
+<div class="section" id="submit-a-small-mpi-job">
+<h3>Submit a small MPI job<a class="headerlink" href="#submit-a-small-mpi-job" title="Permalink to this headline">¶</a></h3>
+<p>A job that fit to one node: <em>single-node job</em>. Here we use the &#8220;-N 1&#8221;
+option which tells slurm to allocate all tasks on a single node. The &#8220;-n
+X&#8221; tells to SLURM how many MPI tasks you want to run.</p>
+<p>Small MPI example using mvapich2</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH -N 1                 # on one node
+#SBATCH -n 4                 # 4 processes
+#SBATCH --time=4:00:00       # 4 hours
+#SBATCH --mem-per-cpu=2000   # 2GB per process
+
+module load gmvolf/triton-2016a   # MVAPICH + GCC + math libs modules
+srun /path/to/mpi_program params
+</pre></div>
+</div>
+<p>For &#8220;-n&#8221; less or equal to 12 this job will fit on any of the available
+nodes, if you put something more that 12 but below 20, it will go to
+either Haswell or IvyBridge nodes, and in case of up to 24 to Haswell
+only. Independently on the requested <code class="docutils literal"><span class="pre">--n</span> <span class="pre">X</span></code> one can always define the
+<code class="docutils literal"><span class="pre">--constraint=</span></code> and explicitly request specific CPU arch. See large MPI
+jobs examples below.</p>
+</div>
+<div class="section" id="submit-a-large-mpi-job">
+<h3>Submit a large MPI job<a class="headerlink" href="#submit-a-large-mpi-job" title="Permalink to this headline">¶</a></h3>
+<p>Large MPI-job, the one that does not fit to a single node. You should
+ask for a number of tasks that is a multiple of number of CPU cores on
+the node. Use the &#8220;exclusive&#8221; option to ensure that entire nodes are
+allocated, removing interference from other jobs and minimizing the
+number of nodes required to fulfill the allocation. One must specify
+type of requested CPU, number of tasks and corresponding number of nodes
+in the SBATCH script.</p>
+<p>MPI example using Open MPI</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH --time=2:00:00       # two hours job
+#SBATCH --mem-per-cpu=1500   # 1.5GB of memory per process
+#SBATCH --exclusive          # allocate whole node
+#SBATCH --constraint=hsw     # require Haswell CPUs with 24 cores per node
+#SBATCH -N 2                 # on two nodes
+#SBATCH -n 48                # 48 processes to run (2 x 24 = 48)
+
+
+module load goolf/triton-2016a    # OpenMPI + GCC + math libs
+srun /path/to/mpi/program  params
+
+
+----------------- 12 CPU cores case ---------------------------------------
+
+#SBATCH --constraint=wsm     # require Westemers, 12 cores per node
+#SBATCH -N 4                 # on four nodes
+#SBATCH -n 48                # 48 processes to run (4 x 12 = 48)
+
+
+----------------- 20 CPU cores case ---------------------------------------
+
+#SBATCH --constraint=ivb    # require IvyBridges, 20 cores per node
+#SBATCH -N 2                 # on two nodes
+#SBATCH -n 40                # 40 processes to run (2 x 20 = 40)
+</pre></div>
+</div>
+</div>
+<div class="section" id="submit-a-hybrid-mpi-openmp-job">
+<h3>Submit a hybrid MPI/OpenMP job<a class="headerlink" href="#submit-a-hybrid-mpi-openmp-job" title="Permalink to this headline">¶</a></h3>
+<p>Batch file for running an application using a hybrid parallelization
+scheme with both MPI and OpenMP. Each MPI rank (process) runs a number
+of OpenMP threads. From the slurm perspective, this is essentially a
+combination of the above examples of parallel and multithreaded jobs. In
+this example we launch 8 MPI processes, and each MPI process runs 6
+threads. The job thus uses a total of 8*6=48 cores. We explicitly
+require Haswell CPUs to run 4 MPI processes per node. You need to
+experiment with your application to see what is the best combination.
+Example below uses goolf-2016a with OpenMPI and GCC.</p>
+<p>Hybrid MPI/OpenMP example using Open MPI</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH --time=30:00
+#SBATCH --mem-per-cpu=2500
+#SBATCH --exclusive
+#SBATCH --constraint=hsw    # Haswells only
+#SBATCH --ntasks=8          # -n, number of MPI tasks
+#SBATCH --cpus-per-task=6   # -c, number of threads per MPI task
+#SBATCH --nodes=2           # -N, amount of nodes
+
+module load goolf/triton-2016a    # here we use OpenMPI as an example
+export OMP_PROC_BIND=true
+srun /path/to/MPI_OpenMP_program params
+</pre></div>
+</div>
+<p>For mvapich2 you need to disable affinity, as mvapich2 has no way of
+specifying that each MPI rank needs N processors. One also cannot use
+the OpenMP affinity features, as the lack of any MPI affinity otherwise
+causes all MPI ranks on a node to be bound to the same cores. Example
+script below:</p>
+<p>Hybrid MPI/OpenMP example using mvapich2</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH --time=30:00
+#SBATCH --mem-per-cpu=2500
+#SBATCH --exclusive
+#SBATCH --constraint=[opt|wsm]
+#SBATCH -n 8
+#SBATCH -c 6
+#SBATCH -N 4
+
+module load gmvolf/triton-2016a
+export MV2_ENABLE_AFFINITY=0
+srun /path/to/MPI_OpenMP_program params
+</pre></div>
+</div>
+<p>If using other MPI flavors, please check the manual and do some tests to
+verify that CPU binding works correctly.</p>
+</div>
+<div class="section" id="submit-a-parallel-non-mpi-job">
+<h3>Submit a parallel (non-MPI) job<a class="headerlink" href="#submit-a-parallel-non-mpi-job" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to launch parallel jobs that do not use MPI. However in
+this case you are responsible for setting up any necessary communication
+between the different tasks (processes) in the job. Depending on the job
+script, resources may be allocated on several nodes, so your application
+must be prepared to communicate over the network. The slurm &#8220;srun&#8221;
+command can be used to launch a number of identical executables, one for
+each task. Example:</p>
+<p>Parallel job</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/bin/bash
+#SBATCH --time=01:00 --mem-per-cpu=500
+#SBATCH --exclusive
+#SBATCH --constraint=[hsw|ivb|wsm]
+#SBATCH -N 4
+srun -N 4 hostname
+</pre></div>
+</div>
+<p>This will print out the 4 allocated hostnames. The &#8220;-N 4&#8221; ensures that
+we run a task on all 4 allocated nodes. If we instead want to launch one
+process per allocated CPU, we can instead do &#8220;srun -n 48 executable&#8221;
+(4*12=48).</p>
+<p>In a case where the program in question uses Master-Worker-paradigm,
+where there exists a single worker that coordinates the rest,
+see&nbsp;<a class="reference internal" href="localstorage.html"><em>Compute node local
+drives</em></a></p>
+<p>Most of the compute nodes are equipped with one SATA disk drive though
+there are some with 2 and 4. See &nbsp;<code class="docutils literal"><span class="pre">slurm</span> <span class="pre">features</span></code> &nbsp;for the full list.
+&nbsp;A node with a specific amount of drives can be requested as:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1">#SBATCH --gres=spindle:4</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gpu-cards-with-gres">
+<h3>GPU cards with <code class="docutils literal"><span class="pre">--gres=</span></code><a class="headerlink" href="#gpu-cards-with-gres" title="Permalink to this headline">¶</a></h3>
+<p>See details at <a class="reference internal" href="../ref/slurm.html"><em>Slurm commands</em></a></p>
+</div>
+</div>
+<div class="section" id="links-and-other-additional-materials">
+<h2>Links and other additional materials<a class="headerlink" href="#links-and-other-additional-materials" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://slurm.schedmd.com/quickstart.html">Quick Start User Guide</a>
+at <a class="reference external" href="https://slurm.schedmd.com/">https://slurm.schedmd.com/</a>.</li>
+<li><a class="reference external" href="https://slurm.schedmd.com/">SLURM: Simple Linux Utility for Resource
+Management</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gpu.html" class="btn btn-neutral float-right" title="GPU Computing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="faq.html" class="btn btn-neutral" title="Frequently asked questions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aalto Science-IT.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/redirect-to-https.js"></script>
+      <script type="text/javascript" src="https://users.aalto.fi/~darstr1/minipres-stable.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
